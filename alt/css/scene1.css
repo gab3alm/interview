@@ -1,0 +1,74 @@
+.scene_layer{
+	height:90vh;
+	width:100%;
+	/*border:2px solid white;*/
+	position:relative;
+}
+/*
+.test{
+	width:100%;
+	position:absolute;
+	top:0px !important;
+	left:0 !important;
+}*/
+
+#icetray{
+	width: 45%;
+	position: absolute;
+	top: 80%;
+	margin-left: 25%;
+}
+
+#orange{
+	width: 12%;
+	position: absolute;
+	top: 73%;
+	margin-left: 44%;
+}
+
+#ice1{
+	width: 12%;
+	position: absolute;
+	top: 76%;
+	margin-left: 36%;
+}
+
+#ice2{
+	width: 12%;
+	position: absolute;
+	top: 76%;
+	margin-left: 52%;
+}
+
+#ice3{
+	width: 12%;
+	position: absolute;
+	top: 76%;
+	margin-left: 59%;
+}
+
+#ice4{
+	width: 12%;
+	position: absolute;
+	top: 76%;
+	margin-left: 28%;
+}
+
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 20px;
+    line-height: 24px;
+    position: fixed;
+    color: #ffffff;
+    user-select: none;
+    z-index: 1000;
+}
+.snowflake:hover {
+    cursor: default;
+}

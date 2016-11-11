@@ -1,0 +1,341 @@
+body{
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+}
+
+/*reset the paddings, so as to avoid a gap in the edges*/
+.row, .col{
+	padding:0px !important;
+	margin:0px !important;
+}
+
+.logo{
+	margin:30px;
+	height:6vh;
+}
+
+.logo-later{
+	display:none;
+}
+
+#scene{
+	/*background-color:blue;*/
+	height:100vh;
+	background:url('../images/home_assets/backdrop.svg');
+	/*background-color:#18495e;*/
+	background-size:cover;
+	margin:0px;
+	padding:0px;
+	/*border:2px solid red;*/
+}
+
+.layer{
+	width:100%;
+	height:100vh;
+	/*border:2px solid pink;*/
+}
+
+.inside_layer{
+	width:100%;
+	height:100vh;
+	position:relative;
+	/*border:2px solid green;*/
+}
+
+.floor{
+	position:absolute;
+	top:60vh;
+	left:0px;
+	width:150%;
+	margin-left:-20%;
+}
+
+.lamp1{
+	height:100%;
+	/*mix-blend-mode: overlay;*/
+}
+
+.fridge{
+	/*border:2px solid white;*/
+	height:70vh;
+	position:absolute;
+	top:25vh;
+	left:-3vh;
+}
+
+.orange_boy{
+	height:35vh;
+	position:absolute;
+	top:55vh;
+	left:15vh;
+}
+
+.cloud, .clouds2{
+	width:100%;
+	position:absolute;
+	height:400px;
+	top:calc(60% - 250px);
+	left:0;
+	/*border:2px solid white;*/
+}
+
+.welcome_text{
+	font-size:6em;
+	color:white;
+	font-family:'fenway-park-jf';
+	/*border:2px solid white;*/
+	width:100%;
+	text-align:center;
+	position:absolute;
+	top:3vh;
+	left:0;
+}
+
+.intro_text{
+	font-size:1.3rem;
+	color:white;
+	font-family:'lato';
+	width:50%;
+	margin-left:25%;
+	text-align:center;
+}
+
+.introduction_area{
+	position:absolute;
+	top:62%;
+	left:0;
+}
+
+.cust-btn{
+	border-radius:40px;
+	background-color:rgba(255,255,0,.75);
+}
+
+.light1{
+	height:500px;
+	position:absolute;
+	top:0px;
+	right:0px;
+	/*opacity:.5;*/
+}
+
+/*LAMP CONTAINER*/
+.hanging_lamp1{
+	transform: scale(1.1);
+	position:absolute;
+	top:0px;
+	left:10%;
+}
+
+.hanging_lamp2{
+	transform: scale(1.2);
+	position:absolute;
+	top:-10%;
+	left:50%;
+}
+
+
+.hanging_lamp3{
+	transform: scale(3.5);
+	position:absolute;
+	top:0px;
+	right:15%;
+}
+
+
+.lamp_container{
+	position:relative;
+}
+
+.handle{
+	height:20vh;
+	position:absolute;
+	top:-10vh;
+	left:.2vh;
+}
+
+.glass{
+	height:10vh;
+	position:absolute;
+	top:10vh;
+	left:0px;
+	opacity:.5;
+	mix-blend-mode: overlay !important;
+}
+
+.bulb{
+	height:3vh;
+	position:absolute;
+	top:9.9vh;
+	left:1.3vh;
+	/*mix-blend-mode: multiply !important;*/
+}
+
+.cone{
+	height:50vh;
+	position:absolute;
+	top:10vh;
+	left:-34vh;
+	mix-blend-mode: overlay !important;
+	opacity:.5;
+}
+/*LAMP CONTAINER END*/
+
+
+/*Styles for Med size screens*/
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+	.floor{
+		display:none;
+		position:absolute;
+		top:78vh;
+		left:0px;
+		transform:scaleY(2.5);
+	}
+
+	.fridge{
+		width:75%;
+		position:absolute;
+		top:22vh;
+		left:-15vh;
+		/*border:2px solid white;*/
+	}
+
+	.orange_boy{
+		/*display:none;*/
+		height:25vh;
+		position:absolute;
+		top:50vh;
+		left:0vh;
+	}
+
+	/*LAMP CONTAINER*/
+	.lamps{
+		opacity:.8;
+	}
+
+	.hanging_lamp3{
+		transform: scale(3);
+		position:absolute;
+		top:0px;
+		right:15vh;
+	}
+	/*LAMP CONTAINER END*/
+
+	.intro_text{
+		font-size:1.1em;
+		color:white;
+		font-family:'lato';
+		width:50%;
+		margin-left:25%;
+		text-align:center;
+	}
+	
+	.cust-btn{
+		border-radius:40px;
+	}
+} 
+
+/*STYLES FOR SMALL/MOBILE SCREENS */
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+	body,html{
+		background-color:#235fa6;
+	}
+
+	body{
+		overflow-y:scroll;
+	}
+
+	.logo{
+		margin:0px;
+		height:6vh;
+	}
+
+	.logo-later{
+		display:none;
+	}
+
+	.hanging_lamp2{
+		transform: scale(1);
+		position:absolute;
+		top:5vh;
+		left:47%;
+		animation-duration: 15s;
+	}
+	
+	.fridge{
+		width:100%;
+		position:absolute;
+		top:10vh;
+		left:0;
+		/*border:2px solid white;*/
+	}
+
+	.orange_boy{
+		height:20vh;
+		position:absolute;
+		top:40vh;
+		left:30%;
+	}
+
+
+	.cloud, .clouds2{
+		height:20%;
+		width:100%;
+		position:absolute;
+		/*border:2px solid white;*/
+	}
+
+	.cloud_right_1{
+		top:30%;
+		left:20%;
+		animation-duration:20s;
+	}
+
+
+	.cloud_left_1{
+		top:30%;
+		left:20%;
+		animation-duration:10s;
+	}
+
+	.cloud_left_2{
+		top:30%;
+		left:0%;
+		animation-duration:15s;
+	}
+
+	.message-holder{
+		padding:0px;
+		width:100%;
+		position:absolute;
+		top:60%;
+		left:0px;
+	}
+
+	.welcome_message{
+		width:100%;
+		text-align:center;
+		font-family:'fenway-park-jf';
+		font-size:4em;
+		color:white;
+		text-transform: capitalize;
+		margin:0px;
+	}
+
+	.intro_text{
+		font-size:1em;
+		color:white;
+		font-family:'lato';
+		width:80%;
+		margin-left:10%;
+		text-align:center;
+	}
+
+	.cust-btn{
+		border-radius:40px;
+		background-color:rgba(255,255,0,.75);
+	}
+} 
