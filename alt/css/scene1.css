@@ -4,162 +4,221 @@
 	/*border:2px solid white;*/
 	position:relative;
 }
-/*
-.test{
+
+#icetray{
+	width: 45%;
+	position: absolute;
+	top: 80%;
+	margin-left: 25%;
+}
+
+#orange{
+	width: 12%;
+	position: absolute;
+	top: 73%;
+	margin-left: 44%;
+}
+
+#ice1{
+	width: 12%;
+	position: absolute;
+	top: 76%;
+	margin-left: 36%;
+}
+
+#ice2{
+	width: 12%;
+	position: absolute;
+	top: 76%;
+	margin-left: 52%;
+}
+
+#ice3{
+	width: 12%;
+	position: absolute;
+	top: 76%;
+	margin-left: 59%;
+}
+
+#ice4{
+	width: 12%;
+	position: absolute;
+	top: 76%;
+	margin-left: 28%;
+}
+
+#snowflakeContainer {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.snowflake {
+	padding-left: 15px;
+	font-family: Cambria, Georgia, serif;
+	font-size: 20px;
+	line-height: 24px;
+	position: fixed;
+	color: #ffffff;
+	user-select: none;
+	z-index: 1000;
+}
+.snowflake:hover {
+	cursor: default;
+}
+
+
+/*SCENE 1 TEXT - START*/
+.section-title{
+	font-family:lato;
+	color:white;
+	font-size:2em;
+	text-transform: capitalize;
+	position:absolute !important;
+	top:10vh !important;
+	left:25% !important;
+}
+
+.section-description{
+	/*overwriting the style sheet*/
+	font-family:lato;
+	color:white !important;
+	font-size:1.5em;
+	text-transform: capitalize;
+	text-align:center !important;
+	position:absolute !important;
+	top:22vh !important;
+	left:25% !important;	
+	z-index:10;
+
+	/*border:2px solid white;*/
+}
+
+.cust-btn{
+	display:block;
+	width:100px;
+	padding:0px;
+	margin-top:10px;
+	margin-left:calc(50% - 50px);
+	height:40px;
+
+	border-radius:20px;
+	background-color:rgba(0,255,0,.5);
+	color:white;
+	font-family:lato;
+	font-size:.5em;
+	text-transform:capitalize !important;
+	border:2px solid green;
+}
+
+.cust-btn:hover{
+	background-color:rgba(0,255,0,.2);
+}
+/*SCENE 1 TEXT - END*/
+
+
+/*FIXED ELEMENTS - START*/
+.cc-logo{
+	position:fixed;
+	top:0px;
+	left:0px;
+	margin:10px;
+	z-index:10;
+	height:50px;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*||||FOOTER RULES - START  				 ||||*/
+/*|||||||||||||||||||||||||||||||||||||||*/
+.footer{
+	background-color:#282828;
 	width:100%;
+	height:50px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:1;
+}
+
+.footer-logo{
+	margin:15px 0px 0px 10px;
+	width:80px;
+	display:inline-block;
+}
+
+.csun-info-holder{
 	position:absolute;
-	top:0px !important;
-	left:0 !important;
-	}*/
+	top:10px;
+	left:100px;
+	display:inline;
+}
 
-	#icetray{
-		width: 45%;
-		position: absolute;
-		top: 80%;
-		margin-left: 25%;
-	}
+.csun-address{
+	color:white;
+	font-family:lato;
+	font-size:.8em;
+	text-transform:capitalize;
+	padding:0px;
+	margin:0px;
+}
 
-	#orange{
-		width: 12%;
-		position: absolute;
-		top: 73%;
-		margin-left: 44%;
-	}
+.social-media-holder{
+	position:absolute;
+	top:15px;
+	right:0px;
+}
 
-	#ice1{
-		width: 12%;
-		position: absolute;
-		top: 76%;
-		margin-left: 36%;
-	}
-
-	#ice2{
-		width: 12%;
-		position: absolute;
-		top: 76%;
-		margin-left: 52%;
-	}
-
-	#ice3{
-		width: 12%;
-		position: absolute;
-		top: 76%;
-		margin-left: 59%;
-	}
-
-	#ice4{
-		width: 12%;
-		position: absolute;
-		top: 76%;
-		margin-left: 28%;
-	}
-
-	#snowflakeContainer {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-	}
-	.snowflake {
-		padding-left: 15px;
-		font-family: Cambria, Georgia, serif;
-		font-size: 20px;
-		line-height: 24px;
-		position: fixed;
-		color: #ffffff;
-		user-select: none;
-		z-index: 1000;
-	}
-	.snowflake:hover {
-		cursor: default;
-	}
+.social-media{
+	margin:0px 20px 0px 0px ;
+	height:20px;
+	display:inline-block;
+}
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*||||FOOTER RULES - END  					 ||||*/
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*FIXED ELEMENTS - END*/
 
 
-	/*SCENE 1 TEXT - START*/
+/*Styles for Med size screens*/
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
 	.section-title{
-		font-family:lato;
-		color:white;
-		font-size:2em;
-		text-transform: capitalize;
-		position:absolute !important;
 		top:10vh !important;
-		left:25% !important;
+		left:20% !important;
+	}
+
+	.section-description{
+		/*overwriting the style sheet*/
+		font-size:1.4em;
+		text-align:left !important;
+		top:22vh !important;
+		left:45% !important;	
+		/*border:2px solid white;*/
+	}
+}
+
+/*STYLES FOR SMALL/MOBILE SCREENS */
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+	.section-title{
+		top:10vh !important;
+		left:35% !important;
 	}
 
 	.section-description{
 		/*overwriting the style sheet*/
 		font-family:lato;
 		color:white !important;
-		font-size:1.5em;
+		font-size:1.4em;
 		text-transform: capitalize;
-		text-align:center !important;
+		text-align:left !important;
 		position:absolute !important;
-		top:22vh !important;
-		left:25% !important;	
+		top:25vh !important;
+		left:52% !important;	
 		z-index:10;
-
 		/*border:2px solid white;*/
 	}
 
-	.cust-btn{
-		display:block;
-		width:100px;
-		padding:0px;
-		margin-top:10px;
-		margin-left:calc(50% - 50px);
-		height:40px;
-
-		border-radius:20px;
-		background-color:rgba(0,255,0,.5);
-		color:white;
-		font-family:lato;
-		font-size:.5em;
-		text-transform:capitalize !important;
-		border:2px solid green;
+	.csun-info-holder{
+		display:none;
 	}
-
-	.cust-btn:hover{
-		background-color:rgba(0,255,0,.2);
-	}
-	/*SCENE 1 TEXT - END*/
-
-
-	/*Styles for Med size screens*/
-	/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
-	@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-		.section-title{
-			top:10vh !important;
-			left:20% !important;
-		}
-
-		.section-description{
-			/*overwriting the style sheet*/
-			font-size:1.4em;
-			text-align:left !important;
-			top:22vh !important;
-			left:45% !important;	
-			/*border:2px solid white;*/
-		}
-	}
-
-	/*STYLES FOR SMALL/MOBILE SCREENS */
-	/* max-width 640px, mobile-only styles, use when QAing mobile issues */
-	@media only screen and (max-width: 40em) {
-		.section-title{
-			top:10vh !important;
-			left:35% !important;
-		}
-
-		.section-description{
-			/*overwriting the style sheet*/
-			font-family:lato;
-			color:white !important;
-			font-size:1.4em;
-			text-transform: capitalize;
-			text-align:left !important;
-			position:absolute !important;
-			top:25vh !important;
-			left:52% !important;	
-			z-index:10;
-			/*border:2px solid white;*/
-		}
-	}
+}
