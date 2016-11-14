@@ -1,0 +1,157 @@
+.sprite-can{
+	height:20vh;
+	position:absolute;
+	top:35vh;
+	left:50%;
+}
+
+.gatorade-bottle{
+	height:40vh;
+	position:absolute;
+	top:30vh;
+	left:58%;
+}
+
+.naked-bottle{
+	height:50vh;
+	position:absolute;
+	top:25vh;
+	left:70%;	
+}
+
+.cola-bottle{
+	height:70vh;
+	position:absolute;
+	top:15vh;
+	left:83%;	
+}
+
+.orange-boy-sc2{
+	height:20vh;
+	position:absolute;
+	top:60vh;
+	left:60%;	
+}
+
+.sc2-section-title{
+	font-family:lato;
+	font-size:2em;
+	text-transform:capitalize;
+	color:rgba(0,0,0,.75) !important;
+
+	position:absolute !important;
+	top:10vh !important;
+	left:25% !important;
+}
+
+.sc2-description{
+	font-family:lato;
+	font-size:1.5em;
+	text-transform:capitalize;
+	color:rgba(0,0,0,.75) !important;
+
+	position:absolute !important;
+	top:15vh !important;
+	left:25% !important;	
+}
+
+.interview-types{
+	position:absolute;
+	top:20vh;
+	left:7%;
+}
+
+.types{
+	font-family:lato;
+	font-size:1.5em;
+	list-style-type:circle;
+	text-transform:capitalize;
+}
+
+.types > li{
+	padding:10px;
+}
+
+.int-cust-btn{
+	border-radius: 10px;
+	background-color:rgba(0,255,0,.5);
+	border:2px solid green;
+	margin-left:10px;
+	text-transform:capitalize;
+	font-size:.5em;
+	color:rgba(0,0,0,.75);
+	display:none;
+}
+
+.types>li:hover .int-cust-btn{
+	color:green;
+	display:inline-block;
+}
+
+.int-cust-btn:hover{
+	background-color:rgba(0,255,0,.25);
+}
+
+
+/*Styles for Med size screens*/
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	.sc2-section-title{
+		top:10vh !important;
+		left:26% !important;
+	}
+
+	.sc2-description{
+		/*overwriting the style sheet*/
+		font-size:1.4em;
+		text-align:left !important;
+		top:16vh !important;
+		left:45% !important;	
+		/*border:2px solid white;*/
+	}
+
+	.interview-types{
+		top:20vh;
+		left:7%;
+	}
+
+	.types{
+		font-size:1.2em;
+	}
+
+}
+
+/*STYLES FOR SMALL/MOBILE SCREENS */
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+	.sc2-section-title{
+		top:10vh !important;
+		left:45% !important;
+	}
+
+	.sc2-description{
+		/*overwriting the style sheet*/
+		font-family:lato;
+		font-size:1.2em;
+		text-transform: capitalize;
+		text-align:left !important;
+		position:absolute !important;
+		top:16vh !important;
+		left:52% !important;	
+		z-index:10;
+		/*border:2px solid white;*/
+	}
+
+	.interview-types{
+		top:20vh;
+		left:12%;
+	}
+
+	.types{
+		font-size:1em;
+	}	
+
+	.csun-info-holder{
+		display:none;
+	}
+}
