@@ -1,14 +1,14 @@
 ﻿// The star of every good animation
 var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+window.mozRequestAnimationFrame ||
+window.webkitRequestAnimationFrame ||
+window.msRequestAnimationFrame;
 
 var transforms = ["transform",
-                  "msTransform",
-                  "webkitTransform",
-                  "mozTransform",
-                  "oTransform"];
+"msTransform",
+"webkitTransform",
+"mozTransform",
+"oTransform"];
 
 var transformProperty = getSupportedPropertyName(transforms);
 
@@ -106,7 +106,7 @@ function generateSnowflakes() {
     var snowflakeContainer = originalSnowflake.parentNode;
 
     // get our browser's size
-	browserWidth = document.documentElement.clientWidth;
+    browserWidth = document.documentElement.clientWidth;
     browserHeight = document.documentElement.clientHeight;
 
     // create each individual snowflake
@@ -124,15 +124,15 @@ function generateSnowflakes() {
 
         // create our Snowflake object
         var snowflakeObject = new Snowflake(snowflakeCopy,
-        									radius,
-        									speed,
-        									initialXPos,
-        									initialYPos);
+           radius,
+           speed,
+           initialXPos,
+           initialYPos);
         snowflakes.push(snowflakeObject);
     }
 
     // remove the original snowflake because we no longer need it visible
-	snowflakeContainer.removeChild(originalSnowflake);
+    snowflakeContainer.removeChild(originalSnowflake);
 
 	// call the moveSnowflakes function every 30 milliseconds
     moveSnowflakes();
@@ -150,19 +150,19 @@ function moveSnowflakes() {
 	// Reset the position of all the snowflakes to a new value
     if (resetPosition) {
     	browserWidth = document.documentElement.clientWidth;
-	    browserHeight = document.documentElement.clientHeight;
+       browserHeight = document.documentElement.clientHeight;
 
-		for (var i = 0; i < snowflakes.length; i++) {
-	        var snowflake = snowflakes[i];
+       for (var i = 0; i < snowflakes.length; i++) {
+           var snowflake = snowflakes[i];
 
-	        snowflake.xPos = getPosition(50, browserWidth);
-	        snowflake.yPos = getPosition(50, browserHeight);
-	    }
+           snowflake.xPos = getPosition(50, browserWidth);
+           snowflake.yPos = getPosition(50, browserHeight);
+       }
 
-	    resetPosition = false;
-    }
+       resetPosition = false;
+   }
 
-    requestAnimationFrame(moveSnowflakes);
+   requestAnimationFrame(moveSnowflakes);
 }
 
 //

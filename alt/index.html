@@ -3,13 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Lato' rel='stylesheet' type='text/css'>
   <!-- <link rel="stylesheet" href="css/materialize.min.css"> -->
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
   <link rel="stylesheet" href="css/scene1.css">
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-	<title>Interviewing</title>
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+  <title>Interviewing</title>
+  <script src="https://use.typekit.net/koc3lky.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
   <!-- SIDE NAVIGATION BAR -->
@@ -38,19 +40,26 @@
 
   <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
+  <!-- FIXED ELEMENTS -->
+  
+  
   <section id="section1" class="cd-section other" style="background-image: url('img/scene1/background.svg'); background-size: cover; background-position:center;">
-    <h1>Welcome</h1>
-		<div id="snowflakeContainer">
-		    <p class="snowflake">*</p>
-		</div>
+    <h1 class="section-title">1. Starting a job search</h1>
+    <p class="section-description">
+      The CSUN Career Center Website has made the job hunting process a bit easier. SUNlink lists jobs and connects students to companies looking specifically hire CSUN students, and Pathways links your area of study or desired occupations to relevant companies that are hiring.
+      <button class="cust-btn">Learn More</button>
+    </p>
+    <div id="snowflakeContainer">
+      <p class="snowflake">*</p>
+    </div>
     <div class="scene_layer scene1">
       <!-- <p class="test">Interviewing</p> -->
-			<img id="icetray" src="img/scene1/icetray.svg">
-			<img id="ice1" src="img/scene1/icecube2.svg">
-			<img id="ice4" src="img/scene1/icecube2.svg">
-			<img id="ice3" src="img/scene1/icecube2.svg">
-			<img id="ice2" src="img/scene1/icecube2.svg">
-			<img id="orange" src="img/scene1/orangeboy2.svg">
+      <img id="icetray" src="img/scene1/icetray.svg">
+      <img id="ice1" src="img/scene1/icecube2.svg">
+      <img id="ice4" src="img/scene1/icecube2.svg">
+      <img id="ice3" src="img/scene1/icecube2.svg">
+      <img id="ice2" src="img/scene1/icecube2.svg">
+      <img id="orange" src="img/scene1/orangeboy2.svg">
     </div>
     <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
   </section><!-- cd-section -->
@@ -81,7 +90,7 @@
 
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/main.js"></script> <!-- Resource jQuery -->
-	<!-- Snowflake plug-in -->
-	<script src="js/fallingsnow_v6.js"></script>
+  <!-- Snowflake plug-in -->
+  <script src="js/fallingsnow_v6.js"></script>
 </body>
 </html>
