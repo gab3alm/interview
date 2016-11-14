@@ -1,3 +1,7 @@
+body{
+	overflow-x:hidden;
+}
+
 .scene_layer{
 	height:90vh;
 	width:100%;

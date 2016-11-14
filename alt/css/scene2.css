@@ -83,8 +83,11 @@
 	display:none;
 }
 
+.types>li:hover{
+	color:rgba(0,255,0,.85);
+}
+
 .types>li:hover .int-cust-btn{
-	color:green;
 	display:inline-block;
 }
 
