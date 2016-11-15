@@ -71,53 +71,6 @@ body{
 }
 
 
-/*SCENE 1 TEXT - START*/
-.section-title{
-	font-family:lato;
-	color:white;
-	font-size:2em;
-	text-transform: capitalize;
-	position:absolute !important;
-	top:10vh !important;
-	left:25% !important;
-}
-
-.section-description{
-	/*overwriting the style sheet*/
-	font-family:lato;
-	color:white !important;
-	font-size:1.5em;
-	text-transform: capitalize;
-	text-align:center !important;
-	position:absolute !important;
-	top:22vh !important;
-	left:25% !important;	
-	z-index:10;
-
-	/*border:2px solid white;*/
-}
-
-.cust-btn{
-	display:block;
-	width:100px;
-	padding:0px;
-	margin-top:10px;
-	margin-left:calc(50% - 50px);
-	height:40px;
-
-	border-radius:20px;
-	background-color:rgba(0,255,0,.5);
-	color:white;
-	font-family:lato;
-	font-size:.5em;
-	text-transform:capitalize !important;
-	border:2px solid green;
-}
-
-.cust-btn:hover{
-	background-color:rgba(0,255,0,.2);
-}
-/*SCENE 1 TEXT - END*/
 
 
 /*FIXED ELEMENTS - START*/
@@ -151,7 +104,7 @@ body{
 
 .csun-info-holder{
 	position:absolute;
-	top:10px;
+	top:15px;
 	left:100px;
 	display:inline;
 }
@@ -161,8 +114,7 @@ body{
 	font-family:lato;
 	font-size:.8em;
 	text-transform:capitalize;
-	padding:0px;
-	margin:0px;
+	padding:1px;
 }
 
 .social-media-holder{
@@ -182,10 +134,62 @@ body{
 /*FIXED ELEMENTS - END*/
 
 
+
+
+
+/*SCENE 1 TEXT - START*/
+.section-title{
+	font-family:pattaya;
+	color:white;
+	font-size:2.5em;
+	text-transform: capitalize;
+	position:absolute !important;
+	top:15vh !important;
+	left:14% !important;
+}
+
+.section-description{
+	/*overwriting the style sheet*/
+	font-family:abel;
+	color:white !important;
+	font-size:1.2em;
+	/*text-transform: capitalize;*/
+	text-align:left !important;
+	position:absolute !important;
+	top:25vh !important;
+	left:25% !important;	
+	z-index:10;
+	line-height: 25px;
+	/*border:2px solid white;*/
+}
+
+.cust-btn{
+	display:block;
+	width:200px;
+	margin-top:20px;
+	margin-left:calc(100% - 250px);
+	height:40px;
+
+	border-radius:10px;
+	background-color:rgba(0,255,0,.5);
+	color:white;
+	font-family:abel;
+	font-size:1em;
+	text-transform:capitalize !important;
+	border:2px solid green;
+}
+
+.cust-btn:hover{
+	background-color:rgba(0,255,0,.2);
+	box-shadows
+}
+/*SCENE 1 TEXT - END*/
+
 /*Styles for Med size screens*/
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 	.section-title{
+		font-size:2em;
 		top:10vh !important;
 		left:20% !important;
 	}
@@ -194,7 +198,7 @@ body{
 		/*overwriting the style sheet*/
 		font-size:1.4em;
 		text-align:left !important;
-		top:22vh !important;
+		top:20vh !important;
 		left:45% !important;	
 		/*border:2px solid white;*/
 	}
