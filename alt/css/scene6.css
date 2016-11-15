@@ -1,0 +1,64 @@
+.banana_man{
+	height:40%;
+	position:absolute;
+	top:40%;
+	left:38%;
+}
+
+.pear{
+	height:40%;
+	position:absolute;
+	top:28%;
+	left:20%;
+}
+
+.watermelon{
+	height:20%;
+	position:absolute;
+	top:65%;
+	left:5%;
+}
+
+.sc6orangeboy{
+	height:30%;
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+
+.corn{
+	height:40%;
+	position:absolute;
+	top:25%;
+	left:65%;
+}
+
+.broco{
+	height:40%;
+	position:absolute;
+	top:35%;
+	left:80%;
+}
+
+.sc6-section-title{
+	text-align:center !important;
+	text-transform:capitalize;
+	font-family:'fenway-park-jf';
+	font-size:2.5em;
+	color:rgba(0,0,0,1) !important;
+
+	position:absolute !important;
+	top:5% !important;
+	left:50% !important;	
+}
+
+.sc6-section-description{
+	text-align:center !important;
+	font-family:'fenway-park-jf';
+	font-size:1.5em;
+	color:rgba(0,0,0,1) !important;
+
+	position:absolute !important;
+	top:18% !important;
+	left:50% !important;	
+}
