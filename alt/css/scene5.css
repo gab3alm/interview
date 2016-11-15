@@ -1,0 +1,27 @@
+.cheesecake{
+	height:50%;
+	position:absolute;
+	top:40%;
+	left:60%;
+}
+
+.chocolate{
+	height:50%;
+	position:absolute;
+	top:28%;
+	left:38%;	
+}
+
+.shake{
+	height:50%;
+	position:absolute;
+	top:15%;
+	left:30%;	
+}
+
+.waffer{
+	height:70%;
+	position:absolute;
+	top:20%;
+	left:10%;	
+}
