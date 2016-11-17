@@ -58,30 +58,65 @@ body{
 }
 .snowflake {
 	padding-left: 15px;
-	font-family: Cambria, Georgia, serif;
 	font-size: 20px;
 	line-height: 24px;
 	position: fixed;
-	color: #ffffff;
+	color: rgba(255,255,255,.5) !important;
 	user-select: none;
-	z-index: 1000;
+	z-index:999;
+
+	/*user cant interact with snowflake*/
+	/*no clicking or dragging*/
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 .snowflake:hover {
 	cursor: default;
 }
 
+.podium{
+	height:50%;
+	width:25%;
+	position:absolute;
+	top:35%;
+	left:65%;
+}
 
-
+.cubes{
+	height:25%;
+	width:50%;
+	position:absolute;
+	top:60%;
+	left:5%;
+}
 
 /*FIXED ELEMENTS - START*/
-.cc-logo{
+
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*||||HEADER RULES - START  				 ||||*/
+/*|||||||||||||||||||||||||||||||||||||||*/
+.header{
+	width:100%;
+	height:65px;
+	background-color:#282828;
 	position:fixed;
 	top:0px;
 	left:0px;
+	z-index:999;
+}
+
+.cc-logo{
 	margin:10px;
 	z-index:10;
-	height:50px;
+	height:45px;
 }
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*||||HEADER RULES - END  				 ||||*/
+/*|||||||||||||||||||||||||||||||||||||||*/
 
 /*|||||||||||||||||||||||||||||||||||||||*/
 /*||||FOOTER RULES - START  				 ||||*/
@@ -138,9 +173,19 @@ body{
 
 
 /*SCENE 1 TEXT - START*/
+.page-title{
+	font-family:pattaya;
+	color:white !important;
+	font-size:2.5em;
+	text-transform: capitalize;
+	position:absolute !important;
+	top:10vh !important;
+	left:50% !important;
+}
+
 .section-title{
 	font-family:pattaya;
-	color:white;
+	color:white !important;
 	font-size:2.5em;
 	text-transform: capitalize;
 	position:absolute !important;
@@ -156,7 +201,7 @@ body{
 	/*text-transform: capitalize;*/
 	text-align:left !important;
 	position:absolute !important;
-	top:25vh !important;
+	top:22vh !important;
 	left:25% !important;	
 	z-index:10;
 	line-height: 25px;
@@ -180,8 +225,15 @@ body{
 }
 
 .cust-btn:hover{
-	background-color:rgba(0,255,0,.2);
-	box-shadows
+	background-color:rgba(139,194,32,1);
+}
+
+#sc1-btn{
+	/*absolute in relation to its paragraph container*/
+	position:absolute;
+	top:100%;
+	right:10%;
+	/*background-color:rgba(139,194,32,1);*/
 }
 /*SCENE 1 TEXT - END*/
 

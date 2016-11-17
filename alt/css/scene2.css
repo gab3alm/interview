@@ -34,25 +34,26 @@
 }
 
 .sc2-section-title{
-	font-family:lato;
-	font-size:2em;
+	font-family:pattaya;
 	text-transform:capitalize;
-	color:rgba(0,0,0,.75) !important;
-
+	color:rgba(0,0,0,1) !important;
 	position:absolute !important;
 	top:10vh !important;
-	left:25% !important;
+	left:14% !important;
+	font-size:2.5em;
+
 }
 
 .sc2-description{
-	font-family:lato;
-	font-size:1.5em;
+	font-family:"abel";
+	font-size:1.2em;
 	text-transform:capitalize;
-	color:rgba(0,0,0,.75) !important;
-
+	color:rgba(0,0,0,.85) !important;
+	text-align:left !important;
 	position:absolute !important;
-	top:15vh !important;
-	left:25% !important;	
+	top:18vh !important;
+	left:26.2% !important;	
+	line-height:25px;
 }
 
 .interview-types{
@@ -93,6 +94,12 @@
 
 .int-cust-btn:hover{
 	background-color:rgba(0,255,0,.25);
+}
+
+#sc2-btn{
+	position:absolute;
+	top:120%;
+	left:35%;
 }
 
 
