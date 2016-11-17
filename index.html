@@ -1,15 +1,24 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pattaya|Roboto|Raleway|Lato|Abel|Didact+Gothic" rel="stylesheet">  
   <!-- <link rel="stylesheet" href="css/materialize.min.css"> -->
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
   <link rel="stylesheet" href="css/scene1.css">
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-	<title>Interviewing</title>
+  <link rel="stylesheet" href="css/scene2.css">
+  <link rel="stylesheet" href="css/scene3.css">
+  <link rel="stylesheet" href="css/scene4.css">
+  <link rel="stylesheet" href="css/scene5.css">
+  <link rel="stylesheet" href="css/scene6.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+  <title>Interviewing</title>
+  <script src="https://use.typekit.net/koc3lky.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
   <!-- SIDE NAVIGATION BAR -->
@@ -36,41 +45,190 @@
     </ul>
   </nav>
 
-  <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+  <a class="cd-nav-trigger cd-img-replace">Open navigation</a>
 
-  <section id="section1" class="cd-section other" style="background-image: url('img/scene1/background.svg'); background-size: cover; background-position:center;">
-    <h1>Welcome</h1>
+  <!-- FIXED VIEWPORT ELEMENTS - START -->
+  <header class="header">
+    <img src="./img/logo4.svg" alt="career center logo" class="cc-logo">
+  </header>
+  <!-- footer css rules are in scene1.css -->
+  <footer class="footer">
+    <a target="_blank" href="https://www.csun.edu/career">
+      <img class="footer-logo" src="./img/footer_assets/footer_logo.svg">
+    </a>
+
+    <div class="csun-info-holder hide-on-small-only">
+      <p class="csun-address">
+        CAREER CENTER &copy; california state university, northridge
+      </p>
+      <p class="csun-address">
+        18111 Nordhoff Street, Northridge, CA 91330 | Phone: (818) 677-2878 | 
+        <a target="_blank" href="https://www.csun.edu/career">WWW.CSUN.EDU/CAREER</a>
+      </p>
+    </div>
+
+    <div class="social-media-holder">
+      <a target="_blank" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Career Center Facebook" href="https://www.facebook.com/CSUNCareerCenter/">
+        <img class="social-media" src="./img/footer_assets/Facebook.svg" alt="Career Center Facebook">
+      </a>
+      <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Career Center Instagram" target="_blank" href="https://www.instagram.com/csuncareercenter/?hl=en">
+        <img class="social-media" src="./img/footer_assets/instagram.svg" alt="Career Center Instagram">
+      </a>
+      <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Career Center Twitter" target="_blank" href="https://twitter.com/CSUNCareerCtr?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+        <img class="social-media" src="./img/footer_assets/twitter.svg" alt="Career Center Twitter">
+      </a>
+      <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Career Center LinkedIn" target="_blank" href="https://www.linkedin.com/in/csuncareerctr">
+        <img class="social-media" src="./img/footer_assets/linkedIn.svg" alt="Career Center LinkedIn">
+      </a>
+      <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Career Center Youtube" target="_blank" href="https://www.youtube.com/user/CsunCareerCenter">
+        <img class="social-media" src="./img/footer_assets/youtube.svg" alt="Career Center Youtube">
+      </a>
+    </div>
+  </footer>
+  <!-- FIXED VIEWPORT ELEMENTS - END   -->
+  
+  <!-- SCENE 1 -->
+  <section id="section1" class="cd-section other" style="background-image: url('img/scene1/background2.svg'); background-size: cover; background-position:center;">
+    <div id="snowflakeContainer">
+      <p class="snowflake">&#10052;</p>
+    </div>
     <div class="scene_layer scene1">
-      <p class="test">Interviewing</p>  
+      <!-- <p class="test">Interviewing</p> -->
+      <!-- <img id="icetray" src="img/scene1/icetray.svg"> -->
+      <!-- <img id="ice1" src="img/scene1/icecube2.svg"> -->
+      <!-- <img id="ice4" src="img/scene1/icecube2.svg"> -->
+      <!-- <img id="ice3" src="img/scene1/icecube2.svg"> -->
+      <!-- <img id="ice2" src="img/scene1/icecube2.svg"> -->
+      <!-- <img id="orange" src="img/scene1/orangeboy2.svg"> -->
+
+      <!-- class animated slideInRight are from animate css library -->
+      <img id="podium1" class="podium animated slideInRight" src="./img/scene1/podium.svg" alt="">
+      <img id="icetray1" class="cubes animated slideInLeft" src="./img/scene1/cubes.svg" alt="">
+      <h1 class="page-title animated fadeIn">Interviewing Steps and Preparation</h1>
+      <p class="section-title animated fadeIn">Starting a job search</p>
+      <p class="section-description animated fadeIn">
+        The CSUN Career Center Website has made the job hunting process a bit easier. SUNlink lists jobs and connects students to companies looking specifically hire CSUN studenst, and Pathways links your area of study or desired occupations to relevant companies that are hiring.
+        <a href="#!" id="sc1-btn" class="button button-3d button-action button-pill">Learn More</a>
+      </p>
+
     </div>
     <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
-  </section><!-- cd-section -->
+  </section>
 
-  <section id="section2" class="cd-section" style="background-image: url('img/InterviewBG02.svg'); background-size: cover; background-position:center;">
-    <p>Types of Interview</p>
+  <!-- SCENE 2 -->
+  <section id="section2" class="cd-section" style="background-image: url('img/scene2/background.svg'); background-size: cover; background-position:center;">
+    <div class="scene_layer scene2">
+      <img src="./img/scene2/gatorade.svg" class="gatorade" alt="">
+      <img src="./img/scene2/starbucks.svg" class="starbucks" alt="">
+      <img src="./img/scene2/naked.svg" class="naked" alt="">
+      <img src="./img/scene2/cola.svg" class="cola" alt="">
+
+      <img src="./img/scene2/skype.svg" class="skype" alt="">
+      <img src="./img/scene2/orangeboy.svg" class="sc2-orangeboy" alt="">
+
+      <img src="./img/scene2/coke.svg" class="coke" alt="">
+      <img src="./img/scene2/monster.svg" class="monster" alt="">
+      <img src="./img/scene2/coconut.svg" class="coconut" alt="">
+      <img src="./img/scene2/orangejuice.svg" class="orange_juice" alt="">
+
+      <p class="sc2-section-title">types of interviews</p>
+      <p class="sc2-description">
+        Knowing the different types of interviews that you may be facing makes it easy to prepare for them. Interviews types range from the general interview, a lunch interview protocol, telephone screening, competency based, multiple one to one, panel interview, role play, skype/facetime, presentation
+        <a href="#!" id="sc2-btn" class="button button-3d button-action button-pill">Learn More</a>
+
+      </p>
+
+
+      <!-- <div class="interview-types">
+        <ul class="types">
+          <li>the general interview       <button class="int-cust-btn">learn more</button></li>
+          <li>the lunch interview protocol<button class="int-cust-btn">learn more</button></li>
+          <li>telephone screening         <button class="int-cust-btn">learn more</button></li>
+          <li>competency based interview  <button class="int-cust-btn">learn more</button></li>
+          <li>multiple one to one interiew<button class="int-cust-btn">learn more</button></li>
+          <li>panel interview             <button class="int-cust-btn">learn more</button></li>
+          <li>role play interview         <button class="int-cust-btn">learn more</button></li>
+          <li>skype/facetime interview    <button class="int-cust-btn">learn more</button></li>
+          <li>presentation interview      <button class="int-cust-btn">learn more</button></li>
+        </ul>
+      </div> -->
+    </div>
     <a href="#section3" class="cd-scroll-down cd-img-replace">scroll down</a>
-  </section><!-- cd-section -->
+  </section>
 
+  <!-- SCENE 3 -->
   <section id="section3" class="cd-section" style="background-image: url('img/InterviewBG03.svg'); background-size: cover; background-position:center;">
-    <p>Preparing</p>
+    <div class="scene_layer scene3">
+      <img class="glass" src="./img/scene3/glass.svg" alt="glass">
+      <img class="orangeboysc3" src="./img/scene3/orangeboy.svg" alt="">
+      <img class="cheese" src="./img/scene3/cheese.svg" alt="">
+      <img class="bed" src="./img/scene3/bed.svg" alt="">
+      <img class="yogurt" src="./img/scene3/yogurt.svg" alt="">
+      <img class="milk" src="./img/scene3/milk.svg" alt="">
+      <p class="sc3-section-title">3. preparing for an interview</p>
+      <p class="sc3-section-description">
+        once you have found an opportunity that appeals to you and is hiring, it is time to apply for a position! The keys to successful interviewing are preparation, like-ability, and bonding. There are several critical areas to consider and essential things to do in preparation for your interview
+        <button class="cust-btn">learn more</button>
+      </p>
+    </div>
     <a href="#section4" class="cd-scroll-down cd-img-replace">scroll down</a>
-  </section><!-- cd-section -->
+  </section>
 
-  <section id="section4" class="cd-section" style="background-image: url('img/InterviewBG04.svg'); background-size: cover; background-position:center;">
-    <p>Ace the Interview</p>
+  <!-- SCENE 4 -->
+  <section id="section4" class="cd-section" style="background-image: url('img/scene4/background.svg'); background-size: cover; background-position:center;">
+    <div class="scene_layer scene5">
+      <img class="jelly" src="./img/scene4/jelly.svg" alt="">
+      <img class="wip" src="./img/scene4/cream.svg" alt="">
+      <img class="mustard" src="./img/scene4/mustard.svg" alt="">
+      <img class="ketchup" src="./img/scene4/ketchup.svg" alt="">
+      <img class="orangeboy" src="./img/scene4/orangeboy.svg" alt="">
+      <img class="desk" src="./img/scene4/desk.svg" alt="">
+      <p class="sc4-section-title">4.acing the interview</p>
+      <p class="sc4-section-description">
+        By preparing properly beforehand, as opposed to leaving it to the last minute, you can avoid extra stress the night before an important interview. 
+        <button class="cust-btn">learn more</button>
+      </p>
+    </div>
     <a href="#section5" class="cd-scroll-down cd-img-replace">scroll down</a>
-  </section><!-- cd-section -->
+  </section>
 
-  <section id="section5" class="cd-section" style="background-image: url('img/InterviewBG05.svg'); background-size: cover; background-position:center;">
-    <p>Follow Up</p>
+  <!-- SCENE 5 -->
+  <section id="section5" class="cd-section" style="background-image: url('img/scene5/background.svg'); background-size: cover; background-position:center;">
+    <div class="scene_layer scene5">
+      <img class="shake" src="./img/scene5/shake.svg" alt="">
+      <img class="chocolate" src="./img/scene5/chocolate.svg" alt="">
+      <img class="cheesecake" src="./img/scene5/cheesecake.svg" alt="">
+      <img class="waffer" src="./img/scene5/waffer.svg" alt="">
+      <p class="sc5-section-title">5. following up after the interview</p>
+      <p class="sc5-section-description">
+        Don't be nervous about following up the interview. Whether it is sending a thank you note for their time, a list of references, a call or email, they will appreciate your tenacity!
+        <button class="cust-btn">learn more</button>
+      </p>
+    </div>
     <a href="#section6" class="cd-scroll-down cd-img-replace">scroll down</a>
   </section><!-- cd-section -->
 
-  <section id="section6" class="cd-section" style="background-image: url('img/InterviewBG06.svg'); background-size: cover;">
-    <p>The Job is Yours</p>
-  </section><!-- cd-section -->
+  <!-- SCENE 6 -->
+  <section id="section6" class="cd-section" style="background-image: url('img/scene6/background.svg'); background-size: cover;">
+    <div class="scene_layer scene6">
+      <img class="banana_man" src="./img/scene6/banana.svg" alt="">
+      <img class="pear" src="./img/scene6/pear.svg" alt="">
+      <img class="watermelon" src="./img/scene6/watermelon.svg" alt="">
+      <img class="sc6orangeboy" src="./img/scene6/orangeboy.svg" alt="">
+      <img class="corn" src="./img/scene6/corn.svg" alt="">
+      <img class="broco" src="./img/scene6/broco.svg" alt="">
+      <p class="sc6-section-title">6. accepting the job</p>
+      <p class="sc6-section-description">
+        Congratulations! Once you have been hired, there are still some important tips to getting started at your new place of employment!
+        <button class="cust-btn">learn more</button>
+      </p>
+    </div>
+  </section>
+  
 
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/main.js"></script> <!-- Resource jQuery -->
+  <!-- Snowflake plug-in -->
+  <script src="js/fallingsnow_v6.js"></script>
 </body>
 </html>
