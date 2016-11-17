@@ -1,3 +1,52 @@
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*||||FOOTER RULES - START  				 ||||*/
+/*|||||||||||||||||||||||||||||||||||||||*/
+.footer{
+	background-color:#282828;
+	width:100%;
+	height:50px;
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+
+.footer-logo{
+	margin:15px 0px 0px 10px;
+	width:80px;
+	display:inline-block;
+}
+
+.csun-info-holder{
+	position:absolute;
+	top:10px;
+	left:100px;
+	display:inline;
+}
+
+.csun-address{
+	color:white;
+	font-family:lato;
+	font-size:.8em;
+	text-transform:capitalize;
+	padding:0px;
+	margin:0px;
+}
+
+.social-media-holder{
+	position:absolute;
+	top:15px;
+	right:0px;
+}
+
+.social-media{
+	margin:0px 20px 0px 0px ;
+	height:20px;
+	display:inline-block;
+}
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*||||FOOTER RULES - END  					 ||||*/
+/*|||||||||||||||||||||||||||||||||||||||*/
+
 body{
 	overflow:hidden;
 	padding:0px;
@@ -22,10 +71,10 @@ body{
 #scene{
 	/*background-color:blue;*/
 	height:100vh;
-	background:url('../images/home_assets/backdrop.svg');
+	background:url('../img/home_assets/backdrop.svg');
 	/*background-color:#18495e;*/
 	background-size:cover;
-	margin:0px;
+	margin:0px;c
 	padding:0px;
 	/*border:2px solid red;*/
 }
@@ -112,6 +161,10 @@ body{
 	background-color:rgba(255,255,0,.75);
 }
 
+.cust-btn > a{
+	color:white !important;
+}
+
 .light1{
 	height:500px;
 	position:absolute;
@@ -161,7 +214,7 @@ body{
 	top:10vh;
 	left:0px;
 	opacity:.5;
-	mix-blend-mode: overlay !important;
+	/*mix-blend-mode: overlay !important;*/
 }
 
 .bulb{
@@ -177,13 +230,15 @@ body{
 	position:absolute;
 	top:10vh;
 	left:-34vh;
-	mix-blend-mode: overlay !important;
+	/*mix-blend-mode: overlay !important;*/
 	opacity:.5;
 }
 /*LAMP CONTAINER END*/
 
 
-/*Styles for Med size screens*/
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*||||STYLE RULES FOR MED SIZE SCREENS||||*/
+/*|||||||||||||||||||||||||||||||||||||||*/
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) { 
 	.floor{
@@ -237,7 +292,9 @@ body{
 	}
 } 
 
-/*STYLES FOR SMALL/MOBILE SCREENS */
+/*|||||||||||||||||||||||||||||||||||||||*/
+/*||||STYLE RULES FOR SMALL/MOBILE SIZE SCREENS||||*/
+/*|||||||||||||||||||||||||||||||||||||||*/
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 @media only screen and (max-width: 40em) {
 	body,html{
@@ -308,7 +365,7 @@ body{
 	}
 
 	.message-holder{
-		padding:0px;
+		margin:0px 0px 100px 0px !important;
 		width:100%;
 		position:absolute;
 		top:60%;
