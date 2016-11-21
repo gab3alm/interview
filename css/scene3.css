@@ -43,11 +43,12 @@
 .sc3-section-title{
 	text-align:center !important;
 	position:absolute !important;
-	top:0% !important;
+	top:5% !important;
 	left:50% !important;
 	
-	font-family:'fenway-park-jf';
+	font-family:'pattaya';
 	/*font-weight: bold;*/
+	color:rgba(0,0,0,1) !important;
 	text-transform: capitalize;
 	font-size:2.5em;
 }
@@ -55,11 +56,12 @@
 .sc3-section-description{
 	text-align:center !important;
 	position:absolute !important;
-	top:18% !important;
+	top:12% !important;
 	left:50% !important;
 	
-	font-family:'fenway-park-jf';
-	text-transform: capitalize;
-	font-size:2em;	
-	color:rgba(0,0,255,.5) !important;
+	font-family:"abel";
+	font-size:1.2em;
+	/*text-transform:capitalize;*/
+	color:rgba(0,0,0,.85) !important;
+	line-height:25px;
 }

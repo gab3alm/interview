@@ -42,22 +42,25 @@
 
 .sc4-section-title{
 	text-transform:capitalize;
-	font-family:'fenway-park-jf';
+	font-family:'pattaya';
 	font-size:2.5em;
 	color:rgba(0,0,0,1) !important;
 
 	position:absolute !important;
-	top:10% !important;
+	top:5% !important;
 	left:25% !important;
 }
 
 .sc4-section-description{
 	text-align:center !important;
-	font-family:'fenway-park-jf';
-	font-size:1.5em;
-	color:rgba(0,0,0,1) !important;
+	
+	font-family:"abel";
+	font-size:1.2em;
+	/*text-transform:capitalize;*/
+	color:rgba(0,0,0,.85) !important;
+	line-height:25px;
 
 	position:absolute !important;
-	top:18% !important;
+	top:12% !important;
 	left:25% !important;	
 }
