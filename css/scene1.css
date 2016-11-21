@@ -196,6 +196,10 @@ body{
 		left:50% !important;
 	}
 
+	.scene1-text-container{
+		position:relative;
+	}
+
 	.section-title{
 		font-family:pattaya;
 		color:white !important;

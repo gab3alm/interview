@@ -9,12 +9,14 @@
 	<link rel="stylesheet" href="./css/animate.css">
 	<link rel="stylesheet" href="./css/homepage_style.css">
 	<link rel="stylesheet" href="./css/buttons.css">
+	<link rel="stylesheet" href="./css/preloader.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<script src="https://use.typekit.net/koc3lky.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
-	
+
+
 	<div class="container-fluid">
 		<!-- SCENE for REGULAR & MEDIUM SCREENS -->
 		<div class="row hide-on-small-only">
@@ -80,7 +82,6 @@
 						<img class="logo logo-initial animated rotateIn infinite" src="./img/logo3.svg" alt="">
 						<img class="logo logo-later animated fadeIn" src="./img/logo4.svg" alt="">		
 					</li>
-
 
 					<!-- fridge -->
 					<li class="layer" data-depth="0.50">
@@ -235,7 +236,39 @@
 		</footer>
 	</div>
 
+	<div id="loader-wrapper">
+		<div id="loader">
+			<div id="animation-container">
+				<img id="loader-logo" class="animated rotateIn infinite" src="./img/preloader/color-logo.svg" alt="">
+				<img id="loader-csun" class="animated pulse" src="./img/preloader/logo-white.svg" alt="">
+			</div>
+			<div class="loader-section section-left"></div>
+			<div class="loader-section section-right"></div>
+		</div>
+	</div>	
+
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<script src="./js/jquery-2.1.1.js"></script>
 	<script src="./js/parallax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
@@ -249,6 +282,12 @@
 	<script>
 		// csun logo animation
 		$(document).ready(function(){
+			$('.container-fluid').hide();
+			setTimeout(function(){
+				$('body').addClass('loaded');
+				$('.container-fluid').show();
+			}, 3000);
+
 			setTimeout(function(){
 				$('.logo-initial').fadeOut(900);
 				setTimeout(function(){
