@@ -3,34 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Preloader Testing</title>
-	<link rel="stylesheet" href="./css/preloader.css">
-	<link rel="stylesheet" href="./css/animate.css">
+	<link rel="stylesheet" href="./css/testing.css">
+	<!-- <link rel="stylesheet" href="./css/animate.css"> -->
+
+	<!-- write your code here -->
+	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<script src="tanner.js"></script>
+	<script src="testing.js"></script>
+	<!-- write your code here -->
 </head>
 <body>
-
-	<div id="loader-wrapper" class="no-js">
-		<div id="loader">
-			<div id="animation-container">
-				<img id="loader-logo" class="animated rotateIn infinite" src="./img/preloader/color-logo.svg" alt="">
-				<img id="loader-csun" class="animated pulse" src="./img/preloader/logo-white.svg" alt="">
-			</div>
-			<div class="loader-section section-left"></div>
-			<div class="loader-section section-right"></div>
+	
+	
+	<div id="animation_container" style="width:550px; height:400px">
+		<canvas id="canvas" width="550" height="400"></canvas>
+		<div id="dom_overlay_container">
 		</div>
 	</div>
 
-	<div id="content" >
-		<h2>This is the page title</h2>
-		<p>Lorem ipsum dolor sit amet.</p>
-	</div>
 
 
 	<script src="./js/jquery-2.1.1.js"></script>
 	<script>
 		$(document).ready(function(){
-			setTimeout(function(){
-				$('body').addClass('loaded');
-			}, 3000);
+			init();
 		});
 	</script>
 </body>

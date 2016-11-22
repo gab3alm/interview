@@ -11,8 +11,11 @@
 	<link rel="stylesheet" href="./css/buttons.css">
 	<link rel="stylesheet" href="./css/preloader.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<script src="tanner.js"></script>
+	<script src="testing.js"></script>
 	<script src="https://use.typekit.net/koc3lky.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 </head>
 <body>
 
@@ -158,7 +161,12 @@
 
 						<!-- Orange Boy -->
 						<li class="layer" data-depth="0.3">
-							<img class="orange_boy" src="./img/home_assets/tanback.svg" alt="">
+							<!-- <img class="orange_boy" src="./img/home_assets/tanback.svg" alt=""> -->
+							<div id="animation_container" style="z-index:9999;width:550px; height:400px">
+								<canvas id="canvas" width="550" height="400"></canvas>
+								<div id="dom_overlay_container">
+								</div>
+							</div>
 						</li>
 
 						<!-- Lamp -->
@@ -288,10 +296,12 @@
 	<script>
 		// csun logo animation
 		$(document).ready(function(){
+
 			$('.container-fluid').hide();
 			setTimeout(function(){
 				$('body').addClass('loaded');
 				$('.container-fluid').show();
+				init();
 			}, 3000);
 
 			setTimeout(function(){

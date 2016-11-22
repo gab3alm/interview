@@ -1,70 +1,70 @@
 .orange_juice{
-	height:60%;
+	height:35%;
 	position:absolute;
-	top:35%;
-	right:0;
+	top:45%;
+	right:12%;
 }
 
 .coconut{
-	height:40%;
+	height:35%;
 	position:absolute;
-	top:45%;
-	right:12%;	
+	top:35%;
+	right:19%;	
 }
 
 .monster{
-	height:40%;
+	height:35%;
 	position:absolute;
-	top:35%;
-	right:23%;	
+	top:30%;
+	right:29%;	
 }
 
 .coke{
-	height:45%;
+	height:35%;
 	position:absolute;
 	top:25%;
-	right:34%;	
+	right:38%;	
 }
 
 .skype{
-	height:30%;
+	height:25%;
 	position:absolute;
-	top:35%;
-	right:46%;	
+	top:32%;
+	right:47%;	
 }
 
 .gatorade{
-	height:45%;
+	height:35%;
 	position:absolute;
 	top:25%;
-	left:30%;	
+	left:35%;	
 }
 
 .starbucks{
-	height:40%;
+	height:35%;
 	position:absolute;
-	top:35%;
-	left:23%;	
+	top:30%;
+	left:29%;	
 }
 
 .naked{
-	height:40%;
+	height:35%;
 	position:absolute;
-	top:45%;
-	left:12%;	
+	top:35%;
+	left:19%;	
 }
 
 .cola{
-	height:60%;
+	height:35%;
 	position:absolute;
-	top:35%;
-	left:0;
+	top:45%;
+	left:12%;
 }
 
 .sc2-orangeboy{
 	height:15%;
 	position:absolute;
-	top:60%;
+	top:50%;
 	right:46%;	
 }
 
@@ -72,33 +72,37 @@
 	font-family:pattaya;
 	text-transform:capitalize;
 	color:rgba(0,0,0,1) !important;
-	position:absolute !important;
-	top:70vh !important;
-	left:50% !important;
 	font-size:2.5em;
+	
+	width:100%;
+	text-align:center;
+
+	position:absolute !important;
+	top:62vh !important;
+	left:0% !important;
 }
 
 .sc2-description{
 	font-family:"abel";
 	font-size:1.2em;
-	/*text-transform:capitalize;*/
+	line-height:25px;
 	color:rgba(0,0,0,.85) !important;
 	text-align:center !important;
+	width:100%;	
+	padding:0px 30% 0px 30%;
+
 	position:absolute !important;
-	top:77vh !important;
-	left:50% !important;	
-	line-height:25px;
+	top:68vh !important;
+	left:0% !important;	
 }
 
 
 #sc2-btn{
 	position:absolute;
 	/*in relation to its paragraph container*/
-	top:120%;
-	left:39%;
+	top:110%;
+	left:46%;
 }
-
-
 
 .interview-types{
 	position:absolute;
@@ -145,28 +149,114 @@
 /*Styles for Med size screens*/
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	.orange_juice{
+		height:35%;
+		position:absolute;
+		top:45%;
+		right:12%;
+		display:none;
+	}
+
+	.coconut{
+		height:25%;
+		position:absolute;
+		top:35%;
+		right:5%;	
+	}
+
+	.monster{
+		height:25%;
+		position:absolute;
+		top:33%;
+		right:18%;	
+	}
+
+	.coke{
+		height:25%;
+		position:absolute;
+		top:31%;
+		right:32%;	
+	}
+
+	.skype{
+		height:20%;
+		position:absolute;
+		top:35%;
+		right:44%;	
+	}
+
+	.gatorade{
+		height:25%;
+		position:absolute;
+		top:30%;
+		left:28%;	
+	}
+
+	.starbucks{
+		height:25%;
+		position:absolute;
+		top:33%;
+		left:18%;	
+	}
+
+	.naked{
+		height:25%;
+		position:absolute;
+		top:35%;
+		left:5%;	
+	}
+
+	.cola{
+		height:35%;
+		position:absolute;
+		top:45%;
+		left:12%;
+		display:none;
+	}
+
+	.sc2-orangeboy{
+		height:15%;
+		position:absolute;
+		top:45%;
+		right:46%;	
+	}
+
 	.sc2-section-title{
-		top:10vh !important;
-		left:26% !important;
+		font-family:pattaya;
+		text-transform:capitalize;
+		color:rgba(0,0,0,1) !important;
+		font-size:2.5em;
+
+		width:100%;
+		text-align:center;
+
+		position:absolute !important;
+		top:60vh !important;
+		left:0% !important;
 	}
 
 	.sc2-description{
-		/*overwriting the style sheet*/
-		font-size:1.4em;
-		text-align:left !important;
-		top:16vh !important;
-		left:45% !important;	
-		/*border:2px solid white;*/
-	}
-
-	.interview-types{
-		top:20vh;
-		left:7%;
-	}
-
-	.types{
+		font-family:"abel";
 		font-size:1.2em;
+		line-height:25px;
+		color:rgba(0,0,0,.85) !important;
+		text-align:justify !important;
+		width:100%;	
+		padding:0px 15% 0px 15%;
+
+		position:absolute !important;
+		top:65vh !important;
+		left:0% !important;	
 	}
+
+
+	#sc2-btn{
+		position:absolute;
+		/*in relation to its paragraph container*/
+		top:110%;
+		left:42%;
+	}
+
 
 }
 
