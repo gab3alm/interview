@@ -139,9 +139,14 @@ body{
 	position:absolute;
 	top:3vh;
 	left:0;
+
+	text-shadow:2px 2px 2px rgba(0,0,0,.5);
 }
 
 .intro_text{
+	background-color:rgba(0,0,0,.5);
+	border-radius:10px;
+	padding:20px;
 	font-size:1.3rem;
 	color:white;
 	font-family:'lato';
@@ -159,6 +164,12 @@ body{
 .cust-btn{
 	border-radius:40px;
 	background-color:rgba(255,255,0,.75);
+}
+
+.btn{
+	/*background-color:gray !important;*/
+	color:gray !important;
+	/*text-shadow: 2px 2px 2px rgba(0,0,0,.5) !important;*/
 }
 
 .cust-btn > a{
