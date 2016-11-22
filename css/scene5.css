@@ -31,22 +31,29 @@
 	font-family:'pattaya';
 	font-size:2.5em;
 	color:rgba(0,0,0,1) !important;
-
-	position:absolute !important;
-	top:10% !important;
-	left:75% !important;
+	width:100%;
+	text-align:right;
+	padding:0px 25% 0px 0px;
 }
 
 .sc5-section-description{
-	text-align:center !important;
+	text-align:justify !important;
 	font-family:"abel";
 	font-size:1.2em;
 	/*text-transform:capitalize;*/
 	color:rgba(0,0,0,.85) !important;
 	line-height:25px;
-
+	width:25%;
+	margin-right:25%;
 
 	position:absolute !important;
-	top:17% !important;
-	left:75% !important;	
+	top:8% !important;
+	right:0% !important;	
+}
+
+
+/* Styles for Med size screens*/
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	
 }
