@@ -21,6 +21,8 @@ require('./tags/scene5.tag');
 require('./tags/scene6.tag');
 require('./tags/scene1-main.tag');
 require('./tags/scene2-main.tag');
+require('./tags/scene3-main.tag');
+require('./tags/scene4-main.tag');
 require('./tags/interview_types_tag/general-interview.tag');
 require('./tags/interview_types_tag/lunch-interview.tag');
 require('./tags/interview_types_tag/telephone-interview.tag');
@@ -35,7 +37,7 @@ require('./tags/interview_types_tag/skype-interview.tag');
 
 
 document.addEventListener('DOMContentLoaded', function(){
-	riot.mount('homepage');
+	riot.mount('scene4-main');
 
 	route.stop();
 	route.start(true);
@@ -51,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	route('/interview-types', function(){
 		riot.mount('#sub-viewport', 'scene2-main');
+	});
+
+	route('/interview-preparation', function(){
+		riot.mount('#sub-viewport', 'scene3-main');
 	});
 
 	route('/general-interview', function(){

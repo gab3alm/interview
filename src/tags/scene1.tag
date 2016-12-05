@@ -4,8 +4,8 @@
   <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
   <div class="container-fluid" id="scene1">
     <div id="snowflakeContainer" class="hide-on-small-only">
-      <!-- <p class="snowflake">.</p> -->
-      <p class="snowflake">&#10052;</p>
+      <p class="snowflake">.</p>
+      <!-- <p class="snowflake">&#10052;</p> -->
     </div>
 
     <!-- page title -->
