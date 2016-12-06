@@ -23,6 +23,7 @@ require('./tags/scene1-main.tag');
 require('./tags/scene2-main.tag');
 require('./tags/scene3-main.tag');
 require('./tags/scene4-main.tag');
+require('./tags/scene5-main.tag');
 require('./tags/interview_types_tag/general-interview.tag');
 require('./tags/interview_types_tag/lunch-interview.tag');
 require('./tags/interview_types_tag/telephone-interview.tag');
@@ -37,7 +38,7 @@ require('./tags/interview_types_tag/skype-interview.tag');
 
 
 document.addEventListener('DOMContentLoaded', function(){
-	riot.mount('scene4-main');
+	riot.mount('scene5-main');
 
 	route.stop();
 	route.start(true);

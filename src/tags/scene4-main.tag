@@ -94,7 +94,10 @@
 				</div>
 
 				<div class="row">
-					<div class="col s12">
+					<div class="col s12 m3 push-m9">
+
+					</div>
+					<div class="col s12 m9 pull-m3">
 						<p class="section-title">how to avoid common mistakes</p>
 						<ul class="tip-lists"><li class="tip-list-item" each={common_mistakes}>{title}</li></ul>
 					</div>
@@ -115,20 +118,25 @@
 			font-size:1.2em;
 			text-transform: capitalize;
 			text-align:left;
-			padding:5%;
+			margin:0 0 0 6%;
+			padding:0 10% 0 0;
 		}
 		
 		.tip-list-item{
 			list-style: circle outside none !important;
 			/*list-style: disc outside none;*/
 			display: list-item;
-			margin-left: 1em;
+			margin:1em 0 0 0;
+
 		}
 
 		.section-title{
 			font-family:'abel';
-			font-size:1.5em;
+			font-size:2.0em;
 			color:rgba(0,0,0,.75);
+			text-transform: capitalize;
+			text-align:left;
+			margin:5% 0 0 5%;
 		}
 
 		.hide{
