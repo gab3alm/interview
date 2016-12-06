@@ -10,7 +10,6 @@ var riot = require('riot');
 var route = require('riot-route');
 
 require('./tags/homepage.tag');
-require('./tags/homepage2.tag');
 require('./tags/footing.tag');
 require('./tags/navigation-bar.tag');
 require('./tags/successful-interviewing.tag');
@@ -40,11 +39,11 @@ require('./tags/interview_types_tag/skype-interview.tag');
 
 
 document.addEventListener('DOMContentLoaded', function(){
-	riot.mount('homepage-2');
+	riot.mount('homepage');
 
 	route.stop();
 	route.start(true);
-	route.base('interview/#');
+	route.base('#');
 
 	route('/scenes', function(){
 		riot.mount('#main-viewport', 'successful-interviewing');

@@ -89,7 +89,7 @@
 
 		route.stop();
 		route.start(true);
-		route.base('#');
+		route.base('interview/#');
 
 		route('/scenes', function () {
 			riot.mount('#main-viewport', 'successful-interviewing');
@@ -21188,7 +21188,7 @@
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* Riot v3.0.2, @license MIT */
+	/* Riot v3.0.1, @license MIT */
 	(function (global, factory) {
 	   true ? factory(exports) :
 	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -21212,7 +21212,6 @@
 	var RE_RESERVED_NAMES = /^(?:_(?:item|id|parent)|update|root|(?:un)?mount|mixin|is(?:Mounted|Loop)|tags|refs|parent|opts|trigger|o(?:n|ff|ne))$/;
 	var RE_SVG_TAGS = /^(altGlyph|animate(?:Color)?|circle|clipPath|defs|ellipse|fe(?:Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|DiffuseLighting|DisplacementMap|Flood|GaussianBlur|Image|Merge|Morphology|Offset|SpecularLighting|Tile|Turbulence)|filter|font|foreignObject|g(?:lyph)?(?:Ref)?|image|line(?:arGradient)?|ma(?:rker|sk)|missing-glyph|path|pattern|poly(?:gon|line)|radialGradient|rect|stop|svg|switch|symbol|text(?:Path)?|tref|tspan|use)$/;
 	var RE_HTML_ATTRS = /([-\w]+) ?= ?(?:"([^"]*)|'([^']*)|({[^}]*}))/g;
-	var CASE_SENSITIVE_ATTRIBUTES = { 'viewbox': 'viewBox' };
 	var RE_BOOL_ATTRS = /^(?:disabled|checked|readonly|required|allowfullscreen|auto(?:focus|play)|compact|controls|default|formnovalidate|hidden|ismap|itemscope|loop|multiple|muted|no(?:resize|shade|validate|wrap)?|open|reversed|seamless|selected|sortable|truespeed|typemustmatch)$/;
 	var IE_VERSION = (WIN && WIN.document || {}).documentMode | 0;
 
@@ -21552,7 +21551,7 @@
 
 	/**
 	 * The riot template engine
-	 * @version v3.0.1
+	 * @version v3.0.0
 	 */
 	/**
 	 * riot.util.brackets
@@ -21796,12 +21795,13 @@
 	    };
 
 	    if (_tmpl.errorHandler) { _tmpl.errorHandler(err); }
-	    else if (
+
+	    if (
 	      typeof console !== 'undefined' &&
 	      typeof console.error === 'function'
 	    ) {
 	      if (err.riotData.tagName) {
-	        console.error('Riot template error thrown in the <%s> tag', err.riotData.tagName.toLowerCase());
+	        console.error('Riot template error thrown in the <%s> tag', err.riotData.tagName);
 	      }
 	      console.error(err);
 	    }
@@ -21972,7 +21972,7 @@
 	    return expr
 	  }
 
-	  _tmpl.version = brackets.version = 'v3.0.1';
+	  _tmpl.version = brackets.version = 'v3.0.0';
 
 	  return _tmpl
 
@@ -22354,8 +22354,8 @@
 	    return
 	  }
 
-	  if (expr.isRtag && value) { return updateDataIs(expr, this) }
 	  if (old === value) { return }
+	  if (expr.isRtag && value) { return updateDataIs(expr, this) }
 	  // no change, so nothing more to do
 	  if (isValueAttr && dom.value === value) { return }
 
@@ -22396,11 +22396,8 @@
 	    dom.value = value;
 	  // <img src="{ expr }">
 	  } else if (startsWith(attrName, RIOT_PREFIX) && attrName !== RIOT_TAG_IS) {
-	    attrName = attrName.slice(RIOT_PREFIX.length);
-	    if (CASE_SENSITIVE_ATTRIBUTES[attrName])
-	      { attrName = CASE_SENSITIVE_ATTRIBUTES[attrName]; }
 	    if (value != null)
-	      { setAttr(dom, attrName, value); }
+	      { setAttr(dom, attrName.slice(RIOT_PREFIX.length), value); }
 	  } else {
 	    // <select> <option selected={true}> </select>
 	    if (attrName === 'selected' && parent && /^(SELECT|OPTGROUP)$/.test(parent.tagName) && value != null) {
@@ -23428,13 +23425,6 @@
 
 	    this.trigger('before-unmount');
 
-	    // clear all attributes coming from the mounted tag
-	    walkAttrs(impl.attrs, function (name) {
-	      if (startsWith(name, RIOT_PREFIX))
-	        { name = name.slice(RIOT_PREFIX.length); }
-	      remAttr(root, name);
-	    });
-
 	    // remove this tag instance from the global virtualDom variable
 	    if (~tagIndex)
 	      { __TAGS_CACHE.splice(tagIndex, 1); }
@@ -23857,32 +23847,32 @@
 	 * @module riot-route
 	 */
 
-	var RE_ORIGIN = /^.+?\/\/+[^\/]+/;
-	var EVENT_LISTENER = 'EventListener';
-	var REMOVE_EVENT_LISTENER = 'remove' + EVENT_LISTENER;
-	var ADD_EVENT_LISTENER = 'add' + EVENT_LISTENER;
-	var HAS_ATTRIBUTE = 'hasAttribute';
-	var POPSTATE = 'popstate';
-	var HASHCHANGE = 'hashchange';
-	var TRIGGER = 'trigger';
-	var MAX_EMIT_STACK_LEVEL = 3;
-	var win = typeof window != 'undefined' && window;
-	var doc = typeof document != 'undefined' && document;
-	var hist = win && history;
-	var loc = win && (hist.location || win.location);
-	var prot = Router.prototype;
-	var clickEvent = doc && doc.ontouchstart ? 'touchstart' : 'click';
-	var central = observable();
+	const RE_ORIGIN = /^.+?\/\/+[^\/]+/;
+	const EVENT_LISTENER = 'EventListener';
+	const REMOVE_EVENT_LISTENER = 'remove' + EVENT_LISTENER;
+	const ADD_EVENT_LISTENER = 'add' + EVENT_LISTENER;
+	const HAS_ATTRIBUTE = 'hasAttribute';
+	const POPSTATE = 'popstate';
+	const HASHCHANGE = 'hashchange';
+	const TRIGGER = 'trigger';
+	const MAX_EMIT_STACK_LEVEL = 3;
+	const win = typeof window != 'undefined' && window;
+	const doc = typeof document != 'undefined' && document;
+	const hist = win && history;
+	const loc = win && (hist.location || win.location);
+	const prot = Router.prototype;
+	const clickEvent = doc && doc.ontouchstart ? 'touchstart' : 'click';
+	const central = observable();
 
-	var started = false;
-	var routeFound = false;
-	var debouncedEmit;
-	var base;
-	var current;
-	var parser;
-	var secondParser;
-	var emitStack = [];
-	var emitStackLevel = 0;
+	let started = false;
+	let routeFound = false;
+	let debouncedEmit;
+	let base;
+	let current;
+	let parser;
+	let secondParser;
+	let emitStack = [];
+	let emitStackLevel = 0;
 
 	/**
 	 * Default parser. You can replace it via router.parser method.
@@ -23900,14 +23890,14 @@
 	 * @returns {array} array
 	 */
 	function DEFAULT_SECOND_PARSER(path, filter) {
-	  var f = filter
+	  const f = filter
 	    .replace(/\?/g, '\\?')
 	    .replace(/\*/g, '([^/?#]+?)')
 	    .replace(/\.\./, '.*');
-	  var re = new RegExp(("^" + f + "$"));
-	  var args = path.match(re);
+	  const re = new RegExp(`^${f}$`);
+	  const args = path.match(re);
 
-	  if (args) { return args.slice(1) }
+	  if (args) return args.slice(1)
 	}
 
 	/**
@@ -23917,7 +23907,7 @@
 	 * @returns {function} debounced function
 	 */
 	function debounce(fn, delay) {
-	  var t;
+	  let t;
 	  return function () {
 	    clearTimeout(t);
 	    t = setTimeout(fn, delay);
@@ -23933,7 +23923,7 @@
 	  win[ADD_EVENT_LISTENER](POPSTATE, debouncedEmit);
 	  win[ADD_EVENT_LISTENER](HASHCHANGE, debouncedEmit);
 	  doc[ADD_EVENT_LISTENER](clickEvent, click);
-	  if (autoExec) { emit(true); }
+	  if (autoExec) emit(true);
 	}
 
 	/**
@@ -23976,20 +23966,20 @@
 
 	function emit(force) {
 	  // the stack is needed for redirections
-	  var isRoot = emitStackLevel === 0;
-	  if (MAX_EMIT_STACK_LEVEL <= emitStackLevel) { return }
+	  const isRoot = emitStackLevel === 0;
+	  if (MAX_EMIT_STACK_LEVEL <= emitStackLevel) return
 
 	  emitStackLevel++;
 	  emitStack.push(function() {
-	    var path = getPathFromBase();
+	    const path = getPathFromBase();
 	    if (force || path !== current) {
 	      central[TRIGGER]('emit', path);
 	      current = path;
 	    }
 	  });
 	  if (isRoot) {
-	    var first;
-	    while (first = emitStack.shift()) { first(); } // stack increses within this call
+	    let first;
+	    while (first = emitStack.shift()) first(); // stack increses within this call
 	    emitStackLevel = 0;
 	  }
 	}
@@ -23999,10 +23989,10 @@
 	    e.which !== 1 // not left click
 	    || e.metaKey || e.ctrlKey || e.shiftKey // or meta keys
 	    || e.defaultPrevented // or default prevented
-	  ) { return }
+	  ) return
 
-	  var el = e.target;
-	  while (el && el.nodeName !== 'A') { el = el.parentNode; }
+	  let el = e.target;
+	  while (el && el.nodeName !== 'A') el = el.parentNode;
 
 	  if (
 	    !el || el.nodeName !== 'A' // not A tag
@@ -24010,7 +24000,7 @@
 	    || !el[HAS_ATTRIBUTE]('href') // has no href attr
 	    || el.target && el.target !== '_self' // another window or frame
 	    || el.href.indexOf(loc.href.match(RE_ORIGIN)[0]) === -1 // cross origin
-	  ) { return }
+	  ) return
 
 	  if (el.href !== loc.href
 	    && (
@@ -24018,7 +24008,7 @@
 	      || base[0] !== '#' && getPathFromRoot(el.href).indexOf(base) !== 0 // outside of base
 	      || base[0] === '#' && el.href.split(base)[0] !== loc.href.split(base)[0] // outside of #base
 	      || !go(getPathFromBase(el.href), el.title || doc.title) // route not found
-	    )) { return }
+	    )) return
 
 	  e.preventDefault();
 	}
@@ -24032,7 +24022,7 @@
 	 */
 	function go(path, title, shouldReplace) {
 	  // Server-side usage: directly execute handlers for the path
-	  if (!hist) { return central[TRIGGER]('emit', getPathFromBase(path)) }
+	  if (!hist) return central[TRIGGER]('emit', getPathFromBase(path))
 
 	  path = base + normalize(path);
 	  title = title || doc.title;
@@ -24059,9 +24049,9 @@
 	 * @param {boolean} third - replace flag
 	 */
 	prot.m = function(first, second, third) {
-	  if (isString(first) && (!second || isString(second))) { go(first, second, third || false); }
-	  else if (second) { this.r(first, second); }
-	  else { this.r('@', first); }
+	  if (isString(first) && (!second || isString(second))) go(first, second, third || false);
+	  else if (second) this.r(first, second);
+	  else this.r('@', first);
 	};
 
 	/**
@@ -24078,7 +24068,7 @@
 	 */
 	prot.e = function(path) {
 	  this.$.concat('@').some(function(filter) {
-	    var args = (filter === '@' ? parser : secondParser)(normalize(path), normalize(filter));
+	    const args = (filter === '@' ? parser : secondParser)(normalize(path), normalize(filter));
 	    if (typeof args != 'undefined') {
 	      this[TRIGGER].apply(null, [filter].concat(args));
 	      return routeFound = true // exit from loop
@@ -24099,17 +24089,17 @@
 	  this.on(filter, action);
 	};
 
-	var mainRouter = new Router();
-	var route = mainRouter.m.bind(mainRouter);
+	const mainRouter = new Router();
+	const route = mainRouter.m.bind(mainRouter);
 
 	/**
 	 * Create a sub router
 	 * @returns {function} the method of a new Router object
 	 */
 	route.create = function() {
-	  var newSubRouter = new Router();
+	  const newSubRouter = new Router();
 	  // assign sub-router's main method
-	  var router = newSubRouter.m.bind(newSubRouter);
+	  const router = newSubRouter.m.bind(newSubRouter);
 	  // stop only this sub-router
 	  router.stop = newSubRouter.s.bind(newSubRouter);
 	  return router
@@ -24140,8 +24130,8 @@
 	    parser = DEFAULT_PARSER;
 	    secondParser = DEFAULT_SECOND_PARSER;
 	  }
-	  if (fn) { parser = fn; }
-	  if (fn2) { secondParser = fn2; }
+	  if (fn) parser = fn;
+	  if (fn2) secondParser = fn2;
 	};
 
 	/**
@@ -24149,8 +24139,8 @@
 	 * @returns {object} parsed query
 	 */
 	route.query = function() {
-	  var q = {};
-	  var href = loc.href || current;
+	  const q = {};
+	  const href = loc.href || current;
 	  href.replace(/[?&](.+?)=([^&]*)/g, function(_, k, v) { q[k] = v; });
 	  return q
 	};
@@ -24175,12 +24165,12 @@
 	route.start = function (autoExec) {
 	  if (!started) {
 	    if (win) {
-	      if (document.readyState === 'complete') { start(autoExec); }
+	      if (document.readyState === 'complete') start(autoExec);
 	      // the timeout is needed to solve
 	      // a weird safari bug https://github.com/riot/route/issues/33
-	      else { win[ADD_EVENT_LISTENER]('load', function() {
+	      else win[ADD_EVENT_LISTENER]('load', function() {
 	        setTimeout(function() { start(autoExec); }, 1);
-	      }); }
+	      });
 	    }
 	    started = true;
 	  }
