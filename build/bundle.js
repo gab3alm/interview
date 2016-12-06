@@ -79,6 +79,10 @@
 	__webpack_require__(61);
 	__webpack_require__(62);
 	__webpack_require__(63);
+	__webpack_require__(64);
+	__webpack_require__(65);
+	__webpack_require__(66);
+	__webpack_require__(67);
 
 	document.addEventListener('DOMContentLoaded', function () {
 		riot.mount('homepage');
@@ -91,6 +95,7 @@
 			riot.mount('#main-viewport', 'successful-interviewing');
 		});
 
+		// SCENE SUBSCENES
 		route('/start-job-search', function () {
 			riot.mount('#sub-viewport', 'scene1-main');
 		});
@@ -99,43 +104,60 @@
 			riot.mount('#sub-viewport', 'scene2-main');
 		});
 
-		route('/general-interview', function () {
+		route('/interview-preparation', function () {
+			riot.mount('#sub-viewport', 'scene3-main');
+		});
+
+		route('/acing-the-interview', function () {
+			riot.mount('#sub-viewport', 'scene4-main');
+		});
+
+		route('/following-up-the-interview', function () {
+			riot.mount('#sub-viewport', 'scene5-main');
+		});
+
+		route('/accepting-the-job', function () {
+			riot.mount('#sub-viewport', 'scene6-main');
+		});
+
+		// ROUTES FOR INTERVIEW TYPES
+		route('/interview-types/general-interview', function () {
 			riot.mount('#interview-viewport', 'general-interview');
 		});
 
-		route('/lunch-interview', function () {
+		route('/interview-types/lunch-interview', function () {
 			riot.mount('#interview-viewport', 'lunch-interview');
 		});
 
-		route('/telephone-interview', function () {
+		route('/interview-types/telephone-interview', function () {
 			riot.mount('#interview-viewport', 'telephone-interview');
 		});
 
-		route('/competency-interview', function () {
+		route('/interview-types/competency-interview', function () {
 			riot.mount('#interview-viewport', 'competency-interview');
 		});
 
-		route('/multiple-interview', function () {
+		route('/interview-types/multiple-interview', function () {
 			riot.mount('#interview-viewport', 'multiple-interview');
 		});
 
-		route('/panel-interview', function () {
+		route('/interview-types/panel-interview', function () {
 			riot.mount('#interview-viewport', 'panel-interview');
 		});
 
-		route('/group-interview', function () {
+		route('/interview-types/group-interview', function () {
 			riot.mount('#interview-viewport', 'group-interview');
 		});
 
-		route('/roleplay-interview', function () {
+		route('/interview-types/roleplay-interview', function () {
 			riot.mount('#interview-viewport', 'roleplay-interview');
 		});
 
-		route('/presentation-interview', function () {
+		route('/interview-types/presentation-interview', function () {
 			riot.mount('#interview-viewport', 'presentation-interview');
 		});
 
-		route('/skype-interview', function () {
+		route('/interview-types/skype-interview', function () {
 			riot.mount('#interview-viewport', 'skype-interview');
 		});
 	});
@@ -21166,7 +21188,7 @@
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* Riot v3.0.1, @license MIT */
+	/* Riot v3.0.2, @license MIT */
 	(function (global, factory) {
 	   true ? factory(exports) :
 	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -21190,6 +21212,7 @@
 	var RE_RESERVED_NAMES = /^(?:_(?:item|id|parent)|update|root|(?:un)?mount|mixin|is(?:Mounted|Loop)|tags|refs|parent|opts|trigger|o(?:n|ff|ne))$/;
 	var RE_SVG_TAGS = /^(altGlyph|animate(?:Color)?|circle|clipPath|defs|ellipse|fe(?:Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|DiffuseLighting|DisplacementMap|Flood|GaussianBlur|Image|Merge|Morphology|Offset|SpecularLighting|Tile|Turbulence)|filter|font|foreignObject|g(?:lyph)?(?:Ref)?|image|line(?:arGradient)?|ma(?:rker|sk)|missing-glyph|path|pattern|poly(?:gon|line)|radialGradient|rect|stop|svg|switch|symbol|text(?:Path)?|tref|tspan|use)$/;
 	var RE_HTML_ATTRS = /([-\w]+) ?= ?(?:"([^"]*)|'([^']*)|({[^}]*}))/g;
+	var CASE_SENSITIVE_ATTRIBUTES = { 'viewbox': 'viewBox' };
 	var RE_BOOL_ATTRS = /^(?:disabled|checked|readonly|required|allowfullscreen|auto(?:focus|play)|compact|controls|default|formnovalidate|hidden|ismap|itemscope|loop|multiple|muted|no(?:resize|shade|validate|wrap)?|open|reversed|seamless|selected|sortable|truespeed|typemustmatch)$/;
 	var IE_VERSION = (WIN && WIN.document || {}).documentMode | 0;
 
@@ -21529,7 +21552,7 @@
 
 	/**
 	 * The riot template engine
-	 * @version v3.0.0
+	 * @version v3.0.1
 	 */
 	/**
 	 * riot.util.brackets
@@ -21773,13 +21796,12 @@
 	    };
 
 	    if (_tmpl.errorHandler) { _tmpl.errorHandler(err); }
-
-	    if (
+	    else if (
 	      typeof console !== 'undefined' &&
 	      typeof console.error === 'function'
 	    ) {
 	      if (err.riotData.tagName) {
-	        console.error('Riot template error thrown in the <%s> tag', err.riotData.tagName);
+	        console.error('Riot template error thrown in the <%s> tag', err.riotData.tagName.toLowerCase());
 	      }
 	      console.error(err);
 	    }
@@ -21950,7 +21972,7 @@
 	    return expr
 	  }
 
-	  _tmpl.version = brackets.version = 'v3.0.0';
+	  _tmpl.version = brackets.version = 'v3.0.1';
 
 	  return _tmpl
 
@@ -22332,8 +22354,8 @@
 	    return
 	  }
 
-	  if (old === value) { return }
 	  if (expr.isRtag && value) { return updateDataIs(expr, this) }
+	  if (old === value) { return }
 	  // no change, so nothing more to do
 	  if (isValueAttr && dom.value === value) { return }
 
@@ -22374,8 +22396,11 @@
 	    dom.value = value;
 	  // <img src="{ expr }">
 	  } else if (startsWith(attrName, RIOT_PREFIX) && attrName !== RIOT_TAG_IS) {
+	    attrName = attrName.slice(RIOT_PREFIX.length);
+	    if (CASE_SENSITIVE_ATTRIBUTES[attrName])
+	      { attrName = CASE_SENSITIVE_ATTRIBUTES[attrName]; }
 	    if (value != null)
-	      { setAttr(dom, attrName.slice(RIOT_PREFIX.length), value); }
+	      { setAttr(dom, attrName, value); }
 	  } else {
 	    // <select> <option selected={true}> </select>
 	    if (attrName === 'selected' && parent && /^(SELECT|OPTGROUP)$/.test(parent.tagName) && value != null) {
@@ -23403,6 +23428,13 @@
 
 	    this.trigger('before-unmount');
 
+	    // clear all attributes coming from the mounted tag
+	    walkAttrs(impl.attrs, function (name) {
+	      if (startsWith(name, RIOT_PREFIX))
+	        { name = name.slice(RIOT_PREFIX.length); }
+	      remAttr(root, name);
+	    });
+
 	    // remove this tag instance from the global virtualDom variable
 	    if (~tagIndex)
 	      { __TAGS_CACHE.splice(tagIndex, 1); }
@@ -23825,32 +23857,32 @@
 	 * @module riot-route
 	 */
 
-	const RE_ORIGIN = /^.+?\/\/+[^\/]+/;
-	const EVENT_LISTENER = 'EventListener';
-	const REMOVE_EVENT_LISTENER = 'remove' + EVENT_LISTENER;
-	const ADD_EVENT_LISTENER = 'add' + EVENT_LISTENER;
-	const HAS_ATTRIBUTE = 'hasAttribute';
-	const POPSTATE = 'popstate';
-	const HASHCHANGE = 'hashchange';
-	const TRIGGER = 'trigger';
-	const MAX_EMIT_STACK_LEVEL = 3;
-	const win = typeof window != 'undefined' && window;
-	const doc = typeof document != 'undefined' && document;
-	const hist = win && history;
-	const loc = win && (hist.location || win.location);
-	const prot = Router.prototype;
-	const clickEvent = doc && doc.ontouchstart ? 'touchstart' : 'click';
-	const central = observable();
+	var RE_ORIGIN = /^.+?\/\/+[^\/]+/;
+	var EVENT_LISTENER = 'EventListener';
+	var REMOVE_EVENT_LISTENER = 'remove' + EVENT_LISTENER;
+	var ADD_EVENT_LISTENER = 'add' + EVENT_LISTENER;
+	var HAS_ATTRIBUTE = 'hasAttribute';
+	var POPSTATE = 'popstate';
+	var HASHCHANGE = 'hashchange';
+	var TRIGGER = 'trigger';
+	var MAX_EMIT_STACK_LEVEL = 3;
+	var win = typeof window != 'undefined' && window;
+	var doc = typeof document != 'undefined' && document;
+	var hist = win && history;
+	var loc = win && (hist.location || win.location);
+	var prot = Router.prototype;
+	var clickEvent = doc && doc.ontouchstart ? 'touchstart' : 'click';
+	var central = observable();
 
-	let started = false;
-	let routeFound = false;
-	let debouncedEmit;
-	let base;
-	let current;
-	let parser;
-	let secondParser;
-	let emitStack = [];
-	let emitStackLevel = 0;
+	var started = false;
+	var routeFound = false;
+	var debouncedEmit;
+	var base;
+	var current;
+	var parser;
+	var secondParser;
+	var emitStack = [];
+	var emitStackLevel = 0;
 
 	/**
 	 * Default parser. You can replace it via router.parser method.
@@ -23868,14 +23900,14 @@
 	 * @returns {array} array
 	 */
 	function DEFAULT_SECOND_PARSER(path, filter) {
-	  const f = filter
+	  var f = filter
 	    .replace(/\?/g, '\\?')
 	    .replace(/\*/g, '([^/?#]+?)')
 	    .replace(/\.\./, '.*');
-	  const re = new RegExp(`^${f}$`);
-	  const args = path.match(re);
+	  var re = new RegExp(("^" + f + "$"));
+	  var args = path.match(re);
 
-	  if (args) return args.slice(1)
+	  if (args) { return args.slice(1) }
 	}
 
 	/**
@@ -23885,7 +23917,7 @@
 	 * @returns {function} debounced function
 	 */
 	function debounce(fn, delay) {
-	  let t;
+	  var t;
 	  return function () {
 	    clearTimeout(t);
 	    t = setTimeout(fn, delay);
@@ -23901,7 +23933,7 @@
 	  win[ADD_EVENT_LISTENER](POPSTATE, debouncedEmit);
 	  win[ADD_EVENT_LISTENER](HASHCHANGE, debouncedEmit);
 	  doc[ADD_EVENT_LISTENER](clickEvent, click);
-	  if (autoExec) emit(true);
+	  if (autoExec) { emit(true); }
 	}
 
 	/**
@@ -23944,20 +23976,20 @@
 
 	function emit(force) {
 	  // the stack is needed for redirections
-	  const isRoot = emitStackLevel === 0;
-	  if (MAX_EMIT_STACK_LEVEL <= emitStackLevel) return
+	  var isRoot = emitStackLevel === 0;
+	  if (MAX_EMIT_STACK_LEVEL <= emitStackLevel) { return }
 
 	  emitStackLevel++;
 	  emitStack.push(function() {
-	    const path = getPathFromBase();
+	    var path = getPathFromBase();
 	    if (force || path !== current) {
 	      central[TRIGGER]('emit', path);
 	      current = path;
 	    }
 	  });
 	  if (isRoot) {
-	    let first;
-	    while (first = emitStack.shift()) first(); // stack increses within this call
+	    var first;
+	    while (first = emitStack.shift()) { first(); } // stack increses within this call
 	    emitStackLevel = 0;
 	  }
 	}
@@ -23967,10 +23999,10 @@
 	    e.which !== 1 // not left click
 	    || e.metaKey || e.ctrlKey || e.shiftKey // or meta keys
 	    || e.defaultPrevented // or default prevented
-	  ) return
+	  ) { return }
 
-	  let el = e.target;
-	  while (el && el.nodeName !== 'A') el = el.parentNode;
+	  var el = e.target;
+	  while (el && el.nodeName !== 'A') { el = el.parentNode; }
 
 	  if (
 	    !el || el.nodeName !== 'A' // not A tag
@@ -23978,7 +24010,7 @@
 	    || !el[HAS_ATTRIBUTE]('href') // has no href attr
 	    || el.target && el.target !== '_self' // another window or frame
 	    || el.href.indexOf(loc.href.match(RE_ORIGIN)[0]) === -1 // cross origin
-	  ) return
+	  ) { return }
 
 	  if (el.href !== loc.href
 	    && (
@@ -23986,7 +24018,7 @@
 	      || base[0] !== '#' && getPathFromRoot(el.href).indexOf(base) !== 0 // outside of base
 	      || base[0] === '#' && el.href.split(base)[0] !== loc.href.split(base)[0] // outside of #base
 	      || !go(getPathFromBase(el.href), el.title || doc.title) // route not found
-	    )) return
+	    )) { return }
 
 	  e.preventDefault();
 	}
@@ -24000,7 +24032,7 @@
 	 */
 	function go(path, title, shouldReplace) {
 	  // Server-side usage: directly execute handlers for the path
-	  if (!hist) return central[TRIGGER]('emit', getPathFromBase(path))
+	  if (!hist) { return central[TRIGGER]('emit', getPathFromBase(path)) }
 
 	  path = base + normalize(path);
 	  title = title || doc.title;
@@ -24027,9 +24059,9 @@
 	 * @param {boolean} third - replace flag
 	 */
 	prot.m = function(first, second, third) {
-	  if (isString(first) && (!second || isString(second))) go(first, second, third || false);
-	  else if (second) this.r(first, second);
-	  else this.r('@', first);
+	  if (isString(first) && (!second || isString(second))) { go(first, second, third || false); }
+	  else if (second) { this.r(first, second); }
+	  else { this.r('@', first); }
 	};
 
 	/**
@@ -24046,7 +24078,7 @@
 	 */
 	prot.e = function(path) {
 	  this.$.concat('@').some(function(filter) {
-	    const args = (filter === '@' ? parser : secondParser)(normalize(path), normalize(filter));
+	    var args = (filter === '@' ? parser : secondParser)(normalize(path), normalize(filter));
 	    if (typeof args != 'undefined') {
 	      this[TRIGGER].apply(null, [filter].concat(args));
 	      return routeFound = true // exit from loop
@@ -24067,17 +24099,17 @@
 	  this.on(filter, action);
 	};
 
-	const mainRouter = new Router();
-	const route = mainRouter.m.bind(mainRouter);
+	var mainRouter = new Router();
+	var route = mainRouter.m.bind(mainRouter);
 
 	/**
 	 * Create a sub router
 	 * @returns {function} the method of a new Router object
 	 */
 	route.create = function() {
-	  const newSubRouter = new Router();
+	  var newSubRouter = new Router();
 	  // assign sub-router's main method
-	  const router = newSubRouter.m.bind(newSubRouter);
+	  var router = newSubRouter.m.bind(newSubRouter);
 	  // stop only this sub-router
 	  router.stop = newSubRouter.s.bind(newSubRouter);
 	  return router
@@ -24108,8 +24140,8 @@
 	    parser = DEFAULT_PARSER;
 	    secondParser = DEFAULT_SECOND_PARSER;
 	  }
-	  if (fn) parser = fn;
-	  if (fn2) secondParser = fn2;
+	  if (fn) { parser = fn; }
+	  if (fn2) { secondParser = fn2; }
 	};
 
 	/**
@@ -24117,8 +24149,8 @@
 	 * @returns {object} parsed query
 	 */
 	route.query = function() {
-	  const q = {};
-	  const href = loc.href || current;
+	  var q = {};
+	  var href = loc.href || current;
 	  href.replace(/[?&](.+?)=([^&]*)/g, function(_, k, v) { q[k] = v; });
 	  return q
 	};
@@ -24143,12 +24175,12 @@
 	route.start = function (autoExec) {
 	  if (!started) {
 	    if (win) {
-	      if (document.readyState === 'complete') start(autoExec);
+	      if (document.readyState === 'complete') { start(autoExec); }
 	      // the timeout is needed to solve
 	      // a weird safari bug https://github.com/riot/route/issues/33
-	      else win[ADD_EVENT_LISTENER]('load', function() {
+	      else { win[ADD_EVENT_LISTENER]('load', function() {
 	        setTimeout(function() { start(autoExec); }, 1);
-	      });
+	      }); }
 	    }
 	    started = true;
 	  }
@@ -25058,7 +25090,7 @@
 
 	var riot = __webpack_require__(39);
 
-	riot.tag2('scene3', '<div class="container-fluid" id="scene3"> <div class="row"> <div class="col s12"> <section id="graphics-container"> <img class="cheesebed" src="src/images/scene3/cheesebed.svg" alt="cheese bed"> <img class="milk" src="src/images/scene3/milk.svg" alt="milk carton"> <img class="glass" src="src/images/scene3/glass.svg" alt="glass image"> </section> </div> </div> <div class="row"> <div class="col s12"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="#!" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> <i id="sc3-next-btn" class="material-icons next-scene-btn tooltipped" data-position="top" data-delay="25" data-tooltip="Scroll Down">arrow_drop_down_circle</i> </div> </div> </div> </div>', 'scene3 #scene3,[data-is="scene3"] #scene3{ position:relative; height:calc(101vh - 45px); background-image:url(\'src/images/scene3/background.svg\'); background-size:cover; background-position:center; overflow:hidden; z-index:1000; } scene3 #scene-info-container,[data-is="scene3"] #scene-info-container{ padding:0px 10% 0px 10%; } scene3 .sc-title,[data-is="scene3"] .sc-title{ color:rgba(0,0,0,.85); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene3 .sc-description,[data-is="scene3"] .sc-description{ color:rgba(0,0,0,.65); font-family:\'abel\'; font-size:1.3em; margin:0px 0px 10px 0px; } scene3 .next-scene-btn-container,[data-is="scene3"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:5%; left:0px; animation-duration: 2s; } scene3 .next-scene-btn,[data-is="scene3"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene3 .next-scene-btn:hover,[data-is="scene3"] .next-scene-btn:hover{ -webkit-backface-visibility: hidden; transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } scene3 #graphics-container,[data-is="scene3"] #graphics-container{ position:relative; height:60vh; width:100%; } scene3 .glass,[data-is="scene3"] .glass{ height:80%; position:absolute; bottom:0; left:1%; } scene3 .cheesebed,[data-is="scene3"] .cheesebed{ height:35%; position:absolute; bottom:10%; left:28%; } scene3 .milk,[data-is="scene3"] .milk{ height:85%; position:absolute; bottom:0; right:1%; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene3 .milk,[data-is="scene3"] .milk{ display:none; } } @media only screen and (max-width: 40em) { scene3 .milk,[data-is="scene3"] .milk{ display:none; } }', '', function(opts) {
+	riot.tag2('scene3', '<div class="container-fluid" id="scene3"> <div class="row"> <div class="col s12"> <section id="graphics-container"> <img class="cheesebed" src="src/images/scene3/cheesebed.svg" alt="cheese bed"> <img class="milk" src="src/images/scene3/milk.svg" alt="milk carton"> <img class="glass" src="src/images/scene3/glass.svg" alt="glass image"> </section> </div> </div> <div class="row"> <div class="col s12"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="/#interview-preparation" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> <i id="sc3-next-btn" class="material-icons next-scene-btn tooltipped" data-position="top" data-delay="25" data-tooltip="Scroll Down">arrow_drop_down_circle</i> </div> </div> </div> </div>', 'scene3 #scene3,[data-is="scene3"] #scene3{ position:relative; height:calc(101vh - 45px); background-image:url(\'src/images/scene3/background.svg\'); background-size:cover; background-position:center; overflow:hidden; z-index:1000; } scene3 #scene-info-container,[data-is="scene3"] #scene-info-container{ padding:0px 10% 0px 10%; } scene3 .sc-title,[data-is="scene3"] .sc-title{ color:rgba(0,0,0,.85); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene3 .sc-description,[data-is="scene3"] .sc-description{ color:rgba(0,0,0,.65); font-family:\'abel\'; font-size:1.3em; margin:0px 0px 10px 0px; } scene3 .next-scene-btn-container,[data-is="scene3"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:5%; left:0px; animation-duration: 2s; } scene3 .next-scene-btn,[data-is="scene3"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene3 .next-scene-btn:hover,[data-is="scene3"] .next-scene-btn:hover{ -webkit-backface-visibility: hidden; transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } scene3 #graphics-container,[data-is="scene3"] #graphics-container{ position:relative; height:60vh; width:100%; } scene3 .glass,[data-is="scene3"] .glass{ height:80%; position:absolute; bottom:0; left:1%; } scene3 .cheesebed,[data-is="scene3"] .cheesebed{ height:35%; position:absolute; bottom:10%; left:28%; } scene3 .milk,[data-is="scene3"] .milk{ height:85%; position:absolute; bottom:0; right:1%; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene3 .milk,[data-is="scene3"] .milk{ display:none; } } @media only screen and (max-width: 40em) { scene3 .milk,[data-is="scene3"] .milk{ display:none; } }', '', function(opts) {
 
 	    this.on('mount', function() {
 	      var $node = $(this.root);
@@ -25083,7 +25115,7 @@
 
 	var riot = __webpack_require__(39);
 
-	riot.tag2('scene4', '<div class="container-fluid" id="scene4"> <div class="row center-align"> <div class="col s12"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="#!" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row"> <div class="col s12"> <section id="graphics-container"> <img src="src/images/scene4/jelly.svg" alt="" class="jelly"> <img src="src/images/scene4/cream.svg" alt="" class="cream"> <img src="src/images/scene4/mustard.svg" alt="" class="mustard"> <img src="src/images/scene4/ketchup.svg" alt="" class="ketchup"> <img src="src/images/scene4/desk.svg" alt="" class="desk"> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> <i id="sc4-next-btn" class="material-icons next-scene-btn tooltipped" data-position="top" data-delay="25" data-tooltip="Scroll Down">arrow_drop_down_circle</i> </div> </div> </div> </div>', 'scene4 #scene4,[data-is="scene4"] #scene4{ position:relative; height:calc(101vh - 45px); background-image:url(\'src/images/scene4/background.svg\'); background-size:cover; background-position:center; overflow:hidden; z-index:1000; } scene4 #scene-info-container,[data-is="scene4"] #scene-info-container{ padding:0px 10% 0px 10%; margin:5% 0px 0px 0px; } scene4 .sc-title,[data-is="scene4"] .sc-title{ color:rgba(0,0,0,.85); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene4 .sc-description,[data-is="scene4"] .sc-description{ padding:0px 10% 0px 10%; color:rgba(0,0,0,.65); font-family:\'abel\'; font-size:1.3em; margin:0px 0px 10px 0px; } scene4 .next-scene-btn-container,[data-is="scene4"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:5%; left:0px; animation-duration: 2s; } scene4 .next-scene-btn,[data-is="scene4"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene4 .next-scene-btn:hover,[data-is="scene4"] .next-scene-btn:hover{ -webkit-backface-visibility: hidden; transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } scene4 #graphics-container,[data-is="scene4"] #graphics-container{ position:relative; height:60vh; width:100%; } scene4 .desk,[data-is="scene4"] .desk{ height:55%; position:absolute; bottom:5%; left:2%; } scene4 .jelly,[data-is="scene4"] .jelly{ height:45%; position:absolute; bottom:40%; right:47%; } scene4 .cream,[data-is="scene4"] .cream{ height:50%; position:absolute; bottom:35%; right:35%; } scene4 .mustard,[data-is="scene4"] .mustard{ height:55%; position:absolute; bottom:25%; right:17%; } scene4 .ketchup,[data-is="scene4"] .ketchup{ height:80%; position:absolute; bottom:10%; right:0%; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene4 .jelly,[data-is="scene4"] .jelly{ height:45%; position:absolute; bottom:40%; left:5%; } scene4 .cream,[data-is="scene4"] .cream{ height:45%; position:absolute; bottom:40%; left:30%; } scene4 .mustard,[data-is="scene4"] .mustard{ height:45%; position:absolute; bottom:40%; left:55%; } scene4 .ketchup,[data-is="scene4"] .ketchup{ height:45%; position:absolute; bottom:40%; left:80%; } } @media only screen and (max-width: 40em) { scene4 .jelly,[data-is="scene4"] .jelly{ display:none; } scene4 .cream,[data-is="scene4"] .cream{ display:none; } scene4 .mustard,[data-is="scene4"] .mustard{ display:none; } scene4 .ketchup,[data-is="scene4"] .ketchup{ display:none; } }', '', function(opts) {
+	riot.tag2('scene4', '<div class="container-fluid" id="scene4"> <div class="row center-align"> <div class="col s12"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="/#acing-the-interview" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row"> <div class="col s12"> <section id="graphics-container"> <img src="src/images/scene4/jelly.svg" alt="" class="jelly"> <img src="src/images/scene4/cream.svg" alt="" class="cream"> <img src="src/images/scene4/mustard.svg" alt="" class="mustard"> <img src="src/images/scene4/ketchup.svg" alt="" class="ketchup"> <img src="src/images/scene4/desk.svg" alt="" class="desk"> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> <i id="sc4-next-btn" class="material-icons next-scene-btn tooltipped" data-position="top" data-delay="25" data-tooltip="Scroll Down">arrow_drop_down_circle</i> </div> </div> </div> </div>', 'scene4 #scene4,[data-is="scene4"] #scene4{ position:relative; height:calc(101vh - 45px); background-image:url(\'src/images/scene4/background.svg\'); background-size:cover; background-position:center; overflow:hidden; z-index:1000; } scene4 #scene-info-container,[data-is="scene4"] #scene-info-container{ padding:0px 10% 0px 10%; margin:5% 0px 0px 0px; } scene4 .sc-title,[data-is="scene4"] .sc-title{ color:rgba(0,0,0,.85); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene4 .sc-description,[data-is="scene4"] .sc-description{ padding:0px 10% 0px 10%; color:rgba(0,0,0,.65); font-family:\'abel\'; font-size:1.3em; margin:0px 0px 10px 0px; } scene4 .next-scene-btn-container,[data-is="scene4"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:5%; left:0px; animation-duration: 2s; } scene4 .next-scene-btn,[data-is="scene4"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene4 .next-scene-btn:hover,[data-is="scene4"] .next-scene-btn:hover{ -webkit-backface-visibility: hidden; transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } scene4 #graphics-container,[data-is="scene4"] #graphics-container{ position:relative; height:60vh; width:100%; } scene4 .desk,[data-is="scene4"] .desk{ height:55%; position:absolute; bottom:5%; left:2%; } scene4 .jelly,[data-is="scene4"] .jelly{ height:45%; position:absolute; bottom:40%; right:47%; } scene4 .cream,[data-is="scene4"] .cream{ height:50%; position:absolute; bottom:35%; right:35%; } scene4 .mustard,[data-is="scene4"] .mustard{ height:55%; position:absolute; bottom:25%; right:17%; } scene4 .ketchup,[data-is="scene4"] .ketchup{ height:80%; position:absolute; bottom:10%; right:0%; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene4 .jelly,[data-is="scene4"] .jelly{ height:45%; position:absolute; bottom:40%; left:5%; } scene4 .cream,[data-is="scene4"] .cream{ height:45%; position:absolute; bottom:40%; left:30%; } scene4 .mustard,[data-is="scene4"] .mustard{ height:45%; position:absolute; bottom:40%; left:55%; } scene4 .ketchup,[data-is="scene4"] .ketchup{ height:45%; position:absolute; bottom:40%; left:80%; } } @media only screen and (max-width: 40em) { scene4 .jelly,[data-is="scene4"] .jelly{ display:none; } scene4 .cream,[data-is="scene4"] .cream{ display:none; } scene4 .mustard,[data-is="scene4"] .mustard{ display:none; } scene4 .ketchup,[data-is="scene4"] .ketchup{ display:none; } }', '', function(opts) {
 
 	    this.on('mount', function() {
 	      var $node = $(this.root);
@@ -25106,7 +25138,7 @@
 
 	var riot = __webpack_require__(39);
 
-	riot.tag2('scene5', '<div class="container-fluid" id="scene5"> <div class="row center-align"> <div class="col s12 m6 offset-m6"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="#!" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row"> <div class="col s12"> <section id="graphics-container"> <img src="src/images/scene5/shake.svg" alt="milk shake" class="shake"> <img src="src/images/scene5/chocolate.svg" alt="chocolate cake" class="cake"> <img src="src/images/scene5/cheesecake.svg" alt="chessecake" class="cheesecake"> <img src="src/images/scene5/waffer.svg" alt="waffer telephone booth" class="waffer"> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> <i id="sc5-next-btn" class="material-icons next-scene-btn tooltipped" data-position="top" data-delay="25" data-tooltip="Scroll Down">arrow_drop_down_circle</i> </div> </div> </div> </div>', 'scene5 #scene5,[data-is="scene5"] #scene5{ position:relative; height:calc(101vh - 45px); background-image:url(\'src/images/scene5/background.svg\'); background-size:cover; background-position:center; overflow:hidden; z-index:1000; } scene5 #scene-info-container,[data-is="scene5"] #scene-info-container{ padding:0px 10% 0px 10%; } scene5 .sc-title,[data-is="scene5"] .sc-title{ color:rgba(0,0,0,.85); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene5 .sc-description,[data-is="scene5"] .sc-description{ color:rgba(0,0,0,.65); font-family:\'abel\'; font-size:1.3em; } scene5 .next-scene-btn-container,[data-is="scene5"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:5%; left:0px; animation-duration: 2s; } scene5 .next-scene-btn,[data-is="scene5"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene5 .next-scene-btn:hover,[data-is="scene5"] .next-scene-btn:hover{ -webkit-backface-visibility: hidden; transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } scene5 #graphics-container,[data-is="scene5"] #graphics-container{ position:relative; height:60vh; width:100%; } scene5 .waffer,[data-is="scene5"] .waffer{ height:100%; position:absolute; bottom:0; left:5%; } scene5 .shake,[data-is="scene5"] .shake{ height:60%; position:absolute; bottom:40%; right:50%; } scene5 .cake,[data-is="scene5"] .cake{ height:60%; position:absolute; bottom:25%; right:20%; } scene5 .cheesecake,[data-is="scene5"] .cheesecake{ height:50%; position:absolute; bottom:0; right:0%; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene5 .shake,[data-is="scene5"] .shake{ display:none; } scene5 .cake,[data-is="scene5"] .cake{ height:50%; position:absolute; bottom:25%; right:0%; } scene5 .cheesecake,[data-is="scene5"] .cheesecake{ display:none; } } @media only screen and (max-width: 40em) { scene5 .shake,[data-is="scene5"] .shake{ display:none; } scene5 .cake,[data-is="scene5"] .cake{ display:none; } scene5 .cheesecake,[data-is="scene5"] .cheesecake{ display:none; } }', '', function(opts) {
+	riot.tag2('scene5', '<div class="container-fluid" id="scene5"> <div class="row center-align"> <div class="col s12 m6 offset-m6"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="/#following-up-the-interview" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row"> <div class="col s12"> <section id="graphics-container"> <img src="src/images/scene5/shake.svg" alt="milk shake" class="shake"> <img src="src/images/scene5/chocolate.svg" alt="chocolate cake" class="cake"> <img src="src/images/scene5/cheesecake.svg" alt="chessecake" class="cheesecake"> <img src="src/images/scene5/waffer.svg" alt="waffer telephone booth" class="waffer"> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> <i id="sc5-next-btn" class="material-icons next-scene-btn tooltipped" data-position="top" data-delay="25" data-tooltip="Scroll Down">arrow_drop_down_circle</i> </div> </div> </div> </div>', 'scene5 #scene5,[data-is="scene5"] #scene5{ position:relative; height:calc(101vh - 45px); background-image:url(\'src/images/scene5/background.svg\'); background-size:cover; background-position:center; overflow:hidden; z-index:1000; } scene5 #scene-info-container,[data-is="scene5"] #scene-info-container{ padding:0px 10% 0px 10%; } scene5 .sc-title,[data-is="scene5"] .sc-title{ color:rgba(0,0,0,.85); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene5 .sc-description,[data-is="scene5"] .sc-description{ color:rgba(0,0,0,.65); font-family:\'abel\'; font-size:1.3em; } scene5 .next-scene-btn-container,[data-is="scene5"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:5%; left:0px; animation-duration: 2s; } scene5 .next-scene-btn,[data-is="scene5"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene5 .next-scene-btn:hover,[data-is="scene5"] .next-scene-btn:hover{ -webkit-backface-visibility: hidden; transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } scene5 #graphics-container,[data-is="scene5"] #graphics-container{ position:relative; height:60vh; width:100%; } scene5 .waffer,[data-is="scene5"] .waffer{ height:100%; position:absolute; bottom:0; left:5%; } scene5 .shake,[data-is="scene5"] .shake{ height:60%; position:absolute; bottom:40%; right:50%; } scene5 .cake,[data-is="scene5"] .cake{ height:60%; position:absolute; bottom:25%; right:20%; } scene5 .cheesecake,[data-is="scene5"] .cheesecake{ height:50%; position:absolute; bottom:0; right:0%; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene5 .shake,[data-is="scene5"] .shake{ display:none; } scene5 .cake,[data-is="scene5"] .cake{ height:50%; position:absolute; bottom:25%; right:0%; } scene5 .cheesecake,[data-is="scene5"] .cheesecake{ display:none; } } @media only screen and (max-width: 40em) { scene5 .shake,[data-is="scene5"] .shake{ display:none; } scene5 .cake,[data-is="scene5"] .cake{ display:none; } scene5 .cheesecake,[data-is="scene5"] .cheesecake{ display:none; } }', '', function(opts) {
 
 	    this.on('mount', function() {
 	      var $node = $(this.root);
@@ -25129,7 +25161,7 @@
 
 	var riot = __webpack_require__(39);
 
-	riot.tag2('scene6', '<div class="container-fluid" id="scene6"> <div class="row center-align"> <div class="col s12"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="#!" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row"> <div class="col s12"> <section id="graphics-container"> <img src="src/images/scene6/watermelon.svg" alt="" class="watermelon"> <img src="src/images/scene6/pear.svg" alt="" class="pear"> <img src="src/images/scene6/banana.svg" alt="" class="banana"> <img src="src/images/scene6/orangeboy.svg" alt="" class="orangeboy"> <img src="src/images/scene6/corn.svg" alt="" class="corn"> <img src="src/images/scene6/broco.svg" alt="" class="brocoli"> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> </div> </div> </div> </div>', 'scene6 #scene6,[data-is="scene6"] #scene6{ position:relative; height:calc(101vh - 45px); background-image:url(\'src/images/scene6/background.svg\'); background-size:cover; background-position:center; overflow:hidden; z-index:1000; } scene6 #scene-info-container,[data-is="scene6"] #scene-info-container{ padding:0px 10% 0px 10%; margin:5% 0px 0px 0px; } scene6 .sc-title,[data-is="scene6"] .sc-title{ color:rgba(0,0,0,.85); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene6 .sc-description,[data-is="scene6"] .sc-description{ color:rgba(0,0,0,.65); font-family:\'abel\'; font-size:1.3em; } scene6 .next-scene-btn-container,[data-is="scene6"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:5%; left:0px; animation-duration: 2s; } scene6 .next-scene-btn,[data-is="scene6"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene6 .next-scene-btn:hover,[data-is="scene6"] .next-scene-btn:hover{ -webkit-backface-visibility: hidden; transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } scene6 #graphics-container,[data-is="scene6"] #graphics-container{ position:relative; height:50vh; width:100%; } scene6 .watermelon,[data-is="scene6"] .watermelon{ height:30%; position:absolute; bottom:2%; left:0; } scene6 .pear,[data-is="scene6"] .pear{ height:60%; position:absolute; bottom:20%; left:20%; } scene6 .banana,[data-is="scene6"] .banana{ height:65%; position:absolute; bottom:5%; left:40%; } scene6 .orangeboy,[data-is="scene6"] .orangeboy{ height:40%; position:absolute; bottom:10%; right:33%; } scene6 .corn,[data-is="scene6"] .corn{ height:70%; position:absolute; bottom:25%; right:20%; } scene6 .brocoli,[data-is="scene6"] .brocoli{ height:60%; position:absolute; bottom:10%; right:0; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene6 .watermelon,[data-is="scene6"] .watermelon{ display:none; } scene6 .pear,[data-is="scene6"] .pear{ display:none; } scene6 .banana,[data-is="scene6"] .banana{ height:65%; position:absolute; bottom:5%; left:20%; } scene6 .orangeboy,[data-is="scene6"] .orangeboy{ height:40%; position:absolute; bottom:10%; right:20%; } scene6 .corn,[data-is="scene6"] .corn{ display:none; } scene6 .brocoli,[data-is="scene6"] .brocoli{ display:none; } } @media only screen and (max-width: 40em) { scene6 .watermelon,[data-is="scene6"] .watermelon{ display:none; } scene6 .pear,[data-is="scene6"] .pear{ display:none; } scene6 .banana,[data-is="scene6"] .banana{ height:65%; position:absolute; bottom:5%; left:0%; } scene6 .orangeboy,[data-is="scene6"] .orangeboy{ height:40%; position:absolute; bottom:10%; right:0%; } scene6 .corn,[data-is="scene6"] .corn{ display:none; } scene6 .brocoli,[data-is="scene6"] .brocoli{ display:none; } }', '', function(opts) {
+	riot.tag2('scene6', '<div class="container-fluid" id="scene6"> <div class="row center-align"> <div class="col s12"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="/#accepting-the-job" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row"> <div class="col s12"> <section id="graphics-container"> <img src="src/images/scene6/watermelon.svg" alt="" class="watermelon"> <img src="src/images/scene6/pear.svg" alt="" class="pear"> <img src="src/images/scene6/banana.svg" alt="" class="banana"> <img src="src/images/scene6/orangeboy.svg" alt="" class="orangeboy"> <img src="src/images/scene6/corn.svg" alt="" class="corn"> <img src="src/images/scene6/broco.svg" alt="" class="brocoli"> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> </div> </div> </div> </div>', 'scene6 #scene6,[data-is="scene6"] #scene6{ position:relative; height:calc(101vh - 45px); background-image:url(\'src/images/scene6/background.svg\'); background-size:cover; background-position:center; overflow:hidden; z-index:1000; } scene6 #scene-info-container,[data-is="scene6"] #scene-info-container{ padding:0px 10% 0px 10%; margin:5% 0px 0px 0px; } scene6 .sc-title,[data-is="scene6"] .sc-title{ color:rgba(0,0,0,.85); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene6 .sc-description,[data-is="scene6"] .sc-description{ color:rgba(0,0,0,.65); font-family:\'abel\'; font-size:1.3em; } scene6 .next-scene-btn-container,[data-is="scene6"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:5%; left:0px; animation-duration: 2s; } scene6 .next-scene-btn,[data-is="scene6"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene6 .next-scene-btn:hover,[data-is="scene6"] .next-scene-btn:hover{ -webkit-backface-visibility: hidden; transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } scene6 #graphics-container,[data-is="scene6"] #graphics-container{ position:relative; height:50vh; width:100%; } scene6 .watermelon,[data-is="scene6"] .watermelon{ height:30%; position:absolute; bottom:2%; left:0; } scene6 .pear,[data-is="scene6"] .pear{ height:60%; position:absolute; bottom:20%; left:20%; } scene6 .banana,[data-is="scene6"] .banana{ height:65%; position:absolute; bottom:5%; left:40%; } scene6 .orangeboy,[data-is="scene6"] .orangeboy{ height:40%; position:absolute; bottom:10%; right:33%; } scene6 .corn,[data-is="scene6"] .corn{ height:70%; position:absolute; bottom:25%; right:20%; } scene6 .brocoli,[data-is="scene6"] .brocoli{ height:60%; position:absolute; bottom:10%; right:0; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene6 .watermelon,[data-is="scene6"] .watermelon{ display:none; } scene6 .pear,[data-is="scene6"] .pear{ display:none; } scene6 .banana,[data-is="scene6"] .banana{ height:65%; position:absolute; bottom:5%; left:20%; } scene6 .orangeboy,[data-is="scene6"] .orangeboy{ height:40%; position:absolute; bottom:10%; right:20%; } scene6 .corn,[data-is="scene6"] .corn{ display:none; } scene6 .brocoli,[data-is="scene6"] .brocoli{ display:none; } } @media only screen and (max-width: 40em) { scene6 .watermelon,[data-is="scene6"] .watermelon{ display:none; } scene6 .pear,[data-is="scene6"] .pear{ display:none; } scene6 .banana,[data-is="scene6"] .banana{ height:65%; position:absolute; bottom:5%; left:0%; } scene6 .orangeboy,[data-is="scene6"] .orangeboy{ height:40%; position:absolute; bottom:10%; right:0%; } scene6 .corn,[data-is="scene6"] .corn{ display:none; } scene6 .brocoli,[data-is="scene6"] .brocoli{ display:none; } }', '', function(opts) {
 
 	    this.on('mount', function() {
 	      var $node = $(this.root);
@@ -25171,13 +25203,365 @@
 
 	var riot = __webpack_require__(39);
 
+	riot.tag2('scene3-main', '<div class="container-fluid"> <section class="row"> <div class="col s12"> <div class="imagery"> <img class="floor" src="src/images/scene2-main/floor.svg" alt=""> </div> </div> </section> <div class="row"> <div class="col s12"></div> </div> <div class="row center-align"> <div id="interview-viewport" class="col s12"> <interview-preparation-viewport></interview-preparation-viewport> <p class="scene-title fancy"><span>preparing for an interview</span></p> <p class="scene-description"> The keys to successful interviewing are preparation, like-ability, and bonding. There are several critical areas to consider and essential things to do in preparation for your interview. </p> <div class="row"> <virtual each="{cards}"> <div class="col s12 m6 l4"> <div class="card-panel"> <img class="circle-img" riot-src="{image}" alt=""> <p class="card-title"> {title} </p> <p class="card-description"> {description} </p> <div class="{hide : !button}"> <a href="{buttonLink}" class="button button-3d button-primary button-pill">{buttonTitle}</a> </div> </div> </div> </virtual> </div> <div class="row"> <div class="col s12"> <p class="scene-title fancy"><span>hearing back from employers &amp; scheduling an interview</span></p> </div> </div> <div class="row"> <div class="col s12 m2"><img class="circle-img" src="" alt=""></div> <div class="col s12 m6"> <p class="section-description"> They say patience is a virtue, but that can be difficult to remember when waiting to hear back from an employer. Try your best to focus on other things, or even keep applying to opportunities. </p> <p class="section-description"> After a week, it is always appropriate to call and check the status of their application. This is less about finding out immediately if they’d like to schedule an interview so much as it lets your potential employer know of your continued interest and initiative. </p> </div> </div> <div class="row"> <div class="col s12 m2 push-m10"><img class="circle-img" src="" alt=""></div> <div class="col s12 m6 push-m2"> <p class="section-description"> They say patience is a virtue, but that can be difficult to remember when waiting to hear back from an employer. Try your best to focus on other things, or even keep applying to opportunities. </p> <p class="section-description"> After a week, it is always appropriate to call and check the status of their application. This is less about finding out immediately if they’d like to schedule an interview so much as it lets your potential employer know of your continued interest and initiative. </p> </div> </div> <hr style="width:80%;"> <hr style="width:80%;"> </div> </div> </div>', 'scene3-main .hide,[data-is="scene3-main"] .hide{ display:none; } scene3-main .card-panel,[data-is="scene3-main"] .card-panel{ margin:5%; background-color:rgba(0,0,0,.25); min-height:420px; } scene3-main .circle-img,[data-is="scene3-main"] .circle-img{ background-color:rgba(0,0,0,.85); height:120px; width:120px; border-radius:50%; } scene3-main .card-title,[data-is="scene3-main"] .card-title{ font-family:\'pattaya\'; color:rgba(0,0,0,.85); font-size:2em; text-transform: capitalize; margin:0px; } scene3-main .card-description,[data-is="scene3-main"] .card-description{ font-family:\'abel\'; color:rgba(0,0,0,.85); font-size:1.2em; text-transform: capitalize; padding:0px 5% 0px 5%; text-align:left; } scene3-main .section-description,[data-is="scene3-main"] .section-description{ font-family:\'abel\'; font-size:1.5em; color:rgba(0,0,0,.75); padding:0px 5% 0px 5%; text-align:left; } scene3-main .fancy,[data-is="scene3-main"] .fancy{ overflow: hidden; text-align: center; } scene3-main .fancy span,[data-is="scene3-main"] .fancy span{ position: relative; } scene3-main .fancy span:before,[data-is="scene3-main"] .fancy span:before,scene3-main .fancy span:after,[data-is="scene3-main"] .fancy span:after{ content: ""; position: absolute; top: 50%; margin-top: -.2em; height: .2em; border-top: 1px solid rgba(0,0,0,.25); border-bottom: 1px solid rgba(0,0,0,.25); width: 150%; } scene3-main .fancy span:before,[data-is="scene3-main"] .fancy span:before{ right: 100%; margin-right: .5em; } scene3-main .fancy span:after,[data-is="scene3-main"] .fancy span:after{ left: 100%; margin-left: .5em; } scene3-main .row,[data-is="scene3-main"] .row,scene3-main .col,[data-is="scene3-main"] .col{ padding:0 !important; margin:0 !important; } scene3-main .scene-title,[data-is="scene3-main"] .scene-title{ font-family:\'pattaya\'; font-size:2.5em; color:rgba(0,0,0,.75); text-transform: capitalize; } scene3-main .scene-description,[data-is="scene3-main"] .scene-description{ font-family:\'abel\'; font-size:1.5em; padding:0 30% 0 30%; color:rgba(0,0,0,.75); text-transform: capitalize; text-align:justify; } scene3-main .scene-control-holder,[data-is="scene3-main"] .scene-control-holder{ height:70vh; line-height:1em; position:relative; } scene3-main .scene-control-btn,[data-is="scene3-main"] .scene-control-btn{ position:absolute; top:50%; font-size:3.5em; margin:0px 10px 0px 10px; border-radius: 50%; height:50px; width:50px; transition:all 0.3s ease-out; } scene3-main .scene-control-btn:hover,[data-is="scene3-main"] .scene-control-btn:hover{ transition:all 0.5s ease-out; background-color:rgba(0,0,0,.5); color:white; transform:scale(1.2); cursor:pointer; } scene3-main #prev,[data-is="scene3-main"] #prev{ left:0; } scene3-main #next,[data-is="scene3-main"] #next{ right:0; } scene3-main #main-viewport,[data-is="scene3-main"] #main-viewport{ background-color:rgba(0,0,155,.1); } scene3-main .imagery,[data-is="scene3-main"] .imagery{ position:relative; height:30vh; width:100%; background-image:url(\'src/images/scene2-main/background.svg\'); background-size:cover; background-position: center; overflow:hidden; } scene3-main .floor,[data-is="scene3-main"] .floor{ position:absolute; bottom:0%; left:0; width:100%; } scene3-main #interview_viewport,[data-is="scene3-main"] #interview_viewport{ position:relative; min-height:70vh; height:auto; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene3-main .scene-description,[data-is="scene3-main"] .scene-description{ padding:0 15% 0 15%; } } @media only screen and (max-width: 40em) { scene3-main .scene-description,[data-is="scene3-main"] .scene-description{ padding:0 15% 0 15%; } scene3-main .card-panel,[data-is="scene3-main"] .card-panel{ min-height:auto; } }', '', function(opts) {
+			this.cards = [
+			{
+				image:'',
+				title:'know the position',
+				description:
+				`
+				be prepared to explain why you are seeking the
+				position and why you would be successful in the job
+				`,
+				button:0,
+				buttonTitle:'',
+				buttonLink:''
+			},
+			{
+				image:'',
+				title:'know the company/agency',
+				description:
+				`
+				Learn about its services and products to converse intelligently about the organization.
+				`,
+				button:0,
+				buttonTitle:'',
+				buttonLink:''
+			},
+			{
+				image:'',
+				title:'why should they hire you?',
+				description:
+				`
+				Your primary responsibility during the interview is to give the employer substantial
+				reasons why you should be hired. Stress what you can do to meet the goals and needs
+				of the employer, not what the employer can do for you. Look for commonalities -
+				colleges, values, backgrounds, interests-so that you can build necessary social links.
+				`,
+				button:0,
+				buttonTitle:'',
+				buttonLink:''
+			},
+			{
+				image:'',
+				title:'present yourself effectively',
+				description:
+				`
+				Remember that the interviewer needs to hire employees. So, if you can present yourself
+				and your qualifications to the interviewer more effectively than anyone else, you
+				will significantly increase your chances for obtaining an offer of employment
+				`,
+				button:0,
+				buttonTitle:'',
+				buttonLink:''
+			},
+			{
+				image:'',
+				title:'know your skills',
+				description:
+				`
+				Need help figuring out what skill areas you excel in?
+				Check out the interactive activity on Pathways!
+				`,
+				button:1,
+				buttonTitle:'Pathways Link',
+				buttonLink:'#!'
+			},
+			{
+				image:'',
+				title:'on campus interviews!',
+				description:
+				`
+				Don’t forget to check out On Campus Interviews at CSUN!
+				`,
+				button:1,
+				buttonTitle:'CSUN LINK',
+				buttonLink:'#!'
+			},
+			];
+	});	
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var riot = __webpack_require__(39);
+
+	riot.tag2('scene4-main', '<div class="container-fluid"> <section class="row"> <div class="col s12"> <div class="imagery"> <img class="floor" src="src/images/scene2-main/floor.svg" alt=""> </div> </div> </section> <div class="row"> <div class="col s12"></div> </div> <div class="row center-align"> <div id="interview-viewport" class="col s12"> <interview-preparation-viewport></interview-preparation-viewport> <p class="scene-title fancy"><span>acing the interview</span></p> <p class="scene-description"> The keys to successful interviewing are preparation, like-ability, and bonding. There are several critical areas to consider and essential things to do in preparation for your interview. </p> <div class="row"> <virtual each="{cards}"> <div class="col s12 m6 l4"> <div class="card-panel"> <img class="circle-img" riot-src="{image}" alt=""> <p class="card-title"> {title} </p> <p class="card-description"> {description} </p> <div class="{hide : !button}"> <a href="{buttonLink}" class="button button-3d button-primary button-pill">{buttonTitle}</a> </div> </div> </div> </virtual> </div> <div class="row"> <div class="col s12"> <p class="scene-title fancy"><span>interview tips &amp; advice</span></p> </div> </div> <div class="row"> <div class="col s12 m6"> <p class="section-description">Do\'s</p> <ul class="section-description-list"> <li>put yourself on their team</li> <li>compliment their accomplishments</li> <li>research their company</li> <li>shake hands with each member interviewing you</li> <li>make eye contact when answering questions, or when the interviewer is speaking</li> <li>talk about previous experience that relates to the position</li> <li>discuss your skills and qualifications</li> </ul> </div> <div class="col s12 m6"><img class="circle-img" src="" alt=""></div> </div> <div class="row"> <div class="col s12 m6"><img class="circle-img" src="" alt=""></div> <div class="col s12 m6"> <p class="section-description">Dont\'s</p> <ul class="section-description"> <li>bring food or gifts for the interview</li> <li>wear heavy make-up, cologne, or perfume.</li> <li>chew gum</li> <li>play with pens, pencils, and objects</li> <li>talk excessively</li> <li>talk badly about acquaintances or past employment positions.</li> <li>slouch</li> <li>talk about politics or religion (unless related to position)</li> <li>ask about salary or benefits during the initial interview (dont\' make it your first question)</li> </ul> </div> </div> <div class="row"> <div class="col s12"> <p class="scene-title fancy"><span>know your rights</span></p> <p class="scene-description">check out the questions that are acceptable for you to be asked by an interviewer</p> <a href="#!" class="button button-3d button-primary button-pill">Coming Soon!</a> </div> </div> <div class="row"> <div class="col s12 m3 push-m9"> </div> <div class="col s12 m9 pull-m3"> <p class="section-title">how to avoid common mistakes</p> <ul class="tip-lists"><li class="tip-list-item" each="{common_mistakes}">{title}</li></ul> </div> </div> <hr style="width:80%;"> <hr style="width:80%;"> </div> </div> </div>', 'scene4-main .tip-lists,[data-is="scene4-main"] .tip-lists{ font-family:\'abel\'; font-size:1.2em; text-transform: capitalize; text-align:left; margin:0 0 0 6%; padding:0 10% 0 0; } scene4-main .tip-list-item,[data-is="scene4-main"] .tip-list-item{ list-style: circle outside none !important; display: list-item; margin:1em 0 0 0; } scene4-main .section-title,[data-is="scene4-main"] .section-title{ font-family:\'abel\'; font-size:2.0em; color:rgba(0,0,0,.75); text-transform: capitalize; text-align:left; margin:5% 0 0 5%; } scene4-main .hide,[data-is="scene4-main"] .hide{ display:none; } scene4-main .card-panel,[data-is="scene4-main"] .card-panel{ margin:5%; background-color:rgba(0,0,0,.25); min-height:500px; } scene4-main .circle-img,[data-is="scene4-main"] .circle-img{ background-color:rgba(0,0,0,.85); height:120px; width:120px; border-radius:50%; } scene4-main .card-title,[data-is="scene4-main"] .card-title{ font-family:\'pattaya\'; color:rgba(0,0,0,.85); font-size:2em; text-transform: capitalize; margin:0px; } scene4-main .card-description,[data-is="scene4-main"] .card-description{ font-family:\'abel\'; color:rgba(0,0,0,.85); font-size:1.2em; text-transform: capitalize; padding:0px 5% 0px 5%; text-align:left; } scene4-main .section-description,[data-is="scene4-main"] .section-description{ font-family:\'abel\'; font-size:1.5em; color:rgba(0,0,0,.75); padding:0px 5% 0px 5%; text-align:left; } scene4-main .section-description-list,[data-is="scene4-main"] .section-description-list{ text-align:left; font-family:\'abel\'; font-size:1.2em; color:rgba(0,0,0,.65); display:list-item; list-style-position:inside; list-style-type:circle; } scene4-main .fancy,[data-is="scene4-main"] .fancy{ overflow: hidden; text-align: center; } scene4-main .fancy span,[data-is="scene4-main"] .fancy span{ position: relative; } scene4-main .fancy span:before,[data-is="scene4-main"] .fancy span:before,scene4-main .fancy span:after,[data-is="scene4-main"] .fancy span:after{ content: ""; position: absolute; top: 50%; margin-top: -.2em; height: .2em; border-top: 1px solid rgba(0,0,0,.25); border-bottom: 1px solid rgba(0,0,0,.25); width: 150%; } scene4-main .fancy span:before,[data-is="scene4-main"] .fancy span:before{ right: 100%; margin-right: .5em; } scene4-main .fancy span:after,[data-is="scene4-main"] .fancy span:after{ left: 100%; margin-left: .5em; } scene4-main .row,[data-is="scene4-main"] .row,scene4-main .col,[data-is="scene4-main"] .col{ padding:0 !important; margin:0 !important; } scene4-main .scene-title,[data-is="scene4-main"] .scene-title{ font-family:\'pattaya\'; font-size:2.5em; color:rgba(0,0,0,.75); text-transform: capitalize; } scene4-main .scene-description,[data-is="scene4-main"] .scene-description{ font-family:\'abel\'; font-size:1.5em; padding:0 30% 0 30%; color:rgba(0,0,0,.75); text-transform: capitalize; text-align:justify; } scene4-main .scene-control-holder,[data-is="scene4-main"] .scene-control-holder{ height:70vh; line-height:1em; position:relative; } scene4-main .scene-control-btn,[data-is="scene4-main"] .scene-control-btn{ position:absolute; top:50%; font-size:3.5em; margin:0px 10px 0px 10px; border-radius: 50%; height:50px; width:50px; transition:all 0.3s ease-out; } scene4-main .scene-control-btn:hover,[data-is="scene4-main"] .scene-control-btn:hover{ transition:all 0.5s ease-out; background-color:rgba(0,0,0,.5); color:white; transform:scale(1.2); cursor:pointer; } scene4-main #prev,[data-is="scene4-main"] #prev{ left:0; } scene4-main #next,[data-is="scene4-main"] #next{ right:0; } scene4-main #main-viewport,[data-is="scene4-main"] #main-viewport{ background-color:rgba(0,0,155,.1); } scene4-main .imagery,[data-is="scene4-main"] .imagery{ position:relative; height:30vh; width:100%; background-image:url(\'src/images/scene2-main/background.svg\'); background-size:cover; background-position: center; overflow:hidden; } scene4-main .floor,[data-is="scene4-main"] .floor{ position:absolute; bottom:0%; left:0; width:100%; } scene4-main #interview_viewport,[data-is="scene4-main"] #interview_viewport{ position:relative; min-height:70vh; height:auto; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene4-main .scene-description,[data-is="scene4-main"] .scene-description{ padding:0 15% 0 15%; } } @media only screen and (max-width: 40em) { scene4-main .scene-description,[data-is="scene4-main"] .scene-description{ padding:0 15% 0 15%; } scene4-main .card-panel,[data-is="scene4-main"] .card-panel{ min-height:auto; } }', '', function(opts) {
+			this.cards = [
+			{
+				image:'',
+				title:'the night before',
+				description:
+				`
+				By preparing properly beforehand, as opposed to leaving it to the last minute,
+				you can avoid extra stress the night before. Simply make sure your clothing is laid out
+				and ready to go and that you have all necessary materials (a copy of your resume,
+				identification, paper for taking any notes or jotting down pertinent information).
+				You can only prepare so much, and over-preparation lends itself to stiffness and unease.
+				Just try your best to get a good night’s sleep and have a healthy breakfast beforehand.
+				`,
+				button:1,
+				buttonTitle:'Coming Soon!',
+				buttonLink:'#!'
+			},
+			{
+				image:'',
+				title:'first impression counts!',
+				description:
+				`
+				First impressions count! Arrive at least 15 minutes before your interview. Know that the
+				first person that you encounter (receptionist) is already interviewing you. Remember,
+				your interview begins before you sit down with the potential employer. Greet everyone,
+				including the receptionist, in a positive and professional manner. The decision to hire,
+				or not to hire, is often made early in the interview. The decision made by the interviewer
+				is largely subjective. It can revolve around whether you fit the office "culture" or if
+				you have a strength an employer is seeking.
+				`,
+				button:0,
+				buttonTitle:'',
+				buttonLink:''
+			},
+			{
+				image:'',
+				title:'once you begin the interview',
+				description:
+				`
+				Once you begin the interview, make eye-contact and show attentiveness to whomever
+				is interviewing you. Employers are looking for potential candidates who feel
+				confident in their proposed position. Fidgeting and nervous behavior can give off
+				the wrong impression
+				`,
+				button:0,
+				buttonTitle:'',
+				buttonLink:''
+			}
+			];
+
+			this.common_mistakes = [
+			{title:'have an idea about what you\'d like to do within your potential new job'},
+			{title:'show your best, most polite, and professional self'},
+			{title:
+				`
+				Assume that your interviewer may not have looked at your resume. You need
+				to sell yourself, so don’t just depend on the submission of your resume to
+				do it for you.
+				`
+			},
+			{title:'Prepare a mental outline and pitch beforehand. Just winging it may push you into a corner.'},
+			{title:
+				`
+				Give thoughtful answers to the questions asked of you. Just giving short,
+				one word answers doesn’t give your potential employer a good image of your
+				potential without explanation.
+				`
+			},
+			{title:
+				`
+				Explain how your experiences fit the needs of the recruiter. You need to tackle
+				the interview believing you’re the best person for the job, and then prove it!
+				`
+			},
+			{title:
+				`
+				Be sure to ask questions of the interviewer! Remember, you’re also interviewing
+				the company to make sure you’d like to work for them. This also allows you to go
+				further in the interview process with as little confusion as possible.
+				`
+			},
+			{title:
+				`
+				Don’t forget to mention extracurricular experiences such as clubs or volunteer work.
+				`
+			},
+			];
+	});	
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var riot = __webpack_require__(39);
+
+	riot.tag2('scene5-main', '<div class="container-fluid"> <section class="row"> <div class="col s12"> <div class="imagery"> <img class="floor" src="src/images/scene2-main/floor.svg" alt=""> </div> </div> </section> <div class="row"> <div class="col s12"></div> </div> <div class="row center-align"> <div id="interview-viewport" class="col s12"> <interview-preparation-viewport></interview-preparation-viewport> <p class="scene-title fancy"><span>following up the interview!</span></p> <p class="scene-description"> The keys to successful interviewing are preparation, like-ability, and bonding. There are several critical areas to consider and essential things to do in preparation for your interview. </p> <div class="row"> <virtual each="{cards}"> <div class="col s12 m6 l4 push-l2"> <div class="card-panel"> <img class="circle-img" riot-src="{image}" alt=""> <p class="card-title"> {title} </p> <p class="card-description"> {description} </p> <div class="{hide : !button}"> <a href="{buttonLink}" class="button button-3d button-primary button-pill">{buttonTitle}</a> </div> </div> </div> </virtual> </div> <div class="row"> <div class="col s12"> <p class="scene-title fancy"><span>response handling tips</span></p> <p class="scene-description"> There can be a variety of reasons why an employer may decide to go with another candidate, and it is important to not take it personally. Be gracious and move on to the next potential opportunity. </p> <a href="#!" class="button button-3d button-primary button-pill">Coming Soon!</a> </div> </div> <div class="row"> <div class="col s12 m6"> <img class="circle-img" src="" alt=""> <p class="section-description"> If you are picked for the job, then CONGRATULATIONS! <br> Remember, you don\'t always have to accept right away. If you are waiting to hear back from other potential opportunities. </p> </div> <div class="col s12 m6"> <img class="circle-img" src="" alt=""> <p class="section-description"> If you do want the job, then hurray! <br> a new adventure awaits you! Make sure you can fulfill all the expectations and get ready to fill out some paperwork. Always have your I.D. and pertinent information close at hand in case your new employeer needs that for record keeping. </p> </div> </div> <hr style="width:80%;"> <hr style="width:80%;"> </div> </div> </div>', 'scene5-main .tip-lists,[data-is="scene5-main"] .tip-lists{ font-family:\'abel\'; font-size:1.2em; text-transform: capitalize; text-align:left; margin:0 0 0 6%; padding:0 10% 0 0; } scene5-main .tip-list-item,[data-is="scene5-main"] .tip-list-item{ list-style: circle outside none !important; display: list-item; margin:1em 0 0 0; } scene5-main .section-title,[data-is="scene5-main"] .section-title{ font-family:\'abel\'; font-size:2.0em; color:rgba(0,0,0,.75); text-transform: capitalize; text-align:left; margin:5% 0 0 5%; } scene5-main .hide,[data-is="scene5-main"] .hide{ display:none; } scene5-main .card-panel,[data-is="scene5-main"] .card-panel{ margin:5%; background-color:rgba(0,0,0,.25); min-height:500px; } scene5-main .circle-img,[data-is="scene5-main"] .circle-img{ background-color:rgba(0,0,0,.85); height:120px; width:120px; border-radius:50%; } scene5-main .card-title,[data-is="scene5-main"] .card-title{ font-family:\'pattaya\'; color:rgba(0,0,0,.85); font-size:2em; text-transform: capitalize; margin:0px; } scene5-main .card-description,[data-is="scene5-main"] .card-description{ font-family:\'abel\'; color:rgba(0,0,0,.85); font-size:1.2em; text-transform: capitalize; padding:0px 5% 0px 5%; text-align:left; } scene5-main .section-description,[data-is="scene5-main"] .section-description{ font-family:\'abel\'; font-size:1.5em; color:rgba(0,0,0,.75); padding:0px 25% 0px 25%; text-align:center; } scene5-main .section-description-list,[data-is="scene5-main"] .section-description-list{ text-align:left; font-family:\'abel\'; font-size:1.2em; color:rgba(0,0,0,.65); display:list-item; list-style-position:inside; list-style-type:circle; } scene5-main .fancy,[data-is="scene5-main"] .fancy{ overflow: hidden; text-align: center; } scene5-main .fancy span,[data-is="scene5-main"] .fancy span{ position: relative; } scene5-main .fancy span:before,[data-is="scene5-main"] .fancy span:before,scene5-main .fancy span:after,[data-is="scene5-main"] .fancy span:after{ content: ""; position: absolute; top: 50%; margin-top: -.2em; height: .2em; border-top: 1px solid rgba(0,0,0,.25); border-bottom: 1px solid rgba(0,0,0,.25); width: 150%; } scene5-main .fancy span:before,[data-is="scene5-main"] .fancy span:before{ right: 100%; margin-right: .5em; } scene5-main .fancy span:after,[data-is="scene5-main"] .fancy span:after{ left: 100%; margin-left: .5em; } scene5-main .row,[data-is="scene5-main"] .row,scene5-main .col,[data-is="scene5-main"] .col{ padding:0 !important; margin:0 !important; } scene5-main .scene-title,[data-is="scene5-main"] .scene-title{ font-family:\'pattaya\'; font-size:2.5em; color:rgba(0,0,0,.75); text-transform: capitalize; } scene5-main .scene-description,[data-is="scene5-main"] .scene-description{ font-family:\'abel\'; font-size:1.5em; padding:0 30% 0 30%; color:rgba(0,0,0,.75); text-transform: capitalize; text-align:justify; } scene5-main .scene-control-holder,[data-is="scene5-main"] .scene-control-holder{ height:70vh; line-height:1em; position:relative; } scene5-main .scene-control-btn,[data-is="scene5-main"] .scene-control-btn{ position:absolute; top:50%; font-size:3.5em; margin:0px 10px 0px 10px; border-radius: 50%; height:50px; width:50px; transition:all 0.3s ease-out; } scene5-main .scene-control-btn:hover,[data-is="scene5-main"] .scene-control-btn:hover{ transition:all 0.5s ease-out; background-color:rgba(0,0,0,.5); color:white; transform:scale(1.2); cursor:pointer; } scene5-main #prev,[data-is="scene5-main"] #prev{ left:0; } scene5-main #next,[data-is="scene5-main"] #next{ right:0; } scene5-main #main-viewport,[data-is="scene5-main"] #main-viewport{ background-color:rgba(0,0,155,.1); } scene5-main .imagery,[data-is="scene5-main"] .imagery{ position:relative; height:30vh; width:100%; background-image:url(\'src/images/scene2-main/background.svg\'); background-size:cover; background-position: center; overflow:hidden; } scene5-main .floor,[data-is="scene5-main"] .floor{ position:absolute; bottom:0%; left:0; width:100%; } scene5-main #interview_viewport,[data-is="scene5-main"] #interview_viewport{ position:relative; min-height:70vh; height:auto; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene5-main .scene-description,[data-is="scene5-main"] .scene-description{ padding:0 15% 0 15%; } scene5-main .section-description,[data-is="scene5-main"] .section-description{ padding:0 5% 0 5%; } } @media only screen and (max-width: 40em) { scene5-main .scene-description,[data-is="scene5-main"] .scene-description{ padding:0 15% 0 15%; } scene5-main .card-panel,[data-is="scene5-main"] .card-panel{ min-height:auto; } scene5-main .section-description,[data-is="scene5-main"] .section-description{ padding:0 5% 0 5%; } }', '', function(opts) {
+	    this.cards = [
+	    {
+	      image:'',
+	      title:'don\'t be nervous!',
+	      description:
+	      `
+	      Dont be nervous about following up the interview.
+	      Whether it is sending a thank-you note for their time, a list of
+	      references, a call or an email, they will appreciate your tenacity.
+	      `,
+	      button:0,
+	      buttonTitle:'',
+	      buttonLink:'#!'
+	    },
+	    {
+	      image:'',
+	      title:'Follow up',
+	      description:
+	      `
+	      Normally, once you have made it to the interview phase of the hiring process,
+	      employers are closer to filling the positions they have advertised.
+
+	      Many will let you know when you can expect to hear back from them.
+	      Sometimes it will take another couple interviews for them to reach their
+	      final decisions. Continue being courteous and patient.
+
+	      Impeccable manners can take a long way.
+	      If it has been a week or more since you had your interview, you can always send
+	      a polite follow up email checking the status of their decision-making process.
+	      `,
+	      button:0,
+	      buttonTitle:'',
+	      buttonLink:''
+	    },
+	    ];
+
+	    this.common_mistakes = [
+	    {title:'have an idea about what you\'d like to do within your potential new job'},
+	    {title:'show your best, most polite, and professional self'},
+	    {title:
+	      `
+	      Assume that your interviewer may not have looked at your resume. You need
+	      to sell yourself, so don’t just depend on the submission of your resume to
+	      do it for you.
+	      `
+	    },
+	    {title:'Prepare a mental outline and pitch beforehand. Just winging it may push you into a corner.'},
+	    {title:
+	      `
+	      Give thoughtful answers to the questions asked of you. Just giving short,
+	      one word answers doesn’t give your potential employer a good image of your
+	      potential without explanation.
+	      `
+	    },
+	    {title:
+	      `
+	      Explain how your experiences fit the needs of the recruiter. You need to tackle
+	      the interview believing you’re the best person for the job, and then prove it!
+	      `
+	    },
+	    {title:
+	      `
+	      Be sure to ask questions of the interviewer! Remember, you’re also interviewing
+	      the company to make sure you’d like to work for them. This also allows you to go
+	      further in the interview process with as little confusion as possible.
+	      `
+	    },
+	    {title:
+	      `
+	      Don’t forget to mention extracurricular experiences such as clubs or volunteer work.
+	      `
+	    },
+	    ];
+	});  
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var riot = __webpack_require__(39);
+
+	riot.tag2('scene6-main', '<div class="container-fluid"> <section class="row"> <div class="col s12"> <div class="imagery"> <img class="floor" src="src/images/scene2-main/floor.svg" alt=""> </div> </div> </section> <div class="row"> <div class="col s12"></div> </div> <div class="row center-align"> <div id="interview-viewport" class="col s12"> <interview-preparation-viewport></interview-preparation-viewport> <p class="scene-title fancy"><span>accepting the job</span></p> <p class="scene-description"> Congratulations! <br> Once you have been hired, there are still some important tips to getting started at your new place of employment. </p> <div class="row"> <div class="col s12 m6 push-m6"> <img class="circle-img" src="" alt=""> </div> <div class="col s12 m6 pull-m6"> <p class="scene-title fancy"><span>Don\'t</span></p> <ul class="tip-lists"> <li each="{dont}" class="tip-list-item">{title}</li> </ul> </div> </div> <div class="row"> <div class="col s12 m6"> <img class="circle-img" src="" alt=""> </div> <div class="col s12 m6"> <p class="scene-title fancy"><span>Do</span></p> <ul class="tip-lists"> <li each="{do}" class="tip-list-item">{title}</li> </ul> </div> </div> <hr style="width:80%;"> <hr style="width:80%;"> </div> </div> </div>', 'scene6-main .tip-lists,[data-is="scene6-main"] .tip-lists{ font-family:\'abel\'; font-size:1.2em; text-transform: capitalize; text-align:left; margin:0 0 0 6%; padding:0 10% 0 0; } scene6-main .tip-list-item,[data-is="scene6-main"] .tip-list-item{ list-style: circle outside none !important; display: list-item; margin:1em 0 0 0; } scene6-main .section-title,[data-is="scene6-main"] .section-title{ font-family:\'abel\'; font-size:2.0em; color:rgba(0,0,0,.75); text-transform: capitalize; text-align:left; margin:5% 0 0 5%; } scene6-main .hide,[data-is="scene6-main"] .hide{ display:none; } scene6-main .card-panel,[data-is="scene6-main"] .card-panel{ margin:5%; background-color:rgba(0,0,0,.25); min-height:500px; } scene6-main .circle-img,[data-is="scene6-main"] .circle-img{ background-color:rgba(0,0,0,.85); height:120px; width:120px; border-radius:50%; } scene6-main .card-title,[data-is="scene6-main"] .card-title{ font-family:\'pattaya\'; color:rgba(0,0,0,.85); font-size:2em; text-transform: capitalize; margin:0px; } scene6-main .card-description,[data-is="scene6-main"] .card-description{ font-family:\'abel\'; color:rgba(0,0,0,.85); font-size:1.2em; text-transform: capitalize; padding:0px 5% 0px 5%; text-align:left; } scene6-main .section-description,[data-is="scene6-main"] .section-description{ font-family:\'abel\'; font-size:1.5em; color:rgba(0,0,0,.75); padding:0px 25% 0px 25%; text-align:center; } scene6-main .section-description-list,[data-is="scene6-main"] .section-description-list{ text-align:left; font-family:\'abel\'; font-size:1.2em; color:rgba(0,0,0,.65); display:list-item; list-style-position:inside; list-style-type:circle; } scene6-main .fancy,[data-is="scene6-main"] .fancy{ overflow: hidden; text-align: center; } scene6-main .fancy span,[data-is="scene6-main"] .fancy span{ position: relative; } scene6-main .fancy span:before,[data-is="scene6-main"] .fancy span:before,scene6-main .fancy span:after,[data-is="scene6-main"] .fancy span:after{ content: ""; position: absolute; top: 50%; margin-top: -.2em; height: .2em; border-top: 1px solid rgba(0,0,0,.25); border-bottom: 1px solid rgba(0,0,0,.25); width: 150%; } scene6-main .fancy span:before,[data-is="scene6-main"] .fancy span:before{ right: 100%; margin-right: .5em; } scene6-main .fancy span:after,[data-is="scene6-main"] .fancy span:after{ left: 100%; margin-left: .5em; } scene6-main .row,[data-is="scene6-main"] .row,scene6-main .col,[data-is="scene6-main"] .col{ padding:0 !important; margin:0 !important; } scene6-main .scene-title,[data-is="scene6-main"] .scene-title{ font-family:\'pattaya\'; font-size:2.5em; color:rgba(0,0,0,.75); text-transform: capitalize; } scene6-main .scene-description,[data-is="scene6-main"] .scene-description{ font-family:\'abel\'; font-size:1.5em; padding:0 30% 0 30%; color:rgba(0,0,0,.75); text-transform: capitalize; text-align:center; } scene6-main .scene-control-holder,[data-is="scene6-main"] .scene-control-holder{ height:70vh; line-height:1em; position:relative; } scene6-main .scene-control-btn,[data-is="scene6-main"] .scene-control-btn{ position:absolute; top:50%; font-size:3.5em; margin:0px 10px 0px 10px; border-radius: 50%; height:50px; width:50px; transition:all 0.3s ease-out; } scene6-main .scene-control-btn:hover,[data-is="scene6-main"] .scene-control-btn:hover{ transition:all 0.5s ease-out; background-color:rgba(0,0,0,.5); color:white; transform:scale(1.2); cursor:pointer; } scene6-main #prev,[data-is="scene6-main"] #prev{ left:0; } scene6-main #next,[data-is="scene6-main"] #next{ right:0; } scene6-main #main-viewport,[data-is="scene6-main"] #main-viewport{ background-color:rgba(0,0,155,.1); } scene6-main .imagery,[data-is="scene6-main"] .imagery{ position:relative; height:30vh; width:100%; background-image:url(\'src/images/scene2-main/background.svg\'); background-size:cover; background-position: center; overflow:hidden; } scene6-main .floor,[data-is="scene6-main"] .floor{ position:absolute; bottom:0%; left:0; width:100%; } scene6-main #interview_viewport,[data-is="scene6-main"] #interview_viewport{ position:relative; min-height:70vh; height:auto; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene6-main .scene-description,[data-is="scene6-main"] .scene-description{ padding:0 15% 0 15%; } scene6-main .section-description,[data-is="scene6-main"] .section-description{ padding:0 5% 0 5%; } } @media only screen and (max-width: 40em) { scene6-main .scene-description,[data-is="scene6-main"] .scene-description{ padding:0 15% 0 15%; } scene6-main .card-panel,[data-is="scene6-main"] .card-panel{ min-height:auto; } scene6-main .section-description,[data-is="scene6-main"] .section-description{ padding:0 5% 0 5%; } }', '', function(opts) {
+	    this.dont = [
+	    {title:
+	      `
+	      get caught in gossip. It\'s easy to figure out who the gossiper in the group is.
+	      They usually come on strong to the 'newbies'
+	      `
+	    },
+	    {title:
+	      `
+	      Don't be a know-it-all. Even if you are correct, your delivery and timing could be off
+	      and get you off on the wrong foot. Also, it can give your boss the impression that you are
+	      not a team player.
+	      `
+	    },
+	    {title:
+	      `
+	      Don't make personal calls.
+	      `
+	    },
+	    {title:
+	      `
+	      Don't use the e-mail for any kind of personal use during business hours.
+	      `
+	    },
+	    {title:
+	      `
+	      Don't have your cell phone on while in the office unless specifically needed to fulfill job responsibilities.
+	      `
+	    },
+	    {title:
+	      `
+	      Don't shout across to others or lean over the low wall. Use your 'best' manners at all times
+	      if you are in a cubicle. Use your low voice on the phone, or when you are talking to someone
+	        (No one wants to hear your fights with your boyfriend/girlfriend/friends/family/pets).
+	      `
+	    },
+	    {title:
+	      `
+	      Bring odorous food to the office.
+	      `
+	    },
+	    {title:
+	      `
+	      Don't wear overpowering scents. (You never know if someone might have allergies/sensitive nose)
+	      `
+	    },
+	    ];
+
+	    this.do = [
+	    {
+	      title:
+	      `
+	      Respect people's time (client/coworker/etc) by being punctual for meetings.
+	      `
+	    },
+	    {
+	      title:
+	      `
+	      If wearing a nametag, place it on your right shoulder. When people shake hands with you,
+	      they usually tend to look there.
+	      `
+	    },
+	    {
+	      title:
+	      `
+	      Remember that when at any business related function, even in the evening, you are an employee.
+	      `
+	    },
+	    {
+	      title:
+	      `
+	      Say hello to good morning to anyone you encounter when you arrive in the morning and good night at the end of the day.
+	      `
+	    },
+	    {
+	      title:
+	      `
+	      When handed a business card, show respect by reading it throughly and perhaps repeat the person's name and thank them for the card.
+	      `
+	    },
+	    ];
+	});  
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var riot = __webpack_require__(39);
+
 	riot.tag2('general-interview', '<div class="row"> <div class="scene-control-holder col s1"> <a href="{prev}"> <i id="prev" class="material-icons scene-control-btn">chevron_left</i> </a> </div> <div class="col s10 animated slideInRight"> <div class="col s12 m4"> <div class="scene-container"> <img class="speech-bubble" src="src/images/scene2-main/bubbles/bubble1.svg" alt=""> <img class="scene-image" src="src/images/scene2-main/general_interview.svg" alt=""> </div> </div> <div class="col s12 m8"> <div class="scene-container"> <p class="scene-title flow-text"> general interview </p> <p class="scene-description flow-text"> The general interview format is the standard form of an interview where you will be invited to meet with the hiring manager, often accompanied by an HR representative. The specifics of the position, the company and industry will be discussed. </p> <p class="scene-description flow-text"> Your Resume/CV will be reviewed with questions designed to ascertain your suitability for the role and your cultural fit with the business. Competency questions may be used to assess how your past experiences have allowed you to develop specific skills and how these could benefit the company. Often the decision to hire is made after this type of interview. </p> </div> </div> </div> <div class="scene-control-holder col s1"> <a href="{next}"> <i id="next" class="material-icons scene-control-btn">chevron_right</i> </a> </div> </div>', 'general-interview .scene-container,[data-is="general-interview"] .scene-container{ height:70vh; padding:10%; } general-interview .speech-bubble,[data-is="general-interview"] .speech-bubble{ width:100%; height:50%; } general-interview .scene-image,[data-is="general-interview"] .scene-image{ width:100%; height:50%; } general-interview .scene-title,[data-is="general-interview"] .scene-title{ margin:0; font-family:\'pattaya\'; font-size:2.5em; text-transform:capitalize; } general-interview .scene-description,[data-is="general-interview"] .scene-description{ font-family:\'abel\'; font-transform:capitalize; text-align:justify; }', '', function(opts) {
 			this.prev = '/#skype-interview';
 			this.next = '/#lunch-interview';
 	});
 
 /***/ },
-/* 55 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25188,7 +25572,7 @@
 	});
 
 /***/ },
-/* 56 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25199,7 +25583,7 @@
 	});
 
 /***/ },
-/* 57 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25210,7 +25594,7 @@
 	});
 
 /***/ },
-/* 58 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25221,7 +25605,7 @@
 	});
 
 /***/ },
-/* 59 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25232,7 +25616,7 @@
 	});
 
 /***/ },
-/* 60 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25243,7 +25627,7 @@
 	});
 
 /***/ },
-/* 61 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25254,7 +25638,7 @@
 	});
 
 /***/ },
-/* 62 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25265,7 +25649,7 @@
 	});
 
 /***/ },
-/* 63 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);

@@ -11,7 +11,7 @@
           <p class="sc-title flow-text"> {scene.title} </p>
           <p class="sc-description flow-text"> {scene.description} </p>
           <!-- <a class="waves-effect waves-light btn"><i class="material-icons right">forward</i>Learn More</a>   -->
-          <a href="#!" class="button button-3d button-caution button-pill">Learn More</a>
+          <a href="/#acing-the-interview" class="button button-3d button-caution button-pill">Learn More</a>
         </section>
       </div>
     </div>

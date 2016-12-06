@@ -24,6 +24,7 @@ require('./tags/scene2-main.tag');
 require('./tags/scene3-main.tag');
 require('./tags/scene4-main.tag');
 require('./tags/scene5-main.tag');
+require('./tags/scene6-main.tag');
 require('./tags/interview_types_tag/general-interview.tag');
 require('./tags/interview_types_tag/lunch-interview.tag');
 require('./tags/interview_types_tag/telephone-interview.tag');
@@ -38,7 +39,7 @@ require('./tags/interview_types_tag/skype-interview.tag');
 
 
 document.addEventListener('DOMContentLoaded', function(){
-	riot.mount('scene5-main');
+	riot.mount('homepage');
 
 	route.stop();
 	route.start(true);
@@ -48,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function(){
 		riot.mount('#main-viewport', 'successful-interviewing');
 	});
 
+	
+	// SCENE SUBSCENES
 	route('/start-job-search', function(){
 		riot.mount('#sub-viewport', 'scene1-main');
 	});
@@ -60,43 +63,59 @@ document.addEventListener('DOMContentLoaded', function(){
 		riot.mount('#sub-viewport', 'scene3-main');
 	});
 
-	route('/general-interview', function(){
+	route('/acing-the-interview', function(){
+		riot.mount('#sub-viewport', 'scene4-main');
+	});
+
+	route('/following-up-the-interview', function(){
+		riot.mount('#sub-viewport', 'scene5-main');
+	});
+
+	route('/accepting-the-job', function(){
+		riot.mount('#sub-viewport', 'scene6-main');
+	});
+
+
+
+
+	// ROUTES FOR INTERVIEW TYPES
+	route('/interview-types/general-interview', function(){
 		riot.mount('#interview-viewport', 'general-interview');
 	});
 
-	route('/lunch-interview', function(){
+	route('/interview-types/lunch-interview', function(){
 		riot.mount('#interview-viewport', 'lunch-interview');
 	});
 
-	route('/telephone-interview', function(){
+	route('/interview-types/telephone-interview', function(){
 		riot.mount('#interview-viewport', 'telephone-interview');
 	});
 
-	route('/competency-interview', function(){
+	route('/interview-types/competency-interview', function(){
 		riot.mount('#interview-viewport', 'competency-interview');
 	});
 
-	route('/multiple-interview', function(){
+	route('/interview-types/multiple-interview', function(){
 		riot.mount('#interview-viewport', 'multiple-interview');
 	});
 
-	route('/panel-interview', function(){
+	route('/interview-types/panel-interview', function(){
 		riot.mount('#interview-viewport', 'panel-interview');
 	});
 
-	route('/group-interview', function(){
+	route('/interview-types/group-interview', function(){
 		riot.mount('#interview-viewport', 'group-interview');
 	});
 
-	route('/roleplay-interview', function(){
+	route('/interview-types/roleplay-interview', function(){
 		riot.mount('#interview-viewport', 'roleplay-interview');
 	});
 
-	route('/presentation-interview', function(){
+	route('/interview-types/presentation-interview', function(){
 		riot.mount('#interview-viewport', 'presentation-interview');
 	});
 
-	route('/skype-interview', function(){
+	route('/interview-types/skype-interview', function(){
 		riot.mount('#interview-viewport', 'skype-interview');
 	});
 })
