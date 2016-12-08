@@ -207,8 +207,8 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 p.nominalBounds = new cjs.Rectangle(389.2,238.5,301,345.8);
 // library properties:
 lib.properties = {
-	width: 550,
-	height: 400,
+	width: 500,
+	height: 500,
 	fps: 24,
 	color: "#FFFFFF",
 	opacity: 1.00,

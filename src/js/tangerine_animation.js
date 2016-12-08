@@ -4,9 +4,6 @@ function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	// canvas = canvas1;
-	// anim_container = anim;
-	// dom_overlay_container = dom;
 	handleComplete();
 }
 
