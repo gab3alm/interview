@@ -106,6 +106,7 @@
 								<div class="row center-align">
 									<button class="btn cust-btn animated bounce">
 										<a href="/#scenes">Begin Journey!</a>
+										<!-- <a href="http://www.csun.edu/career/plan_your_future/sucessful_interviewing/#scenes">Begin Journey! </a> -->
 									</button>
 								</div>	
 							</section>

@@ -83,13 +83,14 @@
 	__webpack_require__(65);
 	__webpack_require__(66);
 	__webpack_require__(67);
+	__webpack_require__(68);
 
 	document.addEventListener('DOMContentLoaded', function () {
 		riot.mount('homepage');
 
 		route.stop();
 		route.start(true);
-		route.base('interview/#');
+		route.base('http://www.csun.edu/career/plan_your_future/sucessful_interviewing/#');
 
 		route('/scenes', function () {
 			riot.mount('#main-viewport', 'successful-interviewing');
@@ -24815,7 +24816,485 @@
 
 	var riot = __webpack_require__(39);
 
-	riot.tag2('footing', '<div class="container-fluid"> <div class="row"> <footer class="footer-wrapper animated slideInUp"> <img class="footer-logo1" src="src/images/footer_assets/logo.svg" alt="career center logo"> <section class="address-info-container hide-on-med-and-down"> <p class="address-info">CAREER CENTER &copy; california state university, northridge</p> <p class="address-info">18111 nordhoff street,nortridge, CA 91330 | phone: (818) 677-2878 | <a target="_blank" href="https://www.csun.edu/career">WWW.CSUN.EDU/CAREER</a></p> </section> <section class="social-media-container"> <virtual each="{social_link in social_media_items}"> <a class="social_media_link" target="_blank" href="{social_link.url}"> <img class="tooltipped" data-position="top" data-delay="30" data-tooltip="{social_link.title}" riot-src="{social_link.src}" alt="{social_link.title}"> </a> </virtual> </section> </footer> </div> </div>', 'footing .footer-wrapper,[data-is="footing"] .footer-wrapper{ background-color:#282828; width:100%; height:55px; position:fixed; bottom:0px; left:0px; z-index:1002; } footing .footer-logo1,[data-is="footing"] .footer-logo1{ height:100%; width:auto; padding:.5%; } footing .address-info-container,[data-is="footing"] .address-info-container{ display:inline-block; height:100%; margin:.4% 0px 0px 0px; position:absolute; top:0px; } footing .address-info,[data-is="footing"] .address-info{ font-family:\'abel\'; font-size:1em; color:white; text-transform: capitalize; margin:0px; } footing .social-media-container,[data-is="footing"] .social-media-container{ height:100%; display:inline-block; float:right; } footing .social_media_link > img,[data-is="footing"] .social_media_link > img{ height:100%; padding:6%; }', '', function(opts) {
+	riot.tag2('homepage-2', '<div class="container-fluid"> <div class="row"> <div class="col s12"> <div id="homepage-container"> <ul id="scene"> <li id="background" class="layer" data-depth="0.00"></li> <li class="layer" data-depth="0.30"> <img id="backcloud1" class="cloud animated shake infinite" src="src/images/homepage2_assets/backcloud.svg" alt=""> </li> <li class="layer" data-depth="0.40"> <img id="forecloud1" class="cloud animated shake infinite" src="src/images/homepage2_assets/forecloud.svg" alt=""> </li> <li class="layer" data-depth="0.35"> <img id="backcloud2" class="cloud animated shake infinite " src="src/images/homepage2_assets/backcloud.svg" alt=""> <img id="backcloud3" class="cloud animated shake infinite" src="src/images/homepage2_assets/backcloud.svg" alt=""> <img id="backcloud2" class="cloud animated fadeOutLeft infinite" src="src/images/homepage2_assets/backcloud.svg" alt=""> <img id="backcloud3" class="cloud animated fadeOutRight infinite" src="src/images/homepage2_assets/backcloud.svg" alt=""> </li> <li class="layer" data-depth="0.10"> <img id="floor" src="src/images/homepage2_assets/floor.svg" alt=""> </li> <li class="layer" data-depth="0.30"> <div id="lamp-wrapper1"> <div class="lamp-container1 animated swing infinite"> <img id="lamp1" src="src/images/homepage2_assets/lamp.svg"> <img id="lamp1-light" src="src/images/homepage2_assets/light.svg"> </div> </div> <div id="lamp-wrapper2"> <div class="lamp-container2 animated swing infinite"> <img id="lamp1" src="src/images/homepage2_assets/lamp.svg"> <img id="lamp1-light" src="src/images/homepage2_assets/light.svg"> </div> </div> <div id="lamp-wrapper3"> <div class="lamp-container3 animated swing infinite"> <img id="lamp1" src="src/images/homepage2_assets/lamp.svg"> <img id="lamp1-light" src="src/images/homepage2_assets/light.svg"> </div> </div> </li> <li class="layer" data-depth="0.20"> <img id="fridge" src="src/images/homepage2_assets/fridge_shadow.svg" alt=""> </li> <li class="layer" data-depth="0.50"> <div id="tangerine"></div> </li> </ul> </div> <div id="information-container"> <div class="row center-align"> <div class="col s12"> <p class="title">successful interviewing</p> <div class="row"> <div class="col s12 m8 push-m2 l6 push-l3"> <div class="description-container"> <p class="description flow-text"> No matter your goals, sometimes applying for a job can be daunting task, especially when it comes to the interview process! </p> <p class="description flow-text"> Luckily, the CSUN Career Center is committed to ensuring you will be completely prepared for when the time comes. On this website, you will find all the necessarily steps and guidance to succeed when an interview day comes your way! </p> <a href="#!" class="button button-3d button-action button-pill">Lets Begin!</a> </div> </div> </div> </div> </div> </div> <footing></footing> </div> </div> </div>', 'homepage-2 .button,[data-is="homepage-2"] .button{ font-family:\'abel\'; color:rgba(255,255,255,1) !important; font-weight:bold; font-size:1.3em; } homepage-2 body,[data-is="homepage-2"] body{ -webkit-transform: translate3d(0, 0, 0); } homepage-2 .row,[data-is="homepage-2"] .row,homepage-2 .col,[data-is="homepage-2"] .col{ padding:0 !important; margin:0 !important; } homepage-2 #homepage-container,[data-is="homepage-2"] #homepage-container{ height:100vh; width:100%; overflow:hidden; background-image:url(\'src/images/homepage2_assets/background.svg\'); background-size:cover; background-position:center; position:relative; z-index:10; } homepage-2 .layer,[data-is="homepage-2"] .layer{ width:100%; height:100vh; } homepage-2 .title,[data-is="homepage-2"] .title{ font-family:\'pattaya\'; font-size:4em; text-transform: capitalize; color:white; margin:10vh 0 0 0; text-shadow: 2px 2px 2px rgba(0,0,0,.5); } homepage-2 .description-container,[data-is="homepage-2"] .description-container{ border-radius:20px; background-color:rgba(0,0,0,.5); padding:40px; margin-top:30vh; } homepage-2 .description,[data-is="homepage-2"] .description{ font-family:\'abel\'; font-size:1.7em; color:white; margin:0 0 3% 0; } homepage-2 #information-container,[data-is="homepage-2"] #information-container{ position:absolute; width:100%; top:0px; left:0px; z-index:11; } homepage-2 #floor,[data-is="homepage-2"] #floor{ position:absolute; top:52vh; left:0; height:50vh; transform:scale(1.2); } homepage-2 #fridge,[data-is="homepage-2"] #fridge{ width:100%; height:100vh; position:absolute; top:8vh; left:0; transform:scale(.8) translate(-28%, 0); } homepage-2 #lamp-wrapper1,[data-is="homepage-2"] #lamp-wrapper1{ position:absolute; top:0px; left:10%; transform:translate(-50%, 0); } homepage-2 #lamp-wrapper2,[data-is="homepage-2"] #lamp-wrapper2{ position:absolute; top:-5%; left:50%; transform:translate(-50%, 0); } homepage-2 #lamp-wrapper3,[data-is="homepage-2"] #lamp-wrapper3{ position:absolute; top:25%; left:85%; transform:translate(-50%, 0) scale(1.5); } homepage-2 .lamp-container1,[data-is="homepage-2"] .lamp-container1{ position:relative; width:500px; height:500px; animation-duration:10s; } homepage-2 .lamp-container2,[data-is="homepage-2"] .lamp-container2{ position:relative; width:500px; height:500px; animation-duration:15s; } homepage-2 .lamp-container3,[data-is="homepage-2"] .lamp-container3{ position:relative; width:500px; height:500px; animation-duration:20s; } homepage-2 #lamp1,[data-is="homepage-2"] #lamp1{ height:100%; position:absolute; top:-50%; left:50%; } homepage-2 #lamp1-light,[data-is="homepage-2"] #lamp1-light{ height:100%; position:absolute; top:15%; left:-15%; opacity: .5; } homepage-2 .cloud,[data-is="homepage-2"] .cloud{ width:100%; height:200px; position:absolute; } homepage-2 #backcloud1,[data-is="homepage-2"] #backcloud1{ top:calc(50% - 180px); left:0; transform:scale(1.2); animation-duration: 6s; } homepage-2 #backcloud2,[data-is="homepage-2"] #backcloud2{ animation-duration: 10s; top:calc(50% - 180px); left:15%; transform:scale(2); opacity:.5; } homepage-2 #backcloud3,[data-is="homepage-2"] #backcloud3{ animation-duration: 10s; top:calc(50% - 180px); left:-15%; transform:scale(1.5); opacity:.5; } homepage-2 #forecloud1,[data-is="homepage-2"] #forecloud1{ top:calc(50% - 180px); left:0; transform:scale(1.1); animation-duration:10s; } homepage-2 #tangerine,[data-is="homepage-2"] #tangerine{ position:absolute; top:50vh; left:25%; transform:scale(1) translate(-50%, 0); } @media only screen and (min-width: 40.063em) and (max-width: 64em) { homepage-2 #floor,[data-is="homepage-2"] #floor{ transform:scale(1.2); } homepage-2 #tangerine,[data-is="homepage-2"] #tangerine{ transform:scale(1) translate(-50%, 0); } homepage-2 #fridge,[data-is="homepage-2"] #fridge{ top:12vh; transform:scale(1) translate(-40%, 0); } homepage-2 #backcloud1,[data-is="homepage-2"] #backcloud1{ top:calc(53% - 180px); transform:scale(1.2); } homepage-2 #backcloud2,[data-is="homepage-2"] #backcloud2{ top:calc(53% - 180px); left:15%; transform:scale(2); } homepage-2 #backcloud3,[data-is="homepage-2"] #backcloud3{ top:calc(53% - 180px); left:-15%; transform:scale(1.5); } homepage-2 #forecloud1,[data-is="homepage-2"] #forecloud1{ top:calc(53% - 180px); left:0; transform:scale(1.1); } homepage-2 #lamp-wrapper1,[data-is="homepage-2"] #lamp-wrapper1{ display:none; } homepage-2 #lamp-wrapper2,[data-is="homepage-2"] #lamp-wrapper2{ transform:translate(-55%,0); } homepage-2 #lamp-wrapper3,[data-is="homepage-2"] #lamp-wrapper3{ display:none; } } @media only screen and (max-width: 40em) { homepage-2 #information-container,[data-is="homepage-2"] #information-container{ height:100vh; background-color:rgba(0,0,0,.5); } homepage-2 .description-container,[data-is="homepage-2"] .description-container{ margin-top:0vh; } homepage-2 #floor,[data-is="homepage-2"] #floor{ transform:scale(1); } homepage-2 #tangerine,[data-is="homepage-2"] #tangerine{ left:0; transform:scale(.7) translate(-50%,0); } homepage-2 #fridge,[data-is="homepage-2"] #fridge{ top:15vh; transform:scale(1.5) translate(-40%, 0); } homepage-2 #backcloud1,[data-is="homepage-2"] #backcloud1{ top:calc(65% - 180px); transform:scale(1.2); } homepage-2 #backcloud2,[data-is="homepage-2"] #backcloud2{ top:calc(65% - 180px); left:15%; transform:scale(2); } homepage-2 #backcloud3,[data-is="homepage-2"] #backcloud3{ top:calc(65% - 180px); left:-15%; transform:scale(1.5); } homepage-2 #forecloud1,[data-is="homepage-2"] #forecloud1{ top:calc(64% - 180px); left:0; transform:scale(1.1); } homepage-2 #lamp-wrapper1,[data-is="homepage-2"] #lamp-wrapper1{ display:none; } homepage-2 #lamp-wrapper2,[data-is="homepage-2"] #lamp-wrapper2{ } homepage-2 #lamp-wrapper3,[data-is="homepage-2"] #lamp-wrapper3{ display:none; } }', '', function(opts) {
+
+	;(function($, window, document, undefined) {
+
+	  'use strict';
+
+	  var NAME = 'parallax';
+	  var MAGIC_NUMBER = 30;
+	  var DEFAULTS = {
+	    relativeInput: false,
+	    clipRelativeInput: false,
+	    calibrationThreshold: 100,
+	    calibrationDelay: 500,
+	    supportDelay: 500,
+	    calibrateX: false,
+	    calibrateY: true,
+	    invertX: true,
+	    invertY: true,
+	    limitX: false,
+	    limitY: false,
+	    scalarX: 10.0,
+	    scalarY: 10.0,
+	    frictionX: 0.1,
+	    frictionY: 0.1,
+	    originX: 0.5,
+	    originY: 0.5
+	  };
+
+	  function Plugin(element, options) {
+
+	    this.element = element;
+
+	    this.$context = $(element).data('api', this);
+	    this.$layers = this.$context.find('.layer');
+
+	    var data = {
+	      calibrateX: this.$context.data('calibrate-x') || null,
+	      calibrateY: this.$context.data('calibrate-y') || null,
+	      invertX: this.$context.data('invert-x') || null,
+	      invertY: this.$context.data('invert-y') || null,
+	      limitX: parseFloat(this.$context.data('limit-x')) || null,
+	      limitY: parseFloat(this.$context.data('limit-y')) || null,
+	      scalarX: parseFloat(this.$context.data('scalar-x')) || null,
+	      scalarY: parseFloat(this.$context.data('scalar-y')) || null,
+	      frictionX: parseFloat(this.$context.data('friction-x')) || null,
+	      frictionY: parseFloat(this.$context.data('friction-y')) || null,
+	      originX: parseFloat(this.$context.data('origin-x')) || null,
+	      originY: parseFloat(this.$context.data('origin-y')) || null
+	    };
+
+	    for (var key in data) {
+	      if (data[key] === null) delete data[key];
+	    }
+
+	    $.extend(this, DEFAULTS, options, data);
+
+	    this.calibrationTimer = null;
+	    this.calibrationFlag = true;
+	    this.enabled = false;
+	    this.depths = [];
+	    this.raf = null;
+
+	    this.bounds = null;
+	    this.ex = 0;
+	    this.ey = 0;
+	    this.ew = 0;
+	    this.eh = 0;
+
+	    this.ecx = 0;
+	    this.ecy = 0;
+
+	    this.erx = 0;
+	    this.ery = 0;
+
+	    this.cx = 0;
+	    this.cy = 0;
+
+	    this.ix = 0;
+	    this.iy = 0;
+
+	    this.mx = 0;
+	    this.my = 0;
+
+	    this.vx = 0;
+	    this.vy = 0;
+
+	    this.onMouseMove = this.onMouseMove.bind(this);
+	    this.onDeviceOrientation = this.onDeviceOrientation.bind(this);
+	    this.onOrientationTimer = this.onOrientationTimer.bind(this);
+	    this.onCalibrationTimer = this.onCalibrationTimer.bind(this);
+	    this.onAnimationFrame = this.onAnimationFrame.bind(this);
+	    this.onWindowResize = this.onWindowResize.bind(this);
+
+	    this.initialise();
+	  }
+
+	  Plugin.prototype.transformSupport = function(value) {
+	    var element = document.createElement('div');
+	    var propertySupport = false;
+	    var propertyValue = null;
+	    var featureSupport = false;
+	    var cssProperty = null;
+	    var jsProperty = null;
+	    for (var i = 0, l = this.vendors.length; i < l; i++) {
+	      if (this.vendors[i] !== null) {
+	        cssProperty = this.vendors[i][0] + 'transform';
+	        jsProperty = this.vendors[i][1] + 'Transform';
+	      } else {
+	        cssProperty = 'transform';
+	        jsProperty = 'transform';
+	      }
+	      if (element.style[jsProperty] !== undefined) {
+	        propertySupport = true;
+	        break;
+	      }
+	    }
+	    switch(value) {
+	      case '2D':
+	        featureSupport = propertySupport;
+	        break;
+	      case '3D':
+	        if (propertySupport) {
+	          var body = document.body || document.createElement('body');
+	          var documentElement = document.documentElement;
+	          var documentOverflow = documentElement.style.overflow;
+	          if (!document.body) {
+	            documentElement.style.overflow = 'hidden';
+	            documentElement.appendChild(body);
+	            body.style.overflow = 'hidden';
+	            body.style.background = '';
+	          }
+	          body.appendChild(element);
+	          element.style[jsProperty] = 'translate3d(1px,1px,1px)';
+	          propertyValue = window.getComputedStyle(element).getPropertyValue(cssProperty);
+	          featureSupport = propertyValue !== undefined && propertyValue.length > 0 && propertyValue !== "none";
+	          documentElement.style.overflow = documentOverflow;
+	          body.removeChild(element);
+	        }
+	        break;
+	    }
+	    return featureSupport;
+	  };
+
+	  Plugin.prototype.ww = null;
+	  Plugin.prototype.wh = null;
+	  Plugin.prototype.wcx = null;
+	  Plugin.prototype.wcy = null;
+	  Plugin.prototype.wrx = null;
+	  Plugin.prototype.wry = null;
+	  Plugin.prototype.portrait = null;
+	  Plugin.prototype.desktop = !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
+	  Plugin.prototype.vendors = [null,['-webkit-','webkit'],['-moz-','Moz'],['-o-','O'],['-ms-','ms']];
+	  Plugin.prototype.motionSupport = !!window.DeviceMotionEvent;
+	  Plugin.prototype.orientationSupport = !!window.DeviceOrientationEvent;
+	  Plugin.prototype.orientationStatus = 0;
+	  Plugin.prototype.transform2DSupport = Plugin.prototype.transformSupport('2D');
+	  Plugin.prototype.transform3DSupport = Plugin.prototype.transformSupport('3D');
+	  Plugin.prototype.propertyCache = {};
+
+	  Plugin.prototype.initialise = function() {
+
+	    if (this.$context.css('position') === 'static') {
+	      this.$context.css({
+	        position:'relative'
+	      });
+	    }
+
+	    this.accelerate(this.$context);
+
+	    this.updateLayers();
+	    this.updateDimensions();
+	    this.enable();
+	    this.queueCalibration(this.calibrationDelay);
+	  };
+
+	  Plugin.prototype.updateLayers = function() {
+
+	    this.$layers = this.$context.find('.layer');
+	    this.depths = [];
+
+	    this.$layers.css({
+	      position:'absolute',
+	      display:'block',
+	      left: 0,
+	      top: 0
+	    });
+	    this.$layers.first().css({
+	      position:'relative'
+	    });
+
+	    this.accelerate(this.$layers);
+
+	    this.$layers.each($.proxy(function(index, element) {
+	      this.depths.push($(element).data('depth') || 0);
+	    }, this));
+	  };
+
+	  Plugin.prototype.updateDimensions = function() {
+	    this.ww = window.innerWidth;
+	    this.wh = window.innerHeight;
+	    this.wcx = this.ww * this.originX;
+	    this.wcy = this.wh * this.originY;
+	    this.wrx = Math.max(this.wcx, this.ww - this.wcx);
+	    this.wry = Math.max(this.wcy, this.wh - this.wcy);
+	  };
+
+	  Plugin.prototype.updateBounds = function() {
+	    this.bounds = this.element.getBoundingClientRect();
+	    this.ex = this.bounds.left;
+	    this.ey = this.bounds.top;
+	    this.ew = this.bounds.width;
+	    this.eh = this.bounds.height;
+	    this.ecx = this.ew * this.originX;
+	    this.ecy = this.eh * this.originY;
+	    this.erx = Math.max(this.ecx, this.ew - this.ecx);
+	    this.ery = Math.max(this.ecy, this.eh - this.ecy);
+	  };
+
+	  Plugin.prototype.queueCalibration = function(delay) {
+	    clearTimeout(this.calibrationTimer);
+	    this.calibrationTimer = setTimeout(this.onCalibrationTimer, delay);
+	  };
+
+	  Plugin.prototype.enable = function() {
+	    if (!this.enabled) {
+	      this.enabled = true;
+	      if (this.orientationSupport) {
+	        this.portrait = null;
+	        window.addEventListener('deviceorientation', this.onDeviceOrientation);
+	        setTimeout(this.onOrientationTimer, this.supportDelay);
+	      } else {
+	        this.cx = 0;
+	        this.cy = 0;
+	        this.portrait = false;
+	        window.addEventListener('mousemove', this.onMouseMove);
+	      }
+	      window.addEventListener('resize', this.onWindowResize);
+	      this.raf = requestAnimationFrame(this.onAnimationFrame);
+	    }
+	  };
+
+	  Plugin.prototype.disable = function() {
+	    if (this.enabled) {
+	      this.enabled = false;
+	      if (this.orientationSupport) {
+	        window.removeEventListener('deviceorientation', this.onDeviceOrientation);
+	      } else {
+	        window.removeEventListener('mousemove', this.onMouseMove);
+	      }
+	      window.removeEventListener('resize', this.onWindowResize);
+	      cancelAnimationFrame(this.raf);
+	    }
+	  };
+
+	  Plugin.prototype.calibrate = function(x, y) {
+	    this.calibrateX = x === undefined ? this.calibrateX : x;
+	    this.calibrateY = y === undefined ? this.calibrateY : y;
+	  };
+
+	  Plugin.prototype.invert = function(x, y) {
+	    this.invertX = x === undefined ? this.invertX : x;
+	    this.invertY = y === undefined ? this.invertY : y;
+	  };
+
+	  Plugin.prototype.friction = function(x, y) {
+	    this.frictionX = x === undefined ? this.frictionX : x;
+	    this.frictionY = y === undefined ? this.frictionY : y;
+	  };
+
+	  Plugin.prototype.scalar = function(x, y) {
+	    this.scalarX = x === undefined ? this.scalarX : x;
+	    this.scalarY = y === undefined ? this.scalarY : y;
+	  };
+
+	  Plugin.prototype.limit = function(x, y) {
+	    this.limitX = x === undefined ? this.limitX : x;
+	    this.limitY = y === undefined ? this.limitY : y;
+	  };
+
+	  Plugin.prototype.origin = function(x, y) {
+	    this.originX = x === undefined ? this.originX : x;
+	    this.originY = y === undefined ? this.originY : y;
+	  };
+
+	  Plugin.prototype.clamp = function(value, min, max) {
+	    value = Math.max(value, min);
+	    value = Math.min(value, max);
+	    return value;
+	  };
+
+	  Plugin.prototype.css = function(element, property, value) {
+	    var jsProperty = this.propertyCache[property];
+	    if (!jsProperty) {
+	      for (var i = 0, l = this.vendors.length; i < l; i++) {
+	        if (this.vendors[i] !== null) {
+	          jsProperty = $.camelCase(this.vendors[i][1] + '-' + property);
+	        } else {
+	          jsProperty = property;
+	        }
+	        if (element.style[jsProperty] !== undefined) {
+	          this.propertyCache[property] = jsProperty;
+	          break;
+	        }
+	      }
+	    }
+	    element.style[jsProperty] = value;
+	  };
+
+	  Plugin.prototype.accelerate = function($element) {
+	    for (var i = 0, l = $element.length; i < l; i++) {
+	      var element = $element[i];
+	      this.css(element, 'transform', 'translate3d(0,0,0)');
+	      this.css(element, 'transform-style', 'preserve-3d');
+	      this.css(element, 'backface-visibility', 'hidden');
+	    }
+	  };
+
+	  Plugin.prototype.setPosition = function(element, x, y) {
+	    x += 'px';
+	    y += 'px';
+	    if (this.transform3DSupport) {
+	      this.css(element, 'transform', 'translate3d('+x+','+y+',0)');
+	    } else if (this.transform2DSupport) {
+	      this.css(element, 'transform', 'translate('+x+','+y+')');
+	    } else {
+	      element.style.left = x;
+	      element.style.top = y;
+	    }
+	  };
+
+	  Plugin.prototype.onOrientationTimer = function(event) {
+	    if (this.orientationSupport && this.orientationStatus === 0) {
+	      this.disable();
+	      this.orientationSupport = false;
+	      this.enable();
+	    }
+	  };
+
+	  Plugin.prototype.onCalibrationTimer = function(event) {
+	    this.calibrationFlag = true;
+	  };
+
+	  Plugin.prototype.onWindowResize = function(event) {
+	    this.updateDimensions();
+	  };
+
+	  Plugin.prototype.onAnimationFrame = function() {
+	    this.updateBounds();
+	    var dx = this.ix - this.cx;
+	    var dy = this.iy - this.cy;
+	    if ((Math.abs(dx) > this.calibrationThreshold) || (Math.abs(dy) > this.calibrationThreshold)) {
+	      this.queueCalibration(0);
+	    }
+	    if (this.portrait) {
+	      this.mx = this.calibrateX ? dy : this.iy;
+	      this.my = this.calibrateY ? dx : this.ix;
+	    } else {
+	      this.mx = this.calibrateX ? dx : this.ix;
+	      this.my = this.calibrateY ? dy : this.iy;
+	    }
+	    this.mx *= this.ew * (this.scalarX / 100);
+	    this.my *= this.eh * (this.scalarY / 100);
+	    if (!isNaN(parseFloat(this.limitX))) {
+	      this.mx = this.clamp(this.mx, -this.limitX, this.limitX);
+	    }
+	    if (!isNaN(parseFloat(this.limitY))) {
+	      this.my = this.clamp(this.my, -this.limitY, this.limitY);
+	    }
+	    this.vx += (this.mx - this.vx) * this.frictionX;
+	    this.vy += (this.my - this.vy) * this.frictionY;
+	    for (var i = 0, l = this.$layers.length; i < l; i++) {
+	      var depth = this.depths[i];
+	      var layer = this.$layers[i];
+	      var xOffset = this.vx * depth * (this.invertX ? -1 : 1);
+	      var yOffset = this.vy * depth * (this.invertY ? -1 : 1);
+	      this.setPosition(layer, xOffset, yOffset);
+	    }
+	    this.raf = requestAnimationFrame(this.onAnimationFrame);
+	  };
+
+	  Plugin.prototype.onDeviceOrientation = function(event) {
+
+	    if (!this.desktop && event.beta !== null && event.gamma !== null) {
+
+	      this.orientationStatus = 1;
+
+	      var x = (event.beta  || 0) / MAGIC_NUMBER;
+	      var y = (event.gamma || 0) / MAGIC_NUMBER;
+
+	      var portrait = window.innerHeight > window.innerWidth;
+	      if (this.portrait !== portrait) {
+	        this.portrait = portrait;
+	        this.calibrationFlag = true;
+	      }
+
+	      if (this.calibrationFlag) {
+	        this.calibrationFlag = false;
+	        this.cx = x;
+	        this.cy = y;
+	      }
+
+	      this.ix = x;
+	      this.iy = y;
+	    }
+	  };
+
+	  Plugin.prototype.onMouseMove = function(event) {
+
+	    var clientX = event.clientX;
+	    var clientY = event.clientY;
+
+	    if (!this.orientationSupport && this.relativeInput) {
+
+	      if (this.clipRelativeInput) {
+	        clientX = Math.max(clientX, this.ex);
+	        clientX = Math.min(clientX, this.ex + this.ew);
+	        clientY = Math.max(clientY, this.ey);
+	        clientY = Math.min(clientY, this.ey + this.eh);
+	      }
+
+	      this.ix = (clientX - this.ex - this.ecx) / this.erx;
+	      this.iy = (clientY - this.ey - this.ecy) / this.ery;
+
+	    } else {
+
+	      this.ix = (clientX - this.wcx) / this.wrx;
+	      this.iy = (clientY - this.wcy) / this.wry;
+	    }
+	  };
+
+	  var API = {
+	    enable: Plugin.prototype.enable,
+	    disable: Plugin.prototype.disable,
+	    updateLayers: Plugin.prototype.updateLayers,
+	    calibrate: Plugin.prototype.calibrate,
+	    friction: Plugin.prototype.friction,
+	    invert: Plugin.prototype.invert,
+	    scalar: Plugin.prototype.scalar,
+	    limit: Plugin.prototype.limit,
+	    origin: Plugin.prototype.origin
+	  };
+
+	  $.fn[NAME] = function (value) {
+	    var args = arguments;
+	    return this.each(function () {
+	      var $this = $(this);
+	      var plugin = $this.data(NAME);
+	      if (!plugin) {
+	        plugin = new Plugin(this, value);
+	        $this.data(NAME, plugin);
+	      }
+	      if (API[value]) {
+	        plugin[value].apply(plugin, Array.prototype.slice.call(args, 1));
+	      }
+	    });
+	  };
+
+	})(window.jQuery || window.Zepto, window, document);
+
+			this.on('mount', function() {
+				var $node = $(this.root);
+				$node.find('#scene').parallax();
+				$node.find('#tangerine').load('src/animations/tangerine.html');
+				animate_clouds($node);
+			});
+
+			function animate_clouds(node){
+				node.find('#backcloud1').fadeIn(5000);
+			}
+	});
+
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var riot = __webpack_require__(39);
+
+	riot.tag2('footing', '<div class="container-fluid"> <div class="row"> <footer class="footer-wrapper animated slideInUp"> <img class="footer-logo1" src="src/images/footer_assets/logo.svg" alt="career center logo"> <section class="address-info-container hide-on-med-and-down"> <p class="address-info">CAREER CENTER &copy; california state university, northridge</p> <p class="address-info">18111 nordhoff street,nortridge, CA 91330 | phone: (818) 677-2878 | <a target="_blank" href="https://www.csun.edu/career">WWW.CSUN.EDU/CAREER</a></p> </section> <section class="social-media-container"> <virtual each="{social_link in social_media_items}"> <a class="social_media_link" target="_blank" href="{social_link.url}"> <img class="tooltipped" data-position="top" data-delay="30" data-tooltip="{social_link.title}" riot-src="{social_link.src}" alt="{social_link.title}"> </a> <img src="" alt=""> </virtual> </section> </footer> </div> </div>', 'footing .footer-wrapper,[data-is="footing"] .footer-wrapper{ background-color:#282828; width:100%; height:55px; position:fixed; bottom:0px; left:0px; z-index:1002; } footing .footer-logo1,[data-is="footing"] .footer-logo1{ height:100%; width:auto; padding:.5%; } footing .address-info-container,[data-is="footing"] .address-info-container{ display:inline-block; height:100%; margin:.4% 0px 0px 0px; position:absolute; top:0px; } footing .address-info,[data-is="footing"] .address-info{ font-family:\'abel\'; font-size:1em; color:white; text-transform: capitalize; margin:0px; } footing .social-media-container,[data-is="footing"] .social-media-container{ height:100%; display:inline-block; float:right; } footing .social_media_link img,[data-is="footing"] .social_media_link img{ height:100%; padding:5%; }', '', function(opts) {
 
 	    this.on('mount', function() {
 	      var $node = $(this.root);
@@ -24833,12 +25312,12 @@
 
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
 
-	riot.tag2('navigation-bar', '<div class="container-fluid"> <div class="row"> <nav class="animated slideInDown"> <div class="nav-wrapper"> <a target="_blank" href="https://www.csun.edu/career" class="brand-logo"><img class="logo-image" src="src/images/logo4.svg" alt=""></a> <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a> <ul class="right hide-on-med-and-down"> <virtual each="{item in nav_items}"> <li class="nav-item"><a target="_blank" href="{item.url}"> {item.title} </a></li> </virtual> </ul> <ul class="side-nav" id="mobile-nav"> <virtual each="{side_item in mobile_nav_items}"> <li class="nav-item"><a target="_blank" href="{side_item.url}"> {side_item.title} </a></li> </virtual> </ul> </div> </nav> </div> </div>', 'navigation-bar .row,[data-is="navigation-bar"] .row{ margin:0px; } navigation-bar .logo-image,[data-is="navigation-bar"] .logo-image{ height:64px; padding:10px; } navigation-bar nav,[data-is="navigation-bar"] nav{ background-color:rgba(0,0,0,.75) !important; margin:0px; } navigation-bar .nav-item,[data-is="navigation-bar"] .nav-item{ text-transform: capitalize; }', '', function(opts) {
+	riot.tag2('navigation-bar', '<div class="container-fluid"> <div class="row"> <nav class="animated slideInDown"> <div class="nav-wrapper"> <a target="_blank" href="https://www.csun.edu/career" class="brand-logo"><img class="logo-image" src="src/images/logo4.svg" alt=""></a> <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a> <ul class="right hide"> <virtual each="{item in nav_items}"> <li class="nav-item"><a target="_blank" href="{item.url}"> {item.title} </a></li> </virtual> </ul> <ul class="side-nav" id="mobile-nav"> <virtual each="{side_item in mobile_nav_items}"> <li class="nav-item"><a target="_blank" href="{side_item.url}"> {side_item.title} </a></li> </virtual> </ul> </div> </nav> </div> </div>', 'navigation-bar .row,[data-is="navigation-bar"] .row{ margin:0px; } navigation-bar .logo-image,[data-is="navigation-bar"] .logo-image{ height:64px; padding:10px; } navigation-bar nav,[data-is="navigation-bar"] nav{ background-color:rgba(0,0,0,.75) !important; margin:0px; } navigation-bar .nav-item,[data-is="navigation-bar"] .nav-item{ text-transform: capitalize; }', '', function(opts) {
 
 	    this.on('mount', function() {
 	      var $node = $(this.root);
@@ -24868,7 +25347,7 @@
 
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -24891,12 +25370,12 @@
 	});
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
 
-	riot.tag2('scene1', '<div class="container-fluid" id="scene1"> <div id="snowflakeContainer" class="hide-on-small-only"> <p class="snowflake">.</p> </div> <div class="row center-align"> <h1 class="app-title flow-text">successful interviewing</h1> </div> <div class="row"> <div class="col s12 m12 l6"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="/#start-job-search" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row center-align"> <div class="col s12"> <section id="graphics-container"> <img class="cubes animated slideInLeft" src="src/images/scene1/cubes.svg" alt=""> <img class="ice-cream animated slideInRight" src="src/images/scene1/podium.svg" alt=""> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> <i id="sc1-next-btn" class="material-icons next-scene-btn tooltipped" data-position="top" data-delay="25" data-tooltip="Scroll Down">arrow_drop_down_circle</i> </div> </div> </div> </div>', 'scene1 #snowflakeContainer,[data-is="scene1"] #snowflakeContainer{ position: absolute; left: 0px; top: 0px; } scene1 .snowflake,[data-is="scene1"] .snowflake{ padding-left: 15px; font-size: 20px; line-height: 24px; position: fixed; color: rgba(255,255,255,.5) !important; user-select: none; z-index:999; user-drag: none; user-select: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none; } scene1 .snowflake:hover,[data-is="scene1"] .snowflake:hover{ cursor: default; } scene1 #scene1,[data-is="scene1"] #scene1{ position:relative; height:calc(101vh - 55px - 64px); background-image:url(\'src/images/scene1/background2.svg\'); background-size:cover; background-position:center; width:auto; overflow:hidden !important; } scene1 .app-title,[data-is="scene1"] .app-title{ color:white; text-shadow:2px 2px 2px rgba(0,0,0,.5); font-family:\'pattaya\'; font-size:2.5em; text-transform:capitalize; margin:0px; padding:20px; } scene1 #scene-info-container,[data-is="scene1"] #scene-info-container{ padding:0px 10px 0px 0px; margin:0px 0px 0px 15%; } scene1 .sc-title,[data-is="scene1"] .sc-title{ color:white; text-shadow:1px 1px 1px rgba(0,0,0,.5); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene1 .sc-description,[data-is="scene1"] .sc-description{ color:white; font-family:\'abel\'; font-size:1.3em; text-align:left; margin:0px 0px 10px 0px; } scene1 #graphics-container,[data-is="scene1"] #graphics-container{ position:relative; } scene1 .cubes,[data-is="scene1"] .cubes{ height:45%; width:45%; display:inline-block; margin:0px 100px 0px 0px; } scene1 .ice-cream,[data-is="scene1"] .ice-cream{ height:20%; width:20%; display:inline-block; } scene1 .next-scene-btn-container,[data-is="scene1"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:10px; left:0px; animation-duration: 2s; } scene1 .next-scene-btn,[data-is="scene1"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene1 .next-scene-btn:hover,[data-is="scene1"] .next-scene-btn:hover{ transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene1 #scene-info-container,[data-is="scene1"] #scene-info-container{ padding:0px 20px 0px 0px; margin:0px; } } @media only screen and (max-width: 40em) { scene1 #scene-info-container,[data-is="scene1"] #scene-info-container{ padding:0px 20px 0px 0px; margin:0px; } }', '', function(opts) {
+	riot.tag2('scene1', '<div class="container-fluid" id="scene1"> <div id="snowflakeContainer" class="hide-on-small-only"> <p class="snowflake">&#10052;</p> </div> <div class="row center-align"> <h1 class="app-title flow-text">successful interviewing</h1> </div> <div class="row"> <div class="col s12 m12 l6"> <section id="scene-info-container"> <p class="sc-title flow-text"> {scene.title} </p> <p class="sc-description flow-text"> {scene.description} </p> <a href="/#start-job-search" class="button button-3d button-caution button-pill">Learn More</a> </section> </div> </div> <div class="row center-align"> <div class="col s12"> <section id="graphics-container"> <img class="cubes animated slideInLeft" src="src/images/scene1/cubes.svg" alt=""> <img class="ice-cream animated slideInRight" src="src/images/scene1/podium.svg" alt=""> </section> </div> </div> <div class="row"> <div class="col s12"> <div class="next-scene-btn-container animated bounce"> <i id="sc1-next-btn" class="material-icons next-scene-btn tooltipped" data-position="top" data-delay="25" data-tooltip="Scroll Down">arrow_drop_down_circle</i> </div> </div> </div> </div>', 'scene1 #snowflakeContainer,[data-is="scene1"] #snowflakeContainer{ position: absolute; left: 0px; top: 0px; } scene1 .snowflake,[data-is="scene1"] .snowflake{ padding-left: 15px; font-size: 20px; line-height: 24px; position: fixed; color: rgba(255,255,255,.5) !important; user-select: none; z-index:999; user-drag: none; user-select: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none; } scene1 .snowflake:hover,[data-is="scene1"] .snowflake:hover{ cursor: default; } scene1 #scene1,[data-is="scene1"] #scene1{ position:relative; height:calc(101vh - 55px - 64px); background-image:url(\'src/images/scene1/background2.svg\'); background-size:cover; background-position:center; width:auto; overflow:hidden !important; } scene1 .app-title,[data-is="scene1"] .app-title{ color:white; text-shadow:2px 2px 2px rgba(0,0,0,.5); font-family:\'pattaya\'; font-size:2.5em; text-transform:capitalize; margin:0px; padding:20px; } scene1 #scene-info-container,[data-is="scene1"] #scene-info-container{ padding:0px 10px 0px 0px; margin:0px 0px 0px 15%; } scene1 .sc-title,[data-is="scene1"] .sc-title{ color:white; text-shadow:1px 1px 1px rgba(0,0,0,.5); font-family:\'pattaya\'; font-size:2em; text-transform:capitalize; margin:0px; } scene1 .sc-description,[data-is="scene1"] .sc-description{ color:white; font-family:\'abel\'; font-size:1.3em; text-align:left; margin:0px 0px 10px 0px; } scene1 #graphics-container,[data-is="scene1"] #graphics-container{ position:relative; } scene1 .cubes,[data-is="scene1"] .cubes{ height:45%; width:45%; display:inline-block; margin:0px 100px 0px 0px; } scene1 .ice-cream,[data-is="scene1"] .ice-cream{ height:20%; width:20%; display:inline-block; } scene1 .next-scene-btn-container,[data-is="scene1"] .next-scene-btn-container{ width:100%; text-align:center; position:absolute; bottom:10px; left:0px; animation-duration: 2s; } scene1 .next-scene-btn,[data-is="scene1"] .next-scene-btn{ transition: all .5s ease-out; font-size:2.7em; color:rgba(255,255,255,.5); } scene1 .next-scene-btn:hover,[data-is="scene1"] .next-scene-btn:hover{ transition: all .5s ease-out; font-size:3.5em; color:rgba(255,255,255,1); cursor:pointer; } @media only screen and (min-width: 40.063em) and (max-width: 64em) { scene1 #scene-info-container,[data-is="scene1"] #scene-info-container{ padding:0px 20px 0px 0px; margin:0px; } } @media only screen and (max-width: 40em) { scene1 #scene-info-container,[data-is="scene1"] #scene-info-container{ padding:0px 20px 0px 0px; margin:0px; } }', '', function(opts) {
 
 	    this.on('mount', function() {
 	      var $node = $(this.root);
@@ -24912,145 +25391,11 @@
 	      and Pathways links your area of study or desired occupations to relevant companies that are hiring.
 	      `
 	    };
-
-	﻿
-	var requestAnimationFrame = window.requestAnimationFrame ||
-	window.mozRequestAnimationFrame ||
-	window.webkitRequestAnimationFrame ||
-	window.msRequestAnimationFrame;
-
-	var transforms = ["transform",
-	"msTransform",
-	"webkitTransform",
-	"mozTransform",
-	"oTransform"];
-
-	var transformProperty = getSupportedPropertyName(transforms);
-
-	var snowflakes = [];
-
-	var browserWidth;
-	var browserHeight;
-
-	var numberOfSnowflakes = 42;
-
-	var resetPosition = false;
-
-	function setup() {
-		window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
-		window.addEventListener("resize", setResetFlag, false);
-	}
-	setup();
-
-	function getSupportedPropertyName(properties) {
-	    for (var i = 0; i < properties.length; i++) {
-	        if (typeof document.body.style[properties[i]] != "undefined") {
-	            return properties[i];
-	        }
-	    }
-	    return null;
-	}
-
-	function Snowflake(element, radius, speed, xPos, yPos) {
-
-	    this.element = element;
-	    this.radius = radius;
-	    this.speed = speed;
-	    this.xPos = xPos;
-	    this.yPos = yPos;
-
-	    this.counter = 0;
-	    this.sign = Math.random() < 0.5 ? 1 : -1;
-
-	    this.element.style.opacity = .6 + Math.random();
-	    this.element.style.fontSize = 12 + Math.random() * 83 + "px";
-	}
-
-	Snowflake.prototype.update = function () {
-
-	    this.counter += this.speed / 5000;
-	    this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
-	    this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
-
-	    setTranslate3DTransform(this.element, Math.round(this.xPos), Math.round(this.yPos));
-
-	    if (this.yPos > browserHeight) {
-	    	this.yPos = -50;
-	    }
-	}
-
-	function setTranslate3DTransform(element, xPosition, yPosition) {
-		var val = "translate3d(" + xPosition + "px, " + yPosition + "px" + ", 0)";
-	    element.style[transformProperty] = val;
-	}
-
-	function generateSnowflakes() {
-
-	    var originalSnowflake = document.querySelector(".snowflake");
-
-	    var snowflakeContainer = originalSnowflake.parentNode;
-
-	    browserWidth = document.documentElement.clientWidth;
-	    browserHeight = document.documentElement.clientHeight;
-
-	    for (var i = 0; i < numberOfSnowflakes; i++) {
-
-	        var snowflakeCopy = originalSnowflake.cloneNode(true);
-	        snowflakeContainer.appendChild(snowflakeCopy);
-
-	        var initialXPos = getPosition(50, browserWidth);
-	        var initialYPos = getPosition(50, browserHeight);
-	        var speed = 5+Math.random()*40;
-	        var radius = 4+Math.random()*10;
-
-	        var snowflakeObject = new Snowflake(snowflakeCopy,
-	           radius,
-	           speed,
-	           initialXPos,
-	           initialYPos);
-	        snowflakes.push(snowflakeObject);
-	    }
-
-	    snowflakeContainer.removeChild(originalSnowflake);
-
-	    moveSnowflakes();
-	}
-
-	function moveSnowflakes() {
-	    for (var i = 0; i < snowflakes.length; i++) {
-	        var snowflake = snowflakes[i];
-	        snowflake.update();
-	    }
-
-	    if (resetPosition) {
-	    	browserWidth = document.documentElement.clientWidth;
-	       browserHeight = document.documentElement.clientHeight;
-
-	       for (var i = 0; i < snowflakes.length; i++) {
-	           var snowflake = snowflakes[i];
-
-	           snowflake.xPos = getPosition(50, browserWidth);
-	           snowflake.yPos = getPosition(50, browserHeight);
-	       }
-
-	       resetPosition = false;
-	   }
-
-	   requestAnimationFrame(moveSnowflakes);
-	}
-
-	function getPosition(offset, size) {
-		return Math.round(-1*offset + Math.random() * (size+2*offset));
-	}
-
-	function setResetFlag(e) {
-		resetPosition = true;
-	}
 	});
 
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25075,7 +25420,7 @@
 	});
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25100,7 +25445,7 @@
 	});
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25123,7 +25468,7 @@
 	});
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25146,7 +25491,7 @@
 	});
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25170,7 +25515,7 @@
 	});
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25179,7 +25524,7 @@
 	});	
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25188,7 +25533,7 @@
 	});	
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25272,7 +25617,7 @@
 	});	
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25368,7 +25713,7 @@
 	});	
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25450,7 +25795,7 @@
 	});  
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25540,7 +25885,7 @@
 	});  
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25551,7 +25896,7 @@
 	});
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25562,7 +25907,7 @@
 	});
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25573,7 +25918,7 @@
 	});
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25584,7 +25929,7 @@
 	});
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25595,7 +25940,7 @@
 	});
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25606,7 +25951,7 @@
 	});
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25617,7 +25962,7 @@
 	});
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25628,7 +25973,7 @@
 	});
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);
@@ -25639,7 +25984,7 @@
 	});
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(39);

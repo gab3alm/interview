@@ -40,7 +40,7 @@ require('./tags/interview_types_tag/skype-interview.tag');
 
 
 document.addEventListener('DOMContentLoaded', function(){
-	riot.mount('scene1');
+	riot.mount('homepage');
 
 	route.stop();
 	route.start(true);
