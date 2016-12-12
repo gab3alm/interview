@@ -29,8 +29,8 @@ var resetPosition = false;
 // It all starts here...
 //
 function setup() {
-	window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
-	window.addEventListener("resize", setResetFlag, false);
+    window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
+    window.addEventListener("resize", setResetFlag, false);
 }
 setup();
 
@@ -51,18 +51,18 @@ function getSupportedPropertyName(properties) {
 //
 function Snowflake(element, radius, speed, xPos, yPos) {
 
-	// set initial snowflake properties
+    // set initial snowflake properties
     this.element = element;
     this.radius = radius;
     this.speed = speed;
     this.xPos = xPos;
     this.yPos = yPos;
 
-	// declare variables used for snowflake's motion
+    // declare variables used for snowflake's motion
     this.counter = 0;
     this.sign = Math.random() < 0.5 ? 1 : -1;
 
-	// setting an initial opacity and size for our snowflake
+    // setting an initial opacity and size for our snowflake
     this.element.style.opacity = .6 + Math.random();
     this.element.style.fontSize = 12 + Math.random() * 83 + "px";
 }
@@ -72,17 +72,17 @@ function Snowflake(element, radius, speed, xPos, yPos) {
 //
 Snowflake.prototype.update = function () {
 
-	// using some trigonometry to determine our x and y position
+    // using some trigonometry to determine our x and y position
     this.counter += this.speed / 5000;
     this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
     this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
 
-	// setting our snowflake's position
+    // setting our snowflake's position
     setTranslate3DTransform(this.element, Math.round(this.xPos), Math.round(this.yPos));
 
     // if snowflake goes below the browser window, move it back to the top
     if (this.yPos > browserHeight) {
-    	this.yPos = -50;
+        this.yPos = -50;
     }
 }
 
@@ -90,7 +90,7 @@ Snowflake.prototype.update = function () {
 // A performant way to set your snowflake's position
 //
 function setTranslate3DTransform(element, xPosition, yPosition) {
-	var val = "translate3d(" + xPosition + "px, " + yPosition + "px" + ", 0)";
+    var val = "translate3d(" + xPosition + "px, " + yPosition + "px" + ", 0)";
     element.style[transformProperty] = val;
 }
 
@@ -99,7 +99,7 @@ function setTranslate3DTransform(element, xPosition, yPosition) {
 //
 function generateSnowflakes() {
 
-	// get our snowflake element from the DOM and store it
+    // get our snowflake element from the DOM and store it
     var originalSnowflake = document.querySelector(".snowflake");
 
     // access our snowflake element's parent container
@@ -112,11 +112,11 @@ function generateSnowflakes() {
     // create each individual snowflake
     for (var i = 0; i < numberOfSnowflakes; i++) {
 
-    	// clone our original snowflake and add it to snowflakeContainer
+        // clone our original snowflake and add it to snowflakeContainer
         var snowflakeCopy = originalSnowflake.cloneNode(true);
         snowflakeContainer.appendChild(snowflakeCopy);
 
-		// set our snowflake's initial position and related properties
+        // set our snowflake's initial position and related properties
         var initialXPos = getPosition(50, browserWidth);
         var initialYPos = getPosition(50, browserHeight);
         var speed = 5+Math.random()*40;
@@ -134,7 +134,7 @@ function generateSnowflakes() {
     // remove the original snowflake because we no longer need it visible
     snowflakeContainer.removeChild(originalSnowflake);
 
-	// call the moveSnowflakes function every 30 milliseconds
+    // call the moveSnowflakes function every 30 milliseconds
     moveSnowflakes();
 }
 
@@ -147,9 +147,9 @@ function moveSnowflakes() {
         snowflake.update();
     }
 
-	// Reset the position of all the snowflakes to a new value
+    // Reset the position of all the snowflakes to a new value
     if (resetPosition) {
-    	browserWidth = document.documentElement.clientWidth;
+        browserWidth = document.documentElement.clientWidth;
        browserHeight = document.documentElement.clientHeight;
 
        for (var i = 0; i < snowflakes.length; i++) {
@@ -169,12 +169,12 @@ function moveSnowflakes() {
 // This function returns a number between (maximum - offset) and (maximum + offset)
 //
 function getPosition(offset, size) {
-	return Math.round(-1*offset + Math.random() * (size+2*offset));
+    return Math.round(-1*offset + Math.random() * (size+2*offset));
 }
 
 //
 // Trigger a reset of all the snowflakes' positions
 //
 function setResetFlag(e) {
-	resetPosition = true;
+    resetPosition = true;
 }

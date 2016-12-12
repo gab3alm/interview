@@ -39,6 +39,4 @@
       }, 1500);
     }
   </script>
-
-
 </successful-interviewing>

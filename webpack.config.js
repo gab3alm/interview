@@ -1,5 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
+var ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
+
 
 module.exports = {
   entry: './src/index.js',
@@ -8,6 +10,9 @@ module.exports = {
     filename: 'bundle.js',
   },
   module:{
+    plugins:[
+      new ModernizrWebpackPlugin()
+    ],
     loaders:[
     { 
       //expose jquery globally

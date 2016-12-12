@@ -10,7 +10,7 @@
           <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
 
           <!-- Desktop Navigation Bar -->
-          <ul class="right hide-on-med-and-down">
+          <ul class="right hide">
             <virtual each={item in nav_items}>
               <li class="nav-item"><a target="_blank" href={ item.url }> { item.title } </a></li>
             </virtual>

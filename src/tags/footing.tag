@@ -17,6 +17,7 @@
             <a class="social_media_link" target="_blank" href={social_link.url}>
               <img class="tooltipped" data-position="top" data-delay="30" data-tooltip={social_link.title} src={social_link.src} alt={social_link.title}>
             </a>
+            <img src='' alt=''>
           </virtual>
         </section>
       </footer>
@@ -71,9 +72,10 @@
       float:right;
     }
 
-    .social_media_link > img{
+    .social_media_link img{
       height:100%;
-      padding:6%;
+      padding:5%;
+      /*border:2px solid green;*/
     }
 
   </style>
