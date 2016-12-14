@@ -74,6 +74,7 @@
       color:rgba(0,0,0,.65);
       font-family:'abel';
       font-size:1.3em;
+      width:60%;
       /*text-align:left;*/
       margin:0px 0px 10px 0px;
     }
@@ -136,12 +137,39 @@
       .milk{
         display:none;
       }
+
+      .sc-description{
+        width:100%;
+        text-align:left;
+      }
     }
 
     /*STYLES FOR SMALL/MOBILE SCREENS */
     @media only screen and (max-width: 40em) {
       .milk{
         display:none;
+      }
+      
+      .sc-title{
+        color:rgba(0,0,0,.85);
+        font-size:1.5em;
+        text-transform:capitalize;
+        margin:0px;
+      }
+
+      .sc-description{
+        font-family:'abel';
+        font-size:1em;
+        width:100%;
+        text-align:left;
+        margin:5px;
+      }
+
+      #graphics-container{
+        /*border:2px solid green;*/
+        position:relative;
+        height:60vh;
+        width:100%;
       }
     }
 

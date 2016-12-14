@@ -96,7 +96,7 @@
 											for when the time comes. On this website, you will find all the necessarily steps and
 											guidance to succeed when an interview day comes your way!
 										</p>
-										<a href="#!" class="button button-3d button-action button-pill">Lets Begin!</a>
+										<a href="/#scenes" class="button button-3d button-action button-pill">Lets Begin!</a>
 									</div>
 								</div>
 							</div>	

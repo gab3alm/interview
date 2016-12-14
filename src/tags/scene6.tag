@@ -9,7 +9,11 @@
       <div class="col s12">
         <section id="scene-info-container">
           <p class="sc-title flow-text"> {scene.title} </p>
-          <p class="sc-description flow-text"> {scene.description} </p>
+          <p class="sc-description flow-text"><span class="success-message">Congratulations!</span></p>
+          <p class="sc-description flow-text">
+            Once you have been hired, there are still some important
+            tips to getting started at your new place of employment.
+          </p>
           <!-- <a class="waves-effect waves-light btn"><i class="material-icons right">forward</i>Learn More</a>   -->
           <a href="/#accepting-the-job" class="button button-3d button-caution button-pill">Learn More</a>
         </section>
@@ -67,7 +71,7 @@
       color:rgba(0,0,0,.85);
       /*text-shadow:1px 1px 1px rgba(0,0,0,.5);*/
       font-family:'pattaya';
-      font-size:2em;
+      font-size:2.5em;
       text-transform:capitalize;
       margin:0px;
     }
@@ -79,6 +83,14 @@
       /*text-align:left;*/
       /*margin:0px 0px 10px 0px;*/
       /*padding:0px 10% 0px 10%;*/
+    }
+
+    .success-message{
+      color:rgba(0,0,0,.9);
+      font-size:1.5em;
+      font-family:'pattaya';
+      margin:0 !important;
+      text-transform: capitalize;
     }
 
     .next-scene-btn-container{
@@ -111,21 +123,21 @@
       height:50vh;
       width:100%;
     }
-    
+
     .watermelon{
       height:30%;
       position:absolute;
       bottom:2%;
       left:0;
     }
-    
+
     .pear{
       height:60%;
       position:absolute;
       bottom:20%;
       left:20%;
     }
-    
+
     .banana{
       height:65%;
       position:absolute;
@@ -153,7 +165,7 @@
       bottom:10%;
       right:0;
     }
-    
+
 
     /*Styles for Med size screens*/
     /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */

@@ -24,7 +24,6 @@
           <img src="src/images/scene5/chocolate.svg" alt="chocolate cake" class="cake">
           <img src="src/images/scene5/cheesecake.svg" alt="chessecake" class="cheesecake">
           <img src="src/images/scene5/waffer.svg" alt="waffer telephone booth" class="waffer">
-
         </section>
       </div>
     </div>    
@@ -57,7 +56,7 @@
     #scene-info-container{
       /*border:2px solid green;*/
       padding:0px 10% 0px 10%;
-      /*margin:5% 0px 0px 0px;*/
+      margin:5% 0px 0px 0px;
       /*padding:0px 10px 0px 0px;*/
       /*margin:0px 0px 0px 15%;*/
     }
@@ -151,6 +150,13 @@
         position:absolute;
         bottom:25%;
         right:0%;
+      }
+
+      .waffer{
+        height:80%;
+        position:absolute;
+        bottom:10%;
+        left:5%;
       }
 
       .cheesecake{

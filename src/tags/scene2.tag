@@ -12,14 +12,15 @@
       <div class="col s12">
         <section id="graphics-container">
           <img class="element skype" src="src/images/scene2/skype.svg">
+          <img class="element starbucks" src="src/images/scene2/starbucks.svg">
           <img class="element naked" src="src/images/scene2/naked.svg">
+          <img class="element gatorade" src="src/images/scene2/gatorade.svg">
+          <img class="element cola" src="src/images/scene2/cola.svg">
+          <img class="element coke" src="src/images/scene2/coke.svg">
+          <img class="element monster" src="src/images/scene2/monster.svg">
           <img class="element coconut" src="src/images/scene2/coconut.svg">
           <img class="element orangejuice" src="src/images/scene2/orangejuice.svg">
-          <img class="element starbucks" src="src/images/scene2/starbucks.svg">
-          <img class="element gatorade" src="src/images/scene2/gatorade.svg">
-          <img class="element monster" src="src/images/scene2/monster.svg">
-          <img class="element coke" src="src/images/scene2/coke.svg">
-          <img class="element cola" src="src/images/scene2/cola.svg">
+          <img class="element orangeboy1" src="src/images/scene2/orangeboy.svg" alt="">
         </section>
       </div>
     </div>
@@ -78,7 +79,7 @@
     }
 
     .sc-description{
-      padding:0px 10% 0px 10%;
+      padding:0px 25% 0px 25%;
       color:rgba(0,0,0,.65);
       font-family:'abel';
       font-size:1.3em;
@@ -128,76 +129,103 @@
     .cola{
       /*height:80%;*/
       bottom:0px;
-      left:88%;
+      /*left:88%;*/
+      left:0%;
+      transform:scale(1.2);
+
     }
     
     .naked{
       /*height:40%;*/
       bottom:0px;
       left:11%; 
+      transform:scale(1.1);
     }
 
     .starbucks{
       /*height:45%;*/
       bottom:0px;
-      left:44%; 
+      left:22%; 
+      transform:scale(1);
     }
 
     .gatorade{
       /*height:55%;*/
       bottom:0px;
-      left:55%; 
+      left:33%;
+      transform:scale(.9);
     }
 
     .skype{
       /*height:30%;*/
       bottom:0px;
-      left:0; 
+      left:44%; 
+      transform:scale(.8);
     }
 
     .coke{
       /*height:60%;*/
       bottom:0px;
-      left:77%;
+      left:55%; 
+      transform:scale(.9);
     }
 
     .monster{
       /*height:50%;*/
       bottom:0px;
       left:66%;
+      transform:scale(1);
     }
 
     .coconut{
       /*height:45%;*/
       bottom:0px;
-      left:22%;
+      left:77%;
+      transform:scale(1.1);
     }
 
     .orangejuice{
       /*height:45%;*/
       bottom:0;
-      left:33%;
+      left:88%;
+      transform:scale(1.2);
     }
 
-    /*Styles for Med size screens*/
-    /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
-    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-      #graphics-container{
-        height:30%;
-      }
+    .orangeboy1{
+     /*height:30%;*/
+     bottom:0px;
+     left:42%; 
+     transform:scale(.8); 
+   }
+
+   /*Styles for Med size screens*/
+   /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+   @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .sc-description{
+      padding:0px 10% 0px 10%;
+      font-size:1.3em;
+      text-align:justify;
+      margin:0px 0px 10px 0px;
     }
+  }
 
-    /*STYLES FOR SMALL/MOBILE SCREENS */
-    @media only screen and (max-width: 40em) {
+  /*STYLES FOR SMALL/MOBILE SCREENS */
+  @media only screen and (max-width: 40em) {
+    .sc-description{
+      padding:0;
+      margin:5px;
+      font-size:1em;
+      text-align:left;
     }
+  }
 
-  </style>
+</style>
 
 
-  <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
-  <!-- SCRIPTS BEGIN - LOGIC                       -->
-  <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
-  <script>
+<!-- ||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- SCRIPTS BEGIN - LOGIC                       -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||| -->
+<script>
     // right after the tag is mounted on the page
     this.on('mount', function() {
       var $node = $(this.root);

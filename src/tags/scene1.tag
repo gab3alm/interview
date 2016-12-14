@@ -4,7 +4,6 @@
   <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
   <div class="container-fluid" id="scene1">
     <div id="snowflakeContainer" class="hide-on-small-only">
-      <!-- <p class="snowflake">.</p> -->
       <p class="snowflake">&#10052;</p>
     </div>
 
@@ -188,7 +187,6 @@
   <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
   <!-- SCRIPTS BEGIN - LOGIC                       -->
   <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
-  <!-- // <script src="src/js/snow.js"></script> -->
   <script>
     // right after the tag is mounted on the page
     this.on('mount', function() {
@@ -206,5 +204,6 @@
       `
     };
   </script>
-
+  <script src="src/js/snow.js"></script>
+  
 </scene1>

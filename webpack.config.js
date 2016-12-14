@@ -11,9 +11,13 @@ module.exports = {
   },
   module:{
     plugins:[
-      new ModernizrWebpackPlugin()
+    new ModernizrWebpackPlugin()
     ],
     loaders:[
+    { 
+      test: /[\\\/]bower_components[\\\/]modernizr[\\\/]modernizr\.js$/,
+      loader: "imports?this=>window!exports?window.Modernizr" 
+    },
     { 
       //expose jquery globally
       test: require.resolve('jquery'), 
