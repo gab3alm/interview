@@ -40,7 +40,7 @@
 						<li class="layer" data-depth="0.30">
 
 							<div id="lamp-wrapper1">
-								<div class="lamp-container1 animated swing infinite">
+								<div class="lamp-container1">
 									<img id="lamp1" src="src/images/homepage2_assets/lamp.svg">
 									<img id="lamp1-light" src="src/images/homepage2_assets/light.svg">
 								</div>	
@@ -56,7 +56,7 @@
 							
 
 							<div id="lamp-wrapper3">
-								<div class="lamp-container3 animated swing infinite">
+								<div class="lamp-container3">
 									<img id="lamp1" src="src/images/homepage2_assets/lamp.svg">
 									<img id="lamp1-light" src="src/images/homepage2_assets/light.svg">
 								</div>	
@@ -66,6 +66,7 @@
 
 						<!-- FRIDGE -->
 						<li class="layer" data-depth="0.20">
+							<img class="csun-logo" src="src/images/logo4.svg">
 							<img id="fridge" src="src/images/homepage2_assets/fridge_shadow.svg" alt="">
 						</li>
 						
@@ -92,11 +93,12 @@
 											when it comes to the interview process! 
 										</p>
 										<p class="description flow-text">
-											Luckily, the CSUN Career Center is committed to ensuring you will be completely prepared 
-											for when the time comes. On this website, you will find all the necessarily steps and
+											On this website, you will find all the necessarily steps and
 											guidance to succeed when an interview day comes your way!
 										</p>
-										<a href="/#scenes" class="button button-3d button-action button-pill">Lets Begin!</a>
+										<!-- <a href="/#scenes" class="button button-3d button-action button-pill">Lets Begin!</a> -->
+										<a href="http://www.csun.edu/career/plan_your_future/sucessful_interviewing/#scenes" class="button button-3d button-action button-pill">Lets Begin!</a>
+
 									</div>
 								</div>
 							</div>	
@@ -164,16 +166,17 @@
 		.description-container{
 			border-radius:20px;
 			background-color:rgba(0,0,0,.5);
-			padding:40px;
-			margin-top:30vh;
+			padding:5%;
+			width:80%;
+			margin:36vh 10% 0 10%;
 		}
 
 		.description{
 			font-family:'abel';
-			font-size:1.7em;
+			font-size:1.3em;
 			color:white;
-			/*padding:5%;*/
-			margin:0 0 3% 0;
+			margin:0 0 2% 0;
+			padding:0 5% 0 5%;
 		}
 
 		#information-container{
@@ -303,8 +306,13 @@
 			/*border:2px solid white;*/
 			position:absolute;
 			top:50vh;
-			left:25%;
+			left:15%;
 			transform:scale(1) translate(-50%, 0);
+		}
+
+		.csun-logo{
+			height:6%;
+			margin:20px;
 		}
 
 		/*Styles for Med size screens*/

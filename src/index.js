@@ -46,7 +46,11 @@ document.addEventListener('DOMContentLoaded', function(){
 	route.start(true);
 	route.base('#');
 
-	route('/scenes', function(){
+	// route('#/scenes', function(){
+	// 	riot.mount('#main-viewport', 'successful-interviewing');
+	// });
+
+	route('http://www.csun.edu/career/plan_your_future/sucessful_interviewing/#/scenes', function(){
 		riot.mount('#main-viewport', 'successful-interviewing');
 	});
 
