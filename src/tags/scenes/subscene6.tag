@@ -6,8 +6,8 @@
       <div class="col s12">
         <div class="imagery">
           <img class="floor" src="src/images/scene2-main/floor.svg" alt="">
-        </div>        
-      </div>  
+        </div>
+      </div>
     </section>
 
 
@@ -20,40 +20,40 @@
     <div class="row center-align">
       <div id="interview-viewport" class="col s12">
         <interview-preparation-viewport></interview-preparation-viewport>
-        
+
 
         <p class="scene-title fancy"><span>accepting the job</span></p>
         <p class="scene-description">
           Congratulations! <br>
-          Once you have been hired, there are still some important tips 
+          Once you have been hired, there are still some important tips
           to getting started at your new place of employment.
         </p>
 
         <div class="row">
           <div class="col s12 m6 push-m6">
             <img class="circle-img" src="" alt="">
-          </div>          
+          </div>
           <div class="col s12 m6 pull-m6">
             <p class="scene-title fancy"><span>Don't</span></p>
             <ul class="tip-lists">
               <li each={dont} class="tip-list-item">{title}</li>
             </ul>
-          </div>          
+          </div>
         </div>
 
 
         <div class="row">
           <div class="col s12 m6">
             <img class="circle-img" src="" alt="">
-          </div>          
+          </div>
           <div class="col s12 m6">
             <p class="scene-title fancy"><span>Do</span></p>
             <ul class="tip-lists">
               <li each={do} class="tip-list-item">{title}</li>
             </ul>
-          </div>          
+          </div>
         </div>
-        
+
 
 
         <hr style="width:80%;">
@@ -61,7 +61,7 @@
 
       </div>
     </div>
-  </div>  
+  </div>
 
 
   <!-- STYLES -->
@@ -157,7 +157,7 @@
 
     .fancy span:before,
     .fancy span:after{
-      content: ""; 
+      content: "";
       position: absolute;
       top: 50%; margin-top: -.2em;
       height: .2em;
@@ -166,12 +166,12 @@
       width: 150%;
     }
 
-    .fancy span:before {  
+    .fancy span:before {
       right: 100%;
       margin-right: .5em;
     }
 
-    .fancy span:after {  
+    .fancy span:after {
       left: 100%;
       margin-left: .5em;
     }
@@ -194,7 +194,7 @@
       font-size:1.5em;
       padding:0 30% 0 30%;
       color:rgba(0,0,0,.75);
-      text-transform: capitalize; 
+      text-transform: capitalize;
       text-align:center;
     }
 
@@ -245,7 +245,7 @@
       background-size:cover;
       background-position: center;
       overflow:hidden;
-    } 
+    }
 
     .floor{
       position:absolute;
@@ -299,18 +299,18 @@
     {title:
       `
       Don't be a know-it-all. Even if you are correct, your delivery and timing could be off
-      and get you off on the wrong foot. Also, it can give your boss the impression that you are 
-      not a team player.        
+      and get you off on the wrong foot. Also, it can give your boss the impression that you are
+      not a team player.
       `
     },
     {title:
       `
-      Don't make personal calls.  
+      Don't make personal calls.
       `
     },
     {title:
       `
-      Don't use the e-mail for any kind of personal use during business hours.  
+      Don't use the e-mail for any kind of personal use during business hours.
       `
     },
     {title:
@@ -320,9 +320,9 @@
     },
     {title:
       `
-      Don't shout across to others or lean over the low wall. Use your 'best' manners at all times 
+      Don't shout across to others or lean over the low wall. Use your 'best' manners at all times
       if you are in a cubicle. Use your low voice on the phone, or when you are talking to someone
-        (No one wants to hear your fights with your boyfriend/girlfriend/friends/family/pets).  
+        (No one wants to hear your fights with your boyfriend/girlfriend/friends/family/pets).
       `
     },
     {title:
@@ -349,7 +349,7 @@
       title:
       `
       If wearing a nametag, place it on your right shoulder. When people shake hands with you,
-      they usually tend to look there.        
+      they usually tend to look there.
       `
     },
     {
@@ -372,4 +372,4 @@
     },
     ];
   </script>
-</subscene6>  
+</subscene6>

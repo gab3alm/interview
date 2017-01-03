@@ -9,13 +9,19 @@
       <div id="address-container">
         <p class="address">career center &copy; california state university, northridge</p>
         <p class="address">18111 nordhoff street, northridge, CA 91330 | phone: (818) 677-2878 | <a target="_blank" href="http://www.csun.edu/career">WWW.CSUN.EDU/CAREER</a></p>
+
       </div>
     </div>
     <!-- SOCIAL MEDIA LINKS -->
     <div id="footer-social">
       <virtual each={social_media_items}>
         <div class="social-media-icon-container center-align tooltipped" data-position="top" data-delay="50" data-tooltip={title}>
-          <a target="_blank" href={url}><img src={src} alt={title} class="social-media-icon"></a>
+          <a target="_blank" href={url}>
+            <!-- <img src={src} alt={title} class="social-media-icon"> -->
+
+
+
+          </a>
         </div>
       </virtual>
     </div>
@@ -78,7 +84,9 @@
       height:100%;
     }
 
-
+    .social-media-icon-container:hover #facebook{
+      fill:#fff;
+    }
 
     /*Styles for Med size screens*/
     @media only screen and (min-width: 40.063em) and (max-width: 64em) {
@@ -123,6 +131,21 @@
   <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
   <script>
     // right after the tag is mounted on the page
+    var facebook =
+    `
+    <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.84 67.87">
+      <defs><style>.cls-1{fill:#fff;}</style></defs>
+      <title>Facebook</title>
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+          <g>
+            <path id="facebook" fill="#116a94" d="M21.84,67.87H7.28V33.93H0V22.23H7.28v-7C7.28,5.68,11.38,0,23.05,0h9.72V11.7H26.7c-4.54,0-4.85,1.64-4.85,4.68l0,5.85h11l-1.29,11.7H21.84Z"/>
+          </g>
+        </g>
+      </g>
+    </svg>
+    `;
+
     this.on('mount', function() {
       var $node = $(this.root);
       $node.find('.tooltipped').tooltip({delay: 50});
@@ -135,6 +158,8 @@
     {title:'LinkedIn', src: 'public/images/footer/linkedin.svg', url: 'https://www.linkedin.com/in/csuncareerctr'},
     {title:'Youtube', src: 'public/images/footer/youtube.svg', url: 'https://www.youtube.com/user/CsunCareerCenter'},
     ];
+
+
 
   </script>
 </footing>

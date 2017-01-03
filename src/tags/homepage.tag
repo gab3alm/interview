@@ -1,5 +1,5 @@
   <homepage>
-    <!-- HTML MARKUP -->  
+    <!-- HTML MARKUP -->
     <navbar></navbar>
 
     <div id="scene-container">
@@ -27,7 +27,7 @@
             <div class="lamp-container" id="lamp-container-2">
               <img src="public/images/homepage/lamp.svg" class="lamp"  id="lamp2" alt="">
               <img src="public/images/homepage/light.svg" class="light" id="light2" alt="">
-            </div>  
+            </div>
           </div>
         </li>
 
@@ -42,7 +42,7 @@
             <div class="lamp-container" id="lamp-container-1">
               <img src="public/images/homepage/lamp.svg" class="lamp"  id="lamp1" alt="">
               <img src="public/images/homepage/light.svg" class="light" id="light1" alt="">
-            </div>  
+            </div>
           </div>
 
 
@@ -50,7 +50,7 @@
             <div class="lamp-container" id="lamp-container-3">
               <img src="public/images/homepage/lamp.svg" class="lamp"  id="lamp3" alt="">
               <img src="public/images/homepage/light.svg" class="light" id="light3" alt="">
-            </div>  
+            </div>
           </div>
         </li>
 
@@ -70,8 +70,8 @@
             Looking to expand your experiences and step foot into the job market?
           </p>
           <p class="app-description">
-            No matter your goals, sometimes applying for a job can be daunting task, especially when it comes to the interview process! 
-            Luckily, the CSUN Career Center is committed to ensuring you will be completely prepared for when the time comes. On this 
+            No matter your goals, sometimes applying for a job can be daunting task, especially when it comes to the interview process!
+            Luckily, the CSUN Career Center is committed to ensuring you will be completely prepared for when the time comes. On this
             website, you will find all the necessarily steps and guidance to succeed when an interview day comes your way!
           </p>
         </div>
@@ -79,7 +79,7 @@
       </section>
     </div>
 
-    <footing></footing>  
+    <footing></footing>
 
 
 
@@ -91,7 +91,7 @@
         background-size:cover;
         background-position: center;
         height:100vh;
-        overflow:hidden;  
+        overflow:hidden;
       }
 
       .layer{
@@ -166,7 +166,7 @@
         position:absolute;
         top:38%;
         left:50%;
-        transform:translate(-48%,0) scale(1.2); 
+        transform:translate(-48%,0) scale(1.2);
         opacity: .5;
       }
 
@@ -249,7 +249,7 @@
           top:45%;
           left:-10%;
           transform:scale(.8);
-        } 
+        }
 
         .app-title{
           font-size:4em;
