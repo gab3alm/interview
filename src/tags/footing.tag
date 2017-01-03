@@ -2,26 +2,22 @@
   <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
   <!-- PRESENTATION MARKUP - BEGIN                 -->
   <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
-  <div class="container-fluid">
-    <div class="row">
-
-      <footer class="footer-wrapper animated slideInUp">
-        <img class="footer-logo1" src="src/images/footer_assets/logo.svg" alt="career center logo">
-        <section class="address-info-container hide-on-med-and-down">
-          <p class="address-info">CAREER CENTER &copy; california state university, northridge</p>
-          <p class="address-info">18111 nordhoff street,nortridge, CA 91330 | phone: (818) 677-2878 | <a target="_blank" href="https://www.csun.edu/career">WWW.CSUN.EDU/CAREER</a></p>
-        </section>
-
-        <section class="social-media-container">
-          <virtual each={ social_link in social_media_items }>
-            <a class="social_media_link" target="_blank" href={social_link.url}>
-              <img class="tooltipped" data-position="top" data-delay="30" data-tooltip={social_link.title} src={social_link.src} alt={social_link.title}>
-            </a>
-            <img src='' alt=''>
-          </virtual>
-        </section>
-      </footer>
-
+  <div id="footer-container">
+    <!-- SCHOOL INFORMATION -->
+    <div id="footer-information">
+      <img class="csun-logo" src="public/images/logo.svg" alt="CSUN Logo">
+      <div id="address-container">
+        <p class="address">career center &copy; california state university, northridge</p>
+        <p class="address">18111 nordhoff street, northridge, CA 91330 | phone: (818) 677-2878 | <a target="_blank" href="http://www.csun.edu/career">WWW.CSUN.EDU/CAREER</a></p>
+      </div>
+    </div>
+    <!-- SOCIAL MEDIA LINKS -->
+    <div id="footer-social">
+      <virtual each={social_media_items}>
+        <div class="social-media-icon-container center-align tooltipped" data-position="top" data-delay="50" data-tooltip={title}>
+          <a target="_blank" href={url}><img src={src} alt={title} class="social-media-icon"></a>
+        </div>
+      </virtual>
     </div>
   </div>
 
@@ -29,53 +25,94 @@
   <!-- STYLES BEGIN                                -->
   <!-- ||||||||||||||||||||||||||||||||||||||||||| -->
   <style>
-    .footer-wrapper{
-      /*background-color:rgba(0,0,0,.75);*/
-      background-color:#282828;
+    #footer-container{
+      height:50px;
       width:100%;
-      height:55px;
+      background-color:rgba(0,0,0,.85);
       position:fixed;
       bottom:0px;
-      left:0px;
-      z-index:1002;
+      left:0;
+      z-index:100;
     }
 
-    .footer-logo1{
-      /*border:2px solid green;*/
+    #footer-information{
       height:100%;
-      width:auto;
-      padding:.5%;
+      float:left;
     }
 
-    .address-info-container{
-      /*border:2px solid green;*/
-      display:inline-block;
+    #footer-social{
       height:100%;
-      margin:.4% 0px 0px 0px;
-      position:absolute;
-      top:0px;
-    }
-
-    .address-info{
-      /*border:2px solid green;*/
-      font-family:'abel';
-      font-size:1em;
-      color:white;
-      text-transform: capitalize;
-      margin:0px;
-    }
-
-    .social-media-container{
-      /*border:2px solid green;*/
-      height:100%;
-      display:inline-block;
       float:right;
     }
 
-    .social_media_link img{
+    #address-container{
       height:100%;
-      padding:5%;
-      /*border:2px solid green;*/
+      display:inline-block;
+      margin:5px 0 5px 10px;
+    }
+
+    .csun-logo{
+      height:30px;
+      margin-left:10px;
+      display:inline-block;
+    }
+
+    .address{
+      font-family:'abel';
+      font-size:1em;
+      text-transform: capitalize;
+      color:white;
+
+      margin:0;
+      padding:0;
+    }
+
+    .social-media-icon-container{
+      height:100%;
+      width:50px;
+      display:inline-block;
+      padding:10px;
+    }
+
+    .social-media-icon{
+      height:100%;
+    }
+
+
+
+    /*Styles for Med size screens*/
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    }
+
+    /*STYLES FOR SMALL/MOBILE SCREENS */
+    @media only screen and (max-width: 40em) {
+      #footer-information{
+        width:auto;
+        float:left;
+        /*display:none;*/
+      }
+
+      #address-container{
+        display:none;
+      }
+
+      .csun-logo{
+        margin:15px 0 0 10px;
+        height:25px;
+      }
+
+      .social-media-icon-container{
+        /*border:2px solid green;*/
+        height:80%;
+        width:40px;
+        display:inline-block;
+        padding:5px;
+        margin:5px 0;
+      }
+
+      .social-media-icon{
+        height:100%;
+      }
     }
 
   </style>
@@ -92,11 +129,12 @@
     })
 
     this.social_media_items = [
-    {title:'Facebook Career Center', src: 'src/images/footer_assets/facebook.svg', url: 'https://www.facebook.com/CSUNCareerCenter'},
-    {title:'Instagram Career Center', src: 'src/images/footer_assets/instagram.svg', url: 'https://www.instagram.com/csuncareercenter'},
-    {title:'Twitter Career Center', src: 'src/images/footer_assets/twitter.svg', url: 'https://twitter.com/CSUNCareerCtr'},
-    {title:'LinkedIn Career Center', src: 'src/images/footer_assets/linkedin.svg', url: 'https://www.linkedin.com/in/csuncareerctr'},
-    {title:'Youtube Career Center', src: 'src/images/footer_assets/youtube.svg', url: 'https://www.youtube.com/user/CsunCareerCenter'},
+    {title:'Facebook', src: 'public/images/footer/facebook.svg', url: 'https://www.facebook.com/CSUNCareerCenter'},
+    {title:'Instagram', src: 'public/images/footer/instagram.svg', url: 'https://www.instagram.com/csuncareercenter'},
+    {title:'Twitter', src: 'public/images/footer/twitter.svg', url: 'https://twitter.com/CSUNCareerCtr'},
+    {title:'LinkedIn', src: 'public/images/footer/linkedin.svg', url: 'https://www.linkedin.com/in/csuncareerctr'},
+    {title:'Youtube', src: 'public/images/footer/youtube.svg', url: 'https://www.youtube.com/user/CsunCareerCenter'},
     ];
+
   </script>
 </footing>
