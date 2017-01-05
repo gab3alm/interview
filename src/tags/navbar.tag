@@ -37,7 +37,7 @@
     }
 
     .nav-logo{
-      margin:10px;
+      margin:20px 0 0 40px;
       padding:5px;
       height:64px;
     }
@@ -56,6 +56,7 @@
     /*STYLES FOR SMALL/MOBILE SCREENS */
     @media only screen and (max-width: 40em) {
       .nav-logo{
+        margin:10px 0 auto;
         height:40px;
       }
     }

@@ -8,11 +8,24 @@
         <!-- Static layer 0.0 -->
       </li>
 
+
+
+      <li class="layer" data-depth="0.40">
+
+        <div id="lamp-post2" class="lamp-outer-container"><!-- absolute container -->
+          <div class="lamp-inner-container"><!-- relative container -->
+            <img src="public/images/homepage/lamp.svg" alt="" id="lamp2" class="lamp">
+            <img src="public/images/homepage/light.svg" alt="" id="light2" class="light">
+          </div>
+        </div>
+
+      </li>
+
       <li class="layer" data-depth="0.20">
         <img src="public/images/homepage/backcloud.svg" alt="" id="cloud1" class="clouds">
         <img src="public/images/homepage/forecloud.svg" alt="" id="cloud2" class="clouds">
-
       </li>
+
 
       <li class="layer" data-depth="0.25">
         <img src="public/images/homepage/backcloud.svg" alt="" id="cloud3" class="clouds">
@@ -22,14 +35,6 @@
         <img src="public/images/homepage/forecloud.svg" alt="" id="cloud4" class="clouds">
       </li>
 
-      <li class="layer" data-depth="0.45">
-        <div id="lamp2-wrapper">
-          <div class="lamp-container" id="lamp-container-2">
-            <img src="public/images/homepage/lamp.svg" class="lamp"  id="lamp2" alt="">
-            <img src="public/images/homepage/light.svg" class="light" id="light2" alt="">
-          </div>
-        </div>
-      </li>
 
       <li class="layer" data-depth="0.30">
         <img src="public/images/homepage/floor.svg" alt="" id="floor">
@@ -37,49 +42,60 @@
       </li>
 
 
-      <li class="layer" data-depth="0.10">
-        <div id="lamp1-wrapper">
-          <div class="lamp-container" id="lamp-container-1">
-            <img src="public/images/homepage/lamp.svg" class="lamp"  id="lamp1" alt="">
-            <img src="public/images/homepage/light.svg" class="light" id="light1" alt="">
+      <li class="layer" data-depth="0.30">
+
+        <div id="lamp-post1" class="lamp-outer-container"><!-- absolute container -->
+          <div class="lamp-inner-container"><!-- relative container -->
+            <img src="public/images/homepage/lamp.svg" alt="" id="lamp1" class="lamp">
+            <img src="public/images/homepage/light.svg" alt="" id="light1" class="light">
           </div>
         </div>
 
 
-        <div id="lamp3-wrapper">
-          <div class="lamp-container" id="lamp-container-3">
-            <img src="public/images/homepage/lamp.svg" class="lamp"  id="lamp3" alt="">
-            <img src="public/images/homepage/light.svg" class="light" id="light3" alt="">
+        <div id="lamp-post3" class="lamp-outer-container"><!-- absolute container -->
+          <div class="lamp-inner-container"><!-- relative container -->
+            <img src="public/images/homepage/lamp.svg" alt="" id="lamp3" class="lamp">
+            <img src="public/images/homepage/light.svg" alt="" id="light3" class="light">
           </div>
         </div>
+
       </li>
-
 
       <li class="layer" data-depth=".35">
         <div id="tanner-container"></div>
       </li>
-
     </ul>
 
+    <!-- absolute container -->
+    <div id="information-container">
+      <!-- relative container -->
+      <div id="inner-information-container">
 
-    <section id="information-container" class="center-align">
-      <p class="app-title">successful interviewing</p>
-      <div id="description-area">
+        <div id="title-container">
+          <p class="app-title flow-text center-align">
+            successful interviewing
+          </p>
+        </div>
 
-        <p class="app-description flow-text">
-          Are you looking to expand your experiences and step foot into the job market?
-        </p>
-        <p class="app-description flow-text">
-          No matter your goals, sometimes applying for a job can be daunting task, especially when it comes to the interview process!
-        </p>
-        <p class="app-description flow-text">
-          Luckily, the CSUN Career Center is committed to ensuring you will be completely prepared for when the time comes. On this
-          website, you will find all the necessarily steps and guidance to succeed when an interview day comes your way!
-        </p>
+        <div id="intro-container">
+          <div id="app-description-container">
+            <p class="app-description flow-text">
+              <span class="welcome-message">Welcome!</span>
+              No matter your goals, sometimes applying for a job can be daunting task, especially when it comes to the interview process!
+            </p>
+            <p class="app-description">
+              Luckily, the CSUN Career Center is committed to ensuring you will be completely prepared for when the time comes. 
+              On this website, you will find all the necessarily steps and guidance to succeed when an interview day comes your way!
+            </p>
+          </div>
+          <div class="center-align">
+            <a href="#steps/" class="cust-btn btn btn-large hoverable">Let's Begin!</a>
+          </div>
+        </div>
 
       </div>
-      <a href="#steps/" class="cust-btn btn btn-large">Learn More</a>
-    </section>
+    </div>
+
 
   </div>
 
@@ -89,10 +105,157 @@
 
   <!-- CSS RULES -->
   <style>
+    /*||||||||||||||||||||||||||||||||*/
+    .lamp-outer-container{
+      position:absolute;
+      height:50vh;
+      width:25vw;
+      /*border:2px solid green;*/
+      transform:translate(-50%, 0);
+    }
+
+    .lamp-inner-container{
+      position:relative;
+      height:inherit;
+      width:inherit;
+    }
+
+    .lamp, .light{
+      position:absolute;
+      transform:translate(-50%, 0);
+    }
+
+    .light{
+      opacity:.8;
+    }
+    
+    #lamp-post1{
+      top:-5%;
+      left:15%;
+    }
+
+    #lamp1{
+      top:0;
+      left:50%;
+      height:50%;
+    }
+
+    #light1{
+      left:53.3%;
+      top:33%;
+      height:100%;
+    }
+
+    #lamp-post2{
+      top:-15%;
+      left:50%;
+    }
+
+    #lamp2{
+      top:0;
+      left:50%;
+      height:60%;
+    }
+
+    #light2{
+      left:53.3%;
+      top:40%;
+      height:110%;
+    }
+
+    #lamp-post3{
+      top:-7%;
+      left:85%;
+    }
+
+    #lamp3{
+      top:0;
+      left:50%;
+      height:120%;
+    }
+
+    #light3{
+      left:56%;
+      top:79%;
+      height:190%;
+    }
+
+    /*|||||||||||||||||||||||||||*/
+    /* INFORMATION CONTAINER RULES*/
+    /*|||||||||||||||||||||||||||*/
+    #information-container{
+      position:absolute;
+      top:0;
+      left:0;
+      height:100vh;
+      width:100vw;
+    }
+
+    #inner-information-container{
+      position:relative;
+      height:inherit;
+      width:inherit;
+      /*border:2px solid green;*/
+    }
+
+    #title-container{
+      position:absolute;
+      top:10vh;
+      left:50%;
+      transform:translate(-50%, 0);
+    }
+
+    .app-title{
+      width:100vw;
+      font-family: 'pattaya';
+      font-size:5em;
+      color:white;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+      text-transform: capitalize;
+      margin:0;
+    }
+
+    #intro-container{
+      position:absolute;
+      top:50vh;
+      left:50%;
+      transform:translate(-50%, 0);
+    }
+
+    #app-description-container{
+      background-color:rgba(0,0,0,.5);
+      border-radius: 20px;
+      width:80%;
+      margin: 0 auto;
+      padding:1% 5% 1% 5%;
+    }
+
+    .app-description{
+      /*border:2px solid green;*/
+      font-family:'abel';
+      font-size:1.2em;
+      color:white;
+      text-align: justify;  
+      -moz-text-align-last: center; /* Code for Firefox */
+      text-align-last: center;
+      max-width:700px;
+    }
+
+    .welcome-message{
+      font-family:'pattaya';
+      font-size:2.5em;
+      display:block;
+      text-align:center;
+      margin:0;
+    }
+    /*|||||||||||||||||||||||||||||||||||*/
+    /* INFORMATION CONTAINER RULES - END */
+    /*|||||||||||||||||||||||||||||||||||*/
 
     .cust-btn{
       border-radius:20px;
       background-color:rgba(244,147,49,1);
+      margin-top:20px;
     }
 
     #scene-container{
@@ -102,224 +265,198 @@
       height:100vh;
       overflow:hidden;
       background-image:url("public/images/homepage/background.svg");
-}
+    }
 
-.layer{
-  height:100vh;
-  width:100%;
-}
+    .layer{
+      height:100vh;
+      width:100%;
+    }
 
-#floor{
-  position:absolute;
-  bottom:0;
-  left:0;
-  height:50%;
-  transform:scaleX(1.2);
-}
+    #floor{
+      position:absolute;
+      bottom:0;
+      left:0;
+      height:50%;
+      transform:scaleX(1.2);
+    }
 
-#fridge{
-  position:absolute;
-  bottom:0;
-  left:50%;
-  height:80%;
-  /*since the shadow is included, i changed the pivot center of the image*/
-  transform:translate(-91%,0);
-}
+    #fridge{
+      position:absolute;
+      bottom:0;
+      left:50%;
+      height:80%;
+      /*since the shadow is included, i changed the pivot center of the image*/
+      transform:translate(-91%,0);
+    }
 
-#tanner-container{
-  position:absolute;
-  top:45%;
-  left:5%;
-}
+    #tanner-container{
+      position:absolute;
+      top:45%;
+      left:5%;
+    }
 
-.clouds{
-  position:absolute;
-  top:50%;
-  /*left:0;*/
-  width:100%;
-  transform:translate(0,-90%);
-}
+    .clouds{
+      position:absolute;
+      top:50%;
+      /*left:0;*/
+      width:100%;
+      transform:translate(0,-90%);
+    }
 
-#cloud1{
-  right:25%;
-}
-#cloud2{
-  left:25%;
-}
-#cloud3{
-  left:50%;
-}
-#cloud4{
-  right:50%;
-}
-
-/*|||||||||||||||||||||||||||||||||*/
-/*||| LAMP STUFF: ;                */
-/*|||||||||||||||||||||||||||||||||*/
-.lamp-container{
-  /*border:2px solid green;*/
-  height:500px;
-  width:500px;
-  position:relative;
-}
-
-.lamp{
-  height:50%;
-  position:absolute;
-  top:0;
-  left:50%;
-  transform:translate(-50%,0);
-}
-
-.light{
-  height:50%;
-  position:absolute;
-  top:38%;
-  left:50%;
-  opacity: .5;
-  transform:translate(-48%,0) scale(1.2);
-}
-
-#lamp-container-1{
-  transform: scale(1.5);
-}
-
-#lamp-container-2{
-  transform: scale(1.6);
-}
-
-#lamp-container-3{
-  transform: scale(3);
-}
-
-#lamp1-wrapper{
-  position:absolute;
-  top:0;
-  left:17%;
-  transform:translate(-50%, 0);
-}
-
-#lamp2-wrapper{
-  position:absolute;
-  top:-8%;
-  left:50%;
-  transform:translate(-50%, 0);
-}
-
-#lamp3-wrapper{
-  position:absolute;
-  top:30%;
-  left:85%;
-  transform:translate(-50%, 0);
-}
+    #cloud1{
+      right:25%;
+    }
+    #cloud2{
+      left:25%;
+    }
+    #cloud3{
+      left:50%;
+    }
+    #cloud4{
+      right:50%;
+    }
 
 
-/*|||||||||||||||||||||||||||||||||||||||||||||||*/
-#information-container{
-  /*border:2px solid green;*/
-  position:absolute;
-  top:0;
-  left:0;
-  height:100vh;
-  width:100%;
-}
+    /* Retina-specific stuff here */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      .app-title{
+        font-size:7em;
+      }
 
-.app-title{
-  font-family:'pattaya';
-  font-size:4.5em;
-  color:white;
-  text-shadow: 2px 2px 2px rgba(0,0,0,.5);
-text-transform: capitalize;
-margin-top:5%;
-}
+      #intro-container{
+        top:48vh;
+      }
 
-#description-area{
-  background-color:rgba(0,0,0,.5);
-border-radius:10px;
-width:800px;
-margin:30vh auto 20px;
-padding:20px 50px 20px 50px;
-}
+      #app-description-container{
+        padding:1px 5% 1px 5%;
+      }
 
-.app-description{
-  font-family:'abel';
-  font-size:1.5em;
-  color:white;
-  margin:0 0 20px 0;
+      .app-description{
+        font-size:1.8em;
+        max-width:1000px;
+      }
 
-  text-align: justify;
-  -moz-text-align-last: center;
-  text-align-last: center;
-}
+      .welcome-message{
+        font-size:2.5em;
+      }
 
-/*Styles for Med size screens*/
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  #tanner-container{
-    position:absolute;
-    top:45%;
-    left:-10%;
-    transform:scale(.8);
-}
+      .cust-btn{
+        transform:scale(1.2);
+      }
+    }
 
-.app-title{
-  font-size:4em;
-  margin-top:10%;
-}
+    /*Styles for Med size screens*/
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+      #tanner-container{
+        position:absolute;
+        top:45%;
+        left:-10%;
+        transform:scale(.8);
+      }
 
-#description-area{
-  margin:36% auto 20px;
-}
-}
+      .app-title{
+        font-size:4.5em;
+      }
 
-/*STYLES FOR SMALL/MOBILE SCREENS */
-@media only screen and (max-width: 40em) {
-  #tanner-container{
-    position:absolute;
-    top:0;
-    left:-60%;
-    transform:scale(.3);
-}
+      #app-description-container{
+        background-color:rgba(0,0,0,.5);
+        border-radius: 20px;
+        width:100%;
+        margin:0 auto;
+        padding:1% 5% 1% 5%;
+      }
 
-#fridge{
-  top:20%;
-  height:50%;
-}
+      .app-description{
+        font-size:1.2em;
+        width:500px;
+      }
 
-#floor{
-  height:65%;
-}
+      .welcome-message{
+        font-size:2.5em;
+      }
 
-.app-title{
-  font-size:2em;
-  margin-top:50px;
-}
+      #lamp-post1, #lamp-post3{
+        display:none;
+      }
 
-#description-area{
-  background-color:rgba(0,0,0,.5);
-border-radius:10px;
-width:100%;
-margin:12% auto 20px;
-padding:20px;
-}
+    }
 
-.app-description{
-  font-family:'abel';
-  font-size:1.2em;
-  color:white;
-}
+    /*STYLES FOR SMALL/MOBILE SCREENS */
+    @media only screen and (max-width: 40em) {
+      .cust-btn{
+        margin-top:5px;
+        transform:scale(.8);
+      }
 
-}
-</style>
+      #scene-container{
+        height:calc(100vh + 150px);
+      }
 
-<!-- SCRIPT STUFF -->
-<script>
-  require('../js/parallax.js');
+      #tanner-container{
+        position:absolute;
+        top:0;
+        left:-60%;
+        transform:scale(.3);
+      }
 
-  this.on('mount', function(){
-    var $node = $(this.root);
-    $node.find('#scene').parallax();
-    $node.find('#tanner-container').load('public/animations/tangerine.html');
-  });
-</script>
+      #fridge{
+        top:20%;
+        height:50%;
+      }
+
+      #floor{
+        height:33%;
+        transform:scaleY(2.7);
+      }
+
+      .app-title{
+        font-size:1.8em;
+      }
+
+      #app-description-container{
+        width:95vw;
+        padding:1% 5% 1% 5%;
+      }
+
+      .welcome-message{
+        font-family:'pattaya';
+        font-size:1.5em;
+        display:block;
+        text-align:center;
+        margin:0;
+      }
+
+      .app-description{
+        /*border:2px solid green;*/
+        font-family:'abel';
+        font-size:1em;
+        color:white;
+        text-align: justify;  
+        -moz-text-align-last: center; /* Code for Firefox */
+        text-align-last: center;
+        max-width:700px;
+      }
+
+      #lamp-post1, #lamp-post3{
+        display:none;
+      }
+
+      #light2{
+        left:61%;
+      }
+
+    }
+  </style>
+
+  <!-- SCRIPT STUFF -->
+  <script>
+    require('../js/parallax.js');
+
+    this.on('mount', function(){
+      var $node = $(this.root);
+      $node.find('#scene').parallax();
+      $node.find('#tanner-container').load('public/animations/tangerine.html');
+    });
+  </script>
 
 </homepage>
