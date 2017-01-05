@@ -75,21 +75,37 @@
           <p class="app-title flow-text center-align">
             successful interviewing
           </p>
+          <p class="app-todo flow-text center-align">
+            <span class="accent">~</span> CSUN career center to-do guide <span class="accent">~</span>
+          </p>
         </div>
 
         <div id="intro-container">
           <div id="app-description-container">
             <p class="app-description flow-text">
               <span class="welcome-message">Welcome!</span>
-              No matter your goals, sometimes applying for a job can be daunting task, especially when it comes to the interview process!
+              No matter your goals, sometimes applying for a job can be daunting task, especially when it comes to the 
+              <span class="keyword">
+                interview process!  
+              </span>
             </p>
             <p class="app-description">
-              Luckily, the CSUN Career Center is committed to ensuring you will be completely prepared for when the time comes. 
-              On this website, you will find all the necessarily steps and guidance to succeed when an interview day comes your way!
+
+              Luckily, the 
+              <span class="keyword">
+                CSUN Career Center
+              </span>
+              is committed to ensuring you will be completely prepared for when the time comes. 
+              On this website, you will find all the 
+              <span class="keyword">
+                necessary steps
+              </span>
+              and guidance to succeed when an interview day comes your way!
             </p>
           </div>
           <div class="center-align">
-            <a href="#steps/" class="cust-btn btn btn-large hoverable">Let's Begin!</a>
+            <a href="#steps/" class="cust-btn2 button button-3d button-action button-pill">Let's Begin!</a>
+            <!-- <a href="#steps/" class="cust-btn btn btn-large hoverable">Let's Begin!</a> -->
           </div>
         </div>
 
@@ -105,6 +121,35 @@
 
   <!-- CSS RULES -->
   <style>
+    .accent{
+      /*font-size:2em;*/
+    }
+
+    .keyword{
+      font-weight: bold;
+      color:#a5de37;
+      /*color:#f49331;*/
+    }
+
+    .app-todo{
+      font-family:'abel';
+      font-size:1.5em;
+      /*margin-left:420px;*/
+      text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+      margin-top:-10px;
+      padding:0;
+      text-transform: capitalize;
+      /*color:#f49331;*/
+      color:white;
+    }
+
+    .cust-btn2{
+      font-family:'abel';
+      margin-top:20px;
+      font-weight: bold;
+      color:rgba(0,0,0,.65) !important;
+    }
+
     /*||||||||||||||||||||||||||||||||*/
     .lamp-outer-container{
       position:absolute;
@@ -128,7 +173,7 @@
     .light{
       opacity:.8;
     }
-    
+
     #lamp-post1{
       top:-5%;
       left:15%;
@@ -200,7 +245,7 @@
 
     #title-container{
       position:absolute;
-      top:10vh;
+      top:7vh;
       left:50%;
       transform:translate(-50%, 0);
     }
@@ -236,8 +281,6 @@
       font-size:1.2em;
       color:white;
       text-align: justify;  
-      -moz-text-align-last: center; /* Code for Firefox */
-      text-align-last: center;
       max-width:700px;
     }
 
@@ -247,6 +290,7 @@
       display:block;
       text-align:center;
       margin:0;
+      /*color:#a5de37;*/
     }
     /*|||||||||||||||||||||||||||||||||||*/
     /* INFORMATION CONTAINER RULES - END */

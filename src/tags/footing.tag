@@ -138,7 +138,8 @@
     }
 
     #icon{
-      fill:#116a94;
+      /*fill:#116a94;*/
+      fill:#0590d3;
     }
 
     /*Styles for Med size screens*/
