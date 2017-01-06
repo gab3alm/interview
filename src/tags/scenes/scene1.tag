@@ -1,164 +1,223 @@
 <scene1>
   <!-- HTML MARKUP -->
+  <div id="sc1-wrapper">
+    <div id="sc1-element-wrapper" class="container">
 
-  <div class="container-fluid">
-   <div class="row">
-     <div class="col s12">
-       <div class="scene-container">
-
+      <div id="app-title-container">
         <p class="app-title">successful interviewing</p>
-        <div id="information-container">
+      </div>
 
-          <p class="scene-title">
-            starting a job search
+      <div id="sc1-scene-information-container" class="animated slideInLeft">
+        <p class="sc1-scene-title">
+          starting a job search
+        </p>
+
+        <div id="description-container" class="animated fadeIn">
+          <p class="sc1-scene-description">
+            The CSUN Career Center Website has made the job hunting process a bit easier.
+            SUNlink lists jobs and connects students to companies looking specifically 
+            hire CSUN students, and Pathways links your area of study or desired occupations 
+            to relevant companies that are hiring.
           </p>
-          <p class="scene-description">
-            The CSUN Career Center Website has made the job hunting process a bit easier. 
-            SUNlink lists jobs and connects students to companies looking specifically hire CSUN students, 
-            and Pathways links your area of study or desired occupations to relevant companies that are hiring.
-          </p>
-          <a href="#steps/starting-job-search" class="button button-3d button-caution button-pill">Learn More</a>
         </div>
 
-        <img class="cubes" src="public/images/scene1/cubes.svg" alt="graduation cubes">
-        <img class="icecream" src="public/images/scene1/podium.svg" alt="ice cream dude">
+        <a href="#steps/starting-job-search" class="cust-btn2 button button-3d button-action button-pill">learn more</a>
+      </div>
 
-      </div>  
+      <section id="outer-scenary-container">
+        <div id="scenary-container">
+          <img id="icecream" class="animated slideInRight" src="public/images/scene1/podium.svg" alt="">
+          <img id="tray" class="animated slideInLeft" src="public/images/scene1/cubes.svg" alt="">
+        </div>  
+      </section>
+      
+
+
     </div>
   </div>
 
-</div> 
-<!-- CSS RULES -->
-<style>
-  .button{
-    margin-top:10px;
-  }
+  <!-- CSS RULES -->
+  <style>
+    .cust-btn2{
+      margin-top:10px;
+      font-size:1.3em;
+      color:rgba(255,255,255,.75) !important;
+      text-shadow:1px 1px 1px rgba(0,0,0,.25);
+      text-transform: capitalize;
+      font-family:'pattaya';
+    }
 
-  .row, .col{
-    padding:0 !important;
-    margin:0 !important;
-  }
+    #sc1-wrapper{
+      background-image:url('public/images/scene1/background2.svg');
+      background-size:cover;
+      background-position:center;
+      width:100%;
+      height:100vh;
+      overflow:hidden;
+    }
 
-  .scene-container{
-    height:auto;
-    min-height:calc(100vh - 50px);
-    width:100%;
-    background-color:rgba(0,0,0,.5);
-    z-index:99;
+    #sc1-element-wrapper{
+      position:relative;
+      /*border:2px solid green;*/
+      height:100vh;
+    }
 
-    background-image:url('public/images/scene1/background2.svg');
-    background-size:cover;
-    background-position:center;
+    #app-title-container{
+      position:absolute;
+      top:10vh;
+      left:0;
+      /*border:2px solid green;*/
+      width:100%;
+      text-align:center;
+    }
 
-    overflow:hidden;
-  }
+    .app-title{
+      font-family:'pattaya';
+      font-size:3.8em;
+      color:white;
+      text-transform: capitalize;
+      margin:0;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+    }
 
-  .app-title{
-    width:100%;
-    text-align:center;
-    font-family:'pattaya';
-    font-size:4em;
-    text-transform: capitalize;
-    color:white;
-    text-shadow: 2px 2px 2px rgba(0,0,0,.5);
-    margin-bottom:10px;
-  }
+    #sc1-scene-information-container{
+      /*border:2px solid white;*/
+      position:absolute;
+      top:20vh;
+      left:0;      
+    }
 
-  #information-container{
-    /*border:2px solid green;*/
-    width:45%;
-    margin-left:100px;
-  }  
+    .sc1-scene-title{
+      font-family:'pattaya';
+      font-size:2.5em;
+      color:white;
+      text-transform: capitalize;
+      margin:0;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    }
 
-  .scene-title{
-    font-family:'pattaya';
-    font-size:2.5em;
-    text-transform: capitalize;
-    color:white;
-    margin:0;
-  }
+    #description-container{
+      background-color:rgba(0,0,0,.4);
+      padding:10px;
+      border-radius:0px 20px;
+    }
 
-  .scene-description{
-    font-family:'abel';
-    font-size:1.5em;
-    color:white;
-    margin:0;
-    text-align:justify;
-  }
+    .sc1-scene-description{
+      font-family:'abel';
+      font-size:1.3em;
+      color:white;
+      margin:0;
+      width:600px;
+      text-align:justify;
+    }
 
-  .cubes{
-    height:20%;
-    position:absolute;
-    top:50%;
-    left:10%;
-  }
+    #outer-scenary-container{
+      /*border:2px solid green;*/
+      position:absolute;
+      top:50vh;
+      left:0;
+      height:35vh;
+      width:100%;
+    }
 
-  .icecream{
-   height:40%; 
-   position:absolute;
-   top:30%;
-   right:10%;
- }
- /*Styles for Med size screens*/
- @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  #information-container{
-    width:80%;
-    margin-left:20px;
-  }
+    #scenary-container{
+      /*border:2px solid green;*/
+      position:relative;
+      height:inherit;
+      width:inherit;
+    }
 
-  .cubes{
-    height:15%;
-    position:absolute;
-    top:55%;
-    left:1%;
-  } 
+    #icecream{
+      height:40vh;
+      position:absolute;
+      top:-40%;
+      right:0%;
+      transform:translate(50%,0);
+    }
 
-  .icecream{
-    height:35%;
-    position:absolute;
-    top:35%;
-    right:1%;
-  }  
-}
+    #tray{
+      height:20vh;
+      position:absolute;
+      top:10%;
+      left:-10%;
+      transform:translate(-40%,0);
+    }
 
-/*STYLES FOR SMALL/MOBILE SCREENS */
-@media only screen and (max-width: 40em) {
-  .app-title{
-    font-size:2em;
-    margin:60px 0 0 0;
-  }
+    /* Retina-specific stuff here */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      #sc1-scene-information-container{
+        top:20vh;
+        left:-10%;      
+      }
 
-  #information-container{
-    width:100%;
-    margin:0;
-    padding:20px;
-  }
+      #icecream{
+        height:30vh;
+        top:-20%;
+        right:-10%;
+      }
 
-  .scene-title{
-    font-size:1.5em;
-  }
+      #tray{
+        height:15vh;
+        top:20%;
+        left:-20%;
+      }
+    }
 
-  .scene-description{
-    font-size:1.2em;
-    margin:0;
-    text-align:justify;
-  }
+    /*Styles for Med size screens*/
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+      #icecream{
+        height:30vh;
+        top:-20%;
+        right:-10%;
+      }
 
-  .cubes, .icecream{
-    display:none;
-  }
-}
+      #tray{
+        height:15vh;
+        top:20%;
+        left:-20%;
+      }
+    }
 
-</style>
-<!-- SCRIPTS & STUFF -->
-<script src="src/js/snow.js"></script>
-<script>
+    /*STYLES FOR SMALL/MOBILE SCREENS */
+    @media only screen and (max-width: 40em) {
+      #sc1-scene-information-container{
+        top:20vh;
+        left:0%;      
+      }
 
-  this.on('mount', function(){
-    var $node = $(this.root);
-    // SNOW STORM INCOMING!!! 
-    // $.fn.snow();
-  });
+      .app-title{
+        font-size:1.8em;
+      }
 
-</script>
+      .sc1-scene-title{
+        font-size:1.5em;
+      }
+
+      .sc1-scene-description{
+        font-size:1.2em;
+        width:100%;
+        text-align:justify;
+      }
+
+      .cust-btn2{
+        /*transform:scale(.8);*/
+      }
+
+      #outer-scenary-container{
+        display:none;
+      }
+    }
+
+  </style>
+  <!-- SCRIPTS & STUFF -->
+  <script src="src/js/snow.js"></script>
+  <script>
+
+    this.on('mount', function(){
+      var $node = $(this.root);
+      // SNOW STORM INCOMING!!! 
+      $.fn.snow();
+    });
+
+  </script>
 </scene1>
