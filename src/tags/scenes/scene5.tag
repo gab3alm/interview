@@ -143,10 +143,19 @@
    .cheesecake{
      right:-50%;
    }
- }
 
- /*Styles for Med size screens*/
- @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+   .sc5-description{
+    font-size:1.5em;
+  }
+
+  #sc5-description-container{
+    padding:20px 30px;
+    width:750px;
+  }
+}
+
+/*Styles for Med size screens*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
 
   .phonebooth{
     left:-30%;

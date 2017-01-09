@@ -149,6 +149,15 @@
     .ketchup{
       right:-16%;
     }
+
+    .sc4-description{
+      font-size:1.5em;
+    }
+
+    #sc4-description-container{
+      padding:20px 30px;
+      width:750px;
+    }
   }
 
   /*Styles for Med size screens*/

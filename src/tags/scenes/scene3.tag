@@ -145,6 +145,15 @@
         left:-10%;
       }
 
+      .sc3-scene-description{
+        font-size:1.5em;
+        width:750px;
+      }
+
+      #sc3-description-container{
+        padding:20px 30px;
+      }
+
     }
 
     /*Styles for Med size screens*/
