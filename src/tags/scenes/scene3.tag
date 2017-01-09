@@ -1,135 +1,196 @@
 <scene3>
-  <!-- HTML MARKUP -->
-  <section id="scene3-container">
+  <!-- HTML -->
+  <div id="scene3-container">
 
-    <div id="sc3-scenary-container">
-      <img src="public/images/scene3/cheesebed.svg" alt="" class="sc3-bed">
-      <img src="public/images/scene3/glass.svg" alt="" class="sc3-glass">
-      <img src="public/images/scene3/milk.svg" alt="" class="sc3-milk">
+
+    <div class="container">
+
+
+      <div id="sc3-scenary" class="center-align animated fadeIn"><!-- relative container -->
+        <!-- item are absolute -->
+        <img src="public/images/scene3/cheesebed.svg" alt="" class="cheesebed">
+        <img src="public/images/scene3/milk.svg" alt="" class="milk">
+        <img src="public/images/scene3/glass.svg" alt="" class="glass">
+      </div>
+
+
+      <div id="sc3-outer-information-container" class="animated slideInLeft">
+        <div id="sc3-inner-information-container">
+          <p class="sc3-title">
+            preparing for an interview
+          </p>
+          <div id="sc3-description-container" class="animated fadeIn">
+            <p class="sc3-description">
+              Once you have found an opportunity that appeals to you and is hiring, it is time to apply for a position!
+              The keys to successful interviewing are preparation, like-ability, and bonding. There are several critical
+              areas to consider and essential things to do in preparation for your interview.
+            </p>
+          </div>
+          <a href="#steps/interview-preparation" class="cust-btn2 button button-3d button-action button-pill">learn more</a>  
+        </div>
+      </div>  
+
+
+
+
     </div>
 
-    <div id="sc3-information-container">
-      <p class="sc3-scene-title">preparing for an interview</p>
-      <p class="sc3-scene-description">
-        Once you have found an opportunity that appeals to you and is hiring, it is time to apply for a position!
-        The keys to successful interviewing are preparation, like-ability, and bonding. There are several critical
-        areas to consider and essential things to do in preparation for your interview.
-      </p>
-      <a href="#steps/interview-preparation" class="button button-3d button-caution button-pill">Learn More</a>
-    </div>
 
-  </section>
-  <!-- CSS RULES -->
-  <style> 
+  </div>
+  <!-- CSS -->
+  <style>
+    .cust-btn2{
+      margin-top:10px;
+      font-size:1.3em;
+      color:rgba(255,255,255,.75) !important;
+      text-shadow:1px 1px 1px rgba(0,0,0,.25);
+      text-transform: capitalize;
+      font-family:'pattaya';
+    }
+
     #scene3-container{
+      background-image:url(public/images/scene3/background.svg);
+      background-position:center;
+      background-size:cover;
       height:100vh;
       width:100%;
       overflow:hidden;
-      background-color:rgba(0,0,0,.8);
-      background-image:url('public/images/scene3/background.svg');
-      background-size:cover;
-      background-position: center;
-    }
-
-    #sc3-scenary-container{
       position:relative;
-      /*border:2px solid green;*/
-      height:600px;
     }
 
-    .sc3-glass{
+    #sc3-outer-information-container{
+      width:100%;
+      position:relative;
+      top:60vh;
+    }
+
+    #sc3-inner-information-container{
       position:absolute;
-      bottom:0;
-      left:2%;
-      height:400px;
+      top:0;
+      left:0;
     }
 
-    .sc3-bed{
-      position:absolute;
-      bottom:50px;
-      left:50%;
-      height:250px;
-      transform:translate(-50%, 0);
+    #sc3-description-container{
+      background-color:rgba(0,0,0,.4);
+      border-radius:0 20px;
+      width:600px;
+      padding:10px;
     }
 
-    .sc3-milk{
-      position:absolute;
-      bottom:0;
-      right:0%;
-      height:500px;
-    }
-
-    #sc3-information-container{
-      /*border:2px solid green;*/
-      padding:0 15% 0 15%;
-    }
-
-    .sc3-scene-title{
+    .sc3-title{
       font-family:'pattaya';
       font-size:2.5em;
       text-transform: capitalize;
-      margin:0 0 10px 0;
+      color:rgba(0,0,0,.75);
+      text-align:left;
+      margin:0;
+      color:white;
+      text-shadow:2px 2px 2px rgba(0,0,0,.25);
     }
 
-    .sc3-scene-description{
+    .sc3-description{
       font-family:'abel';
-      font-size:1.5em;
-      margin:0 0 10px 0;
-      text-align:left;
+      font-size:1.3em;
+      color:rgba(0,0,0,.65);
+      text-align:justify; 
+      margin:0;
+      color:white;
+    }
+
+    #sc3-scenary{
+      width:100%;
+      height:auto;
+      position:relative;
+      top:0;
+      left:0;
+    }
+
+    .glass{
+      position:absolute;
+      top:25vh;
+      left:0;
+      height:35vh;
+      transform:translate(-50%, 0);
+    }
+
+    .cheesebed{
+      position:absolute;
+      top:35vh;
+      left:50%;
+      transform:translate(-50%, 0);
+      height:20vh;
+    }
+
+    .milk{
+      position:absolute;
+      top:25vh;
+      right:0;
+      height:35vh;
+      transform:translate(50%, 0);
+    }
+
+    /* Retina-specific stuff here */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+      #sc3-scenary{
+        top:28%;
+      }
+
+      #sc3-outer-information-container{
+        width:100%;
+        position:relative;
+        top:65vh;
+      }
+
+      #sc3-inner-information-container{
+        left:-10%;
+      }
+
     }
 
     /*Styles for Med size screens*/
     @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-      .sc3-glass{
-        height:250px;
+      #sc3-scenary{
+        top:35%;
       }
 
-      .sc3-bed{
-        height:150px;
-      }
-
-      .sc3-milk{
-        height:350px;
-      }
-
-      #sc3-scenary-container{
-        height:550px;
-      }
-
-      #sc3-information-container{
-        padding:0 8% 0 8%;
-      }
-
-      .sc3-scene-description{
-        text-align:justify;
-      }
     }
 
     /*STYLES FOR SMALL/MOBILE SCREENS */
     @media only screen and (max-width: 40em) {
-      #sc3-scenary-container{
-        display:none;
-      }
-
-      #sc3-information-container{
-        padding:0 5% 0 5%;
-        margin-top:80px;
-      }
-
-      .sc3-scene-title{
+      .sc3-title{
         font-size:1.5em;
       }
 
-      .sc3-scene-description{
+      #sc3-outer-information-container{
+        width:100%;
+        position:relative;
+        top:20vh;
+      }
+
+      #sc3-inner-information-container{
+        left:0;
+      }
+
+      #sc3-description-container{
+        border-radius:0 10px;
+        width:100%;
+      }
+
+      .sc3-description{
         font-size:1.2em;
+        width:100%;
         text-align:justify;
-      }    
+      }
+
+      #sc3-scenary{
+        display:none;
+      }
     }
-  </style>
-  <!-- SCRIPT STUFF -->
+  </style>  
+  <!-- SCRIPT -->
   <script>
     this.on('mount', function(){
-      var $node = $(this.root);
+
     });
   </script>
 </scene3>

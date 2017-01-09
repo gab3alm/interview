@@ -5,11 +5,11 @@
 
     <div class="container">
 
-      <div id="sc2-scenary" class="center-align"><!-- relative container -->
+      <div id="sc2-scenary" class="center-align animated slideInDown"><!-- relative container -->
         <img class="bottles" src="public/images/scene2/bottles.svg" alt="">
       </div>
 
-      <div id="sc2-outer-information-container"><!-- absolute container -->
+      <div id="sc2-outer-information-container" class="animated fadeIn"><!-- absolute container -->
         <div id="sc2-inner-information-container"><!-- relative container -->
           <p class="sc2-title">types of interviews</p>
           <div id="sc2-description-container">
