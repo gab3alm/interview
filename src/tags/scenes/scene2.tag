@@ -109,6 +109,15 @@
     .bottles{
       width:60%;
     }
+
+    .sc2-scene-description{
+      font-size:1.5em;
+      width:750px;
+    }
+
+    #sc2-description-container{
+      padding:20px 30px;
+    }
   }
 
   /*Styles for Med size screens*/

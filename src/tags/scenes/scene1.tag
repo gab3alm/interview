@@ -161,6 +161,15 @@
         top:20%;
         left:-20%;
       }
+
+      .sc1-scene-description{
+        font-size:1.5em;
+        width:750px;
+      }
+
+      #description-container{
+        padding:20px 30px;
+      }
     }
 
     /*Styles for Med size screens*/
