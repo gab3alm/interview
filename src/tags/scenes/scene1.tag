@@ -216,7 +216,7 @@
     this.on('mount', function(){
       var $node = $(this.root);
       // SNOW STORM INCOMING!!! 
-      $.fn.snow();
+      // $.fn.snow();
     });
 
   </script>
