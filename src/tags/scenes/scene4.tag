@@ -1,175 +1,208 @@
 <scene4>
-  <!-- HTML MARKUP -->
-  <section id="scene4-container">
+  <!-- HTML -->
+  <div id="scene4-container">
 
-    <div id="sc4-information-container" class="center-align">
-      <p class="sc4-scene-title">acing the interview</p>
-      <p class="sc4-scene-description">
-        By preparing properly beforehand, as opposed to leaving it to the last minute, you can avoid extra stress the night before an important interview.
-      </p>
-      <a href="#steps/ace-the-interview" class="button button-3d button-caution button-pill">Learn More</a>
+
+    <div class="container">
+
+      <div id="sc4-scenary" class="center-align animated slideInDown"><!-- relative container -->
+        <img src="public/images/scene4/jelly.svg" alt="" class="jelly">
+        <img src="public/images/scene4/cream.svg" alt="" class="cream">
+        <img src="public/images/scene4/mustard.svg" alt="" class="mustard">
+        <img src="public/images/scene4/ketchup.svg" alt="" class="ketchup">
+        <img src="public/images/scene4/desk.svg" alt="" class="desk">
+      </div>
+
+      <div id="sc4-outer-information-container" class="animated fadeIn"><!-- absolute container -->
+        <div id="sc4-inner-information-container"><!-- relative container -->
+          <p class="sc4-title">acing the interview</p>
+          <div id="sc4-description-container">
+            <p class="sc4-description">
+              By preparing properly beforehand, as opposed to leaving it to the
+              last minute, you can avoid extra stress the night before an important interview.
+            </p>  
+          </div>
+          <div class="center-align">
+            <a href="#steps/interview-preparation" class="cust-btn2 button button-3d button-action button-pill">learn more</a>
+          </div>
+
+        </div>
+      </div>
     </div>
 
 
-    <div id="sc4-scenary-container">
-      <img class="sc4-jelly" src="public/images/scene4/jelly.svg" alt="">
-      <img class="sc4-cream" src="public/images/scene4/cream.svg" alt="">
-      <img class="sc4-mustard" src="public/images/scene4/mustard.svg" alt="">
-      <img class="sc4-ketchup" src="public/images/scene4/ketchup.svg" alt="">
-      <img class="sc4-desk" src="public/images/scene4/desk.svg" alt="">
-    </div>
-
-  </section>
-  <!-- CSS RULES -->
-  <style> 
-    /*||||||||||||||||||||||||||*/
-    .sc4-desk{
-      height:360px;
-      position:absolute;
-      bottom:50px;
-      left:50px;
+  </div>
+  <!-- CSS -->
+  <style>
+    .cust-btn2{
+      margin-top:10px;
+      font-size:1.3em;
+      color:rgba(255,255,255,.75) !important;
+      text-shadow:1px 1px 1px rgba(0,0,0,.25);
+      text-transform: capitalize;
+      font-family:'pattaya';
     }
-
-    .sc4-jelly{
-      height:350px;
-      position:absolute;
-      bottom:30%;
-      right:40%;
-    }
-
-    .sc4-cream{
-      height:350px;
-      position:absolute;
-      bottom:20%;
-      right:30%;
-    }
-
-    .sc4-mustard{
-      height:350px;
-      position:absolute;
-      bottom:10%;
-      right:15%;
-    }
-
-    .sc4-ketchup{
-      height:350px;
-      position:absolute;
-      bottom:0%;
-      right:5%;
-    }
-    /*||||||||||||||||||||||||||*/
 
     #scene4-container{
+      background-image:url(public/images/scene2/background.svg);
+      background-position:center;
+      background-size:cover;
       height:100vh;
       width:100%;
       overflow:hidden;
-      background-color:rgba(0,0,0,.8);
-      background-image:url('public/images/scene4/background.svg');
-      background-size:cover;
-      background-position: center;
-    }
-
-    #sc4-scenary-container{
       position:relative;
-      /*border:2px solid green;*/
-      height:600px;
     }
 
-    #sc4-information-container{
-      /*border:2px solid green;*/
-      padding:0 15% 0 15%;
-      margin-top:100px;
+    #sc4-outer-information-container{
+      width:100%;
+      position:absolute;
+      top:65%;
+      left:0;
     }
 
-    .sc4-scene-title{
+    #sc4-inner-information-container{
+      width:600px;
+      margin:0 auto;
+    }
+
+    #sc4-description-container{
+      background-color:rgba(0,0,0,.4);
+      border-radius:0 20px;
+      padding:10px;
+    }
+
+    .sc4-title{
       font-family:'pattaya';
       font-size:2.5em;
       text-transform: capitalize;
-      margin:0 0 10px 0;
-    }
-
-    .sc4-scene-description{
-      font-family:'abel';
-      font-size:1.5em;
-      margin:0 0 10px 0;
+      color:rgba(0,0,0,.75);
       text-align:center;
+      margin:0;
+      color:white;
+      text-shadow:2px 2px 2px rgba(0,0,0,.25);
     }
 
-    /*Styles for Med size screens*/
-    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-      #sc4-scenary-container{
-        height:550px;
-      }
+    .sc4-description{
+     font-family:'abel';
+     font-size:1.3em;
+     color:rgba(0,0,0,.65);
+     text-align:justify; 
+     margin:0;
+     color:white;
+   }
 
-      #sc4-information-container{
-        padding:0 8% 0 8%;
-      }
+   #sc4-scenary{
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+  }
 
-      .sc4-scene-description{
-        text-align:justify;
-      }
+  .desk{
+    position:absolute;
+    top:40vh;
+    left:-25%;
+    height:30vh;
+    transform:translate(50%, 0);
+  }
 
-      .sc4-desk{
-        height:260px;
-        position:absolute;
-        bottom:50px;
-        left:50px;
-      }
+  .jelly{
+    position:absolute;
+    top:30vh;
+    right:30%;
+    height:30vh;
+  }
 
-      .sc4-jelly{
-        height:250px;
-        position:absolute;
-        bottom:30%;
-        right:40%;
-      }
+  .cream{
+    position:absolute;
+    top:35vh;
+    right:15%;
+    height:30vh;
+  }
 
-      .sc4-cream{
-        height:250px;
-        position:absolute;
-        bottom:20%;
-        right:30%;
-      }
+  .mustard{
+    position:absolute;
+    top:42vh;
+    right:-5%;
+    height:30vh;
+  }
 
-      .sc4-mustard{
-        height:250px;
-        position:absolute;
-        bottom:10%;
-        right:15%;
-      }
+  .ketchup{
+    position:absolute;
+    top:50vh;
+    right:-20%;
+    height:30vh;
+  }
 
-      .sc4-ketchup{
-        height:250px;
-        position:absolute;
-        bottom:0%;
-        right:5%;
-      }
+
+  /* Retina-specific stuff here */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+    #sc4-scenary{
+      top:28%;
     }
 
-    /*STYLES FOR SMALL/MOBILE SCREENS */
-    @media only screen and (max-width: 40em) {
-      #sc4-scenary-container{
-        display:none;
-      }
-
-      #sc4-information-container{
-        padding:0 5% 0 5%;
-        margin-top:80px;
-      }
-
-      .sc4-scene-title{
-        font-size:1.5em;
-      }
-
-      .sc4-scene-description{
-        font-size:1.2em;
-        text-align:justify;
-      }    
+    .desk{
+      left:-50%;
     }
-  </style>
-  <!-- SCRIPT STUFF -->
-  <script>
-    this.on('mount', function(){
-      var $node = $(this.root);
-    });
-  </script>
+
+    .ketchup{
+      right:-16%;
+    }
+  }
+
+  /*Styles for Med size screens*/
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    #sc4-scenary{
+      top:35%;
+    }
+
+    .desk{
+      left:-40%;
+    }
+
+    .ketchup{
+      right:-16%;
+    }
+
+  }
+
+  /*STYLES FOR SMALL/MOBILE SCREENS */
+  @media only screen and (max-width: 40em) {
+    #sc4-outer-information-container{
+      top:20%;
+      padding:5%;
+    }
+
+    #sc4-inner-information-container{
+      width:100%;
+      margin:0 auto;
+    }
+
+    .sc4-title{
+      font-size:1.5em;
+    }
+
+    #sc4-description-container{
+      border-radius:0 10px;
+    }
+
+    .sc4-description{
+      font-size:1.2em;
+      width:100%;
+      text-align:justify;
+    }
+
+    #sc4-scenary{
+      display:none;
+    }
+  }
+</style>  
+<!-- SCRIPT -->
+<script>
+  this.on('mount', function(){
+
+  });
+</script>
+
 </scene4>
