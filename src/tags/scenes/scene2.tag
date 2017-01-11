@@ -103,11 +103,11 @@
   /* Retina-specific stuff here */
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
     #sc2-scenary{
-      top:28%;
+      top:20%;
     }
 
     .bottles{
-      width:60%;
+      width:90%;
     }
 
     .sc2-scene-description{

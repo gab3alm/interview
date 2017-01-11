@@ -15,7 +15,7 @@
               they will appreciate your tenacity!
             </p>  
           </div>
-          <a href="#steps/acing-the-interview" class="cust-btn2 button button-3d button-action button-pill">learn more</a>
+          <a href="#steps/following-up-the-interview" class="cust-btn2 button button-3d button-action button-pill">learn more</a>
         </div>
 
 

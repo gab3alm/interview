@@ -23,7 +23,7 @@
             </p>  
           </div>
           <div class="center-align">
-            <a href="#steps/interview-preparation" class="cust-btn2 button button-3d button-action button-pill">learn more</a>
+            <a href="#steps/ace-the-interview" class="cust-btn2 button button-3d button-action button-pill">learn more</a>
           </div>
 
         </div>
