@@ -41,7 +41,7 @@
     }
 
     #scene2-container{
-      background-image:url(public/images/scene2/background.svg);
+      background-image:url(public/images/scene2/background2.svg);
       background-position:center;
       background-size:cover;
       height:100vh;

@@ -44,7 +44,7 @@
     }
 
     #scene4-container{
-      background-image:url(public/images/scene2/background.svg);
+      background-image:url(public/images/scene4/scene4-background.svg);
       background-position:center;
       background-size:cover;
       height:100vh;
@@ -156,7 +156,7 @@
 
     #sc4-description-container{
       padding:20px 30px;
-      width:750px;
+      width:650px;
     }
   }
 

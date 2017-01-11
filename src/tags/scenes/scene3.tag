@@ -9,7 +9,7 @@
       <div id="sc3-scenary" class="center-align animated fadeIn"><!-- relative container -->
         <!-- item are absolute -->
         <img src="public/images/scene3/cheesebed.svg" alt="" class="cheesebed">
-        <img src="public/images/scene3/milk.svg" alt="" class="milk">
+        <img src="public/images/scene3/closet-milk.svg" alt="" class="milk">
         <img src="public/images/scene3/glass.svg" alt="" class="glass">
       </div>
 
@@ -49,7 +49,7 @@
     }
 
     #scene3-container{
-      background-image:url(public/images/scene3/background.svg);
+      background-image:url(public/images/scene3/scene3-background.svg);
       background-position:center;
       background-size:cover;
       height:100vh;
@@ -123,9 +123,9 @@
 
     .milk{
       position:absolute;
-      top:25vh;
+      top:10vh;
       right:0;
-      height:35vh;
+      height:50vh;
       transform:translate(50%, 0);
     }
 
@@ -153,7 +153,10 @@
       #sc3-description-container{
         padding:20px 30px;
       }
-
+      
+      .milk{
+        right:-10%;
+      }
     }
 
     /*Styles for Med size screens*/

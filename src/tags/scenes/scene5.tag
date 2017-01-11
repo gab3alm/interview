@@ -37,7 +37,7 @@
     #sc5-container{
       height:100vh;
       width:100%;
-      background-image:url(public/images/scene5/background.svg);
+      background-image:url(public/images/scene5/scene5-background.svg);
       background-size:cover;
       background-position:center;
       overflow:hidden;

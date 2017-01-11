@@ -53,7 +53,7 @@
       width:100%;
       overflow:hidden;
       background-color:rgba(0,0,0,.8);
-      background-image:url('public/images/scene6/background.svg');
+      background-image:url('public/images/scene6/scene6-background.svg');
       background-size:cover;
       background-position: center;
     }
