@@ -1,0 +1,116 @@
+$main-font:'pattaya';
+$secondary-font:'abel';
+$heading-size:2.5em;
+$secondary-size:1.4em;
+$main-font-color:#FFF;
+$description-container-background:#044a56;
+
+.cust-btn2{
+	margin-top:10px;
+	font-size:1.3em;
+	color:rgba(255,255,255,.75) !important;
+	text-shadow:1px 1px 1px rgba(0,0,0,.25);
+	text-transform: capitalize;
+	font-family:'pattaya';
+}
+
+.sc2-container{
+	height:100vh;
+	width:100%;
+	background-image:url(../../public/images/scene2/background2.svg);
+	background-size:cover;
+	background-position:center;
+	position:relative;
+	overflow:hidden;
+}
+
+
+// |||||||||||||||||||||||||||||||
+// SCENARY RULES
+// |||||||||||||||||||||||||||||||
+.sc2-outer-scenary-container{
+	height:60vh;
+	position:relative;
+}
+
+.sc2-bottles{
+	position:absolute;
+	bottom:-10%;
+	left:-10%;
+	width:120%;
+}
+
+.sc2-tanner{
+	position:absolute;
+	bottom:0;
+	left:50%;
+	height:25%;
+	transform:translate(-50%, 0);
+}
+
+// |||||||||||||||||||||||||||||||
+// INFORMATION CONTAINER RULES
+// |||||||||||||||||||||||||||||||
+.sc2-outer-information-container{
+	height:40vh;
+	position:relative;
+}
+
+.sc2-inner-information-container{
+	position:absolute;
+	top:0vh;
+	left:50%;
+	transform:translate(-50%, 0);
+	text-align:center;
+}
+
+.sc2-title{
+	font-family:$main-font;
+	color:$main-font-color;
+	font-size:$heading-size;
+	text-shadow:2px 2px 2px rgba(0,0,0,.5);
+}
+
+.sc2-description-container{
+	background-color:$description-container-background;
+	padding:10px 30px;
+	width:650px;
+	border-radius:0px 20px;
+}
+
+.sc2-description{
+	font-family:$secondary-font;
+	color:$main-font-color;
+	font-size:$secondary-size;
+	text-align:left;
+}
+
+/* Retina-specific stuff here */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+	.sc2-bottles{
+		position:absolute;
+		bottom:-5%;
+		left:-25%;
+		width:150%;
+	}
+
+
+	.sc2-tanner{
+		bottom:-8%;
+		left:45%;
+		height:25%;
+		transform:translate(-50%, 0);
+	}
+
+	.sc2-inner-information-container{
+		top:5vh;
+	}
+}
+
+/*Styles for Med size screens*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+}
+
+/*STYLES FOR SMALL/MOBILE SCREENS */
+@media only screen and (max-width: 40em) {
+}
