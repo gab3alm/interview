@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -30,7 +31,17 @@ module.exports = {
       loader: "style-loader!css-loader"
     },
     { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader:"url?limit=10000&mimetype=application/font-woff" },
-    { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file" }
+    { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file" },
+    {
+      test: /\.scss$/,
+      loader: 'style-loader!css-loader!sass-loader'
+    }
+    ]
+  },
+  resolve:{
+    root:[
+      path.resolve('./'),
+      path.resolve('./src/sass')
     ]
   }
 
