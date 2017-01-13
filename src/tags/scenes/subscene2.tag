@@ -83,7 +83,7 @@
         <a class="btn btn-large teal lighten-2" href="#steps">Return</a>
       </div>
     </section>
-    
+
 
   </div> 
   <!-- CSS RULES -->
@@ -341,7 +341,6 @@
 
     this.on('mount', function(){
       var $node = $(this.root);
-      
     });
 
 

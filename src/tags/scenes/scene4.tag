@@ -6,11 +6,11 @@
     <div class="container">
 
       <div id="sc4-scenary" class="center-align animated slideInDown"><!-- relative container -->
-        <img src="public/images/scene4/jelly.svg" alt="" class="jelly">
-        <img src="public/images/scene4/cream.svg" alt="" class="cream">
-        <img src="public/images/scene4/mustard.svg" alt="" class="mustard">
-        <img src="public/images/scene4/ketchup.svg" alt="" class="ketchup">
-        <img src="public/images/scene4/desk.svg" alt="" class="desk">
+        <img class="jelly" src="public/images/scene4/jelly.svg" alt="">
+        <img class="cream" src="public/images/scene4/cream.svg" alt="">
+        <img class="mustard" src="public/images/scene4/mustard.svg" alt="" >
+        <img class="ketchup" src="public/images/scene4/ketchup.svg" alt="" >
+        <img class="desk" src="public/images/scene4/desk.svg" alt="">
       </div>
 
       <div id="sc4-outer-information-container" class="animated fadeIn"><!-- absolute container -->
@@ -66,9 +66,9 @@
     }
 
     #sc4-description-container{
-      background-color:rgba(0,0,0,.4);
+      background-color:rgba(69,18,73,.5);
       border-radius:0 20px;
-      padding:10px;
+      padding:10px 30px;
     }
 
     .sc4-title{

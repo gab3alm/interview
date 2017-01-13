@@ -10,9 +10,7 @@
           <p class="sc5-title">following up the interview</p>
           <div id="sc5-description-container">
             <p class="sc5-description">
-              Don't be nervous about following up the interview. Whether it is sending 
-              a thank you note for their time, a list of references, a call or email,
-              they will appreciate your tenacity!
+              Don't be nervous about following up the interview. Whether it is sending a thank you note for their time, a list of references, a call or email, they will appreciate your tenacity!
             </p>  
           </div>
           <a href="#steps/following-up-the-interview" class="cust-btn2 button button-3d button-action button-pill">learn more</a>
@@ -56,18 +54,17 @@
     }
 
     #sc5-description-container{
-      background-color:rgba(0,0,0,.4);
+      background-color:rgba(31,26,80,.5);
       border-radius:0 20px;
       width:600px;
-      padding:10px;
+      padding:10px 30px;
     }
 
     .sc5-title{
       font-family:'pattaya';
       font-size:2.5em;
       text-transform: capitalize;
-      /*color:rgba(0,0,0,.75);*/
-      color:rgba(0,0,0,.75);
+      color:white;
       text-align:left;
       margin:0;
       /*text-shadow:2px 2px 2px rgba(0,0,0,.25);*/

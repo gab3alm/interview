@@ -15,7 +15,6 @@ $secondary-size:1.5em;
 	position:relative;
 }
 
-
 // |||||||||||||||||||||||||||||||||||||| 
 // Information Container Rules
 // |||||||||||||||||||||||||||||||||||||| 
@@ -40,7 +39,7 @@ $secondary-size:1.5em;
 }
 
 .sc6-description-container{
-	background-color:rgba(0,0,0,.5);
+	background-color:rgba(0,92,155,.5);
 	width:700px;
 	margin:0 auto;
 	padding:10px 5px;
@@ -78,9 +77,11 @@ $secondary-size:1.5em;
 	position:relative;
 }
 
-.container{
+.sc6-inner-scenary-container{
 	position:relative;
 	height:100%;
+	width:50%;
+	margin:0 auto;
 }
 
 .unselectable{
@@ -94,11 +95,11 @@ $secondary-size:1.5em;
 }
 
 .cubicles{
-	width:100%;
+	width:130%;
 	position:absolute;
 	top:5%;
 	left:0%;
-	transform:translate(5.5%, 0);
+	transform:translate(-9%, 0);
 }
 
 .characters{
@@ -148,7 +149,7 @@ $secondary-size:1.5em;
 /*STYLES FOR SMALL/MOBILE SCREENS */
 @media only screen and (max-width: 40em) {
 	$mobile-heading-size:1.8em;
-	$mobile-secondary-size:1em;
+	$mobile-secondary-size:1.2em;
 
 	.sc6-inner-information-container{
 		padding:0 10px;

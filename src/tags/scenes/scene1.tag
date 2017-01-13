@@ -89,7 +89,7 @@
 
     .sc1-scene-title{
       font-family:'pattaya';
-      font-size:2.5em;
+      font-size:2.8em;
       color:white;
       text-transform: capitalize;
       margin:0;
@@ -97,8 +97,8 @@
     }
 
     #description-container{
-      background-color:rgba(0,0,0,.4);
-      padding:10px;
+      background-color:rgba(18,38,75,.75);
+      padding:10px 30px;
       border-radius:0px 20px;
     }
 
@@ -208,6 +208,10 @@
         text-align:justify;
       }
 
+      #description-container{
+        padding:10px;
+      }
+
       .cust-btn2{
         /*transform:scale(.8);*/
       }
@@ -219,9 +223,8 @@
 
   </style>
   <!-- SCRIPTS & STUFF -->
-  <script src="src/js/snow.js"></script>
   <script>
-
+    require('../../js/snow.js');
     this.on('mount', function(){
       var $node = $(this.root);
       // SNOW STORM INCOMING!!! 

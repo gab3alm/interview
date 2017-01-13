@@ -1,9 +1,15 @@
 $main-font:'pattaya';
 $secondary-font:'abel';
-$heading-size:2.5em;
+
+$heading-size:3em;
 $secondary-size:1.4em;
+
+$mobile-heading-size:1.5em;
+$mobile-secondary-size:1.2em;
+
 $main-font-color:#FFF;
-$description-container-background:#044a56;
+// $description-container-background:#044a56;
+$description-container-background:rgba(4,74,86,.75);
 
 .cust-btn2{
 	margin-top:10px;
@@ -73,6 +79,7 @@ $description-container-background:#044a56;
 
 .sc2-description-container{
 	background-color:$description-container-background;
+	// padding:10px 30px;
 	padding:10px 30px;
 	width:650px;
 	border-radius:0px 20px;
@@ -82,7 +89,7 @@ $description-container-background:#044a56;
 	font-family:$secondary-font;
 	color:$main-font-color;
 	font-size:$secondary-size;
-	text-align:left;
+	text-align:justify;
 }
 
 /* Retina-specific stuff here */
@@ -105,6 +112,7 @@ $description-container-background:#044a56;
 	.sc2-inner-information-container{
 		top:5vh;
 	}
+
 }
 
 /*Styles for Med size screens*/
@@ -113,4 +121,39 @@ $description-container-background:#044a56;
 
 /*STYLES FOR SMALL/MOBILE SCREENS */
 @media only screen and (max-width: 40em) {
+	.sc2-outer-scenary-container{
+		display:none;
+	}
+
+	.sc2-inner-information-container{
+		position:absolute;
+		top:15vh;
+		left:50%;
+		transform:translate(-50%, 0);
+		text-align:center;
+		width:100%;
+	}
+
+	.sc2-description-container{
+		background-color:$description-container-background;
+		padding:10px 30px;
+		width:100%;
+		border-radius:0px 20px;
+	}
+
+
+	.sc2-title{
+		font-family:$main-font;
+		color:$main-font-color;
+		font-size:$mobile-heading-size;
+		text-shadow:2px 2px 2px rgba(0,0,0,.5);
+	}
+
+	.sc2-description{
+		font-family:$secondary-font;
+		color:$main-font-color;
+		font-size:$mobile-secondary-size;
+		text-align:left;
+	}
+
 }

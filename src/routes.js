@@ -15,19 +15,23 @@ function router(scene, subscene){
     riot.mount('#main-viewport', 'scenes');
     if(subscene == "starting-job-search"){
       riot.mount('#sub-viewport', 'subscene1');
+      window.scrollTo(0,0);
     }else if(subscene == "interview-types"){
       riot.mount('#sub-viewport', 'subscene2');
+      window.scrollTo(0,0);
     }else if(subscene == "interview-preparation"){
       riot.mount('#sub-viewport', 'subscene3');
+      window.scrollTo(0,0);
     }else if(subscene == "ace-the-interview"){
       riot.mount('#sub-viewport', 'subscene4');
+      window.scrollTo(0,0);
     }else if(subscene == "following-up-the-interview"){
       riot.mount('#sub-viewport', 'subscene5');
+      window.scrollTo(0,0);
     }else if(subscene == "accepting-the-job"){
       riot.mount('#sub-viewport', 'subscene6');
+      window.scrollTo(0,0);
     }
-
-
   }else{
     // this would be your 404 page
     riot.mount('#main-viewport', 'main');

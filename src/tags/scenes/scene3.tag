@@ -8,9 +8,9 @@
 
       <div id="sc3-scenary" class="center-align animated fadeIn"><!-- relative container -->
         <!-- item are absolute -->
-        <img src="public/images/scene3/cheesebed.svg" alt="" class="cheesebed">
+        <img src="public/images/scene3/cheesebed2.svg" alt="" class="cheesebed">
         <img src="public/images/scene3/closet-milk.svg" alt="" class="milk">
-        <img src="public/images/scene3/glass.svg" alt="" class="glass">
+        <img src="public/images/scene3/glass2.svg" alt="" class="glass">
       </div>
 
 
@@ -26,15 +26,11 @@
               areas to consider and essential things to do in preparation for your interview.
             </p>
           </div>
-          <a href="#steps/interview-preparation" class="cust-btn2 button button-3d button-action button-pill">learn more</a>  
+          <a href="#steps/interview-preparation" class="cust-btn2 button button-3d button-royal button-pill">learn more</a>  
         </div>
-      </div>  
-
-
-
+      </div> 
 
     </div>
-
 
   </div>
   <!-- CSS -->
@@ -42,7 +38,7 @@
     .cust-btn2{
       margin-top:10px;
       font-size:1.3em;
-      color:rgba(255,255,255,.75) !important;
+      color:rgba(255,255,255,1) !important;
       text-shadow:1px 1px 1px rgba(0,0,0,.25);
       text-transform: capitalize;
       font-family:'pattaya';
@@ -71,10 +67,10 @@
     }
 
     #sc3-description-container{
-      background-color:rgba(0,0,0,.4);
+      background-color:rgba(16,100,51,.5);
       border-radius:0 20px;
       width:600px;
-      padding:10px;
+      padding:10px 30px;
     }
 
     .sc3-title{
@@ -90,7 +86,7 @@
 
     .sc3-description{
       font-family:'abel';
-      font-size:1.3em;
+      font-size:1.4em;
       color:rgba(0,0,0,.65);
       text-align:justify; 
       margin:0;

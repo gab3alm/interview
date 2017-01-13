@@ -4,6 +4,7 @@
 
     <div class="sc6-outer-information-container"><!-- absolute -->
       <div class="sc6-inner-information-container"><!-- relative -->
+
         <div class="sc6-title">accepting the job</div>
         <div class="sc6-description-container">
           <div class="sc6-description">
@@ -14,12 +15,13 @@
         <div class="center-align">
           <a href="#steps/following-up-the-interview" class="cust-btn2 button button-3d button-action button-pill">learn more</a>
         </div>
+
       </div>
     </div>
     
     
     <div class="sc6-outer-scenary-container"><!-- absolute -->
-      <div class="container">
+      <div class="sc6-inner-scenary-container">
         <img class="cubicles unselectable" src="public/images/scene6/cubicles.svg" alt="job characters">
         <img class="characters unselectable" src="public/images/scene6/characters.svg" alt="job characters">
       </div>
