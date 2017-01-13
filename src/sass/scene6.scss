@@ -144,6 +144,20 @@ $secondary-size:1.5em;
 	.sc6-inner-information-container{
 		top:10vh;
 	}
+
+	.cubicles{
+		width:180%;
+		top:10%;
+		transform:translate(-15.5%, 0);
+	}
+
+	.characters{
+		top:15%;
+		left:50%;
+		width:150%;
+		transform:translate(-50%, 0);
+	}
+
 }
 
 /*STYLES FOR SMALL/MOBILE SCREENS */

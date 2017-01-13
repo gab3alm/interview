@@ -101,38 +101,38 @@
 
   .desk{
     position:absolute;
-    top:40vh;
-    left:-25%;
-    height:30vh;
+    top:35vh;
+    left:-40%;
+    height:40vh;
     transform:translate(50%, 0);
   }
 
   .jelly{
     position:absolute;
-    top:30vh;
-    right:30%;
-    height:30vh;
+    top:25vh;
+    right:27%;
+    height:35vh;
   }
 
   .cream{
     position:absolute;
-    top:35vh;
-    right:15%;
-    height:30vh;
+    top:25vh;
+    right:10%;
+    height:40vh;
   }
 
   .mustard{
     position:absolute;
-    top:42vh;
-    right:-5%;
-    height:30vh;
+    top:35vh;
+    right:-10%;
+    height:40vh;
   }
 
   .ketchup{
     position:absolute;
-    top:50vh;
-    right:-20%;
-    height:30vh;
+    top:40vh;
+    right:-25%;
+    height:45vh;
   }
 
 
@@ -143,11 +143,36 @@
     }
 
     .desk{
-      left:-50%;
+      top:30vh;
+      left:-70%;
+      height:40vh;
+    }
+
+    .jelly{
+      top:25vh;
+      right:18%;
+      height:35vh;
+    }
+
+    .cream{
+      position:absolute;
+      top:25vh;
+      right:-3%;
+      height:40vh;
+    }
+
+    .mustard{
+      position:absolute;
+      top:35vh;
+      right:-30%;
+      height:40vh;
     }
 
     .ketchup{
-      right:-16%;
+      position:absolute;
+      top:40vh;
+      right:-50%;
+      height:45vh;
     }
 
     .sc4-description{
@@ -167,11 +192,34 @@
     }
 
     .desk{
+      top:35vh;
       left:-40%;
+      height:30vh;
+    }
+
+    .jelly{
+      top:25vh;
+      right:25%;
+      height:30vh;
+    }
+
+    .cream{
+      top:22vh;
+      right:12%;
+      height:40vh;
+    }
+
+    .mustard{
+      top:28vh;
+      right:-9%;
+      height:40vh;
     }
 
     .ketchup{
-      right:-16%;
+      position:absolute;
+      top:30vh;
+      right:-20%;
+      height:45vh;
     }
 
   }
@@ -194,11 +242,11 @@
 
     #sc4-description-container{
       border-radius:0 10px;
+      width:100%;
     }
 
     .sc4-description{
       font-size:1.2em;
-      width:100%;
       text-align:justify;
     }
 
