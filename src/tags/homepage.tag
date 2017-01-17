@@ -389,6 +389,8 @@
       }
     }
 
+
+
     /*Styles for Med size screens*/
     @media only screen and (min-width: 40.063em) and (max-width: 64em) {
       #tanner-container{

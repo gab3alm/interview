@@ -143,6 +143,7 @@
       transform:translate(-40%,0);
     }
 
+
     /* Retina-specific stuff here */
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
       #sc1-scene-information-container{
@@ -172,6 +173,7 @@
       }
     }
 
+
     /*Styles for Med size screens*/
     @media only screen and (min-width: 40.063em) and (max-width: 64em) {
       #icecream{
@@ -186,6 +188,7 @@
         left:-20%;
       }
     }
+
 
     /*STYLES FOR SMALL/MOBILE SCREENS */
     @media only screen and (max-width: 40em) {
@@ -227,9 +230,9 @@
     require('../../js/snow.js');
     this.on('mount', function(){
       var $node = $(this.root);
-      // SNOW STORM INCOMING!!! 
-      // $.fn.snow();
-    });
+        // SNOW STORM INCOMING!!! 
+        // $.fn.snow();
+      });
 
   </script>
 </scene1>

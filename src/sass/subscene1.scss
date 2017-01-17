@@ -1,0 +1,85 @@
+@import './media_queries.scss';
+
+.subscene1-scenary-container{
+	position:relative;
+	height:40vh;
+	width:100%;
+	background-image:url('../../public/images/subscene1/background3.svg');
+	background-size:cover;
+	background-position:center;
+	overflow:hidden;
+}
+
+.container{
+	border:2px solid green;
+	position:relative;
+	height:100%;
+}
+
+.subc1-floor{
+	position:absolute;
+	bottom:0;
+	left:0;
+
+	height:20vh;
+	transform:scaleX(2);
+}
+
+.subc1-tray{
+	height:60%;
+	position:absolute;
+	top:50%;
+	left:0;
+	transform:translate(0%, -61%);
+
+	@include macbook {
+		top:55%;
+	}
+
+	@include macdesktop{
+		top:55%;
+		height:70%;
+		left:-25%;
+	}
+
+	@include ipad{
+		height:45%;
+		top:60%;
+		left:-10%;
+	}
+
+	@include mobile{
+		top:60%;
+		height:15vh;
+	}
+
+}
+
+.subc1-icecream{
+	height:60%;
+	position:absolute;
+	top:50%;
+	right:0;
+	transform:translate(0%, -60%);
+
+	@include macbook{
+		top:55%;
+	}
+
+	@include macdesktop{
+		top:55%;
+		height:70%;
+		right:-15%;
+	}
+
+	@include ipad{
+		height:45%;
+		top:60%;
+		right:-10%;
+	}
+
+	@include mobile{
+		height:40%;
+		top:60%;
+	}
+}
