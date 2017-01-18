@@ -1,0 +1,35 @@
+/*|||||||||||||||||||||||||||||||*/
+.fancy {
+  font-family:'pattaya';
+  font-size:3em;
+  text-transform:capitalize;
+  line-height: 0.4;
+  text-align: center;
+}
+
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  border-bottom: 2px solid rgba(0,0,0,.25);
+  border-top: 2px solid rgba(0,0,0,.25);
+  top: 0;
+  width: 600px;
+}
+
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+/*||||||||||||||||||||||||||||||||*/

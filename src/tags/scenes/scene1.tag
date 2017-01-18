@@ -30,7 +30,10 @@
           <img id="tray" class="animated slideInLeft" src="public/images/scene1/cubes.svg" alt="">
         </div>  
       </section>
-      
+
+
+      <!-- <div id="ice_cream_container"></div> -->
+      <!-- <div id="ice_tray_container"></div> -->
       
 
     </div>
@@ -38,6 +41,18 @@
 
   <!-- CSS RULES -->
   <style>
+    #ice_cream_container{
+      position:absolute;
+      top:33%;
+      right:0;
+    }
+
+    #ice_tray_container{
+      position:absolute;
+      top:33%;
+      left:0;
+    }
+
     .cust-btn2{
       margin-top:10px;
       font-size:1.3em;
@@ -171,6 +186,13 @@
       #description-container{
         padding:20px 30px;
       }
+
+      #ice_cream_container{
+        position:absolute;
+        top:40%;
+        right:-10%;
+        transform:scale(1.5);
+      }
     }
 
 
@@ -232,6 +254,9 @@
       var $node = $(this.root);
         // SNOW STORM INCOMING!!! 
         // $.fn.snow();
+
+        // $node.find('#ice_cream_container').load('public/animations/icecreamguy.html');
+        // $node.find('#ice_tray_container').load('public/animations/tray.html');
       });
 
   </script>

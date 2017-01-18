@@ -31,6 +31,13 @@ $mobile-max-width:40em;
 	}	
 }
 
+// Mac Book2 Styles
+@mixin macbook2{
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: #{$macbook-max-width}){
+		@content;
+	}	
+}
+
 // Mac Desktop Styles
 @mixin macdesktop{
 	@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: #{$mac-desktop-width}){
