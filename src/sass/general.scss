@@ -1,3 +1,5 @@
+@import './media_queries.scss';
+
 /*|||||||||||||||||||||||||||||||*/
 .fancy {
   font-family:'pattaya';
@@ -33,3 +35,64 @@
   margin-left: 15px;
 }
 /*||||||||||||||||||||||||||||||||*/
+
+$main-font:'pattaya';
+.cust-btn2{
+  font-family:$main-font;
+  text-transform:capitalize;
+  font-size:1.5em;
+  margin-top:30px;
+  color:rgba(0,0,0,.65) !important;
+
+  @include mobile-landscape{
+    transform:scale(.8);
+  }
+
+  @include iphone-landscape{
+    margin-top:5px;
+    transform:scale(.6);
+  }
+
+  @include macbook{
+    margin-top:20px;
+    transform:scale(1);
+  }
+
+  @include macdesktop{
+    margin-top:30px;
+    transform:scale(1.2);
+  }
+
+  @include lowend{
+   margin-top:10px;
+   transform:scale(.8);
+ }
+
+}
+
+
+
+.btn2{
+  margin-top:10px;
+  margin-bottom:50px;
+  font-size:1.3em;
+  color:rgba(255,255,255,.75) !important;
+  text-shadow:1px 1px 1px rgba(0,0,0,.25);
+  text-transform: capitalize;
+  font-family:'pattaya';
+  transform:scale(1.5);
+
+  @include macbook{
+    transform:scale(1);
+  }
+
+  @include macdesktop{
+    transform:scale(1.8);
+  }
+
+  @include ipad{
+  }
+
+  @include mobile{
+  } 
+}

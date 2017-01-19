@@ -7,15 +7,16 @@ require("riot-route");
 
 // require all your necessary elements
 require('./tags/preloader.tag');
-require('./tags/homepage/main.tag');
+require('./tags/homepage/main.tag'); // homepage tag
 require('./tags/navbar.tag');
 require('./tags/footing.tag');
-require('./tags/main.tag');
+require('./tags/main.tag'); 
 require('./tags/scenes.tag');
 require('./tags/scenes/scene1.tag');
 require('./tags/scenes/subscene1.tag');
 require('./tags/scenes/scene2.tag');
-require('./tags/scenes/subscene2.tag');
+// require('./tags/scenes/subscene2.tag');
+require('./tags/subscene2/main.tag');
 require('./tags/scenes/scene3.tag');
 require('./tags/scenes/subscene3.tag');
 require('./tags/scenes/scene4.tag');
