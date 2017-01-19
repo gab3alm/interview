@@ -41,7 +41,9 @@ module.exports = {
   resolve:{
     root:[
       path.resolve('./'),
-      path.resolve('./src/sass')
+      path.resolve('./src/tags'),
+      path.resolve('./src/sass'),
+      path.resolve('./src/js')
     ]
   }
 

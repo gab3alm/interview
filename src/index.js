@@ -7,7 +7,7 @@ require("riot-route");
 
 // require all your necessary elements
 require('./tags/preloader.tag');
-require('./tags/homepage.tag');
+require('./tags/homepage/main.tag');
 require('./tags/navbar.tag');
 require('./tags/footing.tag');
 require('./tags/main.tag');
