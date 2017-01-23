@@ -1,35 +1,11 @@
 @import '../media_queries.scss';
-
-$main-font:'pattaya';
-$secondary-font:'abel';
-
-$retina-title-size:6em;
-$desktop-title-size:4em;
-$tablet-title-size:3.5em;
-$mobile-title-size:2em;
-
-$retina-subtitle-size:2.8em;
-$desktop-subtitle-size:1.5em;
-$tablet-subtitle-size:1.7em;
-$mobile-subtitle-size:1.2em;
-
-$retina-greeting-size:2.5em;
-$desktop-greeting-size:2.2em;
-$tablet-greeting-size:1.8em;
-$mobile-greeting-size:1.8em;
-$xs-greeting-size:1.5em;
-
-$retina-description-size:2em;
-$desktop-description-size:1.3em;
-$tablet-description-size:1.3em;
-$mobile-description-size:1em;
-$xs-description-size:.8em;
-
+@import '../scenes_general.scss';
+@import '../fonts.scss';
 
 .content-container{
   width:45%;
   margin:0 auto;
-  height:100vh;
+  height:calc(100vh - #{$footer-height});
   position:relative;
   overflow:hidden;
 
@@ -65,7 +41,7 @@ $xs-description-size:.8em;
 
 .content-title{
   font-family:$main-font;
-  font-size:$desktop-title-size;
+  font-size:$desktop-home-title-size;
   text-transform:capitalize;
   text-shadow:2px 2px 2px rgba(0,0,0,.45);
   color:white;
@@ -73,61 +49,72 @@ $xs-description-size:.8em;
   margin:8% 0 0 0;
 
   @include mobile{
-    font-size:$mobile-title-size;
-    margin:15% 0 0 0;
+    font-size:$mobile-home-title-size;
+    margin:18% 0 0 0;
   }
 
   @include mobile-landscape{
-    font-size:$mobile-title-size;
+    display:none;
+    font-size:$mobile-home-title-size;
     margin:0% 0 0 0;
   }
 
   @include iphone-landscape{
-    font-size:$mobile-title-size;
+    font-size:$mobile-home-title-size;
     margin:0% 0 0 0; 
+    display:none;
+  }
+
+  @include ipad{
+    font-size:$tablet-home-title-size;
   }
 
   @include macbook{
-    font-size:$tablet-title-size;
+    font-size:$tablet-home-title-size;
     margin:5% 0 0 0;
   }
 
   @include macdesktop{
-    font-size:$retina-title-size;
+    font-size:$retina-home-title-size;
     margin:15% 0 0 0;
   }
 
   @include lowend{
-    font-size:$tablet-title-size;
+    font-size:$tablet-home-title-size;
     margin:5% 0 0 0;
   }
 }
 
 .content-subtitle{
   font-family:$secondary-font;
-  font-size:$desktop-subtitle-size;
+  font-size:$desktop-home-subtitle-size;
   text-align:center;
   margin:-10px 0 0 0;
   color:white;
 
   @include mobile{
-    font-size:$mobile-subtitle-size;
+    font-size:$mobile-home-subtitle-size;
   }
 
   @include mobile-landscape{
-    font-size:$mobile-subtitle-size;
+    display:none;
+    font-size:$mobile-home-subtitle-size;
+  }
+
+  @include iphone-landscape{
+    display:none;
   }
 
   @include macbook{
-    font-size:$tablet-subtitle-size;
+    font-size:$tablet-home-subtitle-size;
   }
 
   @include macdesktop{
-    font-size:$retina-subtitle-size;
+    font-size:$retina-home-subtitle-size;
   }
 
   @include lowend{
-    font-size:$tablet-subtitle-size;
+    font-size:$tablet-home-subtitle-size;
   }
 }
 
@@ -147,13 +134,12 @@ $left-displacement:((100 - $outer-container-width)/2);
   }
 
   @include mobile-landscape{
-    width:80%;
-    left:10%;
+    width:90%;
+    left:5%;
     bottom:5%;
   }
 
   @include macbook{
-    $outer-container-width:50%;
   }
 
   @include macdesktop{
@@ -177,64 +163,67 @@ $left-displacement:((100 - $outer-container-width)/2);
 
 .content-description{
   font-family:$secondary-font;
-  font-size:$desktop-description-size;
+  font-size:$desktop-home-description-size;
   color:white;
   text-align:justify;
   margin:10px;
 
   @include mobile{
-    font-size:$mobile-description-size;
+    font-size:$mobile-home-description-size;
+    margin:5px;
   }
 
   @include mobile-landscape{
-    font-size:$mobile-description-size;
+    font-size:$xs-home-description-size;
+    margin:5px;
   }
 
   @include iphone-landscape{
-    font-size:$xs-description-size;
+    font-size:$xs-home-description-size;
   }
 
   @include macbook{
-    font-size:$tablet-description-size;
+    font-size:$tablet-home-description-size;
   }
 
   @include macdesktop{
-    font-size:$retina-description-size;
+    font-size:$retina-home-description-size;
   }
 
   @include lowend{
-    font-size:$tablet-description-size;
+    font-size:$tablet-home-description-size;
   }
 }
 
 .greeting{
   font-family:$main-font;
   display:block;
-  font-size:$desktop-greeting-size;
+  font-size:$desktop-home-greeting-size;
   text-align:center;
 
   @include mobile{
-    font-size:$mobile-greeting-size;
+    font-size:$mobile-home-greeting-size;
   }
 
   @include mobile-landscape{
-    font-size:$mobile-greeting-size;
+    font-size:$xs-home-greeting-size;
   }
 
   @include iphone-landscape{
-    font-size:$xs-greeting-size;
+    font-size:$xs-home-greeting-size;
+    margin:0;
   }
 
   @include macbook{
-    font-size:$tablet-greeting-size;
+    font-size:$tablet-home-greeting-size;
   }
 
   @include macdesktop{
-    font-size:$retina-greeting-size;
+    font-size:$retina-home-greeting-size;
   }
 
   @include lowend{
-    font-size:$tablet-greeting-size;
+    font-size:$tablet-home-greeting-size;
   }
 }
 
@@ -247,8 +236,13 @@ $left-displacement:((100 - $outer-container-width)/2);
   font-size:1.5em;
   margin-top:30px;
   color:rgba(0,0,0,.65) !important;
+  
+  @include mobile{
+    margin-top:20px;
+  }
 
   @include mobile-landscape{
+    margin-top:5px;
     transform:scale(.8);
   }
 

@@ -1,31 +1,41 @@
-require('expose?$!expose?jQuery!jquery');
-require("materialize-css/dist/css/materialize.min.css");
-require("animate.css/animate.min.css");
-require("materialize-css/dist/js/materialize.min.js");
-require("riot");
-require("riot-route");
+import 'materialize-css/dist/css/materialize.min.css';
+import 'expose-loader?$!expose-loader?jQuery!jquery';
+import 'materialize-css/dist/js/materialize.min.js';
+import 'animate.css/animate.min.css';
+import 'buttons.css';
 
-// require all your necessary elements
-require('./tags/preloader.tag');
-require('./tags/homepage/main.tag'); // homepage tag
-require('./tags/navbar.tag');
-require('./tags/footing.tag');
-require('./tags/main.tag'); 
-require('./tags/scenes.tag');
-require('./tags/scenes/scene1.tag');
-require('./tags/scenes/subscene1.tag');
-require('./tags/scenes/scene2.tag');
-// require('./tags/scenes/subscene2.tag');
-require('./tags/subscene2/main.tag');
-require('./tags/scenes/scene3.tag');
-// require('./tags/scenes/subscene3.tag');
-require('./tags/subscene3/main.tag');
-require('./tags/scenes/scene4.tag');
-require('./tags/scenes/subscene4.tag');
-require('./tags/scenes/scene5.tag');
-require('./tags/scenes/subscene5.tag');
-require('./tags/scenes/scene6.tag');
-require('./tags/scenes/subscene6.tag');
+import riot from 'riot';
+// loading all scenes for project
+import 'main.tag';
+import 'scenes.tag';
+import 'preloader/main.tag';
+import 'navbar/main.tag';
+import 'footing/main.tag';
 
-// route file
-require('./routes.js');
+import 'homepage/main.tag';
+import 'scene1/main.tag';
+import 'scene2/main.tag';
+import 'scene3/main.tag';
+import 'scene4/main.tag';
+import 'scene5/main.tag';
+import 'scene6/main.tag';
+
+import 'subscene1/main.tag';
+import 'subscene2/main.tag';
+import 'subscene3/main.tag';
+
+riot.mount('*');
+
+// HOT RELOADING SETUP - ONLY FOR DEVELOPMENT
+import 'riot-hot-reload'
+if(module.hot){
+  module.hot.accept('main.tag', ()=>{
+    riot.reload('main');
+  });
+}
+
+import './routes.js';
+
+
+
+

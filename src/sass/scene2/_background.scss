@@ -1,0 +1,135 @@
+@import '../media_queries.scss';
+@import '../scenes_general.scss';
+
+.sc2-background-container{
+  height:calc(100vh - #{$footer-height});
+  width:100%;
+
+  background-image:url(../../../public/images/scene2/background3.svg);
+  background-size:cover;
+  background-position:center;
+
+  overflow:hidden;
+  position:relative;
+}
+
+.sc2-scenary-container{
+  // border:2px solid green;
+  width:80%;
+  height:100%;  
+  margin:0 auto;
+  position:relative;
+
+  @include med{
+    width:90%;
+  }
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include ipad{
+    width:100%;
+  }
+
+  @include lowend{
+    width:100%;
+  }
+
+  @include med{
+    width:100%;
+  }
+}
+
+.sc2-floor{
+  height:50%;
+  position:absolute;
+  bottom:0%;
+  right:50%;
+  transform:translate(50%, 0) scaleX(2);
+
+  @include med{
+    height:40%;
+  }
+
+  @include mobile{
+    height:30%;
+  }
+
+  @include mobile-landscape{
+    height:25%;
+  }
+
+  @include ipad{
+    height:30%;
+  }
+
+  @include med{
+    height:50%;
+  }
+}
+
+.sc2-bottles{
+  height:50%;
+  position:absolute;
+  bottom:35%;
+  left:50%;
+  transform:translate(-50%, 0);
+  
+  @include mobile{
+    width:100%;
+    bottom:5%;
+    right:0%;    
+  }
+
+  @include mobile-landscape{
+    height:40%;
+    bottom:10%;
+    right:0%;    
+  }
+
+  @include ipad{
+    width:100%;
+    bottom:10%;
+    right:0%;
+  }
+
+  @include med{
+    height:32%;
+    bottom:40%;
+    right:0%;
+  }
+
+}
+
+.sc2-tanner{
+  height:20%;
+  position:absolute;
+  bottom:40%;
+  left:50%;
+  transform:translate(-50%, 0);
+
+  @include mobile{
+    height:10%;
+    bottom:15%;
+    right:0%;    
+  }
+
+  @include mobile-landscape{
+    height:15%;
+    bottom:10%;
+    right:0%;    
+  }
+
+  @include ipad{
+   height:10%;
+   bottom:12%;
+   right:0%;
+ }
+
+ @include med{
+  height:15%;
+  bottom:40%;
+  right:0%;
+  }
+}

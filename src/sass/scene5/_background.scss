@@ -1,0 +1,218 @@
+@import '../media_queries.scss';
+@import '../scenes_general.scss';
+.sc5-background-container{
+  height:calc(100vh - #{$footer-height});
+  width:100%;
+
+  background-image:url(../../../public/images/scene5/background2.svg);
+  background-size:cover;
+  background-position:center;
+
+  overflow:hidden;
+  position:relative;
+}
+
+.sc5-scenary-container{
+  // border:2px solid green;
+  width:80%;
+  height:100%;  
+  margin:0 auto;
+  position:relative;
+
+  @include med{
+    width:90%;
+  }
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include ipad{
+    width:100%;
+  }
+
+  @include lowend{
+    width:100%;
+  }
+
+  @include med{
+    width:100%;
+  }
+}
+
+.sc5-floor{
+  height:50%;
+  position:absolute;
+  bottom:0%;
+  right:50%;
+  transform:translate(50%, 0) scaleX(2);
+
+  @include med{
+    height:40%;
+  }
+
+  @include mobile{
+    height:30%;
+  }
+
+  @include mobile-landscape{
+    height:25%;
+  }
+
+  @include ipad{
+    height:30%;
+  }
+
+  @include med{
+    height:50%;
+  }
+}
+
+.sc5-telephone{
+  position:absolute;
+  bottom:18%;
+  left:0;
+  height:50%;
+
+  @include mobile{
+    bottom:8%;
+    left:5%;
+    height:30%;
+  }
+
+  @include mobile-landscape{
+    bottom:8%;
+    left:10%;
+    height:50%;
+  }
+
+  @include iphone-landscape{
+    bottom:8%;
+    left:10%;
+    height:50%;
+  }
+
+  @include med{
+    left:0;
+    bottom:18%;
+    height:45%;
+  }
+
+  @include ipad{
+    bottom:18%;
+    left:4%;
+    height:40%;
+  }
+}
+
+.sc5-shake{
+  position:absolute;
+  bottom:35%;
+  right:50%;
+  height:40%;
+  
+  @include mobile{
+    bottom:20%;
+    right:35%;
+    height:18%;
+  }
+
+  @include mobile-landscape{
+    bottom:20%;
+    right:35%;
+    height:30%;
+  }
+
+  @include iphone-landscape{
+    bottom:20%;
+    right:35%;
+    height:30%;
+  }
+
+  @include med{
+    bottom:40%;
+    right:35%;
+    height:35%;
+  }
+
+  @include ipad{
+    bottom:38%;
+    right:40%;
+    height:20%;
+  }
+}
+
+.sc5-chocolate{
+  position:absolute;
+  bottom:23%;
+  right:15%;
+  height:40%;
+
+  @include mobile{
+    bottom:15%;
+    right:10%;
+    height:15%;
+  }
+
+  @include mobile-landscape{
+    bottom:13%;
+    right:13%;
+    height:30%;
+  }
+
+  @include iphone-landscape{
+    bottom:13%;
+    right:13%;
+    height:30%;
+  }
+
+  @include med{
+    bottom:28%;
+    right:5%;
+    height:30%;
+  }
+
+  @include ipad{
+    bottom:28%;
+    right:10%;
+    height:20%;
+  }
+}
+
+.sc5-cheesecake{
+  position:absolute;
+  bottom:10%;
+  right:-10%;
+  height:30%;
+
+
+  @include mobile{
+    bottom:10%;
+    right:0%;
+    height:10%;
+  }
+
+  @include mobile-landscape{
+    bottom:8%;
+    right:0%;
+    height:20%;
+  }
+
+  @include iphone-landscape{
+    bottom:8%;
+    right:0%;
+    height:20%;
+  }
+  
+  @include med{
+    bottom:15%;
+    right:-10%;
+    height:25%;
+  }
+
+  @include ipad{
+    bottom:15%;
+    right:0%;
+    height:15%;
+  }
+}

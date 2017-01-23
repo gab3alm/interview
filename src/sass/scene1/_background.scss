@@ -1,0 +1,125 @@
+@import '../media_queries.scss';
+@import '../scenes_general.scss';
+
+.sc1-background-container{
+  height:calc(100vh - #{$footer-height});
+  width:100%;
+
+  background-image:url(../../../public/images/scene1/background3.svg);
+  background-size:cover;
+  background-position:center;
+
+  overflow:hidden;
+  position:relative;
+}
+
+.sc1-scenary-container{
+  // border:2px solid green;
+  width:80%;
+  height:100%;  
+  margin:0 auto;
+  position:relative;
+
+  @include med{
+    width:90%;
+  }
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include ipad{
+    width:100%;
+  }
+
+  @include lowend{
+    width:100%;
+  }
+}
+
+.sc1-floor{
+  height:50%;
+  position:absolute;
+  bottom:0%;
+  right:50%;
+  transform:translate(50%, 0) scaleX(2);
+
+  @include med{
+    height:40%;
+  }
+
+  @include mobile{
+    height:30%;
+  }
+
+  @include mobile-landscape{
+    height:25%;
+  }
+
+  @include ipad{
+    height:30%;
+  }
+}
+
+.sc1-ice_cream{
+  height:40%;
+  position:absolute;
+  bottom:20%;
+  right:0%;
+  
+  @include med{
+    height:32%;
+    bottom:19%;
+    right:-10%;
+  }
+
+  @include mobile{
+    height:20%;
+    bottom:15%;
+    right:0%;    
+  }
+
+  @include mobile-landscape{
+    height:40%;
+    bottom:10%;
+    right:0%;    
+  }
+
+  @include ipad{
+   height:30%;
+   bottom:12%;
+   right:0%;
+ }
+}
+
+.sc1-ice_tray{
+  height:20%;
+  position:absolute;
+  bottom:22%;
+  left:0%;
+
+  @include med{
+    height:18%;
+    bottom:20%;
+    left:-20%;
+  }
+
+  @include mobile{
+    height:12%;
+    bottom:15%;
+    left:-25%;    
+  }
+
+  @include mobile-landscape{
+    height:20%;
+    bottom:10%;
+    left:0%;    
+  }
+
+  @include ipad{
+   height:15%;
+   bottom:12%;
+   left:-25%;
+ }
+}
+

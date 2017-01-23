@@ -1,0 +1,104 @@
+@import './media_queries.scss';
+$footer-height:50px;
+
+.sc-btn{
+  font-family:'pattaya';
+  font-size:1.4em;
+  text-transform:capitalize;
+  text-shadow:2px 2px 2px rgba(0,0,0,.25);
+  // color:rgba(0,0,0,.5) !important;
+  margin-top:1%;
+
+  @include mobile{
+    margin-top:3%;
+  }
+
+  @include mobile-landscape{
+    margin-top:1.5%;
+  }
+
+  @include lowend{
+    margin-top:1%;
+  }
+
+  @include macdesktop{
+  }
+}
+
+
+/*|||||||||||||||||||||||||||||||*/
+.fancy {
+  font-family:'pattaya';
+  font-size:3em;
+  text-transform:capitalize;
+  line-height: 0.4;
+  text-align: center;
+}
+
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  border-bottom: 2px solid rgba(0,0,0,.25);
+  border-top: 2px solid rgba(0,0,0,.25);
+  top: 0;
+  width: 600px;
+}
+
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+/*||||||||||||||||||||||||||||||||*/
+
+// ::-webkit-scrollbar
+// {
+//   width: 12px;  /* for vertical scrollbars */
+//   height: 12px; /* for horizontal scrollbars */
+// }
+
+// ::-webkit-scrollbar-track
+// {
+//   background: rgba(0, 0, 0, 0.1);
+// }
+
+// ::-webkit-scrollbar-thumb
+// {
+//   background: rgba(0, 0, 0, 0.5);
+// }
+
+.btn2{
+  margin-top:10px;
+  margin-bottom:50px;
+  font-size:1.3em;
+  color:rgba(255,255,255,.75) !important;
+  text-shadow:1px 1px 1px rgba(0,0,0,.25);
+  text-transform: capitalize;
+  font-family:'pattaya';
+  transform:scale(1.5);
+
+  @include macbook{
+    transform:scale(1);
+  }
+
+  @include macdesktop{
+    transform:scale(1.8);
+  }
+
+  @include ipad{
+  }
+
+  @include mobile{
+  } 
+}

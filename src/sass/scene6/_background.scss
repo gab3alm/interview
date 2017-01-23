@@ -1,0 +1,198 @@
+@import '../scenes_general.scss';
+@import '../media_queries.scss';
+
+.sc6-background-container{
+  height:calc(100vh - #{$footer-height});
+  width:100%;
+
+  background-image:url(../../../public/images/scene6/background2.svg);
+  background-size:cover;
+  background-position:center;
+
+  overflow:hidden;
+  position:relative;
+}
+
+.sc6-scenary-container{
+  // border:2px solid green;
+  width:80%;
+  height:100%;  
+  margin:0 auto;
+  position:relative;
+
+  @include med{
+    width:90%;
+  }
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include ipad{
+    width:100%;
+  }
+
+  @include lowend{
+    width:100%;
+  }
+
+  @include med{
+    width:100%;
+  }
+}
+
+.sc6-floor{
+  height:50%;
+  position:absolute;
+  bottom:0%;
+  right:50%;
+  transform:translate(50%, 0) scaleX(2);
+
+  @include med{
+    height:40%;
+  }
+
+  @include mobile{
+    height:30%;
+  }
+
+  @include mobile-landscape{
+    height:25%;
+  }
+
+  @include ipad{
+    height:30%;
+  }
+
+  @include med{
+    height:50%;
+  }
+}
+
+.sc6-cubicles{
+  position:absolute;
+  height:23%;
+  bottom:40%;
+  left:50%;
+  transform:translate(-44.5%, 0);
+
+  @include mobile{
+    bottom:25%;
+    left:50%;
+    height:8%;
+  }
+
+  @include mobile-landscape{
+    bottom:15%;
+    left:50%;
+    height:20%;
+  }
+
+  @include iphone-landscape{
+    bottom:15%;
+    left:50%;
+    height:20%;
+  }
+
+  @include med{
+    left:50%;
+    bottom:40%;
+    height:15%;
+  }
+
+  @include ipad{
+    bottom:43%;
+    left:50%;
+    height:12%;
+  }
+}
+
+.sc6-peeps{
+  position:absolute;
+  bottom:22%;
+  right:50%;
+  height:35%;
+  transform:translate(50%, 0);
+
+  @include mobile{
+    bottom:15%;
+    right:50%;
+    height:15%;
+  }
+
+  @include mobile-landscape{
+    bottom:6%;
+    right:50%;
+    height:30%;
+  }
+
+  @include iphone-landscape{
+    bottom:6%;
+    right:50%;
+    height:30%;
+  }
+
+  @include med{
+    bottom:25%;
+    right:50%;
+    height:23%;
+  }
+
+  @include ipad{
+    bottom:30%;
+    right:50%;
+    height:20%;
+  }
+}
+
+.sc6-down-arrow-container{
+  position:absolute;
+  bottom:2%;
+  left:48.5%;
+  transform:translate(-50%, -50%);
+  animation-duration:3s;
+
+  @include mobile{
+    bottom:0%;
+  }
+
+  @include ipad{
+    bottom:.5%;
+  }
+}
+
+$arrow-size:5vh;
+.sc6-down-arrow{
+  height:$arrow-size;
+  width:$arrow-size;
+
+  fill:white;
+  border-radius:50%;
+  background-color:rgba(0,0,0,.25);  
+
+  transform-origin: 50% 50%; 
+  transition:all .2s linear;
+}
+
+.sc6-down-arrow:hover{
+  $arrow-size:6vh;
+  height:$arrow-size;
+  width:$arrow-size;
+
+  fill:white;
+  border-radius:50%;
+  background-color:rgba(0,0,0,.5);  
+}
+
+
+
+// Test center of screen
+// .test{
+//   width:50%;
+//   border:1px solid green;
+//   height:100vh;
+//   position:absolute;
+//   top:0;
+//   left:0;
+//   z-index: 10;
+// }

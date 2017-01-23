@@ -1,0 +1,97 @@
+#footer-container{
+  height:50px;
+  width:100%;
+  background-color:rgba(0,0,0,.85);
+  position:fixed;
+  bottom:0px;
+  left:0;
+  z-index:100;
+}
+
+#footer-information{
+  height:100%;
+  float:left;
+}
+
+#footer-social{
+  height:100%;
+  float:right;
+}
+
+#address-container{
+  height:100%;
+  display:inline-block;
+  margin:5px 0 5px 10px;
+}
+
+.csun-logo{
+  height:30px;
+  margin-left:10px;
+  display:inline-block;
+}
+
+.address{
+  font-family:'abel';
+  font-size:1em;
+  text-transform: capitalize;
+  color:white;
+
+  margin:0;
+  padding:0;
+}
+
+.social-media-icon-container{
+  height:100%;
+  width:50px;
+  display:inline-block;
+  padding:10px;
+}
+
+.social-media-icon{
+  height:100%;
+}
+
+.social-media-icon-container:hover #icon{
+  fill:#fff;
+  transition-duration: 1s;
+}
+
+#icon{
+  /*fill:#116a94;*/
+  fill:#0590d3;
+}
+
+/*Styles for Med size screens*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+}
+
+/*STYLES FOR SMALL/MOBILE SCREENS */
+@media only screen and (max-width: 40em) {
+  #footer-information{
+    width:auto;
+    float:left;
+    /*display:none;*/
+  }
+
+  #address-container{
+    display:none;
+  }
+
+  .csun-logo{
+    margin:15px 0 0 10px;
+    height:25px;
+  }
+
+  .social-media-icon-container{
+    /*border:2px solid green;*/
+    height:80%;
+    width:40px;
+    display:inline-block;
+    padding:5px;
+    margin:5px 0;
+  }
+
+  .social-media-icon{
+    height:100%;
+  }
+}

@@ -1,0 +1,238 @@
+@import '../scenes_general.scss';
+@import '../media_queries.scss';
+@import '../fonts.scss';
+
+
+$description-container-background:rgba(0,92,155,.5);
+.sc6-content-container{
+  // border:2px solid green;
+  height:calc(100vh - #{$footer-height});
+  width:70%;
+  margin:0 auto;
+  position:relative;
+
+  @include mobile{
+    width:90%;
+    overflow:hidden;
+  }
+
+  @include mobile-landscape{
+    width:90%;
+    overflow:hidden;
+  }
+
+  @include ipad{
+    width:90%;
+  }
+
+  @include med{
+    width:90%;
+  }
+
+  @include macdesktop{
+    width:55%;
+  }
+}
+
+
+.sc6-outer-information-container{
+  width:100%;
+  position:absolute;
+  top:5vh;
+  left:0%;
+
+  @include mobile{
+    top:10vh;
+  }
+
+  @include lowend{
+    top:15vh;
+  }
+
+  @include med{
+    top:5vh;
+  }
+
+  @include mobile-landscape{
+    top:15vh;
+  }
+
+  @include ipad{
+    top:10vh;
+  }
+
+  @include macdesktop{
+    top:10vh;
+  }
+
+}
+
+.sc6-inner-information-container{
+  position:relative;
+  width:100%;
+  height:100%;
+  // border:2px solid green;
+}
+
+.sc6-title{
+  font-family:$main-font;
+  font-size:$desktop-title-size;
+  text-transform:capitalize;
+  text-shadow:2px 2px 2px rgba(0,0,0,.25);
+  color:white;
+  margin:0;
+
+  @include mobile{
+    font-size:$mobile-title-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-title-size;
+  }
+
+  @include ipad{
+    font-size:$med-title-size;
+    // text-align:center;
+  }
+
+  @include lowend{
+    font-size:$mobile-title-size;
+  }
+
+  @include med{
+    font-size:$med-title-size;
+  }
+
+
+  @include macbook{
+    font-size:$med-title-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-title-size;
+  }
+
+
+}
+
+.sc6-description-container{
+  width:45%;
+  margin:0 auto;
+  border-radius:0px 30px;
+  // background-color:rgba(18,46,91,.85);
+  background-color:$description-container-background;
+  padding:1% 2%;
+
+  @include mobile{
+    width:100%;
+    padding:5%;
+  }
+
+  @include mobile-landscape{
+    width:100%;
+    padding:5%;
+  }
+
+  @include ipad{
+    width:80%;
+    padding:3% 5%;
+    // margin:0 auto;
+  }
+
+  @include lowend{
+    width:60%;
+    padding:1.5% 3%;
+  }
+
+  @include med{
+    width:60%;
+    padding:1.5% 3%;
+  }
+
+  @include mobile-landscape{
+    width:90%;
+    padding:5%;
+  }
+
+  @include macbook{
+    width:60%;
+    padding:1.5% 3%;
+  }
+
+  @include macdesktop{
+    width:50%;
+    padding:1.5% 3%;
+  }
+}
+
+.sc6-description{
+  font-family:$secondary-font;
+  font-size:$desktop-description-size;
+  text-align:center;
+  color:white;
+  margin:0;
+
+  @include mobile{
+    font-size:$mobile-description-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-description-size;
+  }
+
+  @include ipad{
+    font-size:$med-description-size;
+  }
+
+  @include lowend{
+    font-size:$mobile-description-size;
+  }
+
+  @include med{
+    font-size:$med-description-size;
+  }
+
+  @include macbook{
+    font-size:$med-description-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-description-size;
+  }
+
+
+}
+
+$retina-welcome-size:1.8em;
+$desktop-welcome-size:1.6em;
+$med-welcome-size:1.4em;
+$mobile-welcome-size:1.3em;
+.sc6-welcome{
+  display:block;
+  font-family:$main-font;
+  font-size:$desktop-welcome-size;
+  text-align:center;
+  width:100%;
+  margin:0;
+
+  @include mobile{
+    font-size: $mobile-welcome-size;
+  }
+
+  @include mobile-landscape{
+    font-size: $mobile-welcome-size;
+  }
+
+  @include iphone-landscape{
+    font-size: $mobile-welcome-size;
+  }
+
+  @include med{
+    font-size: $med-welcome-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-welcome-size;
+  }
+
+}

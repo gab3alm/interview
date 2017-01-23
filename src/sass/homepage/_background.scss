@@ -1,138 +1,139 @@
-  @import '../media_queries.scss';
+@import '../media_queries.scss';
+@import '../scenes_general.scss';
 
-  .homepage-container{
+.homepage-container{
+  height:calc(100vh - #{$footer-height});
+  width:100%;
+  background-image:url('../../../public/images/homepage/background.svg');
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+  position:relative;
+}
+
+.layer{
+  height:100vh;
+  width:100%;
+}
+
+// tangerine element of homepage
+.hp-tanner{
+  height:35%;
+  position:absolute;
+  top:70%;
+  left:20%;
+// center image perfectly
+transform:translate(-50%, -50%);
+
+@include mobile{
+  height:20%;
+  top:50%;
+  left:15%;
+}
+
+@include ipad{
+  height:30%;
+  top:65%;
+  left:15%; 
+}
+
+}
+
+// homepage floor element
+.hp-floor{
+  height:40%;
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translate(-50%, 0) scaleX(2);
+
+  @include mobile{
     height:100vh;
-    width:100%;
-    background-image:url('../../../public/images/homepage/background.svg');
-    background-size:cover;
-    background-position:center;
-    overflow:hidden;
-    position:relative;
+    top:40%;
   }
+}
 
-  .layer{
-    height:100vh;
-    width:100%;
+// homepage fridge element
+.hp-fridge{
+  height:80vh;
+  position:absolute;
+  top:62%;
+  left:50%;
+  transform:translate(-91%, -40%);
+
+
+  @include mobile{
+    height:60vh;
+    top:42%;
   }
-
-  // tangerine element of homepage
-  .hp-tanner{
-    height:35%;
-    position:absolute;
-    top:70%;
-    left:20%;
-    // center image perfectly
-    transform:translate(-50%, -50%);
-
-    @include mobile{
-      height:20%;
-      top:50%;
-      left:15%;
-    }
-
-    @include ipad{
-      height:30%;
-      top:65%;
-      left:15%; 
-    }
-
-  }
-
-  // homepage floor element
-  .hp-floor{
-    height:40%;
-    position:absolute;
-    bottom:0;
-    left:50%;
-    transform:translate(-50%, 0) scaleX(2);
-
-    @include mobile{
-      height:100vh;
-      top:40%;
-    }
-  }
-
-  // homepage fridge element
-  .hp-fridge{
-    height:80vh;
-    position:absolute;
-    top:62%;
-    left:50%;
-    transform:translate(-91%, -40%);
+}
 
 
-    @include mobile{
-      height:60vh;
-      top:42%;
-    }
-  }
+// cloud element in homepage
+#hp-cloud{
+  width:100%;
+  position:absolute;
+  transform:translate(0, -80%) scale(1);
+}
 
+.hp-cloud1{
+  top:60%;
+  left:0;
 
-  // cloud element in homepage
-  #hp-cloud{
-    width:100%;
-    position:absolute;
-    transform:translate(0, -80%) scale(1);
-  }
-
-  .hp-cloud1{
-    top:60%;
+  @include mobile{
+    top:40%;
     left:0;
-
-    @include mobile{
-      top:40%;
-      left:0;
-    }
   }
+}
 
-  .hp-cloud2{
-    top:60%;
-    left:-30%;
+.hp-cloud2{
+  top:60%;
+  left:-30%;
 
-    @include mobile{
-      top:40%;
-      left:0;
-    }
+  @include mobile{
+    top:40%;
+    left:0;
   }
+}
 
 
-  .hp-cloud3{
-    top:60%;
-    right:-50%;
+.hp-cloud3{
+  top:60%;
+  right:-50%;
 
-    @include mobile{
-      top:40%;
-      left:0;
-    }
+  @include mobile{
+    top:40%;
+    left:0;
   }
+}
 
 
-  // SPOTLIGHT ELEMENTS IN HOMEPAGE
-  $outer-height:50%;
-  #hp-outer-lamp-container{
-    height:$outer-height;
-    width:$outer-height;
-    position:absolute;
+// SPOTLIGHT ELEMENTS IN HOMEPAGE
+$outer-height:50%;
+#hp-outer-lamp-container{
+  height:$outer-height;
+  width:$outer-height;
+  position:absolute;
 
-    transform:translate(-50%, 0);
-  }
+  transform:translate(-50%, 0);
+}
 
-  #hp-inner-lamp-container{
-    position:relative;
-    height:100%;
-    width:100%;
-  }
+#hp-inner-lamp-container{
+  position:relative;
+  height:100%;
+  width:100%;
+}
 
-  .lamp{
-    position:absolute;
-    transform:translate(-50%, 0);
-  }
-  
-  .light{
-   position:absolute;
-   transform:translate(-50%, 0); 
-   opacity:.5;
- }
+.lamp{
+  position:absolute;
+  transform:translate(-50%, 0);
+}
+
+.light{
+  position:absolute;
+  transform:translate(-50%, 0); 
+  opacity:.5;
+}
 
 
 // lamp1
@@ -152,9 +153,9 @@
 }
 
 #light1{
- height:100%;
- top:66%;
- left:51.5%;
+  height:100%;
+  top:66%;
+  left:51.5%;
 }
 
 
@@ -176,13 +177,13 @@
 }
 
 #light2{
- height:150%;
- top:66%;
- left:52.5%;
+  height:150%;
+  top:66%;
+  left:52.5%;
 
- @include mobile{
-   left:57%;
- }
+  @include mobile{
+    left:57%;
+  }
 }
 
 // lamp 3
@@ -203,8 +204,8 @@
 }
 
 #light3{
- height:100%;
- top:66%;
- left:51.5%;
+  height:100%;
+  top:66%;
+  left:51.5%;
 }
 

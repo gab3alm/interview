@@ -1,35 +1,31 @@
-var riot = require('riot');
-var route = require('riot-route');
-
-riot.mount('*');
+import riot from 'riot';
+import route from 'riot-route';
 
 function router(scene, subscene){
   // console.log(scene + " " + subscene);
   // initial page for user
   if(scene == ''){
-    riot.mount('#main-viewport', 'main');
-  }else if(scene == "home"){
-    riot.mount('#main-viewport', 'homepage');
+    riot.mount('#viewport', 'homepage');
   }else if(scene == "steps"){
     //you want to load scenes, because it has the #sub-viewport element 
-    riot.mount('#main-viewport', 'scenes');
+    riot.mount('#viewport', 'scenes');
     if(subscene == "starting-job-search"){
-      riot.mount('#sub-viewport', 'subscene1');
+      riot.mount('#viewport', 'subscene1');
       window.scrollTo(0,0);
     }else if(subscene == "interview-types"){
-      riot.mount('#sub-viewport', 'subscene2');
+      riot.mount('#viewport', 'subscene2');
       window.scrollTo(0,0);
     }else if(subscene == "interview-preparation"){
-      riot.mount('#sub-viewport', 'subscene3');
+      riot.mount('#viewport', 'subscene3');
       window.scrollTo(0,0);
     }else if(subscene == "ace-the-interview"){
-      riot.mount('#sub-viewport', 'subscene4');
+      riot.mount('#viewport', 'subscene4');
       window.scrollTo(0,0);
     }else if(subscene == "following-up-the-interview"){
-      riot.mount('#sub-viewport', 'subscene5');
+      riot.mount('#viewport', 'subscene5');
       window.scrollTo(0,0);
     }else if(subscene == "accepting-the-job"){
-      riot.mount('#sub-viewport', 'subscene6');
+      riot.mount('#viewport', 'subscene6');
       window.scrollTo(0,0);
     }
   }else{
@@ -38,6 +34,6 @@ function router(scene, subscene){
   }
 }
 
-route(router);
 route.stop();
 route.start(true);
+route(router);

@@ -1,0 +1,228 @@
+@import '../scenes_general.scss';
+@import '../media_queries.scss';
+@import '../fonts.scss';
+
+$description-container-background:rgba(69,18,73,.5);;
+.sc4-content-container{
+  // border:2px solid green;
+  width:70%;
+  margin:0 auto;
+  height:calc(100vh - #{$footer-height});
+  position:relative;
+
+  @include mobile{
+    width:90%;
+    overflow:hidden;
+  }
+
+  @include mobile-landscape{
+    width:90%;
+    overflow:hidden;
+  }
+
+  @include ipad{
+    width:90%;
+  }
+
+  @include med{
+    width:90%;
+  }
+
+  @include macdesktop{
+    width:55%;
+  }
+}
+
+
+.sc4-outer-information-container{
+  width:100%;
+  position:absolute;
+  bottom:12vh;
+  left:0%;
+
+  @include mobile{
+    top:10vh;
+  }
+
+  @include mobile-landscape{
+    bottom:18vh;
+  }
+
+  @include ipad{
+    bottom:15vh;
+  }
+  
+  @include lowend{
+    bottom:15vh;
+  }
+
+  @include med{
+    bottom:15vh;
+  }
+
+  @include macdesktop{
+    bottom:16vh;
+  }
+
+}
+
+.sc4-inner-information-container{
+  position:relative;
+  width:100%;
+  height:100%;
+  // border:2px solid green;
+}
+
+.sc4-title{
+  font-family:$main-font;
+  font-size:$desktop-title-size;
+  text-transform:capitalize;
+  text-shadow:2px 2px 2px rgba(0,0,0,.25);
+  color:white;
+  margin:0;
+
+  @include mobile{
+    font-size:$mobile-title-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-title-size;
+  }
+
+  @include ipad{
+    font-size:$med-title-size;
+    // text-align:center;
+  }
+
+  @include lowend{
+    font-size:$mobile-title-size;
+  }
+
+  @include med{
+    font-size:$med-title-size;
+  }
+
+
+  @include macbook{
+    font-size:$med-title-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-title-size;
+  }
+
+
+}
+
+.sc4-description-container{
+  width:45%;
+  margin:0 auto;
+  border-radius:0px 30px;
+  // background-color:rgba(18,46,91,.85);
+  background-color:$description-container-background;
+  padding:1% 2%;
+
+  @include mobile{
+    width:100%;
+    padding:5%;
+  }
+
+  @include mobile-landscape{
+    width:100%;
+    padding:5%;
+  }
+
+  @include ipad{
+    width:80%;
+    padding:3% 5%;
+    // margin:0 auto;
+  }
+
+  @include lowend{
+    width:60%;
+    padding:1.5% 3%;
+  }
+
+  @include med{
+    width:60%;
+    padding:1.5% 3%;
+  }
+
+  @include mobile-landscape{
+    width:90%;
+    padding:5%;
+  }
+
+  @include macbook{
+    width:60%;
+    padding:1.5% 3%;
+  }
+
+  @include macdesktop{
+    width:50%;
+    padding:1.5% 3%;
+  }
+}
+
+.sc4-description{
+  font-family:$secondary-font;
+  font-size:$desktop-description-size;
+  text-align:justify;
+  color:white;
+  margin:0;
+
+  @include mobile{
+    font-size:$mobile-description-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-description-size;
+  }
+
+  @include ipad{
+    font-size:$med-description-size;
+  }
+
+  @include lowend{
+    font-size:$mobile-description-size;
+  }
+
+  @include med{
+    font-size:$med-description-size;
+  }
+
+  @include macbook{
+    font-size:$med-description-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-description-size;
+  }
+
+
+}
+
+.sc4-down-arrow-container{
+  position:absolute;
+  bottom:2%;
+  left:48%;
+  animation-duration:3s;
+
+  @include mobile{
+    bottom:0%;
+  }
+
+  @include ipad{
+    bottom:.5%;
+  }
+}
+
+$arrow-size:5vh;
+.sc4-down-arrow{
+  height:$arrow-size;
+  width:$arrow-size;
+
+  fill:white;
+  border-radius:50%;
+  background-color:rgba(0,0,0,.25);  
+}

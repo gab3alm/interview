@@ -1,0 +1,10 @@
+nav{
+  background-color:transparent !important;
+  box-shadow:none;
+}
+
+$margin-value:5%;
+.navbar-logo{
+  height:5vh;
+  margin:$margin-value 0 0 $margin-value;
+}

@@ -14,7 +14,7 @@
 
 // Mac Book Styles
 @mixin macbook{
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px){
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px){
     @content;
   } 
 }
@@ -47,7 +47,7 @@
 
 // Ipad Styles
 @mixin ipad{
-  @media only screen and (min-device-width : 760px) and (max-device-width : 1024px){ 
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){ 
     @content;
   } 
 }

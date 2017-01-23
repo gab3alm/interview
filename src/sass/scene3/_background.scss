@@ -1,0 +1,151 @@
+@import '../media_queries.scss';
+@import '../scenes_general.scss';
+
+
+.sc3-background-container{
+  height:calc(100vh - #{$footer-height});
+  width:100%;
+
+  background-image:url(../../../public/images/scene3/background3.svg);
+  background-size:cover;
+  background-position:center;
+
+  overflow:hidden;
+  position:relative;
+}
+
+.sc3-scenary-container{
+  // border:2px solid green;
+  width:80%;
+  height:100%;  
+  margin:0 auto;
+  position:relative;
+
+  @include med{
+    width:90%;
+  }
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include ipad{
+    width:100%;
+  }
+
+  @include lowend{
+    width:100%;
+  }
+
+  @include med{
+    width:100%;
+  }
+}
+
+.sc3-floor{
+  height:50%;
+  position:absolute;
+  bottom:0%;
+  right:50%;
+  transform:translate(50%, 0) scaleX(2);
+
+  @include med{
+    height:40%;
+  }
+
+  @include mobile{
+    height:30%;
+  }
+
+  @include mobile-landscape{
+    height:25%;
+  }
+
+  @include ipad{
+    height:30%;
+  }
+
+  @include med{
+    height:50%;
+  }
+}
+
+
+.sc3-glass{
+  position:absolute;
+  bottom:40%;
+  left:0;
+  height:40%;
+  
+  @include mobile{
+    height:22%;  
+    bottom:15%;
+  }
+
+  @include mobile-landscape{
+    height:50%;  
+    bottom:15%; 
+  }
+
+  @include iphone-landscape{
+    height:50%;  
+    bottom:15%; 
+  }
+
+  @include med{
+    height:35%;  
+  }
+}
+
+.sc3-closet{
+  position:absolute;
+  bottom:40%;
+  right:0;
+  height:50%;
+
+  @include mobile{
+    height:30%;  
+    bottom:15%;
+  }
+
+  @include mobile-landscape{
+    height:55%;  
+    bottom:15%; 
+  }
+  
+  @include iphone-landscape{
+    height:55%;  
+    bottom:15%;
+  }
+
+  @include med{
+    height:40%;
+  }
+}
+
+.sc3-bed{
+  position:absolute;
+  bottom:45%;
+  left:50%;
+  transform:translate(-50%, 0);
+  height:25%;
+
+  @include mobile{
+    height:10%;  
+    bottom:20%;
+  }
+
+  @include mobile-landscape{
+    height:25%;  
+    bottom:18%; 
+  }
+
+  @include iphone-landscape{
+    height:25%;  
+    bottom:18%; 
+  }
+
+  @include med{
+    height:18%;
+  }
+}

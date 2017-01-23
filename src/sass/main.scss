@@ -1,0 +1,33 @@
+@import 'scenes_general.scss';
+$scene-height:calc(100vh - $footer-height);
+
+.element-container{
+  position:relative;
+  height:$scene-height;
+  width:100%;
+}
+
+homepage-background,
+scene1-background,
+scene2-background, 
+scene3-background,
+scene4-background,
+scene5-background,
+scene6-background{
+  width:inherit;
+  height:$scene-height;
+}
+
+homepage-content,
+scene1-content,
+scene2-content, 
+scene3-content,
+scene4-content,
+scene5-content,
+scene6-content{
+ width:inherit;
+ height:$scene-height;
+ position:absolute;
+ top:0;
+ left:0;
+}

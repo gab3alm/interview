@@ -1,0 +1,308 @@
+@import '../scenes_general.scss';
+@import '../media_queries.scss';
+
+$main-font: 'pattaya';
+$secondary-font: 'abel';
+
+$retina-title-size:3.2em;
+$desktop-title-size:3em;
+$mobile-title-size:2em;
+
+$retina-description-size:2em;
+$desktop-description-size:1.5em;
+$mobile-description-size:1.2em;
+
+$retina-interview-title-size:2.5em;
+$desktop-interview-title-size:2.2em;
+$mobile-interview-title-size:1.8em;
+
+$retina-interview-description-size:1.8em;
+$desktop-interview-description-size:1.4em;
+$mobile-interview-description-size:1.2em;
+
+// ||||||||||||||||||||||||||||||||
+// 	IMAGERY CONTAINER
+// ||||||||||||||||||||||||||||||||
+.subscene2-imagery-container{
+	height:50vh;
+	width:100%;
+	position:relative;
+
+	background-image:url('../../../public/images/subscene2/background2.svg');
+	background-position:center;
+	background-size:cover;
+	overflow:hidden;
+}
+
+.subsc2-floor{
+	position:absolute;
+	bottom:0;
+	left:0;
+	height:50%;
+	transform:scaleX(20);
+}
+
+.subsc2-bottles{
+	position:absolute;
+	bottom:10%;
+	left:50%;
+	height:80%;
+	transform:translate(-50%, 0);
+
+	@include mobile{
+		bottom:15%;
+		left:50%;
+		height:45%;
+		transform:translate(-50%, 0);		
+	}
+}
+
+.subsc2-tanner{
+	position:absolute;
+	bottom:10%;
+	left:50%;
+	height:30%;
+	transform:translate(-50%, 0);	
+}
+
+
+// ||||||||||||||||||||||||||||||||
+// 	INFORMATION CONTAINER
+// ||||||||||||||||||||||||||||||||
+.subsc2-title{
+	font-family:$main-font;
+	font-size:$desktop-title-size;
+
+	@include mobile{
+		font-size:$mobile-title-size;
+	}
+
+	@include macdesktop{
+		font-size:$retina-title-size;
+	}
+}
+
+.subsc2-description{
+	font-family:$secondary-font;
+	font-size:$desktop-description-size;
+	text-align:center;	
+	margin:0 auto;
+	width:80%;
+
+	@include mobile{
+		font-size:$mobile-description-size;
+	}
+
+	@include macdesktop{
+		font-size:$retina-description-size;
+	}
+}
+
+// ||||||||||||||||||||||||||||||||
+// 	INTERVIEW TYPES CONTAINER
+// ||||||||||||||||||||||||||||||||
+.subsc2-interview-types-container{
+	width:70%;
+	margin:30px auto;
+	overflow:hidden;
+
+	@include mobile{
+		width:90%;
+	}
+
+	@include macdesktop{
+		width:60%;
+	}
+}
+
+.interview-type-container{
+	// border:2px solid green;
+	margin-bottom:10%;
+}
+
+.interview-type-image{
+	transform:translate(0, 10%);
+
+	@include mobile{
+		transform:translate(0, 0);
+		margin:10px auto;
+	}
+}
+
+.interview-title-container{
+	background-color:#bd202e;
+	border-radius:20px;
+	width:100%;
+	margin:0 auto;
+}
+
+.interview-type-title{
+	font-family:$main-font;
+	font-size:$desktop-interview-title-size;
+	text-transform:capitalize;
+	margin:0;
+	color:white;
+	text-align:center;
+
+	@include mobile{
+		font-size:$mobile-interview-title-size;
+		text-align:center;
+	}
+
+	@include macdesktop{
+		font-size:$retina-interview-title-size;
+	}
+}
+
+.interview-type-description{
+	font-family:$secondary-font;
+	font-size:$desktop-interview-description-size;	
+	text-align:justify;
+	margin:3% 0 0 0;
+	padding:0 10%;
+	
+	@include mobile{
+		font-size:$mobile-interview-description-size;	
+		text-align:left;
+		padding:0 0%;
+	}
+
+	@include macdesktop{
+		font-size:$retina-interview-description-size;
+	}
+}
+
+.interview-type-description::first-letter{
+	@include mobile{
+		font-size:1.5em;
+		font-weight:bold;
+	}	
+}
+
+
+
+
+
+// TITLE BOX COLORS
+#general-interview{
+	background-color:#bd202e;
+}
+
+#lunch-interview{
+	background-color:#ef4137;
+}
+
+#telephone-interview{
+	background-color:#f15a2b;
+}
+
+#competency-interview{
+	background-color:#fbb041;
+}
+
+#multiple-interview{
+	background-color:#8ec640;
+}
+
+#panel-interview{
+	background-color:#3bb54a;
+}
+
+#group-interview{
+	background-color:#00a79d;
+}
+
+#role-interview{
+	background-color:#27a9e1;
+}
+
+#presentation-interview{
+	background-color:#1b75bc;
+}
+
+#skype-interview{
+	background-color:#2a3b90;
+}
+
+
+
+// |||||||||||||||||||||||
+// CUSTOM IMAGE SIZES
+// |||||||||||||||||||||||
+#telephone-interview-image{
+	height:30vh;
+}
+
+
+
+
+
+
+
+
+
+$retina-tip-title-size:2.5em;
+$desktop-tip-title-size:2em;
+$mobile-tip-title-size:1.5em;
+
+$retina-tip-description-size:1.8em;
+$desktop-tip-description-size:1.5em;
+$mobile-tip-description-size:1.2em;
+
+// ||||||||||||||||||||||||||||||
+// TIP LIST RULES
+// ||||||||||||||||||||||||||||||
+.interview-tips-container{
+	width:100%;
+	margin:2% 0 5% 0;
+}
+
+.tip-list-container{
+	width:60%;
+	margin:20px auto;
+	
+	@include mobile{
+		width:90%;
+	}
+
+	@include macdesktop{
+		width:50%;
+	}
+}
+
+.tip-title{
+	font-family:$main-font;
+	font-size:$desktop-tip-title-size;
+	text-transform:capitalize;
+	margin:0;
+
+	@include mobile{
+		font-size:$mobile-tip-title-size;
+		text-align:left;
+	}
+
+	@include macdesktop{
+		font-size:$retina-tip-title-size;
+	}
+}
+
+.tip-description{
+	font-family:$secondary-font;
+	font-size:$desktop-tip-description-size;
+	margin:0 0 5% 0;
+	padding:0 5%;
+
+	@include mobile{
+		font-size:$mobile-tip-description-size;
+		margin:0 0 10% 0;
+		text-align:justify;
+	}
+
+	@include macdesktop{
+		font-size:$retina-tip-description-size;
+	}
+}
+
+.tip-description::first-letter{
+	text-transform:capitalize;
+}

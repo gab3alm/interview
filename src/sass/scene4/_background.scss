@@ -1,0 +1,257 @@
+@import '../media_queries.scss';
+@import '../scenes_general.scss';
+
+.sc4-background-container{
+  height:calc(100vh - #{$footer-height});
+  width:100%;
+
+  background-image:url(../../../public/images/scene4/background2.svg);
+  background-size:cover;
+  background-position:center;
+
+  overflow:hidden;
+  position:relative;
+}
+
+.sc4-scenary-container{
+  // border:2px solid green;
+  width:80%;
+  height:100%;  
+  margin:0 auto;
+  position:relative;
+
+  @include med{
+    width:90%;
+  }
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include ipad{
+    width:100%;
+  }
+
+  @include lowend{
+    width:100%;
+  }
+
+  @include med{
+    width:100%;
+  }
+}
+
+.sc4-floor{
+  height:50%;
+  position:absolute;
+  bottom:0%;
+  right:50%;
+  transform:translate(50%, 0) scaleX(2);
+
+  @include med{
+    height:40%;
+  }
+
+  @include mobile{
+    height:30%;
+  }
+
+  @include mobile-landscape{
+    height:25%;
+  }
+
+  @include ipad{
+    height:30%;
+  }
+
+  @include med{
+    height:50%;
+  }
+}
+
+.sc4-desk{
+  position:absolute;
+  bottom:35%;
+  left:0;
+  height:40%;
+
+  @include mobile{
+    height:18%;  
+    bottom:15%;
+  }
+
+  @include mobile-landscape{
+    height:30%;  
+    bottom:15%;
+    left:10%; 
+  }
+
+  @include iphone-landscape{
+    height:40%;  
+    bottom:10%;
+    left:5%; 
+  }
+
+  @include med{
+    bottom:35%;
+    left:0;
+    height:30%;    
+  }
+
+  @include ipad{
+    height:25%;  
+    bottom:38%;
+    left:5%; 
+  }
+}
+
+.sc4-jelly{
+  position:absolute;
+  bottom:42%;
+  right:30%;
+  height:35%;
+  
+  @include mobile{
+    height:10%;  
+    bottom:20%;
+  }
+
+  @include mobile-landscape{
+    height:30%;  
+    bottom:15%;
+    right:30%; 
+  }
+
+  @include iphone-landscape{
+    height:35%;  
+    bottom:15%;
+    right:35%; 
+  }
+
+  @include med{
+    bottom:40%;
+    right:22%;
+    height:25%;
+  }
+
+  @include ipad{
+    height:20%;  
+    bottom:45%;
+    right:30%; 
+  }
+}
+
+.sc4-cream{
+  position:absolute;
+  bottom:35%;
+  right:18%;
+  height:40%;
+
+  @include mobile{
+    height:12%;  
+    bottom:15%;
+  }
+
+  @include mobile-landscape{
+    height:35%;  
+    bottom:15%; 
+    right:20%;
+  }
+
+  @include iphone-landscape{
+    height:38%;  
+    bottom:15%;
+    right:23%; 
+  }
+
+  @include med{
+    bottom:30%;
+    right:15%;
+    height:30%;
+  }
+
+  @include ipad{
+    height:25%;  
+    bottom:40%;
+    right:20%; 
+  }
+}
+
+.sc4-mustard{
+  position:absolute;
+  bottom:28%;
+  right:1%;
+  height:42%;
+
+
+  @include mobile{
+    height:12%;  
+    bottom:12%;
+  }
+
+  @include mobile-landscape{
+    height:30%;  
+    bottom:15%;
+    right:8%; 
+  }
+
+  @include iphone-landscape{
+    height:50%;  
+    bottom:15%; 
+  }
+  
+  @include iphone-landscape{
+    bottom:15%;
+    right:10%;
+    height:35%;  
+  }
+
+  @include med{
+    bottom:22%;
+    right:0%;
+    height:30%;
+  }
+
+  @include ipad{
+    height:25%;  
+    bottom:35%;
+    right:5%; 
+  }
+}
+
+.sc4-ketchup{
+  position:absolute;
+  bottom:20%;
+  right:-12%;
+  height:45%;
+
+
+  @include mobile{
+    height:12%;  
+    bottom:8%;
+  }
+
+  @include mobile-landscape{
+    height:30%;  
+    bottom:15%; 
+    right:0%;
+  }
+
+  @include iphone-landscape{
+    bottom:15%;
+    right:0%;
+    height:35%;  
+  }
+
+  @include med{
+    bottom:12%;
+    right:-6%;
+    height:30%;
+  }
+
+  @include ipad{
+    height:25%;  
+    bottom:30%;
+    right:0%; 
+  }
+}
