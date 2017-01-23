@@ -27,12 +27,12 @@ import 'subscene3/main.tag';
 riot.mount('*');
 
 // HOT RELOADING SETUP - ONLY FOR DEVELOPMENT
-import 'riot-hot-reload'
-if(module.hot){
-  module.hot.accept('main.tag', ()=>{
-    riot.reload('main');
-  });
-}
+// import 'riot-hot-reload'
+// if(module.hot){
+//   module.hot.accept('main.tag', ()=>{
+//     riot.reload('main');
+//   });
+// }
 
 import './routes.js';
 

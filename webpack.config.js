@@ -38,7 +38,6 @@ module.exports = function(env){
       parts.extractSASS(),
       parts.loadTAG(),
       parts.exposeJQUERY(),
-      parts.babel(),
       parts.loadFONTS()
       );
   }
