@@ -1,6 +1,6 @@
 @import '../scenes_general.scss';
 @import '../media_queries.scss';
-@import '../fonts.scss';
+@import '../subscenes_fonts.scss';
 
 // ||||||||||||||||||||||||||||||||
 // 	IMAGERY CONTAINER
@@ -136,80 +136,80 @@
 
 .subsc3-title{
 	font-family:$main-font;
-	font-size:$desktop-title-size;
+	font-size:$desktop-subscene-title-size;
 
 	@include mobile{
-		font-size:$mobile-title-size;
+		// font-size:$mobile-title-size;
 	}
 
 	@include mobile-landscape{
-		font-size:$mobile-title-size;
+		// font-size:$mobile-title-size;
 	}
 
 	@include iphone-landscape{
-		font-size:$mobile-title-size;
+		// font-size:$mobile-title-size;
 	}
 
 	@include ipad{
-		font-size:$med-title-size;
+		// font-size:$med-title-size;
 	}
 
 	@include med{
-		font-size:$med-title-size;
+		// font-size:$med-title-size;
 	}
 
 	@include lowend{
-		font-size:$mobile-title-size;
+		// font-size:$mobile-title-size;
 	}
 
 	@include macbook{
-		font-size:$med-title-size;
+		// font-size:$med-title-size;
 	}
 
 	@include macdesktop{
-		font-size:$retina-title-size;
+		// font-size:$retina-title-size;
 	}
 }
 
 .subsc3-description{
 	font-family:$secondary-font;
-	font-size:$desktop-description-size;
+	font-size:$desktop-subscene-description-size;
 	text-align:center;	
 	margin:0 auto;
 	width:50%;
 
 	@include mobile{
-		font-size:$mobile-description-size;
+		// font-size:$mobile-description-size;
 		width:90%;
 	}
 
 	@include mobile-landscape{
-		font-size:$mobile-description-size;
+		// font-size:$mobile-description-size;
 		width:70%;
 	}	
 
 	@include iphone-landscape{
-		font-size:$mobile-description-size;
+		// font-size:$mobile-description-size;
 		width:70%;
 	}
 
 	@include ipad{
-		font-size:$med-description-size;
+		// font-size:$med-description-size;
 		width:80%;
 	}
 
 	@include lowend{
-		font-size:$mobile-description-size;
+		// font-size:$mobile-description-size;
 		width:80%;
 	}
 
 	@include macbook{
-		font-size:$med-description-size;
+		// font-size:$med-description-size;
 		width:60%;
 	}
 
 	@include macdesktop{
-		font-size:$retina-description-size;
+		// font-size:$retina-description-size;
 		width:45%;
 	}
 }
@@ -232,10 +232,8 @@ $med-box-description-size:2em;
 $mobile-box-description-size:1.2em;
 
 
-
-
 .subscene3-boxes-container{
-	width:70%;
+	width:80%;
 	margin:2% auto;
 	// border:2px solid green;
 
@@ -273,177 +271,110 @@ $mobile-box-description-size:1.2em;
 	}
 }
 
-.subsc3-box-container{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subscene3-card-container{
 	// border:2px solid green;
-	margin:5% auto;
-
-	@include mobile{
-		margin:10% auto;
-	}
-
-	@include mobile-landscape{
-		margin:10% auto;
-	}
-
-	@include iphone-landscape{
-	}
-
-	@include ipad{
-	}
-
-	@include med{
-	}
-
-	@include macbook{
-	}
-
-	@include macdesktop{
-	}
+	height:auto;
+	min-height:400px;
+	margin:5%;
+	border-radius:20px;
+	background-color:rgba(188,214,49,.2);
+	// box-shadow:2px 2px 2px black;
 }
 
-.subsc3-box-image{
-	height:25vh;
+.card-title-container{
+	// border:2px solid green;
+	position:relative;
+	height:8vh;
 	width:100%;
-	padding:5%;
-	animation-duration:2s;
 
-	@include mobile{
-		height:20vh;
-		width:50%;
-		padding:5%;
-	}
-
-	@include mobile-landscape{
-		height:40vh;
-		width:50%;
-		padding:1%;
-	}
-
-	@include iphone-landscape{
-	}
-
-	@include ipad{
-	}
-
-	@include med{
-	}
-
-	@include macbook{
-	}
-
-	@include macdesktop{
-	}
-
+	// background-color:rgba(188,214,49,1);
+	background-color:rgba(143,195,63,1);
+	border-radius:20px 20px 0 0;
 }
 
-.subsc3-box-title-container{
-	border-radius:0px 20px;
+.card-image-container{
+	// border:2px solid green;
+	position:absolute;
+	top:50%;
+	right:0%;
+	
+	transform:translate(50%, -50%);
+
+	border:5px solid rgba(188,214,49,1);
+	background-color:rgba(143,195,63,1);
+
+	height:120px;
+	width:120px;
+	border-radius:50%;
 }
 
-.subsc3-box-title{
-	color:white;
+.card-image{
+	height:80%;
+}
+
+.card-title{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	width:100%;
+
+
 	font-family:$main-font;
-	font-size:$desktop-box-title-size;
+	font-size:$desktop-subscene-card-title-size;
 	text-transform:capitalize;
-	text-shadow:2px 2px 2px rgba(0,0,0,.25);
-
-	@include mobile{
-		font-size:$mobile-box-title-size;
-	}
-
-	@include mobile-landscape{
-		font-size:$mobile-box-title-size;
-	}
-
-	@include iphone-landscape{
-	}
-
-	@include ipad{
-		font-size:$mobile-box-title-size;
-	}
-
-	@include lowend{
-		font-size:$mobile-box-title-size;
-	}
-
-	@include med{
-	}
-
-	@include macbook{
-		font-size:$mobile-box-title-size;
-	}
-
-	@include macdesktop{
-		font-size:$retina-box-title-size;
-	}
-
+	text-shadow:2px 2px 2px rgba(0,0,0,.2);
+	color:white;
+	margin:0;
 }
 
-.subsc3-box-description-container{
-	// background-color:rgba(0,0,0,.5);
-	padding:1% 10%;
+.card-description-container{
+	// border:2px solid green;
+	width:90%;
 	margin:0 auto;
-
-	@include mobile{
-		padding:0% 5%;
-	}
-
-	@include mobile-landscape{
-	}
-
-	@include iphone-landscape{
-	}
-
-	@include ipad{
-	}
-
-	@include med{
-	}
-
-	@include macbook{
-	}
-
-	@include macdesktop{
-	}
 }
 
-.subsc3-box-description{
+.card-description{
 	font-family:$secondary-font;
-	font-size:$desktop-box-description-size;
-	text-align:center;
-
-	@include mobile{
-		font-size:$mobile-box-description-size;
-		text-align:left;
-	}
-
-	@include mobile-landscape{
-		font-size:$mobile-box-description-size;
-	}
-
-	@include iphone-landscape{
-	}
-
-	@include ipad{
-		font-size:$mobile-box-description-size;
-		text-align:left;
-	}
-
-	@include lowend{
-		font-size:$mobile-box-description-size;
-	}
-
-	@include med{
-	}
-
-	@include macbook{
-		font-size:$mobile-box-description-size;
-	}
-
-	@include macdesktop{
-		font-size:$retina-box-description-size;
-	}
+	font-size:$desktop-subscene-card-description-size;
+	color:rgba(0,0,0,.85);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -485,3 +416,23 @@ $opacity-level:.8;
 	// background-color:rgba(220,175,132, $opacity-level);
 	// background-color:rgba(233,215,198, $opacity-level);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ||||||||||||||||||||||||||||||||||||||\
+// TIPS CONTAINER
+// ||||||||||||||||||||||||||||||||||||||\

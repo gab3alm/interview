@@ -14,7 +14,9 @@
 	<section class="subscene3-information-container">
 		<p class="fancy subsc3-title"><span>preparing for an interview</span></p>
 		<p class="subsc3-description">
-			The keys to successful interviewing are preparation, like-ability, and bonding. There are several critical areas to consider and essential things to do in preparation for your interview.
+			The keys to successful interviewing are preparation, like-ability, and bonding. 
+			There are several critical areas to consider and essential things to do in
+			preparation for your interview.
 		</p>
 	</section>
 	
@@ -28,7 +30,10 @@
 			<virtual each={boxes}>
 				<div class="col s12 m6 l4">
 
-					<div class="subsc3-box-container">
+
+
+
+<!-- 					<div class="subsc3-box-container">
 						<img class="subsc3-box-image animated" id={image_id} src={image} alt="">
 
 						<div id={title_id} class="subsc3-box-title-container">
@@ -40,7 +45,27 @@
 						</div>
 
 						<a if={button} href={url} class="cust-btn2 button button-3d button-action button-pill">learn more</a>
-					</div>
+					</div> -->
+
+					<aside class="subscene3-card-container hoverable">
+						<div class="card-title-container">
+							
+							<div class="card-image-container">
+								<img class="card-image" src={image} id={image_id} alt={image_alt}>	
+							</div>
+
+							<p class="card-title">{title}</p>
+						</div>
+
+						<div class="card-description-container">
+							<virtual each={description}>
+								<p class="card-description">{text}</p>
+							</virtual>
+							<a if={button} href={url} class="cust-btn2 button button-3d button-action button-pill">learn more</a>
+
+						</div>
+					</aside>
+
 
 				</div>	
 			</virtual>
@@ -52,9 +77,36 @@
 	<!-- ||||||||||||||||||||||||||||||||||||||\\ -->
 	<!--  SUBSCENE3 HEARING BACK FROM EMPLOYERS		-->
 	<!-- ||||||||||||||||||||||||||||||||||||||\\ -->
-	<div class="subscene3-tips-container">
-		
-	</div>
+	<section class="subscene3-information-container">
+		<p class="fancy subsc3-title"><span>hearing back from employers</span></p>
+		<p class="subsc3-description">
+			Here are some tips that will guide you when employers get back to you.
+		</p>
+	</section>
+
+	<section class="subscene3-tips-container">
+		<div class="row">
+			<div class="col s12 m4">
+				<img src="" alt="">
+			</div>
+			<div class="col s12 m8" each={tip1}>
+				<virtual each={tip}>
+					<p class="tip-description">{text}</p>
+				</virtual>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s12 m4 push-m8">
+				<img src="" alt="">
+			</div>
+			<div class="col s12 m8 pull-m4" each={tip2}>
+				<virtual each={tip}>
+					<p class="tip-description">{text}</p>
+				</virtual>
+			</div>
+		</div>
+	</section>
 
 
 
@@ -71,6 +123,41 @@
 				$node.find(this).removeClass('shake');
 			});
 		});
+
+
+		this.tip1 = [
+		{
+			tip:[
+			{
+				text:`
+				They say patience is a virtue, but that can be difficult to remember when waiting to hear back
+				from an employer. Try your best to focus on other things, or even keep applying to opportunities.
+				`
+			},
+			{
+				text:`
+				After a week, it is always appropiate to call and check the status of their application. This is less
+				about finding out immediately if they'd like to schedule an interview so much as it lets your
+				potential employer know of your continued interest and initiative.
+				`
+			}
+			],
+		}
+		];
+
+		this.tip2 = {
+			tip:[
+			{
+				text:`
+				Sometimes it's through an email and other times over the phone, but hearing back from an employer
+				that they'd like to schedule an interview is very exciting. Many times, employers will give a range
+				of dates and times. Try to be as flexible as possible, but don't schedule for a time that could result
+				in you being late. Be sure to reflect on your excitement for having the opportunity to learn more about
+				the company.
+				`
+			}
+			]
+		};
 
 		this.boxes = [
 		{
@@ -91,7 +178,7 @@
 			url:'#!'
 		},
 		{
-			title:' know the company/agency',
+			title:' know the company',
 			title_id:'know_company_title',
 			description:[
 			{
@@ -108,7 +195,7 @@
 			url:'#!'
 		},
 		{
-			title:'why should they hire you?',
+			title:'why hire you?',
 			title_id:'hire_you_title',
 			description:[
 			{
