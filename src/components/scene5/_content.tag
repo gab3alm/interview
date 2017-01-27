@@ -13,7 +13,7 @@
           </p>
         </div>
         
-        <a href="" class="sc5-btn sc-btn button button-3d button-action button-pill">learn more</a>
+        <a href="#steps/following-up-the-interview" class="sc5-btn sc-btn button button-3d button-action button-pill">learn more</a>
       </div>      
     </div>
 

@@ -13,7 +13,7 @@ By preparing properly beforehand, as opposed to leaving it to the last minute, y
 </p>
 </div>
 
-<a href="" class="sc4-btn sc-btn button button-3d button-action button-pill">learn more</a>
+<a href="#steps/ace-the-interview" class="sc4-btn sc-btn button button-3d button-action button-pill">learn more</a>
 </div>      
 </div>
 

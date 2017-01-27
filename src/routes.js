@@ -11,7 +11,6 @@ function router(scene, subscene){
     riot.mount('#viewport', 'scenes');
     if(subscene == "starting-job-search"){
       riot.mount('#viewport', 'subscene1');
-      window.scrollTo(0,0);
     }else if(subscene == "interview-types"){
       riot.mount('#viewport', 'subscene2');
       window.scrollTo(0,0);

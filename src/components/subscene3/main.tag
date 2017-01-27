@@ -30,26 +30,9 @@
 			<virtual each={boxes}>
 				<div class="col s12 m6 l4">
 
-
-
-
-<!-- 					<div class="subsc3-box-container">
-						<img class="subsc3-box-image animated" id={image_id} src={image} alt="">
-
-						<div id={title_id} class="subsc3-box-title-container">
-							<div class="subsc3-box-title">{title}</div>
-						</div>
-
-						<div class="subsc3-box-description-container" each={description}>
-							<div class="subsc3-box-description">{text}</div>
-						</div>
-
-						<a if={button} href={url} class="cust-btn2 button button-3d button-action button-pill">learn more</a>
-					</div> -->
-
 					<aside class="subscene3-card-container hoverable">
 						<div class="card-title-container">
-							
+
 							<div class="card-image-container">
 								<img class="card-image" src={image} id={image_id} alt={image_alt}>	
 							</div>
@@ -61,16 +44,14 @@
 							<virtual each={description}>
 								<p class="card-description">{text}</p>
 							</virtual>
-							<a if={button} href={url} class="cust-btn2 button button-3d button-action button-pill">learn more</a>
+							<a if={button} href={url} class="sc3-btn button button-3d button-action button-pill">learn more</a>
 
 						</div>
 					</aside>
 
-
 				</div>	
 			</virtual>
 		</div>
-
 	</section>
 
 
@@ -87,26 +68,35 @@
 	<section class="subscene3-tips-container">
 		<div class="row">
 			<div class="col s12 m4">
-				<img src="" alt="">
+				<img class="subscene3-fish" src="public/images/subscene3/fish.svg" alt="">
 			</div>
 			<div class="col s12 m8" each={tip1}>
-				<virtual each={tip}>
-					<p class="tip-description">{text}</p>
-				</virtual>
+				<div class="tip-description-container">
+					<virtual each={tip}>
+						<p class="tip-description">{text}</p>
+					</virtual>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col s12 m4 push-m8">
-				<img src="" alt="">
+				<img class="subscene3-calendar" src="public/images/subscene3/calendar.svg" alt="">
 			</div>
 			<div class="col s12 m8 pull-m4" each={tip2}>
-				<virtual each={tip}>
-					<p class="tip-description">{text}</p>
-				</virtual>
+				<div class="tip-description-container">
+					<virtual each={tip}>
+						<p class="tip-description">{text}</p>
+					</virtual>
+				</div>
+
 			</div>
 		</div>
 	</section>
+
+	<div class="center-align">
+		<a href="#steps/" class="btn2 button button-3d button-primary button-pill">Return</a>
+	</div>
 
 
 
@@ -145,7 +135,7 @@
 		}
 		];
 
-		this.tip2 = {
+		this.tip2 = [{
 			tip:[
 			{
 				text:`
@@ -157,7 +147,7 @@
 				`
 			}
 			]
-		};
+		}];
 
 		this.boxes = [
 		{

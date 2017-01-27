@@ -1,0 +1,157 @@
+@import '../scenes_general.scss';
+@import '../subscenes_fonts.scss';
+
+.subscene4-information-container{
+  width:60%;
+  margin:0 auto;
+  overflow:hidden;
+
+  @include med{
+    width:80%;
+  }
+}
+
+.subsc4-title{
+  font-family:$main-font;
+  font-size:$desktop-subscene-title-size;
+  text-transform: capitalize;
+
+  @include med{
+    font-size:$med-subscene-title-size;
+  }
+}
+
+.subsc4-description{
+  font-family:$secondary-font;
+  font-size:$desktop-subscene-description-size;
+  text-align:center;
+
+  @include med{
+    font-size:$med-subscene-description-size;
+  }
+}
+
+// -------------------------------------------
+// CARD CONTAINER - START
+// -------------------------------------------
+.subscene4-cards-container{
+  width:80%;
+  height:auto;
+  margin:2% auto;
+  @include med{
+    width:100%;
+  }
+}
+
+.card-image{
+  width:50%;
+  padding:2%;
+
+  @include med{
+    width: 60%;
+  }
+}
+
+.card-title-container{
+  background-color:rgba(134,53,136,1);
+  border:6px solid rgba(155,78,155,1);
+
+  // background-color:rgba(155,78,155,1);
+  // border:6px solid rgba(134,53,136,1);
+
+  border-radius:40px;
+  width:100%;
+  height:5%;
+}
+
+.card-title{
+  font-family:$main-font;
+  font-size:$desktop-subscene-card-title-size;
+  color:white;
+  text-transform:capitalize;
+  margin:1% auto;
+}
+
+.card-description-container{
+  height:auto;
+  // min-height:580px;
+  width:90%;
+  margin:-10px auto;
+  border-radius:0 0 20px 20px;
+  padding:5%;
+  box-shadow:0px 2px 2px rgba(0,0,0,.25);
+}
+
+.card-description{
+  margin:2% auto;
+  font-family:$secondary-font;
+  font-size:$desktop-subscene-card-description-size;
+  width:90%;
+  text-align:center;
+}
+
+.card-btn{
+  font-family:$main-font;
+  font-size:1.5em;
+  text-transform:capitalize;
+  text-shadow:2px 2px 2px rgba(0,0,0,.25);
+  margin:5% auto;
+}
+// ---------------------------------------
+// CARD CONTAINER - END
+// ---------------------------------------
+
+
+
+
+
+
+
+// ---------------------------------------
+// Do's & Dont's List - START
+// ---------------------------------------
+.subscene4-tip-list{
+  width:70%;
+  margin:5% auto;
+  // border:2px solid green;
+}
+
+.list-title{
+  font-family:$main-font;
+  font-size:3em;
+  margin:0;
+  text-transform:capitalize;
+}
+
+.list-item{
+  font-family:$secondary-font;
+  font-size:1.5em;
+  margin:0 0 10px 0;
+  text-transform:capitalize;
+}
+
+.tip-list-image{
+  width:80%;
+  margin:0 auto;
+}
+// ---------------------------------------
+// Do's & Dont's List - END
+// ---------------------------------------
+
+
+
+
+// ---------------------------------------
+// Know your rights - START
+// ---------------------------------------
+.reg-btn{
+  font-family:$main-font;
+  font-size:1.5em;
+  text-transform:capitalize;
+  text-shadow:2px 2px 2px rgba(0,0,0,.25);
+  margin:1% auto;
+}  
+// ---------------------------------------
+// Know your rights - END
+// ---------------------------------------
+

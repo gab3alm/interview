@@ -4,7 +4,7 @@
     <scene6-background></scene6-background>
     <scene6-content></scene6-content>    
   </div>
-  
+
 
   <!-- SCRIPT -->
   <script>
@@ -13,6 +13,7 @@
     import 'scene6/_content.tag';  
 
     this.on('mount', function(){
+      window.scrollTo(0,0);
 
     });
   </script>

@@ -23,19 +23,21 @@ import 'scene6/main.tag';
 import 'subscene1/main.tag';
 import 'subscene2/main.tag';
 import 'subscene3/main.tag';
+import 'subscene4/main.tag';
+import 'subscene5/main.tag';
+import 'subscene6/main.tag';
 
 riot.mount('*');
 
 // HOT RELOADING SETUP - ONLY FOR DEVELOPMENT
-import 'riot-hot-reload'
-if(module.hot){
-  module.hot.accept('subscene3/main.tag', ()=>{
-    riot.reload('subscene3');
-  });
-}
+// import 'riot-hot-reload'
+// if(module.hot){
+//   module.hot.accept('subscene6/main.tag', ()=>{
+//     riot.reload('subscene6');
+//   });
+// }
 
-// import './routes.js';
-
+import './routes.js';
 
 
 
