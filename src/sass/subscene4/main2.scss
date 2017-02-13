@@ -68,7 +68,7 @@
   @include mobile{
     height:40%;
     bottom:20%;
-    left:15%;    
+    left:25%;    
   }
 
   @include mobile-landscape{
@@ -85,8 +85,8 @@
 
   @include ipad{
     height:55%;
-    bottom:20%;
-    left:10%;
+    bottom:15%;
+    left:20%;
   }
 }
 
@@ -98,21 +98,21 @@
   transform:translate(-50%, 0);
   
   @include med{
-    height:60%;
-    bottom:20%;
-    left:15%;
+    height:30%;
+    bottom:40%;
+    left:40%;
   }
 
   @include mobile{
-    height:40%;
-    bottom:20%;
-    left:15%;    
+    height:25%;
+    bottom:40%;
+    left:35%;    
   }
 
   @include mobile-landscape{
-    height:70%;
-    bottom:15%;
-    left:15%;    
+    height:40%;
+    bottom:40%;
+    left:45%;    
   }
 
   @include iphone-landscape{
@@ -122,9 +122,9 @@
   }
 
   @include ipad{
-    height:55%;
-    bottom:20%;
-    left:10%;
+    height:25%;
+    bottom:40%;
+    left:40%;
   }
 }
 
@@ -136,21 +136,21 @@
   transform:translate(50%, 0);
   
   @include med{
-    height:30%;
-    bottom:40%;
-    right:50%;
+    height:38%;
+    bottom:35%;
+    right:48%;
   }
 
   @include mobile{
-    height:20%;
-    bottom:40%;
-    right:50%;    
+    height:33%;
+    bottom:30%;
+    right:48%;    
   }
 
   @include mobile-landscape{
-    height:40%;
-    bottom:30%;
-    right:50%; 
+    height:45%;
+    bottom:35%;
+    right:42%; 
   }
 
   @include iphone-landscape{
@@ -160,9 +160,9 @@
   }
   
   @include ipad{
-    height:25%;
-    bottom:40%;
-    right:50%; 
+    height:35%;
+    bottom:35%;
+    right:45%; 
   }
 }
 
@@ -174,21 +174,21 @@
   transform:translate(50%, 0);
   
   @include med{
-    height:70%;
-    bottom:20%;
-    right:8%;
+    height:55%;
+    bottom:25%;
+    right:30%;
   }
 
   @include mobile{
-    height:45%;
-    bottom:20%;
-    right:10%;    
+    height:35%;
+    bottom:25%;
+    right:30%;    
   }
 
   @include mobile-landscape{
-    height:70%;
-    bottom:20%;
-    right:15%; 
+    height:55%;
+    bottom:25%;
+    right:30%; 
   }
 
   @include iphone-landscape{
@@ -198,9 +198,9 @@
   }
   
   @include ipad{
-    height:55%;
-    bottom:20%;
-    right:0%; 
+    height:45%;
+    bottom:27%;
+    right:25%; 
   }
 }
 
@@ -213,19 +213,19 @@
   
   @include med{
     height:70%;
-    bottom:20%;
+    bottom:15%;
     right:8%;
   }
 
   @include mobile{
     height:45%;
-    bottom:20%;
+    bottom:15%;
     right:10%;    
   }
 
   @include mobile-landscape{
     height:70%;
-    bottom:20%;
+    bottom:15%;
     right:15%; 
   }
 
@@ -236,8 +236,8 @@
   }
   
   @include ipad{
-    height:55%;
-    bottom:20%;
+    height:60%;
+    bottom:15%;
     right:0%; 
   }
 }
@@ -282,7 +282,7 @@
   
   @include ipad{
     height:auto;
-    min-height:55vh;
+    min-height:30vh;
   }
 
   @include lowend{
@@ -1014,7 +1014,7 @@
   position:relative;
 
   @include med{
-    width:65%;
+    width:80%;
   }
 
   @include mobile{
@@ -1088,9 +1088,8 @@
   margin:0 0 5% 0;
 
   @include med{
-    margin:5% 0 5% 0;
+    margin:0% 0 5% 0;
     font-size:$med-subscene-tip-description-size;
-    text-align:center;
   }
 
   @include mobile{
