@@ -2,14 +2,24 @@ $main-font:'pattaya';
 $secondary-font:'abel';
 
 $retina-subscene-title-size:3.2em;
-$desktop-subscene-title-size:3em;
+$desktop-subscene-title-size:2.8em;
 $med-subscene-title-size:2.8em;
 $mobile-subscene-title-size:1.8em;
 
-$retina-subscene-description-size:2em;
-$desktop-subscene-description-size:1.8em;
+$retina-subscene-description-size:1.8em;
+$desktop-subscene-description-size:1.6em;
 $med-subscene-description-size:1.6em;
 $mobile-subscene-description-size:1.4em;
+
+$retina-subscene-resource-title-size:2em;
+$desktop-subscene-resource-title-size:1.6em;
+$med-subscene-resource-title-size:1.3em;
+$mobile-subscene-resource-title-size:1.1em;
+
+$retina-subscene-resource-description-size:1.8em;
+$desktop-subscene-resource-description-size:1.4em;
+$med-subscene-resource-description-size:1.2em;
+$mobile-subscene-resource-description-size:1em;
 
 
 $retina-subscene-card-title-size:2em;
@@ -23,7 +33,21 @@ $desktop-subscene-card-description-size:1.3em;
 $med-subscene-card-description-size:1.4em;
 $mobile-subscene-card-description-size:1.2em;
 
-$retina-subscene-tip-description-size:1.5em;
+
+$retina-subscene-tip-title-size:2em;
+$desktop-subscene-tip-title-size:1.8em;
+$med-subscene-tip-title-size:1.6em;
+$mobile-subscene-tip-title-size:1.4em;
+
+
+$retina-subscene-tip-description-size:1.8em;
 $desktop-subscene-tip-description-size:1.5em;
 $med-subscene-tip-description-size:1.4em;
-$mobile-subscene-tip-description-size:1.3em;
+$mobile-subscene-tip-description-size:1.2em;
+
+
+$retina-subscene-info-size:1.8em;
+$desktop-subscene-info-size:1.5em;
+$med-subscene-info-size:1.4em;
+$mobile-subscene-info-size:1.2em;
+

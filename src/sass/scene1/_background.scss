@@ -42,7 +42,7 @@
   position:absolute;
   bottom:0%;
   right:50%;
-  transform:translate(50%, 0) scaleX(2);
+  transform:translate(50%, 0) scaleX(3);
 
   @include med{
     height:40%;
@@ -123,3 +123,55 @@
  }
 }
 
+#tray-animation-container{
+  // border:2px solid white;
+  width:auto; 
+
+  position:absolute;
+  bottom:20%;
+  left:0%;
+
+  transform:scale(.5) translate(-50%, 50%);
+
+  @include med{
+    bottom:13%;
+    left:-50%;
+    transform:scale(.4) translate(-50%, 50%);
+  }
+
+  @include mobile{
+    bottom:13%;
+    left:0%;
+    transform:scale(.2) translate(-250%, 200%);
+  }
+
+  @include mobile-landscape{
+    bottom:8%;
+    left:0%;
+    transform:scale(.5) translate(-50%, 50%);
+  }
+
+  @include iphone-landscape{
+    bottom:10%;
+    left:0%;
+    transform:scale(.6) translate(-50%, 50%);
+  }
+
+  @include ipad{
+    bottom:13%;
+    left:0%;
+    transform:scale(.4) translate(-120%, 80%); 
+  }
+
+  @include lowend{
+    bottom:13%;
+    left:-20%;
+    transform:scale(.4) translate(-50%, 50%);  
+  }
+
+  @include macdesktop{
+    bottom:28%;
+    left:0%;
+    transform:scale(.7) translate(-25%, 50%); 
+  }
+} 

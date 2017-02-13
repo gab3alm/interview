@@ -1,6 +1,6 @@
 <scene4-content>
 <!-- HTML -->
-<div class="sc4-content-container">
+<div class="sc4-content-container animated fadeIn">
 
 <div class="sc4-outer-information-container center-align"><!-- absolute container -->
 <div class="sc4-inner-information-container"><!-- relative container -->

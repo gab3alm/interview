@@ -1,0 +1,12 @@
+<svg width="1920" height="256" viewBox="0 0 1920 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Vector 2</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-4767 253)" figma:type="canvas">
+<g id="Vector 2" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_fill" transform="translate(4764.48 -252.353)" fill="#FFF5FC" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 1.35374 120.732L 0 121.387L 0 254.57L 1926 254.57L 1926 121.387C 1827.99 121.387 1799.34 0 1576.69 0C 1354.03 0 1289.7 121.387 1046.94 121.387C 804.175 121.387 705.664 0 452.349 0C 250.785 0 85.3854 80.0579 1.35374 120.732Z"/>
+</defs>
+</svg>

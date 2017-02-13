@@ -19,7 +19,7 @@
 			Here are some examples of the different kind of Interviews
 		</p>
 	</section>
-	
+
 
 	<!-- ||||||||||||||||||||||||||||||||||||||\\ -->
 	<!-- INTERVIEW TYPE INFORMATION - TEMPLATE	  -->
@@ -106,7 +106,6 @@
 	<script>
 		require('subscene2/main.scss');
 		this.on('mount', function(){
-
 		});
 
 

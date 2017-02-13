@@ -3,11 +3,8 @@
   <div class="sc2-background-container">
     <section class="sc2-scenary-container">
       <img class="sc2-floor" src="public/images/scene2/floor.svg" alt="">
-      <img class="sc2-bottles" src="public/images/scene2/bottles_2.svg" alt="">
-      <img class="sc2-tanner" src="public/images/scene2/tanner.svg" alt="">
-      
-      
-
+      <img class="sc2-bottles animated fadeIn" src="public/images/scene2/bottles_2.svg" alt="">
+      <img class="sc2-tanner animated fadeIn" src="public/images/scene2/tanner.svg" alt="">
     </section>
   </div>  
 

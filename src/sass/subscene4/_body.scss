@@ -6,6 +6,18 @@
   margin:0 auto;
   overflow:hidden;
 
+  @include mobile{
+    width:90%;
+  }
+
+  @include mobile-landscape{
+    width:80%;
+  }
+
+  @include iphone-landscape{
+    width:80%;
+  }
+
   @include med{
     width:80%;
   }
@@ -16,6 +28,18 @@
   font-size:$desktop-subscene-title-size;
   text-transform: capitalize;
 
+  @include mobile{
+    font-size:$mobile-subscene-title-size !important;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-subscene-title-size;
+  }
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-title-size;
+  }
+
   @include med{
     font-size:$med-subscene-title-size;
   }
@@ -25,6 +49,19 @@
   font-family:$secondary-font;
   font-size:$desktop-subscene-description-size;
   text-align:center;
+  margin:0 auto;
+
+  @include mobile{
+    font-size:$mobile-subscene-description-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-subscene-description-size;
+  }
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-description-size;
+  }
 
   @include med{
     font-size:$med-subscene-description-size;
@@ -38,21 +75,49 @@
   width:80%;
   height:auto;
   margin:2% auto;
+
+  @include mobile{
+    width:90%;
+  }
+
+  @include mobile-landscape{
+    width:90%;
+  }
+
+  @include iphone-landscape{
+    width:90%;
+  }
+
   @include med{
     width:100%;
   }
 }
 
-.card-image{
+.subsc4-card-image{
   width:50%;
   padding:2%;
+  
+  @include mobile{
+    width:70%;
+    margin-top:10%;
+  }
+
+  @include mobile-landscape{
+    width:70%;
+    margin-top:10%;
+  }
+
+  @include iphone-landscape{
+    width:70%;
+    margin-top:10%;
+  }
 
   @include med{
     width: 60%;
   }
 }
 
-.card-title-container{
+.subsc4-card-title-container{
   background-color:rgba(134,53,136,1);
   border:6px solid rgba(155,78,155,1);
 
@@ -64,15 +129,31 @@
   height:5%;
 }
 
-.card-title{
+.subsc4-card-title{
   font-family:$main-font;
   font-size:$desktop-subscene-card-title-size;
   color:white;
   text-transform:capitalize;
   margin:1% auto;
+
+  @include mobile{
+    font-size:$mobile-subscene-card-title-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-subscene-card-title-size;
+  }
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-card-title-size;
+  }
+
+  @include med{
+    font-size:$med-subscene-card-title-size;
+  }
 }
 
-.card-description-container{
+.subsc4-card-description-container{
   height:auto;
   // min-height:580px;
   width:90%;
@@ -82,15 +163,32 @@
   box-shadow:0px 2px 2px rgba(0,0,0,.25);
 }
 
-.card-description{
+.subsc4-card-description{
   margin:2% auto;
   font-family:$secondary-font;
   font-size:$desktop-subscene-card-description-size;
   width:90%;
   text-align:center;
+
+  @include mobile{
+    font-size:$mobile-subscene-card-description-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-subscene-card-description-size;
+  }
+
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-card-description-size;
+  }
+
+  @include med{
+    font-size:$med-subscene-card-description-size;
+  }
 }
 
-.card-btn{
+.subsc4-card-btn{
   font-family:$main-font;
   font-size:1.5em;
   text-transform:capitalize;
@@ -114,23 +212,83 @@
   width:70%;
   margin:5% auto;
   // border:2px solid green;
+
+  @include mobile{
+    width:90%;
+  }
+
+  @include mobile-landscape{
+    width:90%;
+  }
+
+  @include iphone-landscape{
+    width:90%;
+  }
+
+  @include med{
+    width:80%;
+  }
 }
 
-.list-title{
+.subsc4-list-title{
   font-family:$main-font;
-  font-size:3em;
+  font-size:$desktop-subscene-tip-title-size;
   margin:0;
   text-transform:capitalize;
+
+  @include mobile{
+    font-size:$mobile-subscene-tip-title-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-subscene-tip-title-size;
+  }
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-tip-title-size;
+  }
+
+  @include med{
+    font-size:$med-subscene-tip-title-size;
+  }
 }
 
-.list-item{
+.subsc4-list-item, .subsc4-list-item2{
   font-family:$secondary-font;
-  font-size:1.5em;
+  font-size:$desktop-subscene-tip-description-size;
   margin:0 0 10px 0;
+  // text-transform:capitalize;
+
+  @include mobile{
+    font-size:$mobile-subscene-tip-description-size;
+  }
+  
+  @include mobile-landscape{
+    font-size:$mobile-subscene-tip-description-size;
+  }
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-tip-description-size;
+  }
+
+  @include med{
+    font-size:$med-subscene-tip-description-size;
+  }
+}
+
+.subsc4-list-item::first-letter, .subsc4-list-item2::first-letter{
   text-transform:capitalize;
 }
 
-.tip-list-image{
+.subsc4-list-item::before, .subsc4-list-item2::before{
+  content:'~ ';
+}
+
+.subsc4-list-item2{
+  margin:40px 0 0 0;
+}
+
+.subsc4-tip-list-image{
   width:80%;
   margin:0 auto;
 }
@@ -144,7 +302,7 @@
 // ---------------------------------------
 // Know your rights - START
 // ---------------------------------------
-.reg-btn{
+.subsc4-reg-btn{
   font-family:$main-font;
   font-size:1.5em;
   text-transform:capitalize;
@@ -155,3 +313,28 @@
 // Know your rights - END
 // ---------------------------------------
 
+
+.subsc4-tip-list-image{
+  width:60%;
+  margin-left:20%;
+
+  @include mobile{
+    width:50%;
+    margin-left:25%;
+  }
+
+  @include mobile-landscape{
+    width:50%;
+    margin-left:25%;
+  }
+
+  @include iphone-landscape{
+    width:50%;
+    margin-left:25%;
+  }
+
+  @include med{
+    width:25%;
+    margin:0;
+  }
+}

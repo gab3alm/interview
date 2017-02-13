@@ -168,9 +168,11 @@
 	}
 
 	@include iphone-landscape{
+		font-size:$mobile-subscene-title-size;
 	}
 
 	@include ipad{
+		font-size:$med-subscene-title-size;
 	}
 
 	@include lowend{
@@ -178,9 +180,11 @@
 	}
 
 	@include macbook{
+		font-size:$med-subscene-title-size;
 	}
 
 	@include macdesktop{
+		font-size:$retina-subscene-title-size;
 	}
 }
 
@@ -207,12 +211,12 @@
 	}	
 
 	@include iphone-landscape{
-		// font-size:$mobile-description-size;
+		font-size:$mobile-subscene-description-size;
 		width:70%;
 	}
 
 	@include ipad{
-		// font-size:$med-description-size;
+		font-size:$med-subscene-description-size;
 		width:80%;
 	}
 
@@ -222,12 +226,12 @@
 	}
 
 	@include macbook{
-		// font-size:$med-description-size;
+		font-size:$med-subscene-description-size;
 		width:60%;
 	}
 
 	@include macdesktop{
-		// font-size:$retina-description-size;
+		font-size:$retina-subscene-description-size;
 		width:45%;
 	}
 }
@@ -335,7 +339,7 @@ $mobile-box-description-size:1.2em;
 
 }
 
-.card-title-container{
+.subsc3-card-title-container{
 	// border:2px solid green;
 	position:relative;
 	height:8vh;
@@ -375,7 +379,7 @@ $mobile-box-description-size:1.2em;
 	}
 }
 
-.card-image-container{
+.subsc3-card-image-container{
 	// border:2px solid green;
 	overflow:hidden;
 	position:absolute;
@@ -426,11 +430,11 @@ $mobile-box-description-size:1.2em;
 	}	
 }
 
-.card-image{
+.subsc3-card-image{
 	height:80%;
 }
 
-.card-title{
+.subsc3-card-title{
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -475,7 +479,7 @@ $mobile-box-description-size:1.2em;
 	}
 }
 
-.card-description-container{
+.subsc3-card-description-container{
 	// border:2px solid green;
 	width:90%;
 	margin:0 auto;
@@ -513,7 +517,7 @@ $mobile-box-description-size:1.2em;
 	}
 }
 
-.card-description{
+.subsc3-card-description{
 	font-family:$secondary-font;
 	font-size:$desktop-subscene-card-description-size;
 	color:rgba(0,0,0,.85);
@@ -560,11 +564,6 @@ $mobile-box-description-size:1.2em;
 	font-size:$mobile-subscene-card-description-size;
 	text-transform:capitalize;
 	text-shadow:2px 2px 2px rgba(0,0,0,.25);
-
-	@include mobile,lowend{
-		transform:scale(1.2);
-		margin:0 auto 20px auto;
-	}
 }
 
 
@@ -611,11 +610,11 @@ $mobile-box-description-size:1.2em;
 	}
 }
 
-.tip-description-container{
+.subsc3-tip-description-container{
 	margin-top:6%;
 }
 
-.tip-description{
+.subsc3-tip-description{
 	font-family:$secondary-font;
 	font-size:$desktop-subscene-tip-description-size;
 	text-align:justify;

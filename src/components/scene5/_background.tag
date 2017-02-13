@@ -4,10 +4,10 @@
     <section class="sc5-scenary-container">
       <img class="sc5-floor" src="public/images/scene5/floor.svg" alt="">
 
-      <img class="sc5-shake" src="public/images/scene5/shake.svg" alt="">
-      <img class="sc5-chocolate" src="public/images/scene5/chocolate.svg" alt="">
-      <img class="sc5-cheesecake" src="public/images/scene5/cheesecake.svg" alt="">
-      <img class="sc5-telephone" src="public/images/scene5/phonebooth.svg" alt="">
+      <img class="sc5-shake animated slideInLeft" src="public/images/scene5/shake.svg" alt="">
+      <img class="sc5-chocolate animated slideInLeft" src="public/images/scene5/chocolate.svg" alt="">
+      <img class="sc5-cheesecake animated slideInLeft" src="public/images/scene5/cheesecake.svg" alt="">
+      <img class="sc5-telephone animated slideInRight" src="public/images/scene5/phonebooth.svg" alt="">
 
       
 

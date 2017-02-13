@@ -3,7 +3,7 @@
   <nav>
     <div class="nav-wrapper">
 
-      <a href="#!" class="brand-logo">
+      <a href="" class="brand-logo">
         <img class="navbar-logo" src="public/images/logo4.svg" alt="">
       </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse">
@@ -24,14 +24,15 @@
 
 
       <ul class="side-nav" id="mobile-demo">
-      <li><a href="sass.html">Home</a></li>
-        <li><a href="badges.html">Starting Job Search</a></li>
-        <li><a href="collapsible.html">Types of Interviews</a></li>
-        <li><a href="mobile.html">Preparing for Interview</a></li>
-        <li><a href="mobile.html">Acing the Interview</a></li>
-        <li><a href="mobile.html">Following up the interview</a></li>
-        <li><a href="mobile.html">Accepting the job</a></li>
-        <li><a href="mobile.html">Career Center</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="#steps">Steps</a></li>
+        <li><a href="#steps/starting-job-search">Starting Job Search</a></li>
+        <li><a href="#steps/interview-types">Types of Interviews</a></li>
+        <li><a href="#steps/interview-preparation">Preparing for Interview</a></li>
+        <li><a href="#steps/ace-the-interview">Acing the Interview</a></li>
+        <li><a href="#steps/following-up-the-interview">Following up the interview</a></li>
+        <li><a href="#steps/accepting-the-job">Accepting the job</a></li>
+        <li><a href="http://www.csun.edu/career">Career Center</a></li>
       </ul>
 
 

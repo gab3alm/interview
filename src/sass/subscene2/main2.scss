@@ -1,0 +1,931 @@
+@import '../media_queries.scss';
+@import '../subscenes_fonts.scss';
+
+
+// ||||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 2 - SCENARY CONTAINER - START
+// ||||||||||||||||||||||||||||||||||||||||
+.subscene2-scenary-container{
+  position:relative;
+  height:50vh;
+  width:100%;
+  overflow:hidden;
+
+  background-image:url('../../../public/images/subscene2/background2.svg');
+  background-size:cover;
+  background-position:center;
+}
+
+.subscene2-scenary{
+  // border:2px solid green;
+  width:70%; 
+  height:100%;
+  margin:0 auto;
+  position:relative;
+  
+  @include med{
+    width:90%;
+  }
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include mobile-landscape{
+    width:80%;
+  }
+  
+  @include ipad{
+    width:80%;
+  }
+
+  @include lowend{
+    width:80%;
+  }
+}
+
+.subscene2-floor{
+  height:50%;
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translate(-50%, 0) scaleX(20);
+}
+
+.subscene2-bottles{
+  height:80%;
+  position:absolute;
+  bottom:15%;
+  left:50%;
+  transform:translate(-50%, 0);
+  
+  @include med{
+    height:60%;
+    bottom:20%;
+    left:50%;
+  }
+
+  @include mobile{
+    height:35%;
+    bottom:20%;
+    left:50%;    
+  }
+
+  @include mobile-landscape{
+    height:50%;
+    bottom:15%;
+    left:50%;    
+  }
+
+  @include iphone-landscape{
+    height:50%;
+    bottom:20%;
+    left:0; 
+  }
+
+  @include ipad{
+    height:35%;
+    bottom:20%;
+    left:0;
+  }
+}
+
+.subscene2-tanner{
+  height:30%;
+  position:absolute;
+  bottom:15%;
+  right:52%;
+  transform:translate(50%, 0);
+  
+  @include med{
+    height:22%;
+    bottom:20%;
+    right:55%;
+  }
+
+  @include mobile{
+    height:35%;
+    bottom:20%;
+    right:0;    
+  }
+
+  @include mobile-landscape{
+    height:50%;
+    bottom:20%;
+    right:0; 
+  }
+
+  @include iphone-landscape{
+    height:50%;
+    bottom:20%;
+    right:0; 
+  }
+  
+  @include ipad{
+    height:35%;
+    bottom:20%;
+    right:0; 
+  }
+}
+// |||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 2 - SCENARY CONTAINER - END
+// |||||||||||||||||||||||||||||||||||||||
+
+
+
+
+
+
+// ||||||||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 2 - INFORMATION CONTAINER - START
+// ||||||||||||||||||||||||||||||||||||||||||||
+.subscene2-information-container{
+  position:relative;
+  height:50vh;
+  width:100%;
+  background-color:#166B6F;
+  overflow:hidden;
+  
+  @include med{
+    height:auto;
+    min-height:35vh;
+  }
+
+  @include mobile{
+    height:auto;
+    min-height:50vh;
+  }
+
+  @include mobile-landscape{
+    height:auto;
+    min-height:100vh;
+  }
+
+  @include iphone-landscape{
+    height:auto;
+    min-height:100vh;
+  }
+  
+  @include ipad{
+    height:auto;
+    min-height:55vh;
+  }
+
+  @include lowend{
+    height:auto;
+    min-height:50vh; 
+  }
+
+  @include macbook{
+    height:auto;
+    min-height:60vh; 
+  }
+
+  @include macdesktop{
+    height:auto;
+    min-height:40vh; 
+  }
+}
+
+.subscene2-information{
+  // border:2px solid green;
+  height:100%;
+  width:50%;
+
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%, 0);
+
+  @include med{
+    width:90%;
+  }
+
+  @include mobile{
+    width:90%;
+  }
+
+  @include mobile-landscape{
+    width:90%;
+  }
+
+  @include iphone-landscape{
+    width:90%;
+  }
+
+  @include ipad{
+    width:90%;
+  }  
+
+  @include lowend{
+    width:90%;
+  }
+
+  @include macdesktop{
+    width:50%;
+  }  
+}
+
+.subscene2-title{
+  color:white;
+  font-family:$main-font;
+  font-size:$desktop-subscene-title-size;
+  text-align:center;
+  text-transform:capitalize;
+  margin:6% 0 0 0;
+
+  @include med{
+    font-size:$med-subscene-title-size;
+    margin:6% 0 0 0;
+  }
+
+  @include mobile{
+    font-size:$mobile-subscene-title-size;
+    margin:6% 0 3% 0;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-subscene-title-size;
+    margin:6% 0 0 0;
+  }
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-title-size;
+    margin:3% 0 0 0;
+  }
+  
+  @include ipad{
+    font-size:$med-subscene-title-size;
+    margin:3% 0 0 0; 
+  }
+
+  @include lowend{
+    font-size:$med-subscene-title-size;
+    margin:3% 0 0 0;  
+  }
+
+  @include macdesktop{
+    font-size:$retina-subscene-title-size;
+    margin:3% 0 0 0;  
+  }
+}
+
+.subscene2-description{
+  color:white;
+  font-family:$secondary-font;
+  font-size:$desktop-subscene-description-size;
+  text-align:center;
+  width:85%;
+  margin:0 auto;
+
+  @include med{
+    width:90%;
+    font-size:$med-subscene-description-size;
+    text-align:center;
+  }
+
+  @include mobile{
+    width:100%;
+    font-size:$mobile-subscene-description-size;
+    text-align:justify;
+  }
+
+  @include mobile-landscape{
+    width:100%;
+    font-size:$mobile-subscene-description-size;
+    text-align:justify;
+  }
+
+  @include iphone-landscape{
+    width:100%;
+    font-size:$mobile-subscene-description-size;
+    text-align:justify;
+  }
+  
+  @include ipad{
+    width:80%;
+    font-size:$med-subscene-description-size;
+    text-align:justify;
+  }
+
+  @include lowend{
+    width:80%;
+    font-size:$med-subscene-description-size;
+    text-align:center;
+  }
+
+  @include macdesktop{
+    width:90%;
+    font-size:$retina-subscene-description-size;
+    text-align:center;
+  }
+
+}
+
+.subscene2-wave{
+  position:absolute;
+}
+
+#wave1{
+  bottom:-1%;
+  left:0;
+  width:55%;
+
+  @include mobile{
+    display:none;
+  }
+
+  @include ipad{
+    bottom:-1%;
+    left:-1%;
+    width:55%;    
+  }
+
+  @include lowend{
+    bottom:-1%;
+    left:-1%;
+    width:55%; 
+  }
+}
+
+#wave2{
+  bottom:-1%;
+  right:0;
+  width:65%;
+
+  @include mobile{
+    display:none;
+  }
+}
+
+#wave3{
+  bottom:0%;
+  left:-8%;
+  width:60%;
+
+  @include mobile{
+    display:none;
+  }
+}
+
+#wave4{
+  bottom:0%;
+  right:-8%;
+  width:60%;
+
+  @include mobile{
+    display:none;
+  }
+}
+// ||||||||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 2 - INFORMATION CONTAINER - END
+// ||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+
+// ||||||||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 1 - CARD CONTAINER - START
+// ||||||||||||||||||||||||||||||||||||||||||||
+.subscene2-cards-container{
+  width:100%;
+  background-color:#ECFFFE;
+  overflow:hidden;
+  position:relative;
+  @include med{
+  }
+  @include mobile{
+  }
+  @include mobile-landscape{
+  }
+}
+
+.subscene2-card-wrapper{
+  height:400px;
+  width:70%;
+  margin:0% auto 10% auto;
+  // border:2px solid green;
+  position:relative;
+
+  @include med{
+    width:100%;
+  }
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include macbook{
+    width:80%;
+  }
+
+  @include macdesktop{
+    width:60%;
+  }
+}
+
+.subscene2-card-image-container{
+  // border:2px solid green;
+  width:100%;
+  height:400px;
+  position:relative;
+
+  @include mobile{
+    height:300px;
+  }
+}
+
+.subscene2-card-image{
+  width:80%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  position:absolute;
+  
+  @include mobile{
+    width:90%;
+  }
+
+  @include macdesktop{
+    top:70%;
+  }
+}
+
+// |||||||||||||||||||||||||||||||||||||
+// CUSTOM CARD BOTTOM MARGIN - START
+// |||||||||||||||||||||||||||||||||||||
+#lunch-interview{
+  margin:0% auto 5% auto;
+}
+
+#telephone-interview{
+  margin:0% auto 13% auto;
+}
+
+#competency-interview{
+  margin:0% auto 5% auto;
+}
+
+#panel-interview{
+  margin:0% auto 22% auto;
+}
+
+#group-interview{
+  margin:0% auto 13% auto;
+}
+
+#roleplay-interview{
+  margin:0% auto 13% auto;
+}
+
+#skype-interview{
+  margin:0% auto 13% auto;
+  
+  @include lowend{
+    margin:0% auto 20% auto;
+  }
+
+  @include macbook{
+    margin:0% auto 20% auto;
+  }
+
+  @include macdesktop{
+    margin:0% auto 15% auto;
+  }
+
+}
+
+#telephone-interview-image{
+  height:80%;
+}
+// |||||||||||||||||||||||||||||||||||||
+// CUSTOM CARD BOTTOM MARGIN - END
+// |||||||||||||||||||||||||||||||||||||
+
+.subscene2-card-title-container{
+  height:80px;
+  width:100%;
+  border-radius:40px;
+  // background-color:#4A9AE8;
+  background-color:#33B9B5;
+  position:relative;
+
+  @include med{
+    height:60px;
+  }
+
+  @include mobile{
+    height:50px;
+  }
+
+  @include mobile-landscape{
+    height:50px;
+  }
+  @include iphone-landscape{
+    height:50px;
+  }
+  @include ipad{
+    height:50px;
+  }
+
+  @include lowend{
+    height:60px;
+  }
+}
+
+.subscene2-card-title{
+  color:white;
+  font-family:$main-font;
+  font-size:$desktop-subscene-card-title-size;
+  text-transform:capitalize;
+  text-shadow:2px 2px 2px rgba(0,0,0,.25);
+  margin:0;
+  text-align:center;
+  width:100%;
+
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  
+  @include med{
+    font-size:$med-subscene-card-title-size;
+  }
+
+  @include mobile{
+    font-size:$mobile-subscene-card-title-size;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-subscene-card-title-size;
+  }
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-card-title-size;
+  }
+
+  @include ipad{
+    font-size:$med-subscene-card-title-size;
+  }
+
+  @include lowend{
+    font-size:$med-subscene-card-title-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-subscene-card-title-size;
+  }
+}
+
+.subscene2-card-description-container{
+  height:auto;
+  min-height:350px;
+  width:85%;
+  margin:0 auto;
+  background-color:white;
+  padding:5%;
+
+  box-shadow:0px 5px 5px rgba(0,0,0,.25);
+  border-radius:0 0 20px 20px;
+
+  @include med{
+    width:90%;
+    margin-top:-2%;
+    margin-bottom:10%;
+  }
+
+  @include mobile{
+    min-height:280px;
+    width:90%;
+    margin-top:-2%;
+    margin-bottom:10%;
+  }
+
+  @include mobile-landscape{
+    min-height:300px;
+    width:90%;
+    margin-top:-2%;
+    margin-bottom:10%;
+  }
+
+  @include iphone-landscape{
+    min-height:300px;
+    width:90%;
+    margin-top:-2%;
+    margin-bottom:10%;
+  }
+
+  @include ipad{
+    min-height:350px;
+    width:90%;
+    margin-top:-2%;
+    margin-bottom:10%;
+  }
+
+  @include lowend{
+    min-height:350px;
+    width:88%;
+    margin-top:-2%;
+    margin-bottom:10%;
+  }
+
+  @include macdesktop{
+    min-height:300px;
+    width:85%;
+    margin-top:-2%;
+    margin-bottom:10%;
+  }
+}
+
+.subscene2-card-description{
+  font-family:$secondary-font;
+  font-size:$desktop-subscene-card-description-size;
+  text-align:center;
+  margin:0 0 5% 0;
+  padding:0 3%;
+
+  @include med{
+    font-size:$med-subscene-card-description-size;
+    padding:0 3%;
+  }
+
+  @include mobile{
+    font-size:$mobile-subscene-card-description-size;
+    padding:0 3%;
+  }
+
+  @include mobile-landscape{
+    font-size:$mobile-subscene-card-description-size;
+    padding:0 3%;
+  }
+
+  @include iphone-landscape{
+    font-size:$mobile-subscene-card-description-size;
+    padding:0 3%;
+  }
+
+  @include ipad{
+    font-size:$med-subscene-card-description-size;
+    padding:0 3%;
+  }
+
+  @include lowend{
+    font-size:$mobile-subscene-card-description-size;
+    padding:0 3%;
+  }
+
+  @include macdesktop{
+    font-size:$retina-subscene-card-description-size;
+    padding:0 5%;
+  }
+}
+
+.subscene1-card-btn{
+  font-family:$main-font;
+  font-size:1.5em;
+  text-transform:capitalize;
+
+  @include mobile{
+
+  }
+}
+
+
+// WAVES for information section 2
+#wave5{
+  bottom:-1%;
+  left:0;
+  width:60%;
+  
+  @include med{
+    bottom:0%;
+  }
+
+  @include mobile{
+    display:none;
+  }
+
+  @include lowend{
+    bottom:-.5%;
+  }
+
+  @include macbook{
+    bottom:-.5%;
+  }
+
+  @include macdesktop{
+
+  }
+}
+
+#wave5_2{
+  bottom:-1%;
+  right:0;
+  width:63%;
+
+  @include med{
+    bottom:0%;
+  }
+
+  @include mobile{
+    display:none;
+  }
+
+  @include lowend{
+    bottom:-.5%;
+  }
+
+  @include macbook{
+    bottom:-.5%;
+  }
+}
+
+#wave6{
+  bottom:-1%;
+  left:0;
+  width:50%;
+
+  @include med{
+    bottom:0%;
+  }
+
+  @include mobile{
+    display:none;
+  }
+
+  @include lowend{
+    bottom:-.5%;
+  }
+
+  @include macbook{
+    bottom:-1%;
+  }
+}
+
+#wave7{
+  bottom:-1%;
+  left:20%;
+  width:50%;
+  
+  @include med{
+    bottom:0%;
+  }
+
+  @include mobile{
+    display:none;
+  }
+}
+
+#wave8{
+  bottom:-1%;
+  right:0%;
+  width:60%;
+  @include med{
+    bottom:0%;
+  }
+
+  @include mobile{
+    display:none;
+  }
+}
+// ||||||||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 1 - CARD CONTAINER - END
+// ||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+// ||||||||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 1 - INFORMATION SECTION 2 - START
+// ||||||||||||||||||||||||||||||||||||||||||||
+.subscene2-information-container2{
+  height:auto;
+  width:100%;
+  position:relative;
+  overflow:hidden;
+  background-color:#166B6F;
+}
+
+.subscene2-title2{
+  color:white;
+  font-family:$main-font;
+  font-size:$desktop-subscene-title-size;
+  text-align:center;
+  text-transform:capitalize;
+  
+  @include med{
+    font-size:$med-subscene-title-size;
+  }
+
+  @include mobile{
+    font-size:$mobile-subscene-title-size;
+  }
+
+  @include macbook{
+    font-size:$med-subscene-title-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-subscene-title-size;
+  }
+} 
+
+
+// ||||||||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 2 - INTERVIEW TIPS SECTION - START
+// ||||||||||||||||||||||||||||||||||||||||||||
+.subscene2-list-container{
+  width:60%;
+  height:auto;
+  min-height:600px;
+  // border:2px solid green;
+  margin:0 auto;
+
+  @include med{
+    width:80%;
+  }
+
+  @include mobile{
+    width:80%;
+  }
+  
+  @include macbook{
+    width:70%;
+  }
+
+  @include macdesktop{
+    width:50%;
+  }
+}
+
+.subscene2-list-item{
+  list-style-image:url('../../../public/images/subscene2/check.svg'); 
+}
+
+.subscene2-tip-title{
+  font-family:$main-font;
+  text-transform:capitalize;
+  color:white;
+  font-size:$desktop-subscene-tip-title-size;
+  margin:0;
+
+  @include med{
+    font-size:$med-subscene-tip-title-size;
+  }
+
+  @include mobile{
+    font-size:$mobile-subscene-tip-title-size;
+  }
+
+  @include macbook{
+    font-size:$med-subscene-tip-title-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-subscene-tip-title-size;
+  }
+}
+
+.subscene2-tip-description{
+  font-family:$secondary-font;
+  color:white;
+  font-size:$desktop-subscene-tip-description-size;
+  margin-top:0%; 
+  margin-bottom:3%; 
+
+  @include med{
+    font-size:$med-subscene-tip-description-size;
+  }
+
+  @include mobile{
+    margin-bottom:10%; 
+    font-size:$mobile-subscene-tip-title-size;
+  }
+
+  @include macbook{
+    font-size:$med-subscene-tip-description-size;
+  }
+
+  @include macdesktop{
+    font-size:$retina-subscene-tip-description-size;
+  }
+}
+
+.subscene2-tip-description::first-letter{
+  text-transform:capitalize;
+}
+// ||||||||||||||||||||||||||||||||||||||||||||
+// SUBSCENE 1 - INFORMATION SECTION 2 - END
+// ||||||||||||||||||||||||||||||||||||||||||||
+
+.subscene2-return-btn{
+  margin-bottom:5%;
+  font-family:$main-font;
+  font-size:1.5em;
+  transform:scale(1.1);
+
+  @include mobile{
+    transform:scale(1);
+  }
+}

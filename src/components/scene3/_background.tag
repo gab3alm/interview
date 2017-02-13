@@ -4,9 +4,9 @@
     <section class="sc3-scenary-container">
       <img class="sc3-floor" src="public/images/scene3/floor.svg" alt="">
 
-      <img class="sc3-bed" src="public/images/scene3/cheesebed2.svg" alt="">
-      <img class="sc3-glass" src="public/images/scene3/glass2.svg" alt="">
-      <img class="sc3-closet" src="public/images/scene3/closet-milk.svg" alt="">
+      <img class="sc3-bed animated fadeIn" src="public/images/scene3/cheesebed2.svg" alt="">
+      <img class="sc3-glass animated slideInLeft" src="public/images/scene3/glass2.svg" alt="">
+      <img class="sc3-closet animated slideInRight" src="public/images/scene3/closet-milk.svg" alt="">
       
       
 

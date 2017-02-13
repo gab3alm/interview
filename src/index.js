@@ -20,24 +20,26 @@ import 'scene4/main.tag';
 import 'scene5/main.tag';
 import 'scene6/main.tag';
 
-import 'subscene1/main.tag';
-import 'subscene2/main.tag';
-import 'subscene3/main.tag';
-import 'subscene4/main.tag';
+import 'subscene1/main2.tag';
+import 'subscene2/main2.tag';
+import 'subscene3/main2.tag';
+import 'subscene4/main2.tag';
 import 'subscene5/main.tag';
 import 'subscene6/main.tag';
+
+// import 'animations/banana_desk.tag';
 
 riot.mount('*');
 
 // HOT RELOADING SETUP - ONLY FOR DEVELOPMENT
-// import 'riot-hot-reload'
-// if(module.hot){
-//   module.hot.accept('subscene6/main.tag', ()=>{
-//     riot.reload('subscene6');
-//   });
-// }
+import 'riot-hot-reload'
+if(module.hot){
+  module.hot.accept('subscene4/main2.tag', ()=>{
+    riot.reload('subscene4');
+  });
+}
 
-import './routes.js';
+// import './routes.js';
 
 
 

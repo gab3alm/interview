@@ -18,20 +18,20 @@
 
       <virtual each={cards}>
         <div class="col s12 m6 l4">
-          <div class="card-container center-align">
+          <div class="subsc4-card-container center-align">
 
-            <img class="card-image" id={image_id} src={image} alt={image_alt}>
-            <div class="card-title-container">
-              <p class="card-title">{title}</p>
+            <img class="subsc4-card-image" id={image_id} src={image} alt={image_alt}>
+            <div class="subsc4-card-title-container">
+              <p class="subsc4-card-title">{title}</p>
             </div>
 
-            <div class="card-description-container hoverable">
+            <div class="subsc4-card-description-container hoverable">
               <virtual each={description}>
-                <p class="card-description">{text}</p>
+                <p class="subsc4-card-description">{text}</p>
               </virtual>  
 
               <div class="center-align">
-                <a href='#!' class="card-btn button button-3d button-royal button-pill">
+                <a href='#!' class="subsc4-card-btn button button-3d button-royal button-pill">
                   learn more
                 </a>
               </div>
@@ -53,11 +53,11 @@
     <div class="row">
       <virtual each={do_list}>
         <div class="col s12 m12 l4 push-l8">
-          <img class="tip-list-image" src={image} alt="">
+          <img class="subsc4-tip-list-image" src={image} alt="">
         </div>
         <div class="col s12 m12 l8 pull-l4">
-          <p class="list-title">{title}</p>
-          <p each={items} class="list-item">~ {text}</p>
+          <p class="subsc4-list-title">{title}</p>
+          <p each={items} class="subsc4-list-item">{text}</p>
         </div>
       </virtual>    
     </div>
@@ -66,11 +66,11 @@
     <div class="row">
       <virtual each={dont_list}>
         <div class="col s12 m12 l4">
-          <img class="tip-list-image" src={image} alt="">
+          <img class="subsc4-tip-list-image" src={image} alt="">
         </div>
         <div class="col s12 m12 l8">
-          <p class="list-title">{title}</p>
-          <p each={items} class="list-item">~ {text}</p>
+          <p class="subsc4-list-title">{title}</p>
+          <p each={items} class="subsc4-list-item">{text}</p>
         </div>
       </virtual>    
     </div>
@@ -87,7 +87,7 @@
       check out the questions that are acceptable for you to be asked by an interviewer
     </p>
     <div class="center-align">
-      <a href='#!' class="reg-btn button button-3d button-royal button-pill">
+      <a href='#!' class="subsc4-reg-btn button button-3d button-royal button-pill">
         Coming Soon!
       </a>
     </div>
@@ -107,12 +107,12 @@
       <virtual each={avoid_common_mistakes}>
 
         <div class="col s12 m12 l4 push-l8">
-          <img class="tip-list-image" src={image} alt="">
+          <img class="subsc4-tip-list-image" src={image} alt="">
         </div>
 
         <div class="col s12 m12 l8 pull-l4">
-          <p class="list-title">{title}</p>
-          <p each={items} class="list-item">~ {text}</p>
+          <p class="subsc4-list-title">{title}</p>
+          <p each={items} class="subsc4-list-item2">{text}</p>
         </div>
 
       </virtual>    
@@ -125,7 +125,7 @@
 
 
   <div class="center-align">
-  <a href="#steps/" class="btn2 button button-3d button-royal button-pill">Return</a>
+    <a href="#steps/" class="btn2 button button-3d button-royal button-pill">Return</a>
   </div>
 
 

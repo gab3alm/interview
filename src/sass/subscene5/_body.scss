@@ -52,7 +52,7 @@
   }
 }
 
-.card-title-container{
+.subsc5-card-title-container{
   background-color:rgba(134,53,136,1);
   border:6px solid rgba(155,78,155,1);
 
@@ -64,7 +64,7 @@
   height:5%;
 }
 
-.card-title{
+.subsc5-card-title{
   font-family:$main-font;
   font-size:$desktop-subscene-card-title-size;
   color:white;
@@ -72,7 +72,7 @@
   margin:1% auto;
 }
 
-.card-description-container{
+.subsc5-card-description-container{
   height:auto;
   min-height:550px;
   width:90%;
@@ -82,7 +82,7 @@
   box-shadow:0px 2px 2px rgba(0,0,0,.25);
 }
 
-.card-description-container2{
+.subsc5-card-description-container2{
   height:auto;
   min-height:250px;
   width:90%;
@@ -92,7 +92,7 @@
   box-shadow:0px 2px 2px rgba(0,0,0,.25);
 }
 
-.card-description{
+.subsc5-card-description{
   margin:2% auto;
   font-family:$secondary-font;
   font-size:$desktop-subscene-card-description-size;
@@ -100,7 +100,7 @@
   text-align:center;
 }
 
-.card-btn{
+.subsc5-card-btn{
   font-family:$main-font;
   font-size:1.5em;
   text-transform:capitalize;

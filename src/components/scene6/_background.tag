@@ -6,16 +6,8 @@
     <section class="sc6-scenary-container">
       <img class="sc6-floor" src="public/images/scene6/floor.svg" alt="">
 
-      <img class="sc6-cubicles" src="public/images/scene6/cubicles.svg" alt="">
-      <img class="sc6-peeps" src="public/images/scene6/characters.svg" alt="">
-
-
-      <!-- <div class="sc6-down-arrow-container animated bounce infinite tooltipped" data-position="top" data-delay="50" data-tooltip="Scroll Down">
-        <svg class="sc6-down-arrow" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" />
-        </svg>  
-      </div> -->
-      
+      <img class="sc6-cubicles animated fadeIn" src="public/images/scene6/cubicles.svg" alt="">
+      <img class="sc6-peeps animated fadeIn" src="public/images/scene6/characters.svg" alt="">
 
     </section>
   </div>  

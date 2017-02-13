@@ -22,6 +22,7 @@
     "node-sass": "^4.3.0",
     "purifycss-webpack-plugin": "^2.0.3",
     "riot-hot-reload": "0.0.2",
+    "riot-router": "^0.9.6",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "tag-loader": "^0.3.0",

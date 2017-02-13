@@ -21,7 +21,7 @@
 
 // Mac Desktop Styles
 @mixin macdesktop{
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 2400px){
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 2300px){
     @content;
   } 
 }

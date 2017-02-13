@@ -36,7 +36,6 @@
   @include macdesktop{
     width:50%;
   }
-
 }
 
 .content-title{
@@ -139,20 +138,22 @@ $left-displacement:((100 - $outer-container-width)/2);
     bottom:5%;
   }
 
-  @include macbook{
-  }
-
-  @include macdesktop{
-    width:70%;
-    left:15%;
-    bottom:5%;
-  }
-
   @include lowend{
     width:60%;
     left:20%;
     bottom:5%;
   }
+
+  @include macbook{
+  }
+
+  @include macdesktop{
+    width:60%;
+    left:20%;
+    bottom:10%;
+  }
+
+  
 }
 
 #hp-description-container{

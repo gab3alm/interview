@@ -1,6 +1,6 @@
 <scene4-background>
   <!-- HTML -->
-  <div class="sc4-background-container">
+  <div class="sc4-background-container animated fadeIn">
     <section class="sc4-scenary-container">
       <img class="sc4-floor" src="public/images/scene4/floor.svg" alt="">
 

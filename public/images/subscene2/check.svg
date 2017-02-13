@@ -1,0 +1,89 @@
+<svg width="25" height="25" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>checked</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-881 -2747)" figma:type="canvas">
+<g id="checked" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_fill" transform="translate(881 2747)" fill="#6AC259" style="mix-blend-mode:normal;"/>
+</g>
+<mask id="mask0_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask0_alpha)" figma:type="frame">
+</g>
+<mask id="mask1_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask1_alpha)" figma:type="frame">
+</g>
+<mask id="mask2_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask2_alpha)" figma:type="frame">
+</g>
+<mask id="mask3_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask3_alpha)" figma:type="frame">
+</g>
+<mask id="mask4_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask4_alpha)" figma:type="frame">
+</g>
+<mask id="mask5_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask5_alpha)" figma:type="frame">
+</g>
+<mask id="mask6_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask6_alpha)" figma:type="frame">
+</g>
+<mask id="mask7_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask7_alpha)" figma:type="frame">
+</g>
+<mask id="mask8_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask8_alpha)" figma:type="frame">
+</g>
+<mask id="mask9_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask9_alpha)" figma:type="frame">
+</g>
+<mask id="mask10_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask10_alpha)" figma:type="frame">
+</g>
+<mask id="mask11_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask11_alpha)" figma:type="frame">
+</g>
+<mask id="mask12_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask12_alpha)" figma:type="frame">
+</g>
+<mask id="mask13_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask13_alpha)" figma:type="frame">
+</g>
+<mask id="mask14_alpha" mask-type="alpha">
+<path d="M 881 2747L 891.547 2747L 891.547 2757.55L 881 2757.55L 881 2747Z" fill="#FFFFFF"/>
+</mask>
+<g id="Group" style="mix-blend-mode:normal;" mask="url(#mask14_alpha)" figma:type="frame">
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 22.5 0C 10.0742 0 0 10.0738 0 22.5C 0 34.9262 10.0742 45 22.5 45C 34.9272 45 45 34.9262 45 22.5C 45 10.0738 34.9268 0 22.5 0ZM 18.3726 34.0578L 8.46536 24.151L 11.7675 20.8489L 18.3726 27.4536L 33.2325 12.5932L 36.5346 15.8953L 18.3726 34.0578Z"/>
+</defs>
+</svg>

@@ -18,20 +18,20 @@
 
       <virtual each={cards}>
         <div class="col s12 m6 l6">
-          <div class="card-container center-align">
+          <div class="subsc5-card-container center-align">
 
             <img class="subsc5-card-image" id={image_id} src={image} alt={image_alt}>
-            <div class="card-title-container">
-              <p class="card-title">{title}</p>
+            <div class="subsc5-card-title-container">
+              <p class="subsc5-card-title">{title}</p>
             </div>
 
-            <div class="card-description-container hoverable">
+            <div class="subsc5-card-description-container hoverable">
               <virtual each={description}>
-                <p class="card-description">{text}</p>
+                <p class="subsc5-card-description">{text}</p>
               </virtual>  
 
               <div if={button} class="center-align">
-                <a href='#!' class="card-btn button button-3d button-royal button-pill">
+                <a href='#!' class="subsc5-card-btn button button-3d button-royal button-pill">
                   learn more
                 </a>
               </div>
@@ -46,44 +46,12 @@
   <!-- CARD CONTAINER - END -->
 
 
-
-
-  <!-- DO's & Dont's List - START -->
-  <!-- <section class="subscene5-tip-list">
-    <div class="row">
-      <virtual each={do_list}>
-        <div class="col s12 m12 l4 push-l8">
-          <img class="tip-list-image" src={image} alt="">
-        </div>
-        <div class="col s12 m12 l8 pull-l4">
-          <p class="list-title">{title}</p>
-          <p each={items} class="list-item">~ {text}</p>
-        </div>
-      </virtual>    
-    </div>
-
-
-    <div class="row">
-      <virtual each={dont_list}>
-        <div class="col s12 m12 l4">
-          <img class="tip-list-image" src={image} alt="">
-        </div>
-        <div class="col s12 m12 l8">
-          <p class="list-title">{title}</p>
-          <p each={items} class="list-item">~ {text}</p>
-        </div>
-      </virtual>    
-    </div>
-  </section> -->
-  <!-- DO's & Dont's List - END -->
-
-
   <!-- |||||||||||||||||||||||||||||||||||||||||||||| -->
   <!-- handling the repsonse - START                        -->
   <!-- |||||||||||||||||||||||||||||||||||||||||||||| -->
   <section class="subscene5-information-container">
-    <p class="fancy subsc4-title"><span>handling the response</span></p>
-    <p class="subsc4-description">
+    <p class="fancy subsc5-title"><span>handling the response</span></p>
+    <p class="subsc5-description">
       there can be a variety of reason for which an employer can go for another candidate,
       and it is important to not take it personally. Be gracious and move on to the next potential 
       opportunity.
@@ -95,20 +63,20 @@
 
       <virtual each={response}>
         <div class="col s12 m6 l6">
-          <div class="card-container center-align">
+          <div class="subsc5-card-container center-align">
 
             <img class="subsc5-card-image" id={image_id} src={image} alt={image_alt}>
-            <div class="card-title-container">
-              <p class="card-title">{title}</p>
+            <div class="subsc5-card-title-container">
+              <p class="subsc5-card-title">{title}</p>
             </div>
 
-            <div class="card-description-container2 hoverable">
+            <div class="subsc5-card-description-container2 hoverable">
               <virtual each={description}>
-                <p class="card-description">{text}</p>
+                <p class="subsc5-card-description">{text}</p>
               </virtual>  
 
               <div if={button} class="center-align">
-                <a href='#!' class="card-btn button button-3d button-royal button-pill">
+                <a href='#!' class="subsc5-card-btn button button-3d button-royal button-pill">
                   learn more
                 </a>
               </div>
@@ -124,34 +92,6 @@
   <!-- |||||||||||||||||||||||||||||||||||||||||||||| -->
   <!-- Handling the response - END                          -->
   <!-- |||||||||||||||||||||||||||||||||||||||||||||| -->
-
-
-
-  <!-- |||||||||||||||||||||||||||||||||||||||||||||| -->
-  <!-- Avoid common mistakes - START                  -->
-  <!-- |||||||||||||||||||||||||||||||||||||||||||||| -->
-<!--   <section class="subscene5-tip-list">
-
-    <div class="row">
-      <virtual each={avoid_common_mistakes}>
-
-        <div class="col s12 m12 l4 push-l8">
-          <img class="tip-list-image" src={image} alt="">
-        </div>
-
-        <div class="col s12 m12 l8 pull-l4">
-          <p class="list-title">{title}</p>
-          <p each={items} class="list-item">~ {text}</p>
-        </div>
-
-      </virtual>    
-    </div>
-
-  </section> -->
-  <!-- |||||||||||||||||||||||||||||||||||||||||||||| -->
-  <!-- Avoid commmon mistakes - END                   -->
-  <!-- |||||||||||||||||||||||||||||||||||||||||||||| -->
-
 
   <div class="center-align">
     <a href="#steps/" class="reg-btn button button-3d button-royal button-pill">Return</a>

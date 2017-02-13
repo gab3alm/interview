@@ -13,7 +13,6 @@ function router(scene, subscene){
       riot.mount('#viewport', 'subscene1');
     }else if(subscene == "interview-types"){
       riot.mount('#viewport', 'subscene2');
-      window.scrollTo(0,0);
     }else if(subscene == "interview-preparation"){
       riot.mount('#viewport', 'subscene3');
       window.scrollTo(0,0);

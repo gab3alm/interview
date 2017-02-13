@@ -6,7 +6,7 @@
   </div>
   <!-- SCRIPT -->
   <script>
-    import 'main.scss';
+    // import 'main.scss';
     import 'scene1/_background.tag';  
     import 'scene1/_content.tag';  
     this.on('mount', function(){

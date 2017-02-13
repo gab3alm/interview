@@ -21,6 +21,11 @@ $description-container-background:rgba(18,38,75,.75);
     overflow:hidden;
   }
 
+
+  @include med{
+    width:90%;
+  }
+
   @include ipad{
     width:90%;
   }
@@ -127,6 +132,10 @@ $description-container-background:rgba(18,38,75,.75);
     font-size:$mobile-title-size;
   }
 
+  @include med{
+    font-size:$med-title-size;
+  }
+
   @include ipad{
     font-size:$med-title-size;
   }
@@ -162,6 +171,12 @@ $description-container-background:rgba(18,38,75,.75);
     padding:5%;
   }
 
+
+  @include med{
+    width:70%;
+    padding:2%; 
+  }
+
   @include ipad{
     width:80%;
     padding:3% 5%;
@@ -181,6 +196,7 @@ $description-container-background:rgba(18,38,75,.75);
     width:55%;
     padding:1.5% 3%;
   }
+
 }
 
 .sc1-description{
@@ -196,6 +212,10 @@ $description-container-background:rgba(18,38,75,.75);
 
   @include mobile-landscape{
     font-size:$mobile-description-size;
+  }
+
+  @include med{
+    font-size:$med-description-size;
   }
 
   @include ipad{
@@ -243,4 +263,41 @@ $arrow-size:5vh;
   border-radius:50%;
   background-color:rgba(0,0,0,.25);  
   
+}
+
+.sc1-btn-container{
+  width:50%;
+
+  @include mobile{
+    width:100%;
+  }
+
+  @include mobile-landscape{
+    width:100%;
+  }
+
+  @include med{
+    width:70%;
+  }
+
+  @include ipad{
+    width:80%;
+  }
+
+  @include lowend{
+    width:60%;
+  }
+
+  @include macbook{
+    width:60%;
+  }
+
+  @include macdesktop{
+    width:55%;
+  }
+}
+
+.sc1-btn{
+  margin-top:2% !important;
+  float:right;
 }

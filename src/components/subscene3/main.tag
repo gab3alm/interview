@@ -31,18 +31,18 @@
 				<div class="col s12 m6 l4">
 
 					<aside class="subscene3-card-container hoverable">
-						<div class="card-title-container">
+						<div class="subsc3-card-title-container">
 
-							<div class="card-image-container">
-								<img class="card-image" src={image} id={image_id} alt={image_alt}>	
+							<div class="subsc3-card-image-container">
+								<img class="subsc3-card-image" src={image} id={image_id} alt={image_alt}>	
 							</div>
 
-							<p class="card-title">{title}</p>
+							<p class="subsc3-card-title">{title}</p>
 						</div>
 
-						<div class="card-description-container">
+						<div class="subsc3-card-description-container">
 							<virtual each={description}>
-								<p class="card-description">{text}</p>
+								<p class="subsc3-card-description">{text}</p>
 							</virtual>
 							<a if={button} href={url} class="sc3-btn button button-3d button-action button-pill">learn more</a>
 
@@ -71,9 +71,9 @@
 				<img class="subscene3-fish" src="public/images/subscene3/fish.svg" alt="">
 			</div>
 			<div class="col s12 m8" each={tip1}>
-				<div class="tip-description-container">
+				<div class="subsc3-tip-description-container">
 					<virtual each={tip}>
-						<p class="tip-description">{text}</p>
+						<p class="subsc3-tip-description">{text}</p>
 					</virtual>
 				</div>
 			</div>
@@ -84,9 +84,9 @@
 				<img class="subscene3-calendar" src="public/images/subscene3/calendar.svg" alt="">
 			</div>
 			<div class="col s12 m8 pull-m4" each={tip2}>
-				<div class="tip-description-container">
+				<div class="subsc3-tip-description-container">
 					<virtual each={tip}>
-						<p class="tip-description">{text}</p>
+						<p class="subsc3-tip-description">{text}</p>
 					</virtual>
 				</div>
 
