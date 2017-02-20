@@ -7,11 +7,12 @@ on how to prepare, behave, and act before and after an interview.
 ## Development
 
 Successful Interviewing harnesses the power of the following technologies.
-1. Webpack 2.0
-2. Riot JS
-3. SASS
-4. Parallax JS (Homepage only)
-5. Node JS & NPM (packages)
+
+⋅⋅* Webpack 2.0
+⋅⋅* Riot JS
+⋅⋅* SASS
+⋅⋅* Parallax JS (Homepage only)
+⋅⋅* Node JS & NPM (packages)
 
 There is no backend for this project. 
 
