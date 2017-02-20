@@ -255,3 +255,34 @@
     right:0%; 
   }
 }
+
+.desk-animation{
+  position:absolute;
+  bottom:40%;
+  left:30%;
+  transform:scale(1.8) translate(-50%, 10%);
+
+  @include med{
+  }
+
+  @include mobile{
+  }
+
+  @include mobile-landscape{
+  }
+
+  @include iphone-landscape{
+  }
+
+  @include ipad{
+  }
+
+  @include lowend{
+  }
+
+  @include macbook{
+  }
+
+  @include macdesktop{
+  }
+}

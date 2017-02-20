@@ -112,20 +112,20 @@
   }
 
   @include iphone-landscape{
-   height:60%;
-   bottom:15%;
-   right:50%;
- }
+    height:60%;
+    bottom:15%;
+    right:50%;
+  }
 
- @include med{
-  height:50%;
-  bottom:20%;
-  right:50%;
-}
+  @include med{
+    height:50%;
+    bottom:20%;
+    right:50%;
+  }
 
-@include ipad{
-  height:35%;
-  bottom:22%;
-  right:60%;
-}
+  @include ipad{
+    height:35%;
+    bottom:22%;
+    right:60%;
+  }
 }

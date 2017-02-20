@@ -8,6 +8,7 @@
       <!-- viewport is used by route in routes.js -->
       <div id="viewport">
       </div>
+      <!-- <scenes body={body_handler}></scenes> -->
 
       <navbar></navbar>
       <footing></footing>
@@ -16,6 +17,7 @@
 
   <!-- SCRIPT -->
   <script>
+    var body_handler = opts.body;
     this.on('mount', function(){
       var $node = $(this.root);
       // transition the loader into homepage, nice and smooth

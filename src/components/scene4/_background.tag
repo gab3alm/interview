@@ -11,7 +11,7 @@
       <img class="sc4-desk" src="public/images/scene4/desk.svg" alt="">
 
       
-      
+      <!-- <object class="desk-animation hide-on-small-only" id="EdgeID" type="text/html" width="570" height="420" data-dw-widget="Edge" data="public/animation/dr_ban_animated/Assets/dr_ban_animated.html"></object> -->
 
     </section>
   </div>  

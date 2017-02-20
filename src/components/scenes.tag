@@ -12,6 +12,14 @@
 
   <!-- SCRIPT -->
   <script>
-    
+    this.on('mount', function(){
+      var $node = $(this.root);
+      var body = opts.body;
+
+      $node.find('.sc1-down-arrow-container').click(function(){
+        $(body).animate({scrollTop: 800}, 200, "swing");
+        console.log('hello there');
+      });
+    });
   </script>
 </scenes>

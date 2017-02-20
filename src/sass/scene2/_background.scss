@@ -131,5 +131,48 @@
   height:15%;
   bottom:40%;
   right:0%;
+}
+}
+
+.tanner-shows-animation-container{
+  position:absolute;
+  bottom:27%;
+  left:50%;
+  transform:scale(.55) translate(-90%, 0);
+
+  @include med{
+    bottom:24%;
+    left:43%;
+    transform:scale(.45) translate(-90%, 0);  
+  }
+
+  @include mobile{
+  }
+
+  @include mobile-landscape{
+  }
+
+  @include iphone-landscape{
+  }
+
+  @include ipad{
+  }
+
+  @include lowend{
+    bottom:15%;
+    left:43%;
+    transform:scale(.4) translate(-90%, 0);  
+  }
+
+  @include macbook{
+    bottom:22%;
+    left:45%;
+    transform:scale(.45) translate(-90%, 0);  
+  }
+
+  @include macdesktop{
+    bottom:31%;
+    left:54%;
+    transform:scale(.7) translate(-90%, 0);  
   }
 }
