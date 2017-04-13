@@ -125,6 +125,92 @@
     right:0; 
   }
 }
+
+.sub1_tray-animation-container{
+  position:absolute;
+  bottom:15%;
+  left:0%;
+  transform:scale(.45) translate(-65%, 70%);
+
+  @include med{
+    bottom:19%;
+    left:-30%;
+    transform:scale(.4) translate(-72%, 80%);
+  }
+
+  @include mobile{
+  }
+
+  @include mobile-landscape{
+  }
+
+  @include iphone-landscape{
+  }
+
+  @include ipad{
+    bottom:22%;
+    left:0%;
+    transform:scale(.3) translate(-140%, 170%);
+  }
+
+  @include lowend{
+    bottom:0%;
+    left:0%;
+    transform:scale(.3) translate(-110%, 90%);
+  }
+
+  @include macdesktop{
+    bottom:22%;
+    left:0%;
+    transform:scale(.7) translate(-30%, 35%);
+  }
+} 
+
+.sub1_icecream-animation-container{
+  position:absolute;
+  bottom:6%;
+  right:0%;
+  transform:scale(1) translate(0%, 0);
+
+  @include med{
+    bottom:12%;
+    right:-30%;
+    transform:scale(1) translate(0%, 0);
+  }
+
+  @include mobile{
+  }
+
+  @include mobile-landscape{
+  }
+
+  @include iphone-landscape{
+  }
+
+  @include ipad{
+    bottom:5%;
+    right:-20%;
+    transform:scale(.8) translate(0%, 0);
+  }
+
+  @include macbook{
+    bottom:15%;
+    right:-5%;
+    transform:scale(1) translate(0%, 0);
+  }
+
+  @include lowend{
+    bottom:0%;
+    right:0%;
+    transform:scale(.7) translate(20%, 15%);
+  }
+
+  @include macdesktop{
+    bottom:22%;
+    right:0%;
+    transform:scale(1.5) translate(0%, 0);
+  }
+}
 // |||||||||||||||||||||||||||||||||||||||
 // SUBSCENE 1 - SCENARY CONTAINER - END
 // |||||||||||||||||||||||||||||||||||||||
@@ -793,3 +879,5 @@
   font-size:1.5em;
   transform:scale(1.1);
 }
+
+

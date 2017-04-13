@@ -3,8 +3,15 @@
   <div class="subscene1-scenary-container">
     <img class="subscene1-floor" src="public/images/subscene1/floor.svg" alt="">
     <div class="subscene1-scenary">
-      <img class="subscene1-tray animated slideInLeft" src="public/images/subscene1/tray.svg" alt="">
-      <img class="subscene1-icecream" src="public/images/subscene1/icecream.svg" alt="">
+
+      <object class="sub1_tray-animation-container hide-on-small-only" id="EdgeID" type="text/html" width="1930" height="535" data-dw-widget="Edge" data="public/animation/ice_tray_animated/Assets/ice_tray_animated.html">
+      </object>
+
+      <object class="sub1_icecream-animation-container hide-on-small-only" id="EdgeID" type="text/html" width="570" height="420" data-dw-widget="Edge" data="public/animation/prof_cream_animated/Assets/prof_cream_animated.html">
+      </object>
+
+      <img class="subscene1-tray animated slideInLeft hide-on-med-and-up" src="public/images/subscene1/tray.svg" alt="">
+      <img class="subscene1-icecream hide-on-med-and-up" src="public/images/subscene1/icecream.svg" alt="">
     </div> 
   </div>
   <!-- SUBSCENE1 SCENARY -->

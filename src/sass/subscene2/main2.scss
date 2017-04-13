@@ -86,7 +86,7 @@
   @include ipad{
     height:35%;
     bottom:20%;
-    left:0;
+    left:50%;
   }
 }
 
@@ -100,13 +100,13 @@
   @include med{
     height:22%;
     bottom:20%;
-    right:55%;
+    right:0%;
   }
 
   @include mobile{
-    height:35%;
-    bottom:20%;
-    right:0;    
+    height:20%;
+    bottom:15%;
+    right:55%;    
   }
 
   @include mobile-landscape{
@@ -125,6 +125,52 @@
     height:35%;
     bottom:20%;
     right:0; 
+  }
+}
+
+.sub2_tanner-shows-animation-container{
+  position:absolute;
+  bottom:0%;
+  left:50%;
+  transform:scale(.55) translate(-90%, 25%);
+
+  @include med{
+    bottom:0%;
+    left:43%;
+    transform:scale(.4) translate(-100%, 45%);  
+  }
+
+  @include mobile{
+  }
+
+  @include mobile-landscape{
+  }
+
+  @include iphone-landscape{
+  }
+
+  @include ipad{
+    bottom:0%;
+    left:42%;
+    transform:scale(.30) translate(-120%, 60%);  
+  }
+
+  @include lowend{
+    bottom:0%;
+    left:43%;
+    transform:scale(.36) translate(-100%, 70%);  
+  }
+
+  @include macbook{
+    bottom:0%;
+    left:45%;
+    transform:scale(.45) translate(-90%, 40%);  
+  }
+
+  @include macdesktop{
+    bottom:0%;
+    left:55%;
+    transform:scale(.7) translate(-90%, 5%);  
   }
 }
 // |||||||||||||||||||||||||||||||||||||||

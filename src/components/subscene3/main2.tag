@@ -5,8 +5,11 @@
     <img class="subscene3-floor" src="public/images/subscene3/floor.svg" alt="">
     <div class="subscene3-scenary">
       <img class="subscene3-cheesebed" src="public/images/subscene3/cheesebed.svg" alt="">
-      <img class="subscene3-glass" src="public/images/subscene3/glass2.svg" alt="">
+      <img class="subscene3-glass hide-on-med-and-up" src="public/images/subscene3/glass2.svg" alt="">
       <img class="subscene3-closet" src="public/images/subscene3/closet.svg" alt="">
+
+      <object class="sub3_tanner-tie-animation hide-on-small-only" id="EdgeID" type="text/html" width="570" height="420" data-dw-widget="Edge" data="public/animation/tanner_tie_animated/Assets/tanner_tie_animated.html">
+      </object>
     </div> 
   </div>
   <!-- SUBSCENE3 SCENARY -->
@@ -19,8 +22,6 @@
     <img id="wave4" class="subscene3-wave" src="public/images/subscene3/wave1_3.svg" alt="">
     <img id="wave1" class="subscene3-wave" src="public/images/subscene3/wave1.svg" alt="">
     <img id="wave2" class="subscene3-wave" src="public/images/subscene3/wave1.svg" alt="">
-
-
 
     <div class="subscene3-information">
       <p class="subscene3-title">preparing for an interview</p>

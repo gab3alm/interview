@@ -165,6 +165,53 @@
     right:0%; 
   }
 }
+
+
+.sub3_tanner-tie-animation{
+  position:absolute;
+  bottom:15%;
+  left:5%;
+  transform:scale(1) translate(-50%, 10%);
+
+  @include med{
+    bottom:12%;
+    left:10%;
+    transform:scale(.8) translate(-50%, 10%);
+  }
+
+  @include mobile{
+  }
+
+  @include mobile-landscape{
+  }
+
+  @include iphone-landscape{
+  }
+
+  @include ipad{
+    bottom:10%;
+    left:5%;
+    transform:scale(.8) translate(-50%, 10%);
+  }
+
+  @include lowend{
+    bottom:2%;
+    left:0%;
+    transform:scale(.8) translate(-50%, 10%);
+  }
+
+  @include macbook{
+    bottom:5%;
+    left:0%;
+    transform:scale(.8) translate(-50%, 10%);
+  }
+
+  @include macdesktop{
+    bottom:32%;
+    left:12%;
+    transform:scale(1.6) translate(-50%, 10%);
+  }
+}
 // |||||||||||||||||||||||||||||||||||||||
 // SUBSCENE 2 - SCENARY CONTAINER - END
 // |||||||||||||||||||||||||||||||||||||||

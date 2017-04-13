@@ -5,7 +5,11 @@
     <img class="subscene2-floor" src="public/images/subscene2/floor2.svg" alt="">
     <div class="subscene2-scenary">
       <img class="subscene2-bottles" src="public/images/subscene2/bottles2.svg" alt="">
-      <img class="subscene2-tanner" src="public/images/subscene2/orangeboy.svg" alt="">
+      <img class="subscene2-tanner hide-on-med-and-up" src="public/images/subscene2/orangeboy.svg" alt="">
+
+      <object class="sub2_tanner-shows-animation-container hide-on-small-only" id="EdgeID" type="text/html" width="570" height="420" data-dw-widget="Edge" data="public/animation/tanner_shows/Assets/tanner_shows_animated_cc.html">
+      </object>
+
     </div> 
   </div>
   <!-- SUBSCENE2 SCENARY -->
@@ -18,8 +22,6 @@
     <img id="wave4" class="subscene2-wave" src="public/images/subscene2/wave1_3.svg" alt="">
     <img id="wave1" class="subscene2-wave" src="public/images/subscene2/wave1.svg" alt="">
     <img id="wave2" class="subscene2-wave" src="public/images/subscene2/wave1.svg" alt="">
-
-
 
     <div class="subscene2-information">
       <p class="subscene2-title">types of interviews</p>

@@ -5,6 +5,7 @@ import 'animate.css/animate.min.css';
 import 'buttons.css';
 
 import riot from 'riot';
+
 // loading all scenes for project
 import 'main.tag';
 import 'scenes.tag';
@@ -28,16 +29,15 @@ import 'subscene5/main2.tag';
 import 'subscene6/main2.tag';
 
 // import 'animations/banana_desk.tag';
-
 riot.mount('*');
 
 // HOT RELOADING SETUP - ONLY FOR DEVELOPMENT
-// import 'riot-hot-reload'
-// if(module.hot){
-//   module.hot.accept('subscene6/main2.tag', ()=>{
-//     riot.reload('subscene6');
-//   });
-// }
+import 'riot-hot-reload'
+if(module.hot){
+  module.hot.accept('subscene2/main2.tag', ()=>{
+    riot.reload('subscene2');
+  });
+}
 
 import './routes.js';
 
